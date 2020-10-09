@@ -39,6 +39,12 @@ public class GameManager : MonoBehaviour
     
     [Tooltip("Dropdown to select what scenario to play")]
     public Dropdown scenarioSelect;
+
+    [Tooltip("Dropdown that lets the players choose their option")]
+    public Dropdown choiceSelect;
+
+    [Tooltip("Text that displays all the options")]
+    public Text choicesText;
     #endregion
     
     #region Scenario and Setup management
@@ -120,13 +126,14 @@ public class GameManager : MonoBehaviour
     /// Fired when a choice is made. Adjusts the stats and picks the next setup
     /// </summary>
     /// <param name="isA">True if choice A was selected, false otherwise</param>
-    public void ChoiceSelect(bool isA)
+    public void ChoiceSelect()
     {
-        int approvalAdjust = currentSetup.ApprovalB;
-        int efficiencyAdjust = currentSetup.EfficiencyB;
-        int envrionmentAdjust = currentSetup.EnvironmentB;
-        int costAdjust = currentSetup.CostB;
-        
+        int decisionIndex = choiceSelect.value;
+        int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
+        int efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
+        int envrionmentAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
+        int costAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
+        /*
         if (isA)
         {
             approvalAdjust = currentSetup.ApprovalA;
@@ -134,7 +141,7 @@ public class GameManager : MonoBehaviour
             envrionmentAdjust = currentSetup.EnvironmentA;
             costAdjust = currentSetup.CostA;
         }
-
+        */
         approval += approvalAdjust;
         efficiency += efficiencyAdjust;
         environment += envrionmentAdjust;
@@ -158,9 +165,22 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void UpdateText()
     {
+        choicesText.text = "";
         setupText.text = currentSetup.Setup;
+        char currentLetter = 'A';
+        List<string> availableChoices = new List<string>();
+        foreach (var choice in currentSetup.Decisions)
+        {
+            choicesText.text += currentLetter + ": " + choice.Choice + "\n";
+            availableChoices.Add(currentLetter.ToString());
+            ++currentLetter;
+        }
+        
+        choiceSelect.AddOptions(availableChoices);
+        /*
         choiceAText.text = currentSetup.ChoiceA;
         choiceBText.text = currentSetup.ChoiceB;
+        */
     }
 
     /// <summary>

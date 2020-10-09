@@ -3,7 +3,9 @@ namespace FileLoading
     [System.Serializable]
     public class Scenario
     {
+        public Choices[] Decisions;
         public string Setup;
+        /*
         public string ChoiceA;
         public string ChoiceB;
 
@@ -16,5 +18,6 @@ namespace FileLoading
         public int EfficiencyB;
         public int EnvironmentB;
         public int CostB;
+        */
     }
 }
