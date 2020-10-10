@@ -390,5 +390,4 @@
                 }
             ]
         }
-    ]
-}
+    "},{"Decisions":[{"Choice":"","Approval":1,"Efficiency":2,"Environment":3,"Finance":4},{"Choice":"","Approval":5,"Efficiency":6,"Environment":7,"Finance":8},{"Choice":"","Approval":9,"Efficiency":10,"Environment":11,"Finance":12},{"Choice":"","Approval":13,"Efficiency":14,"Environment":15,"Finance":16}],"Setup":"This is a text choose wisely"}]}
