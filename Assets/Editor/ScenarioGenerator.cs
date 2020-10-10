@@ -14,9 +14,9 @@ public class ScenarioGenerator : EditorWindow
     private string fileName;
     private string setup;
     
-    public List<Choice> choiceList = new List<Choice>();
+    public List<Choices> choiceList = new List<Choices>();
     
-    [MenuItem("Secnarios/Create")] 
+    [MenuItem("Scenarios/Create")] 
     public static void ShowWindow()
     {
         Array.Resize(ref scenarios.Setups, 1);
@@ -48,10 +48,10 @@ public class ScenarioGenerator : EditorWindow
             for (int i = 0; i < choiceList.Count; ++i)
             {
                 scenarios.Setups[0].Decisions[i] = new Choices();
-                scenarios.Setups[0].Decisions[i].Approval = choiceList[i].approval;
-                scenarios.Setups[0].Decisions[i].Efficiency = choiceList[i].efficiency;
-                scenarios.Setups[0].Decisions[i].Environment = choiceList[i].environment;
-                scenarios.Setups[0].Decisions[i].Cost = choiceList[i].cost;
+                scenarios.Setups[0].Decisions[i].Approval = choiceList[i].Approval;
+                scenarios.Setups[0].Decisions[i].Efficiency = choiceList[i].Efficiency;
+                scenarios.Setups[0].Decisions[i].Environment = choiceList[i].Environment;
+                scenarios.Setups[0].Decisions[i].Finance = choiceList[i].Finance;
             }
 
             string json = JsonUtility.ToJson(scenarios);
@@ -62,7 +62,7 @@ public class ScenarioGenerator : EditorWindow
                 json = json.Substring(12);
                 string currentFile = File.ReadAllText(path);
                 currentFile = currentFile.Substring(0, (currentFile.Length - 4));
-                currentFile += ",{" + json;
+                currentFile += "\"},{" + json;
                 File.WriteAllText(path, currentFile);
                 
             }

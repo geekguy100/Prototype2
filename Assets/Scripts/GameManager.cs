@@ -131,8 +131,8 @@ public class GameManager : MonoBehaviour
         int decisionIndex = choiceSelect.value;
         int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
         int efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
-        int envrionmentAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
-        int costAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
+        int envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment;
+        int costAdjust = currentSetup.Decisions[decisionIndex].Finance;
         /*
         if (isA)
         {
@@ -166,6 +166,7 @@ public class GameManager : MonoBehaviour
     private void UpdateText()
     {
         choicesText.text = "";
+        choiceSelect.ClearOptions();
         setupText.text = currentSetup.Setup;
         char currentLetter = 'A';
         List<string> availableChoices = new List<string>();

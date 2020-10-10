@@ -8,6 +8,6 @@ namespace FileLoading
         public int Approval;
         public int Efficiency;
         public int Environment;
-        public int Cost;
+        public int Finance;
     }
 }
