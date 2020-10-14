@@ -64,7 +64,11 @@ public class GameManager : MonoBehaviour
     /// removed from this list
     /// </summary>
     private List<int> validChoices = new List<int>();
-    
+
+    /// <summary>
+    /// A collection of all the possible endings
+    /// </summary>
+    private Endings endings;
     #endregion
     
     #region Stat variables
@@ -74,6 +78,11 @@ public class GameManager : MonoBehaviour
     private int environment = 50;
     private int cost = 50;
 
+    [Tooltip("Stats above this give the good ending")]
+    public int goodThreshold = 75;
+
+    [Tooltip("Stats above this, but below the good threshold, are given the neutral ending")]
+    public int neutralThreshold = 25;
     #endregion
 
     private void Start()
@@ -89,6 +98,8 @@ public class GameManager : MonoBehaviour
         scenarioListTrimmed.Insert(0, "Random");
         scenarioSelect.AddOptions(scenarioListTrimmed);
 
+        TextAsset endingsData = Resources.Load("Endings/endings") as TextAsset;
+        endings = JsonUtility.FromJson<Endings>(endingsData.text);
     }
     
     
@@ -128,20 +139,18 @@ public class GameManager : MonoBehaviour
     /// <param name="isA">True if choice A was selected, false otherwise</param>
     public void ChoiceSelect()
     {
+        // Prevent any changes from happening once the max number of choices is reached
+        if (choicesMade > maxChoices)
+        {
+            return;
+        }
+
         int decisionIndex = choiceSelect.value;
         int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
         int efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
         int envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment;
         int costAdjust = currentSetup.Decisions[decisionIndex].Finance;
-        /*
-        if (isA)
-        {
-            approvalAdjust = currentSetup.ApprovalA;
-            efficiencyAdjust = currentSetup.EfficiencyA;
-            envrionmentAdjust = currentSetup.EnvironmentA;
-            costAdjust = currentSetup.CostA;
-        }
-        */
+
         approval += approvalAdjust;
         efficiency += efficiencyAdjust;
         environment += envrionmentAdjust;
@@ -186,12 +195,63 @@ public class GameManager : MonoBehaviour
 
     /// <summary>
     /// Compare the values against specified thresholds and give an ending
-    /// TODO: Actually put in proper ending logic
     /// </summary>
     private void EndGame()
     {
-        Debug.Log(
-            $"Ending approval: {approval}\nEnding efficiency: {efficiency}\nEnding envrionment: {environment}\nEnding cost: {cost}");
+        string endingText = "";
+        
+        // I have it, make it better
+        // TODO: Better way of doing this. Maybe reformat json?
+        if (approval > goodThreshold)
+        {
+            endingText += endings.Good[0].Approval + "\n";
+        } else if (approval > neutralThreshold)
+        {
+            endingText += endings.Neutral[0].Approval + "\n";
+        }
+        else
+        {
+            endingText += endings.Bad[0].Approval + "\n";
+        }
+        
+        if (efficiency > goodThreshold)
+        {
+            endingText += endings.Good[0].Efficiency + "\n";
+        } else if (approval > neutralThreshold)
+        {
+            endingText += endings.Neutral[0].Efficiency + "\n";
+        }
+        else
+        {
+            endingText += endings.Bad[0].Efficiency + "\n";
+        }
+
+        if (environment > goodThreshold)
+        {
+            endingText += endings.Good[0].Environment + "\n";
+        } else if (approval > neutralThreshold)
+        {
+            endingText += endings.Neutral[0].Environment + "\n";
+        }
+        else
+        {
+            endingText += endings.Bad[0].Environment + "\n";
+        }
+        
+        if (cost > goodThreshold)
+        {
+            endingText += endings.Good[0].Finance + "\n";
+        } else if (approval > neutralThreshold)
+        {
+            endingText += endings.Neutral[0].Finance + "\n";
+        }
+        else
+        {
+            endingText += endings.Bad[0].Finance + "\n";
+        }
+
+        choicesText.text = "";
+        setupText.text = endingText;
     }
 
     /// <summary>

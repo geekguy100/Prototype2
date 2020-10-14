@@ -3389,7 +3389,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 7, y: 52}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 489.3, y: 181.1}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1790946470
 MonoBehaviour:
@@ -3418,7 +3418,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -3795,6 +3795,8 @@ MonoBehaviour:
   scenarioSelect: {fileID: 1406547779}
   choiceSelect: {fileID: 34786849}
   choicesText: {fileID: 1164516547}
+  goodThreshold: 75
+  neutralThreshold: 25
 --- !u!4 &2042046202
 Transform:
   m_ObjectHideFlags: 0

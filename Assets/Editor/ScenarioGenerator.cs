@@ -39,8 +39,8 @@ public class ScenarioGenerator : EditorWindow
         SerializedProperty property = so.FindProperty("choiceList");
         EditorGUILayout.PropertyField(property, true);
         so.ApplyModifiedProperties();
-
-
+        
+        
         if (GUILayout.Button("Save Setup"))
         {
             scenarios.Setups[0].Setup = setup;
@@ -48,6 +48,7 @@ public class ScenarioGenerator : EditorWindow
             for (int i = 0; i < choiceList.Count; ++i)
             {
                 scenarios.Setups[0].Decisions[i] = new Choices();
+                scenarios.Setups[0].Decisions[i].Choice = choiceList[i].Choice;
                 scenarios.Setups[0].Decisions[i].Approval = choiceList[i].Approval;
                 scenarios.Setups[0].Decisions[i].Efficiency = choiceList[i].Efficiency;
                 scenarios.Setups[0].Decisions[i].Environment = choiceList[i].Environment;

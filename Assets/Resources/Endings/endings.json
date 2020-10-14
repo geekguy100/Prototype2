@@ -1,0 +1,26 @@
+{
+  "Bad": [
+    {
+      "Approval": "BadApproval",
+      "Efficiency": "BadEfficiency",
+      "Environment": "BadEnvironment",
+      "Finance": "BadFinance"
+    }
+  ],
+  "Neutral": [
+    {
+      "Approval": "NeutralApproval",
+      "Efficiency": "NeutralEfficiency",
+      "Environment": "NeutralEnvironment",
+      "Finance": "NeutralFinance"
+    }
+  ],
+  "Good": [
+    {
+      "Approval": "GoodApproval",
+      "Efficiency": "GoodEfficiency",
+      "Environment": "GoodEnvironment",
+      "Finance": "GoodFinance"
+    }
+  ]
+}
