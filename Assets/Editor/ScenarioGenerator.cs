@@ -13,6 +13,7 @@ public class ScenarioGenerator : EditorWindow
 
     private string fileName;
     private string setup;
+    private string iconName;
     
     public List<Choices> choiceList = new List<Choices>();
     
@@ -33,21 +34,25 @@ public class ScenarioGenerator : EditorWindow
         fileName = EditorGUILayout.TextField(fileName);
         GUILayout.Label("Setup: ", EditorStyles.boldLabel);
         setup = EditorGUILayout.TextArea(setup);
+        GUILayout.Label("Icon name: ", EditorStyles.boldLabel);
+        iconName = EditorGUILayout.TextField(iconName);
         
         GUILayout.Label("Choices", EditorStyles.boldLabel);
         so = new SerializedObject(target);
         SerializedProperty property = so.FindProperty("choiceList");
         EditorGUILayout.PropertyField(property, true);
         so.ApplyModifiedProperties();
-
-
+        
+        
         if (GUILayout.Button("Save Setup"))
         {
             scenarios.Setups[0].Setup = setup;
+            scenarios.Setups[0].Icon = iconName;
             Array.Resize(ref scenarios.Setups[0].Decisions, choiceList.Count);
             for (int i = 0; i < choiceList.Count; ++i)
             {
                 scenarios.Setups[0].Decisions[i] = new Choices();
+                scenarios.Setups[0].Decisions[i].Choice = choiceList[i].Choice;
                 scenarios.Setups[0].Decisions[i].Approval = choiceList[i].Approval;
                 scenarios.Setups[0].Decisions[i].Efficiency = choiceList[i].Efficiency;
                 scenarios.Setups[0].Decisions[i].Environment = choiceList[i].Environment;

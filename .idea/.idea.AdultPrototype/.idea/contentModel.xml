@@ -14,10 +14,15 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="FileLoading" t="Include">
-            <e p="Choice.cs" t="Include" />
-            <e p="Choices.cs" t="Include" />
-            <e p="Scenario.cs" t="Include" />
-            <e p="Scenarios.cs" t="Include" />
+            <e p="Endings" t="Include">
+              <e p="Ending.cs" t="Include" />
+              <e p="Endings.cs" t="Include" />
+            </e>
+            <e p="Scenarios" t="Include">
+              <e p="Choices.cs" t="Include" />
+              <e p="Scenario.cs" t="Include" />
+              <e p="Scenarios.cs" t="Include" />
+            </e>
           </e>
           <e p="GameManager.cs" t="Include" />
         </e>
