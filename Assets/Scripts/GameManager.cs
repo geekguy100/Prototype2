@@ -2,6 +2,7 @@
 using System.IO;
 using FileLoading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -45,6 +46,18 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Text that displays all the options")]
     public Text choicesText;
+    
+    [Tooltip("The object that shows the scenario's icon")]
+    public Image scenarioIcon;
+
+    [Tooltip("The SpriteRenderer for the background")]
+    public SpriteRenderer backgroundRenderer;
+
+    [Tooltip("Button that shows on the game over screen")]
+    public GameObject restartButton;
+
+    [Tooltip("Button for selecting the current choice")]
+    public GameObject choiceButton;
     #endregion
     
     #region Scenario and Setup management
@@ -177,6 +190,7 @@ public class GameManager : MonoBehaviour
         choicesText.text = "";
         choiceSelect.ClearOptions();
         setupText.text = currentSetup.Setup;
+        scenarioIcon.sprite = Resources.Load<Sprite>("Icons/" + currentSetup.Icon);
         char currentLetter = 'A';
         List<string> availableChoices = new List<string>();
         foreach (var choice in currentSetup.Decisions)
@@ -204,53 +218,58 @@ public class GameManager : MonoBehaviour
         // TODO: Better way of doing this. Maybe reformat json?
         if (approval > goodThreshold)
         {
-            endingText += endings.Good[0].Approval + "\n";
+            endingText += endings.Good[0].Approval + "\n\n";
         } else if (approval > neutralThreshold)
         {
-            endingText += endings.Neutral[0].Approval + "\n";
+            endingText += endings.Neutral[0].Approval + "\n\n";
         }
         else
         {
-            endingText += endings.Bad[0].Approval + "\n";
+            endingText += endings.Bad[0].Approval + "\n\n";
         }
         
         if (efficiency > goodThreshold)
         {
-            endingText += endings.Good[0].Efficiency + "\n";
+            endingText += endings.Good[0].Efficiency + "\n\n";
         } else if (approval > neutralThreshold)
         {
-            endingText += endings.Neutral[0].Efficiency + "\n";
+            endingText += endings.Neutral[0].Efficiency + "\n\n";
         }
         else
         {
-            endingText += endings.Bad[0].Efficiency + "\n";
+            endingText += endings.Bad[0].Efficiency + "\n\n";
         }
 
         if (environment > goodThreshold)
         {
-            endingText += endings.Good[0].Environment + "\n";
+            endingText += endings.Good[0].Environment + "\n\n";
         } else if (approval > neutralThreshold)
         {
-            endingText += endings.Neutral[0].Environment + "\n";
+            endingText += endings.Neutral[0].Environment + "\n\n";
         }
         else
         {
-            endingText += endings.Bad[0].Environment + "\n";
+            endingText += endings.Bad[0].Environment + "\n\n";
         }
         
         if (cost > goodThreshold)
         {
-            endingText += endings.Good[0].Finance + "\n";
+            endingText += endings.Good[0].Finance + "\n\n";
         } else if (approval > neutralThreshold)
         {
-            endingText += endings.Neutral[0].Finance + "\n";
+            endingText += endings.Neutral[0].Finance + "\n\n";
         }
         else
         {
-            endingText += endings.Bad[0].Finance + "\n";
+            endingText += endings.Bad[0].Finance + "\n\n";
         }
 
         choicesText.text = "";
+        scenarioIcon.gameObject.SetActive(false);
+        choiceSelect.gameObject.SetActive(false);
+        choiceButton.SetActive(false);
+        restartButton.SetActive(true);
+        setupText.alignment = TextAnchor.UpperLeft;
         setupText.text = endingText;
     }
 
@@ -279,5 +298,22 @@ public class GameManager : MonoBehaviour
         // Subtracting 1 because Random is the 0-th element
         int selected = scenarioSelect.value - 1;
         ScenarioSelect(selected);
+    }
+
+    /// <summary>
+    /// Loads a scene with the given name
+    /// </summary>
+    /// <param name="sceneName">Name of the scene to load</param>
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    /// <summary>
+    /// Quits the game
+    /// </summary>
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
