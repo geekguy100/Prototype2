@@ -101,7 +101,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         string[] scenarioArray = Directory.GetFiles("Assets/Resources/Scenarios", "*.json");
-        /* Uncomment if multiple files/pools of setups
         List<string> scenarioListTrimmed = new List<string>();
         for (int i = 0; i < scenarioArray.Length; ++i)
         {
@@ -109,9 +108,8 @@ public class GameManager : MonoBehaviour
         }
 
         scenarioFiles = scenarioListTrimmed.ToArray();
-        scenarioListTrimmed.Insert(0, "Random");
-        scenarioSelect.AddOptions(scenarioListTrimmed);
-        */
+        //scenarioListTrimmed.Insert(0, "Random");
+        //scenarioSelect.AddOptions(scenarioListTrimmed);
         TextAsset endingsData = Resources.Load("Endings/endings") as TextAsset;
         endings = JsonUtility.FromJson<Endings>(endingsData.text);
     }
