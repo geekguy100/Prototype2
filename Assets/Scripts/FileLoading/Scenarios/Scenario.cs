@@ -6,6 +6,7 @@ namespace FileLoading
         public Choices[] Decisions;
         public string Setup;
 
+        public int ID;
         public string Icon;
         /*
         public string ChoiceA;
