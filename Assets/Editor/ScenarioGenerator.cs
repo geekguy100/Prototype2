@@ -14,7 +14,6 @@ public class ScenarioGenerator : EditorWindow
     private string fileName;
     private string setup;
     private string iconName;
-    private int id;
     
     public List<Choices> choiceList = new List<Choices>();
     
@@ -37,9 +36,6 @@ public class ScenarioGenerator : EditorWindow
         setup = EditorGUILayout.TextArea(setup);
         GUILayout.Label("Icon name: ", EditorStyles.boldLabel);
         iconName = EditorGUILayout.TextField(iconName);
-        GUILayout.Label("Setup ID Number: ", EditorStyles.boldLabel);
-        id = EditorGUILayout.IntField(id);
-        
         
         GUILayout.Label("Choices", EditorStyles.boldLabel);
         so = new SerializedObject(target);
@@ -52,7 +48,6 @@ public class ScenarioGenerator : EditorWindow
         {
             scenarios.Setups[0].Setup = setup;
             scenarios.Setups[0].Icon = iconName;
-            scenarios.Setups[0].ID = id;
             Array.Resize(ref scenarios.Setups[0].Decisions, choiceList.Count);
             for (int i = 0; i < choiceList.Count; ++i)
             {
