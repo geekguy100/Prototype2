@@ -2,6 +2,7 @@
 using System.IO;
 using FileLoading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -45,6 +46,18 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Text that displays all the options")]
     public Text choicesText;
+    
+    [Tooltip("The object that shows the scenario's icon")]
+    public Image scenarioIcon;
+
+    [Tooltip("The SpriteRenderer for the background")]
+    public SpriteRenderer backgroundRenderer;
+
+    [Tooltip("Button that shows on the game over screen")]
+    public GameObject restartButton;
+
+    [Tooltip("Button for selecting the current choice")]
+    public GameObject choiceButton;
     #endregion
     
     #region Scenario and Setup management
@@ -176,7 +189,8 @@ public class GameManager : MonoBehaviour
     {
         choicesText.text = "";
         choiceSelect.ClearOptions();
-        setupText.text = currentSetup.Setup;
+        setupText.text = "ID: " + currentSetup.ID + "\n" + currentSetup.Setup;
+        scenarioIcon.sprite = Resources.Load<Sprite>("Icons/" + currentSetup.Icon);
         char currentLetter = 'A';
         List<string> availableChoices = new List<string>();
         foreach (var choice in currentSetup.Decisions)
@@ -199,58 +213,83 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         string endingText = "";
-        
+        List<string> endingBackgrounds = new List<string>();
         // I have it, make it better
         // TODO: Better way of doing this. Maybe reformat json?
         if (approval > goodThreshold)
         {
-            endingText += endings.Good[0].Approval + "\n";
-        } else if (approval > neutralThreshold)
+            endingText += endings.Good[0].Approval + "\n\n";
+            endingBackgrounds.Add("Endings/Backgrounds/ApprovalGood");
+        } 
+        else if (approval > neutralThreshold)
         {
-            endingText += endings.Neutral[0].Approval + "\n";
+            endingText += endings.Neutral[0].Approval + "\n\n";
+            endingBackgrounds.Add("Endings/Backgrounds/ApprovalNeutral");
         }
         else
         {
-            endingText += endings.Bad[0].Approval + "\n";
+            endingText += endings.Bad[0].Approval + "\n\n";
+            endingBackgrounds.Add("Endings/Backgrounds/ApprovalBad");
         }
         
         if (efficiency > goodThreshold)
         {
-            endingText += endings.Good[0].Efficiency + "\n";
-        } else if (approval > neutralThreshold)
+            endingText += endings.Good[0].Efficiency + "\n\n";
+            endingBackgrounds.Add("Endings/Backgrounds/EfficiencyGood");
+        } 
+        else if (approval > neutralThreshold)
         {
-            endingText += endings.Neutral[0].Efficiency + "\n";
+            endingText += endings.Neutral[0].Efficiency + "\n\n";
+            endingBackgrounds.Add("Endings/Backgrounds/EfficiencyNeutral");
         }
         else
         {
-            endingText += endings.Bad[0].Efficiency + "\n";
+            endingText += endings.Bad[0].Efficiency + "\n\n";
+            endingBackgrounds.Add("Endings/Backgrounds/EfficiencyBad");
         }
 
         if (environment > goodThreshold)
         {
-            endingText += endings.Good[0].Environment + "\n";
-        } else if (approval > neutralThreshold)
+            endingText += endings.Good[0].Environment + "\n\n";
+            endingBackgrounds.Add("Endings/Backgrounds/EnvironmentGood");
+        } 
+        else if (approval > neutralThreshold)
         {
-            endingText += endings.Neutral[0].Environment + "\n";
+            endingText += endings.Neutral[0].Environment + "\n\n";
+            endingBackgrounds.Add("Endings/Backgrounds/EnvironmentNeutral");
         }
         else
         {
-            endingText += endings.Bad[0].Environment + "\n";
+            endingText += endings.Bad[0].Environment + "\n\n";
+            endingBackgrounds.Add("Endings/Backgrounds/EnvironmentBad");
         }
         
         if (cost > goodThreshold)
         {
-            endingText += endings.Good[0].Finance + "\n";
-        } else if (approval > neutralThreshold)
+            endingText += endings.Good[0].Finance + "\n\n";
+            endingBackgrounds.Add("Endings/Backgrounds/FinanceGood");
+        } 
+        else if (approval > neutralThreshold)
         {
-            endingText += endings.Neutral[0].Finance + "\n";
+            endingText += endings.Neutral[0].Finance + "\n\n";
+            endingBackgrounds.Add("Endings/Backgrounds/FinanceNeutral");
         }
         else
         {
-            endingText += endings.Bad[0].Finance + "\n";
+            endingText += endings.Bad[0].Finance + "\n\n";
+            endingBackgrounds.Add("Endings/Backgrounds/FinanceBad");
         }
 
+        int spriteIndex = Random.Range(0, endingBackgrounds.Count - 1);
+        Debug.Log($"Loading background {endingBackgrounds[spriteIndex]}");
+        backgroundRenderer.sprite = Resources.Load<Sprite>(endingBackgrounds[spriteIndex]);
+        
         choicesText.text = "";
+        scenarioIcon.gameObject.SetActive(false);
+        choiceSelect.gameObject.SetActive(false);
+        choiceButton.SetActive(false);
+        restartButton.SetActive(true);
+        setupText.alignment = TextAnchor.UpperLeft;
         setupText.text = endingText;
     }
 
@@ -279,5 +318,22 @@ public class GameManager : MonoBehaviour
         // Subtracting 1 because Random is the 0-th element
         int selected = scenarioSelect.value - 1;
         ScenarioSelect(selected);
+    }
+
+    /// <summary>
+    /// Loads a scene with the given name
+    /// </summary>
+    /// <param name="sceneName">Name of the scene to load</param>
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    /// <summary>
+    /// Quits the game
+    /// </summary>
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
