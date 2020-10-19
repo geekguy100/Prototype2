@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     [Tooltip("All the text files for each setup, one per setup. The ID is the files index in the array")]
-    public string[] scenarioFiles;
+    private string[] scenarioFiles;
 
     #region Choice Tracking
     
@@ -100,14 +100,16 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        string[] scenarioArray = Directory.GetFiles("Assets/Resources/Scenarios", "*.json");
-        List<string> scenarioListTrimmed = new List<string>();
-        for (int i = 0; i < scenarioArray.Length; ++i)
-        {
-            scenarioListTrimmed.Add(Path.GetFileNameWithoutExtension(scenarioArray[i]));
-        }
-
-        scenarioFiles = scenarioListTrimmed.ToArray();
+        //string[] scenarioArray = Directory.GetFiles("Assets/Resources/Scenarios", "*.json");
+        //List<string> scenarioListTrimmed = new List<string>();
+        //for (int i = 0; i < scenarioArray.Length; ++i)
+        //{
+        //    scenarioListTrimmed.Add(Path.GetFileNameWithoutExtension(scenarioArray[i]));
+        //}
+        
+        scenarioFiles = new string[] {"Scenarios"};
+        
+        //scenarioFiles = scenarioListTrimmed.ToArray();
         //scenarioListTrimmed.Insert(0, "Random");
         //scenarioSelect.AddOptions(scenarioListTrimmed);
         TextAsset endingsData = Resources.Load("Endings/endings") as TextAsset;
