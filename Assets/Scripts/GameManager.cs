@@ -58,6 +58,30 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Button for selecting the current choice")]
     public GameObject choiceButton;
+    
+    [Tooltip("Backgrounds for approval, lower indecies are worse")]
+    public List<Sprite> approvalBackgrounds = new List<Sprite>();
+    
+    [Tooltip("Backgrounds for efficnency, lower indecies are worse")]
+    public List<Sprite> efficiencyBackgrounds = new List<Sprite>();
+    
+    [Tooltip("Backgrounds for envrionment, lower indecies are worse")]
+    public List<Sprite> environmentBackgrounds = new List<Sprite>();
+    
+    [Tooltip("Backgrounds for finance, lower indecies are worse")]
+    public List<Sprite> financeBackgrounds = new List<Sprite>();
+    
+    [Tooltip("Sprite showing the current state of approval")]
+    public Sprite approvalSprite;
+    
+    [Tooltip("Sprite showing the current state of effienency")]
+    public Sprite efficiencySprite;
+    
+    [Tooltip("Sprite showing the current state of the environment")]
+    public Sprite envrionmentSprite;
+    
+    [Tooltip("Sprite showing the current state of finance")]
+    public Sprite financeSprite;
     #endregion
     
     #region Scenario and Setup management
@@ -150,7 +174,6 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Fired when a choice is made. Adjusts the stats and picks the next setup
     /// </summary>
-    /// <param name="isA">True if choice A was selected, false otherwise</param>
     public void ChoiceSelect()
     {
         // Prevent any changes from happening once the max number of choices is reached
@@ -160,15 +183,16 @@ public class GameManager : MonoBehaviour
         }
 
         int decisionIndex = choiceSelect.value;
-        int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
+        //int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
         int efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
         int envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment;
         int costAdjust = currentSetup.Decisions[decisionIndex].Finance;
-
-        approval += approvalAdjust;
+        
+        
         efficiency += efficiencyAdjust;
         environment += envrionmentAdjust;
         cost += costAdjust;
+        approval += (efficiency + environment + cost) / 3;
         
         ++choicesMade;
         if (choicesMade <= maxChoices)
@@ -200,6 +224,11 @@ public class GameManager : MonoBehaviour
             availableChoices.Add(currentLetter.ToString());
             ++currentLetter;
         }
+
+        approvalSprite = UpdateBackground(approval, approvalBackgrounds);
+        efficiencySprite = UpdateBackground(efficiency, efficiencyBackgrounds);
+        envrionmentSprite = UpdateBackground(environment, environmentBackgrounds);
+        financeSprite = UpdateBackground(cost, financeBackgrounds);
         
         choiceSelect.AddOptions(availableChoices);
         /*
@@ -336,5 +365,23 @@ public class GameManager : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    private Sprite UpdateBackground(int stat, List<Sprite> sprites)
+    {
+        Sprite background;
+        if (stat > goodThreshold)
+        {
+            background = sprites[2];
+        } else if (stat > neutralThreshold)
+        {
+            background = sprites[1];
+        }
+        else
+        {
+            background = sprites[0];
+        }
+
+        return background;
     }
 }
