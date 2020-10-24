@@ -23,6 +23,7 @@ public class FillBar : MonoBehaviour {
     // Use this for initialization
     void Start () {
         CurrentValue = 0f;
+        Debug.Log("Testing, ignore this");//quick change for push
     }
 	
     // Update is called once per frame
