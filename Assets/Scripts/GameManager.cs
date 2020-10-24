@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private string[] scenarioFiles;
 
     #region Choice Tracking
-    
+    [Header("Tracking and changing how many choices the players have")]
     [Tooltip("What is the maximum number of choices the players will have")]
     public int maxChoices = 12;
 
@@ -19,11 +19,56 @@ public class GameManager : MonoBehaviour
     /// How many choices the players have made so far
     /// </summary>
     private int choicesMade;
+
+    /// <summary>
+    /// Paths to the different backgrounds for the approval endings
+    /// </summary>
+    private string[] approvalEndingBackgrounds = 
+        {"Endings/Backgrounds/ApprovalBad", "Endings/Backgrounds/ApprovalNeutral", "Endings/Backgrounds/ApprovalGood"};
+
+    /// <summary>
+    /// Paths to the different backgrounds for the efficiency endings
+    /// </summary>
+    private string[]efficiencyEndingBackgrounds = 
+    {
+        "Endings/Backgrounds/EfficiencyBad", "Endings/Backgrounds/EfficiencyNeutral",
+        "Endings/Backgrounds/EfficiencyGood"
+    };
+
+    /// <summary>
+    /// Paths to the different backgrounds for the envrionment endings
+    /// </summary>
+    private string[] envrionmentEndingBackgrounds = 
+    {
+        "Endings/Backgrounds/EnvironmentBad", "Endings/Backgrounds/EnvironmentNeutral",
+        "Endings/Backgrounds/EnvironmentGood"
+    };
     
+    /// <summary>
+    /// Paths to the different backgrounds for the finance endings
+    /// </summary>
+    private string[] financeEndingBackgrounds = 
+        {"Endings/Backgrounds/FinanceBad", "Endings/Backgrounds/FinanceNeutral", "Endings/Backgrounds/FinanceGood"};
+
+    /// <summary>
+    /// Used to hold the information returned about the specific ending
+    /// </summary>
+    struct Ending
+    {
+        /// <summary>
+        /// The text of the ending
+        /// </summary>
+        public string text;
+        
+        /// <summary>
+        /// The path to the background of the ending 
+        /// </summary>
+        public string backgroundPath;
+    }
     #endregion
     
     #region GameObjects
-
+    [Header("GameObjects modified throughout the game")]
     [Tooltip("The text to show the current setup")]
     public Text setupText;
     
@@ -72,16 +117,19 @@ public class GameManager : MonoBehaviour
     public List<Sprite> financeBackgrounds = new List<Sprite>();
     
     [Tooltip("Sprite showing the current state of approval")]
-    public Sprite approvalSprite;
+    public SpriteRenderer approvalSprite;
     
     [Tooltip("Sprite showing the current state of effienency")]
-    public Sprite efficiencySprite;
+    public SpriteRenderer efficiencySprite;
     
     [Tooltip("Sprite showing the current state of the environment")]
-    public Sprite envrionmentSprite;
+    public SpriteRenderer envrionmentSprite;
     
     [Tooltip("Sprite showing the current state of finance")]
-    public Sprite financeSprite;
+    public SpriteRenderer financeSprite;
+
+    [Tooltip("Parent object of all background sprites")]
+    public GameObject backgroundStuff;
     #endregion
     
     #region Scenario and Setup management
@@ -109,17 +157,17 @@ public class GameManager : MonoBehaviour
     #endregion
     
     #region Stat variables
-
+    
     private int approval = 50;
     private int efficiency = 50;
     private int environment = 50;
     private int cost = 50;
 
-    [Tooltip("Stats above this give the good ending")]
-    public int goodThreshold = 75;
+    [Header("Thresholds for various changes and backgrounds")]
 
-    [Tooltip("Stats above this, but below the good threshold, are given the neutral ending")]
-    public int neutralThreshold = 25;
+    [Tooltip("Thresholds for the different backgrounds and endings")]
+    public int[] thresholds;
+    
     #endregion
 
     private void Start()
@@ -192,7 +240,7 @@ public class GameManager : MonoBehaviour
         efficiency += efficiencyAdjust;
         environment += envrionmentAdjust;
         cost += costAdjust;
-        approval += (efficiency + environment + cost) / 3;
+        approval = (efficiency + environment + cost) / 3;
         
         ++choicesMade;
         if (choicesMade <= maxChoices)
@@ -225,10 +273,10 @@ public class GameManager : MonoBehaviour
             ++currentLetter;
         }
 
-        approvalSprite = UpdateBackground(approval, approvalBackgrounds);
-        efficiencySprite = UpdateBackground(efficiency, efficiencyBackgrounds);
-        envrionmentSprite = UpdateBackground(environment, environmentBackgrounds);
-        financeSprite = UpdateBackground(cost, financeBackgrounds);
+        approvalSprite.sprite = UpdateBackground(approval, approvalBackgrounds);
+        efficiencySprite.sprite = UpdateBackground(efficiency, efficiencyBackgrounds);
+        envrionmentSprite.sprite = UpdateBackground(environment, environmentBackgrounds);
+        financeSprite.sprite = UpdateBackground(cost, financeBackgrounds);
         
         choiceSelect.AddOptions(availableChoices);
         /*
@@ -244,72 +292,23 @@ public class GameManager : MonoBehaviour
     {
         string endingText = "";
         List<string> endingBackgrounds = new List<string>();
-        // I have it, make it better
-        // TODO: Better way of doing this. Maybe reformat json?
-        if (approval > goodThreshold)
-        {
-            endingText += endings.Good[0].Approval + "\n\n";
-            endingBackgrounds.Add("Endings/Backgrounds/ApprovalGood");
-        } 
-        else if (approval > neutralThreshold)
-        {
-            endingText += endings.Neutral[0].Approval + "\n\n";
-            endingBackgrounds.Add("Endings/Backgrounds/ApprovalNeutral");
-        }
-        else
-        {
-            endingText += endings.Bad[0].Approval + "\n\n";
-            endingBackgrounds.Add("Endings/Backgrounds/ApprovalBad");
-        }
         
-        if (efficiency > goodThreshold)
-        {
-            endingText += endings.Good[0].Efficiency + "\n\n";
-            endingBackgrounds.Add("Endings/Backgrounds/EfficiencyGood");
-        } 
-        else if (approval > neutralThreshold)
-        {
-            endingText += endings.Neutral[0].Efficiency + "\n\n";
-            endingBackgrounds.Add("Endings/Backgrounds/EfficiencyNeutral");
-        }
-        else
-        {
-            endingText += endings.Bad[0].Efficiency + "\n\n";
-            endingBackgrounds.Add("Endings/Backgrounds/EfficiencyBad");
-        }
+        // TODO: Don't repeat the same code with small changes
+        Ending approvalEnd = TestEnding(approval, endings.Approval, approvalEndingBackgrounds);
+        Ending efficiencyEnd = TestEnding(efficiency, endings.Efficiency, efficiencyEndingBackgrounds);
+        Ending environmentEnd = TestEnding(environment, endings.Envrionment, envrionmentEndingBackgrounds);
+        Ending financeEnd = TestEnding(cost, endings.Finance, financeEndingBackgrounds);
 
-        if (environment > goodThreshold)
-        {
-            endingText += endings.Good[0].Environment + "\n\n";
-            endingBackgrounds.Add("Endings/Backgrounds/EnvironmentGood");
-        } 
-        else if (approval > neutralThreshold)
-        {
-            endingText += endings.Neutral[0].Environment + "\n\n";
-            endingBackgrounds.Add("Endings/Backgrounds/EnvironmentNeutral");
-        }
-        else
-        {
-            endingText += endings.Bad[0].Environment + "\n\n";
-            endingBackgrounds.Add("Endings/Backgrounds/EnvironmentBad");
-        }
+        endingText += approvalEnd.text + "\n\n";
+        endingText += efficiencyEnd.text + "\n\n";
+        endingText += environmentEnd.text + "\n\n";
+        endingText += financeEnd.text;
         
-        if (cost > goodThreshold)
-        {
-            endingText += endings.Good[0].Finance + "\n\n";
-            endingBackgrounds.Add("Endings/Backgrounds/FinanceGood");
-        } 
-        else if (approval > neutralThreshold)
-        {
-            endingText += endings.Neutral[0].Finance + "\n\n";
-            endingBackgrounds.Add("Endings/Backgrounds/FinanceNeutral");
-        }
-        else
-        {
-            endingText += endings.Bad[0].Finance + "\n\n";
-            endingBackgrounds.Add("Endings/Backgrounds/FinanceBad");
-        }
-
+        endingBackgrounds.Add(approvalEnd.backgroundPath);
+        endingBackgrounds.Add(efficiencyEnd.backgroundPath);
+        endingBackgrounds.Add(environmentEnd.backgroundPath);
+        endingBackgrounds.Add(financeEnd.backgroundPath);
+        
         int spriteIndex = Random.Range(0, endingBackgrounds.Count - 1);
         Debug.Log($"Loading background {endingBackgrounds[spriteIndex]}");
         backgroundRenderer.sprite = Resources.Load<Sprite>(endingBackgrounds[spriteIndex]);
@@ -319,6 +318,7 @@ public class GameManager : MonoBehaviour
         choiceSelect.gameObject.SetActive(false);
         choiceButton.SetActive(false);
         restartButton.SetActive(true);
+        backgroundStuff.SetActive(false);
         setupText.alignment = TextAnchor.UpperLeft;
         setupText.text = endingText;
     }
@@ -369,19 +369,35 @@ public class GameManager : MonoBehaviour
 
     private Sprite UpdateBackground(int stat, List<Sprite> sprites)
     {
-        Sprite background;
-        if (stat > goodThreshold)
+        Sprite background = sprites[0];
+
+        for (int i = 0; i < sprites.Count; ++i)
         {
-            background = sprites[2];
-        } else if (stat > neutralThreshold)
-        {
-            background = sprites[1];
-        }
-        else
-        {
-            background = sprites[0];
+            if (stat >= thresholds[i])
+            {
+                background = sprites[i];
+            }
         }
 
         return background;
+    }
+
+    private Ending TestEnding(int stat, string[] endings, string[] backgroundPaths)
+    {
+        Ending ending;
+        ending.text = endings[0];
+        ending.backgroundPath = backgroundPaths[0];
+
+        for (int i = 0; i < thresholds.Length; i += 3)
+        {
+            if (stat >= thresholds[i])
+            {
+                // Making sure not to go over the ending's length
+                ending.text = endings[i / 3];
+                ending.backgroundPath = backgroundPaths[i / 3];
+            }
+        }
+
+        return ending;
     }
 }
