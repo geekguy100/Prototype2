@@ -130,6 +130,9 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Parent object of all background sprites")]
     public GameObject backgroundStuff;
+
+    [Tooltip("Sliders for tracking player values")]
+    public Slider[] sliders;
     #endregion
     
     #region Scenario and Setup management
@@ -161,7 +164,7 @@ public class GameManager : MonoBehaviour
     private int approval = 50;
     private int efficiency = 50;
     private int environment = 50;
-    private int cost = 50;
+    private int finance = 50;
 
     [Header("Thresholds for various changes and backgrounds")]
 
@@ -239,8 +242,8 @@ public class GameManager : MonoBehaviour
         
         efficiency += efficiencyAdjust;
         environment += envrionmentAdjust;
-        cost += costAdjust;
-        approval = (efficiency + environment + cost) / 3;
+        finance += costAdjust;
+        approval = (efficiency + environment + finance) / 3;
         
         ++choicesMade;
         if (choicesMade <= maxChoices)
@@ -276,13 +279,17 @@ public class GameManager : MonoBehaviour
         approvalSprite.sprite = UpdateBackground(approval, approvalBackgrounds);
         efficiencySprite.sprite = UpdateBackground(efficiency, efficiencyBackgrounds);
         envrionmentSprite.sprite = UpdateBackground(environment, environmentBackgrounds);
-        financeSprite.sprite = UpdateBackground(cost, financeBackgrounds);
+        financeSprite.sprite = UpdateBackground(finance, financeBackgrounds);
         
         choiceSelect.AddOptions(availableChoices);
         /*
         choiceAText.text = currentSetup.ChoiceA;
         choiceBText.text = currentSetup.ChoiceB;
         */
+        sliders[0].value = approval/100f;
+        sliders[1].value = efficiency/100f;
+        sliders[2].value = environment/100f;
+        sliders[3].value = finance/100f;
     }
 
     /// <summary>
@@ -297,7 +304,7 @@ public class GameManager : MonoBehaviour
         Ending approvalEnd = TestEnding(approval, endings.Approval, approvalEndingBackgrounds);
         Ending efficiencyEnd = TestEnding(efficiency, endings.Efficiency, efficiencyEndingBackgrounds);
         Ending environmentEnd = TestEnding(environment, endings.Envrionment, envrionmentEndingBackgrounds);
-        Ending financeEnd = TestEnding(cost, endings.Finance, financeEndingBackgrounds);
+        Ending financeEnd = TestEnding(finance, endings.Finance, financeEndingBackgrounds);
 
         endingText += approvalEnd.text + "\n\n";
         endingText += efficiencyEnd.text + "\n\n";
