@@ -18,7 +18,7 @@
     ],
     "Setup":" A company specializing in protecting privacy of consumers from large scale companies offer to combine their new software, which ensures consumer’s electricity use is not shared to corporate businesses, with the computer system your company has been building to implement the smart grid and manage electricity. Do you take the deal?",
     "ID":1,
-    "Icon":"Eye icon"
+    "Icon":"Scenario 1"
   },
   {
     "Decisions": [
@@ -39,7 +39,7 @@
     ],
     "Setup":"You wish to build a new transformer station in an undeveloped area. The area is a very luscious swampland. Due to an increase in the amount of electricity needed in a nearby neighborhood a new transformer is required to be made.\r\n",
     "ID":2,
-    "Icon":"Transformer"
+    "Icon":"Scenario 2"
   },
   {
     "Decisions":[
@@ -60,7 +60,7 @@
     ],
     "Setup":"Currently there is a bill being considered where smart meters will be installed into individual homes to start the transition into the smart grid. However, there are rising concerns about the emissions of radio frequency emissions from the smart meters. The board has come to you on how to respond to public concerns. How do you recommend responding?",
     "ID":3,
-    "Icon":"House Icon"
+    "Icon":"Scenario 3"
   },
   {
     "Decisions":[
@@ -81,7 +81,7 @@
     ],
     "Setup":"Severe weather is becoming more common, and is causing more power outages. How do you combat this?",
     "ID":4,
-    "Icon":"Cloud Icon"
+    "Icon":"Scenario 4"
   },
   {
     "Decisions":[
@@ -102,7 +102,7 @@
     ],
     "Setup":"Your company is rolling Smart Meters out to all customers as an optional upgrade. How will you market this upgrade?",
     "ID":5,
-    "Icon":"Lightbulb"
+    "Icon":"Scenario 5"
   },
   {
     "Decisions":[
@@ -122,7 +122,7 @@
     ],
     "Setup":"Your company has spilled a large amount of oil into the ocean, how does your company respond?",
     "ID":6,
-    "Icon":"Oil Icon"
+    "Icon":"Scenario 6"
   },
   {
     "Decisions":[
@@ -143,7 +143,7 @@
     ],
     "Setup":"A giant monster attacks the community, destroying many generators. What do you replace the generators with?\r",
     "ID":7,
-    "Icon":"Monster Icon"
+    "Icon":"Scenario 7"
   },
   {
     "Decisions":[
@@ -164,7 +164,7 @@
     ],
     "Setup":"Workers who worked on/still support the old power grid system are getting upset that the smart grid is going to take away their jobs. How do you deal with this situation?",
     "ID":8,
-    "Icon":"Person Icon"
+    "Icon":"Scenario 8"
   },
   {
     "Decisions":[
@@ -199,7 +199,7 @@
     ],
     "Setup":"A large coal company is offering your company a great sum of money to implement their coal energy into the smart grid system. ",
     "ID":9,
-    "Icon":"Battery"
+    "Icon":"Scenario 9"
   },
   {
     "Decisions":[
@@ -227,7 +227,7 @@
     ],
     "Setup":"You have had a strong, successful startup for your Smart Grid system. How do you continue operations?",
     "ID":10,
-    "Icon":"Chart Arrow"
+    "Icon":"Scenario 10"
   },
   {
     "Decisions":[
@@ -255,7 +255,7 @@
     ],
     "Setup":"Your company plans on expanding its customer base by expanding into a new neighborhood. To do so, new energy generation will need to be created. Laws are forbidding the creation of fossil-fuel burning plants. What type of generators will you use?",
     "ID":11,
-    "Icon":"Transformer"
+    "Icon":"Scenario 11"
   },
   {
     "Decisions":[
@@ -276,7 +276,7 @@
     ],
     "Setup":"One of the most effective features of the smart grid is the ability to both manually and automatically divert power to and from specific areas in order to fit the needs of the system as a whole. At this moment, you do not have ability to do both options, which one do you choose?",
     "ID":12,
-    "Icon":"Lightbulb"
+    "Icon":"Scenario 12"
   },
   {
     "Decisions":[
@@ -297,7 +297,7 @@
     ],
     "Setup":"Someone on social media is claiming your Smart Meters are ineffective, and a waste of money. How will you respond?",
     "ID":13,
-    "Icon":"Person Icon"
+    "Icon":"Scenario 13"
   },
   {
     "Decisions":[
@@ -332,7 +332,7 @@
     ],
     "Setup":"Smart grids are trending on social media! The PR department wants to capitalize on it. What aspect of the smart grid would you like to focus on?",
     "ID":14,
-    "Icon":"Thumbs Up"
+    "Icon":"Scenario 14"
   }
 ]
 }
