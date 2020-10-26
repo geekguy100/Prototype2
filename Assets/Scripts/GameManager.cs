@@ -133,6 +133,9 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Sliders for tracking player values")]
     public Slider[] sliders;
+
+    [Tooltip("A holder for all the sliders")]
+    public GameObject sliderHolder;
     #endregion
     
     #region Scenario and Setup management
@@ -326,6 +329,7 @@ public class GameManager : MonoBehaviour
         choiceButton.SetActive(false);
         restartButton.SetActive(true);
         backgroundStuff.SetActive(false);
+        sliderHolder.SetActive(false);
         setupText.alignment = TextAnchor.UpperLeft;
         setupText.text = endingText;
     }

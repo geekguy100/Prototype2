@@ -20,44 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="962ac219-0b90-4050-b0bd-b391c4759b86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/endings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/endings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/ApprovalBad.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/ApprovalBad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/ApprovalBad.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/ApprovalBad.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyGood.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyGood.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyNeutral.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyNeutral.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyNeutral.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyNeutral.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EnvironmentBad.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EnvironmentBad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EnvironmentBad.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EnvironmentBad.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EnvironmentNeutral.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EnvironmentNeutral.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/FinanceNeutral.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/FinanceNeutral.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios.json.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Ending.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Ending.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Endings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Endings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Better 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Better 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Better 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Better 2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Better 3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Better 3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Neutral.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Neutral.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Worse 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Worse 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Worse 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Worse 2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Worse 3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Approval Worse 3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Art Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Art Background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Better 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Better 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Better 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Better 2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Better 3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Better 3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Neutral.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Neutral.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Worse 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Worse 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Worse 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Worse 2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Worse 3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/City Worse 3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Better 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Better 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Better 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Better 2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Neutral.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Neutral.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Worse 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Worse 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Worse 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Worse 2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Worse 3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Worse 3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Worse 4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Money Worse 4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Phone Base.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Phone Base.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Texture Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Texture Background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Tree Better 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Tree Better 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Tree Better 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Tree Better 2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Tree Neutral.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Tree Neutral.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Tree Worse 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Tree Worse 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Tree Worse 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Final ProtoType/Tree Worse 2.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,12 +84,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Ending.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/ScenarioGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios.json" />
         <option value="$PROJECT_DIR$/Assets/Editor/ScenarioEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Ending.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Endings.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Endings/endings.json" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios_old.json" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios.json" />
       </list>
     </option>
   </component>
@@ -156,10 +137,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11640">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="11640" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -188,6 +169,8 @@
       <workItem from="1603068675762" duration="2296000" />
       <workItem from="1603393562026" duration="3314000" />
       <workItem from="1603496901645" duration="4123000" />
+      <workItem from="1603736277098" duration="602000" />
+      <workItem from="1603737942610" duration="1793000" />
     </task>
     <servers />
   </component>
