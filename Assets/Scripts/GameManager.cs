@@ -160,6 +160,11 @@ public class GameManager : MonoBehaviour
     /// A collection of all the possible endings
     /// </summary>
     private Endings endings;
+
+    /// <summary>
+    /// Did the players get the godzilla setup
+    /// </summary>
+    private bool hadGozilla = false;
     #endregion
     
     #region Stat variables
@@ -220,7 +225,12 @@ public class GameManager : MonoBehaviour
         int choiceIndex = Random.Range(0, validChoices.Count);
 
         currentSetup = currentScenario.Setups[validChoices[choiceIndex]];
-        
+
+        if (currentSetup.ID == 7)
+        {
+            hadGozilla = true;
+        }
+
         // Remove the selected choice from the valid list
         validChoices.RemoveAt(choiceIndex);
     }
@@ -318,7 +328,10 @@ public class GameManager : MonoBehaviour
         endingBackgrounds.Add(efficiencyEnd.backgroundPath);
         endingBackgrounds.Add(environmentEnd.backgroundPath);
         endingBackgrounds.Add(financeEnd.backgroundPath);
-        
+        if (hadGozilla)
+        {
+            endingBackgrounds.Add("Endings/Backgrounds/GodzillaEnd");
+        }
         int spriteIndex = Random.Range(0, endingBackgrounds.Count - 1);
         Debug.Log($"Loading background {endingBackgrounds[spriteIndex]}");
         backgroundRenderer.sprite = Resources.Load<Sprite>(endingBackgrounds[spriteIndex]);
@@ -367,6 +380,7 @@ public class GameManager : MonoBehaviour
     /// <param name="sceneName">Name of the scene to load</param>
     public void LoadScene(string sceneName)
     {
+        hadGozilla = false;
         SceneManager.LoadScene(sceneName);
     }
 

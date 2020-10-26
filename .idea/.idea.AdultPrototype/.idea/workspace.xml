@@ -19,7 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="962ac219-0b90-4050-b0bd-b391c4759b86" name="Default Changelist" comment="" />
+    <list default="true" id="962ac219-0b90-4050-b0bd-b391c4759b86" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyGood.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyGood.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyNeutral.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyNeutral.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/FinanceNeutral.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/FinanceNeutral.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/GodzillaEnd.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/GodzillaEnd.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,9 +76,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Ending.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Endings.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Endings/endings.json" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios_old.json" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios.json" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -152,6 +159,7 @@
       <workItem from="1603496901645" duration="4123000" />
       <workItem from="1603736277098" duration="602000" />
       <workItem from="1603737942610" duration="2496000" />
+      <workItem from="1603753169024" duration="327000" />
     </task>
     <servers />
   </component>
