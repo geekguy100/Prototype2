@@ -332,7 +332,7 @@ public class GameManager : MonoBehaviour
         {
             endingBackgrounds.Add("Endings/Backgrounds/GodzillaEnd");
         }
-        int spriteIndex = Random.Range(0, endingBackgrounds.Count - 1);
+        int spriteIndex = Random.Range(0, endingBackgrounds.Count);
         Debug.Log($"Loading background {endingBackgrounds[spriteIndex]}");
         backgroundRenderer.sprite = Resources.Load<Sprite>(endingBackgrounds[spriteIndex]);
         

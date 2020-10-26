@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="962ac219-0b90-4050-b0bd-b391c4759b86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyGood.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyGood.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyNeutral.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyNeutral.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/FinanceNeutral.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/FinanceNeutral.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/GodzillaEnd.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/GodzillaEnd.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="962ac219-0b90-4050-b0bd-b391c4759b86" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,10 +118,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="6384">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="6384" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -159,7 +152,7 @@
       <workItem from="1603496901645" duration="4123000" />
       <workItem from="1603736277098" duration="602000" />
       <workItem from="1603737942610" duration="2496000" />
-      <workItem from="1603753169024" duration="327000" />
+      <workItem from="1603753169024" duration="832000" />
     </task>
     <servers />
   </component>
@@ -262,6 +255,23 @@
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603500510190" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
+          <line>335</line>
+          <properties documentPath="H:\Bradley\2020-2021\Semseter 1\IM 388\AdultPrototype\Assets\Scripts\GameManager.cs" initialLine="335">
+            <startOffsets>
+              <option value="11492" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11558" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#FileLoading.Setup" memberName="Choices" />
