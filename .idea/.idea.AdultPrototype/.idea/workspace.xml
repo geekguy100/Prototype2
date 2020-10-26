@@ -19,26 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="962ac219-0b90-4050-b0bd-b391c4759b86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/ApprovalBad.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/ApprovalBad.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/ApprovalBad.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/ApprovalBad.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyGood.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyGood.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyNeutral.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyNeutral.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyNeutral.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyNeutral.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EnvironmentBad.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EnvironmentBad.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EnvironmentBad.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EnvironmentBad.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EnvironmentNeutral.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EnvironmentNeutral.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/FinanceNeutral.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/FinanceNeutral.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios.json.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="962ac219-0b90-4050-b0bd-b391c4759b86" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +151,7 @@
       <workItem from="1603393562026" duration="3314000" />
       <workItem from="1603496901645" duration="4123000" />
       <workItem from="1603736277098" duration="602000" />
-      <workItem from="1603737942610" duration="1793000" />
+      <workItem from="1603737942610" duration="2496000" />
     </task>
     <servers />
   </component>
