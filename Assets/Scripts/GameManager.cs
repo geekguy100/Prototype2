@@ -319,6 +319,7 @@ public class GameManager : MonoBehaviour
     {
         endPanel.SetActive(true);
         gamePanel.SetActive(false);
+        /*
         string endingText = "";
         List<string> endingBackgrounds = new List<string>();
         
