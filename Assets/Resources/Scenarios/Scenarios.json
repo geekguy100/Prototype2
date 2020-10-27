@@ -30,7 +30,7 @@
         "Finance":10
       },
       {
-        "Choice":"Find a new place to build the transformer somewhere else and try to preserve the habitat",
+        "Choice":"Build the transformer somewhere else and try to preserve the habitat",
         "Approval":20,
         "Efficiency":-10,
         "Environment":-10,
