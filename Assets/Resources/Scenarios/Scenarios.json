@@ -16,7 +16,7 @@
         "Finance":20
       }
     ],
-    "Setup":" A company specializing in protecting privacy of consumers from large scale companies offer to combine their new software, which ensures consumer’s electricity use is not shared to corporate businesses, with the computer system your company has been building to implement the smart grid and manage electricity. Do you take the deal?",
+    "Setup":" A company specializing in protecting privacy of consumers from large scale companies offer to combine their new software, which ensures consumer’s electricity use is not shared to corporate businesses. With the computer system your company has been able to implement the smart grid and manage electricity. Do you take the deal?",
     "ID":1,
     "Icon":"Scenario 1"
   },
@@ -253,7 +253,7 @@
         "Finance": -5
       }
     ],
-    "Setup":"Your company plans on expanding its customer base by expanding into a new neighborhood. To do so, new energy generation will need to be created. Laws are forbidding the creation of fossil-fuel burning plants. What type of generators will you use?",
+    "Setup":"Your company plans on expanding its customer base by expanding into a new neighborhood. To do so, new energy generation will need to be created. What type of generators will you use?",
     "ID":11,
     "Icon":"Scenario 11"
   },
