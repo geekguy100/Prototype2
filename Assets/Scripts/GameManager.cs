@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
     public Text choicesText;
     
     [Tooltip("The object that shows the scenario's icon")]
-    public Spriter scenarioIcon;
+    public SpriteRenderer scenarioIcon;
 
     [Tooltip("The SpriteRenderer for the background")]
     public SpriteRenderer backgroundRenderer;
