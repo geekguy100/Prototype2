@@ -5579,8 +5579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05cf6753267cb5f4687d71fccbe898f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPanel: {fileID: 0}
-  gamePanel: {fileID: 0}
+  endPanel: {fileID: 519441188}
+  gamePanel: {fileID: 1114290037}
   maxChoices: 12
   setupText: {fileID: 1790946470}
   choiceAText: {fileID: 1157898379}
