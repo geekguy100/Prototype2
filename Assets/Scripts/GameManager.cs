@@ -470,7 +470,7 @@ public class GameManager : MonoBehaviour
         if(hadGodzilla)
         {
             allEndings.Add("Endings/Backgrounds/GodzillaEnd");
-           for(int i = 0; i < 4; i ++)
+           for(int i = 0; i < 9; i ++)
             {
                 allEndings.Add(switcher.backgroundPath);
             }
