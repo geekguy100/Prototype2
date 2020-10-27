@@ -1090,7 +1090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 540, y: -230}
+  m_AnchoredPosition: {x: 540, y: -260}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &105167824
@@ -2239,8 +2239,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 15}
-  m_SizeDelta: {x: 682.38, y: 383.85}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 685, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &519441190
 MonoBehaviour:
@@ -2949,7 +2949,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 314, y: -205}
+  m_AnchoredPosition: {x: -330, y: -205}
   m_SizeDelta: {x: 120, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764521459
@@ -5497,6 +5497,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05cf6753267cb5f4687d71fccbe898f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPanel: {fileID: 519441188}
+  gamePanel: {fileID: 1114290037}
   maxChoices: 12
   setupText: {fileID: 1790946470}
   choiceAText: {fileID: 1157898379}
@@ -5506,7 +5508,7 @@ MonoBehaviour:
   scenarioSelect: {fileID: 0}
   choiceSelect: {fileID: 34786849}
   choicesText: {fileID: 1164516547}
-  scenarioIcon: {fileID: 1622426148}
+  scenarioIcon: {fileID: 0}
   backgroundRenderer: {fileID: 436335536}
   restartButton: {fileID: 666610067}
   choiceButton: {fileID: 305985798}
