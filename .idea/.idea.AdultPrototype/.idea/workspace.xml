@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="962ac219-0b90-4050-b0bd-b391c4759b86" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Ending.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Ending.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Endings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Endings.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,12 +73,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Ending.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/ScenarioGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/ScenarioEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Ending.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Endings.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Endings/endings.json" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios_old.json" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios.json" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Ending.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Endings.cs" />
       </list>
     </option>
   </component>
@@ -157,6 +160,8 @@
       <workItem from="1603736277098" duration="602000" />
       <workItem from="1603737942610" duration="2496000" />
       <workItem from="1603753169024" duration="1007000" />
+      <workItem from="1603754354218" duration="292000" />
+      <workItem from="1603761176914" duration="544000" />
     </task>
     <servers />
   </component>
@@ -259,23 +264,6 @@
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603500510190" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs</url>
-          <line>335</line>
-          <properties documentPath="H:\Bradley\2020-2021\Semseter 1\IM 388\AdultPrototype\Assets\Scripts\GameManager.cs" initialLine="335">
-            <startOffsets>
-              <option value="11488" />
-            </startOffsets>
-            <endOffsets>
-              <option value="11554" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#FileLoading.Setup" memberName="Choices" />

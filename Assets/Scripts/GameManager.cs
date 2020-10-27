@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     [Tooltip("All the text files for each setup, one per setup. The ID is the files index in the array")]
     private string[] scenarioFiles;
 
+    public GameObject endPanel;
+    public GameObject gamePanel;
+
     #region Choice Tracking
     [Header("Tracking and changing how many choices the players have")]
     [Tooltip("What is the maximum number of choices the players will have")]
@@ -93,7 +96,7 @@ public class GameManager : MonoBehaviour
     public Text choicesText;
     
     [Tooltip("The object that shows the scenario's icon")]
-    public Image scenarioIcon;
+    public SpriteRenderer scenarioIcon;
 
     [Tooltip("The SpriteRenderer for the background")]
     public SpriteRenderer backgroundRenderer;
@@ -314,7 +317,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void EndGame()
     {
-        /*
+        endPanel.SetActive(true);
+        gamePanel.SetActive(false);
         string endingText = "";
         List<string> endingBackgrounds = new List<string>();
         
