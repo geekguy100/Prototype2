@@ -136,6 +136,8 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("A holder for all the sliders")]
     public GameObject sliderHolder;
+
+
     #endregion
     
     #region Scenario and Setup management
@@ -164,16 +166,18 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Did the players get the godzilla setup
     /// </summary>
-    private bool hadGozilla = false;
+    private bool hadGodzilla = false;
     #endregion
-    
+
     #region Stat variables
-    
+
+    /*
     private int approval = 50;
     private int efficiency = 50;
     private int environment = 50;
     private int finance = 50;
-
+    */
+    private int[] stats = { 50, 50, 50, 50 };
     [Header("Thresholds for various changes and backgrounds")]
 
     [Tooltip("Thresholds for the different backgrounds and endings")]
@@ -228,7 +232,7 @@ public class GameManager : MonoBehaviour
 
         if (currentSetup.ID == 7)
         {
-            hadGozilla = true;
+            hadGodzilla = true;
         }
 
         // Remove the selected choice from the valid list
@@ -253,10 +257,10 @@ public class GameManager : MonoBehaviour
         int costAdjust = currentSetup.Decisions[decisionIndex].Finance;
         
         
-        efficiency += efficiencyAdjust;
-        environment += envrionmentAdjust;
-        finance += costAdjust;
-        approval = (efficiency + environment + finance) / 3;
+        stats[1] += efficiencyAdjust;
+        stats[2] += envrionmentAdjust;
+        stats[3] += costAdjust;
+        stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
         
         ++choicesMade;
         if (choicesMade <= maxChoices)
@@ -289,20 +293,20 @@ public class GameManager : MonoBehaviour
             ++currentLetter;
         }
 
-        approvalSprite.sprite = UpdateBackground(approval, approvalBackgrounds);
-        efficiencySprite.sprite = UpdateBackground(efficiency, efficiencyBackgrounds);
-        envrionmentSprite.sprite = UpdateBackground(environment, environmentBackgrounds);
-        financeSprite.sprite = UpdateBackground(finance, financeBackgrounds);
+        approvalSprite.sprite = UpdateBackground(stats[0], approvalBackgrounds);
+        efficiencySprite.sprite = UpdateBackground(stats[1], efficiencyBackgrounds);
+        envrionmentSprite.sprite = UpdateBackground(stats[2], environmentBackgrounds);
+        financeSprite.sprite = UpdateBackground(stats[3], financeBackgrounds);
         
         choiceSelect.AddOptions(availableChoices);
         /*
         choiceAText.text = currentSetup.ChoiceA;
         choiceBText.text = currentSetup.ChoiceB;
         */
-        sliders[0].value = approval/100f;
-        sliders[1].value = efficiency/100f;
-        sliders[2].value = environment/100f;
-        sliders[3].value = finance/100f;
+        sliders[0].value = stats[0]/100f;
+        sliders[1].value = stats[1]/100f;
+        sliders[2].value = stats[2]/100f;
+        sliders[3].value = stats[3]/100f;
     }
 
     /// <summary>
@@ -310,14 +314,15 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void EndGame()
     {
+        /*
         string endingText = "";
         List<string> endingBackgrounds = new List<string>();
         
         // TODO: Don't repeat the same code with small changes
-        Ending approvalEnd = TestEnding(approval, endings.Approval, approvalEndingBackgrounds);
-        Ending efficiencyEnd = TestEnding(efficiency, endings.Efficiency, efficiencyEndingBackgrounds);
-        Ending environmentEnd = TestEnding(environment, endings.Envrionment, envrionmentEndingBackgrounds);
-        Ending financeEnd = TestEnding(finance, endings.Finance, financeEndingBackgrounds);
+        Ending approvalEnd = TestEnding(stats[0], endings.Approval, approvalEndingBackgrounds);
+        Ending efficiencyEnd = TestEnding(stats[1], endings.Efficiency, efficiencyEndingBackgrounds);
+        Ending environmentEnd = TestEnding(stats[2], endings.Envrionment, envrionmentEndingBackgrounds);
+        Ending financeEnd = TestEnding(stats[3], endings.Finance, financeEndingBackgrounds);
 
         endingText += approvalEnd.text + "\n\n";
         endingText += efficiencyEnd.text + "\n\n";
@@ -335,7 +340,7 @@ public class GameManager : MonoBehaviour
         int spriteIndex = Random.Range(0, endingBackgrounds.Count);
         Debug.Log($"Loading background {endingBackgrounds[spriteIndex]}");
         backgroundRenderer.sprite = Resources.Load<Sprite>(endingBackgrounds[spriteIndex]);
-        
+        */
         choicesText.text = "";
         scenarioIcon.gameObject.SetActive(false);
         choiceSelect.gameObject.SetActive(false);
@@ -344,7 +349,8 @@ public class GameManager : MonoBehaviour
         backgroundStuff.SetActive(false);
         sliderHolder.SetActive(false);
         setupText.alignment = TextAnchor.UpperLeft;
-        setupText.text = endingText;
+        //setupText.text = endingText;
+        endingButton();
     }
 
     /// <summary>
@@ -380,7 +386,7 @@ public class GameManager : MonoBehaviour
     /// <param name="sceneName">Name of the scene to load</param>
     public void LoadScene(string sceneName)
     {
-        hadGozilla = false;
+        hadGodzilla = false;
         SceneManager.LoadScene(sceneName);
     }
 
@@ -424,5 +430,54 @@ public class GameManager : MonoBehaviour
         }
 
         return ending;
+    }
+    int endingsSeen = 0;
+
+    public void endingButton()
+    {
+        List<string> allEndings = new List<string>();
+        //set setup text to text that needs to be shown, and set ending background to background that needs to be shown
+        if(endingsSeen > 3)
+        {
+            LoadScene("SampleScene");
+        }
+        Ending switcher;
+        if (endingsSeen == 0)//approval
+        {
+            switcher = TestEnding(stats[0], endings.Approval, approvalEndingBackgrounds);
+        }
+        else if(endingsSeen == 1)//efficiency
+        {
+            switcher = TestEnding(stats[1], endings.Efficiency, efficiencyEndingBackgrounds);
+        }
+        else if(endingsSeen == 2)//environment
+        {
+            switcher = TestEnding(stats[2], endings.Envrionment, envrionmentEndingBackgrounds);
+        }
+        else//finance
+        {
+            switcher = TestEnding(stats[3], endings.Finance, financeEndingBackgrounds);
+            restartButton.transform.GetChild(0).GetComponent<Text>().text = "Restart Game";
+        }
+        setupText.text = switcher.text;
+        ++endingsSeen;
+        allEndings.Add(switcher.backgroundPath);
+        if(hadGodzilla)
+        {
+            allEndings.Add("Endings/Backgrounds/GodzillaEnd");
+           for(int i = 0; i < 4; i ++)
+            {
+                allEndings.Add(switcher.backgroundPath);
+            }
+        }
+
+        int randZilla = Random.Range(0, allEndings.Count);
+        backgroundRenderer.sprite = Resources.Load<Sprite>(allEndings[randZilla]);
+        if(randZilla == 1)
+        {
+            hadGodzilla = false;
+        }
+       
+        
     }
 }
