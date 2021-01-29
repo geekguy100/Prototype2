@@ -20,10 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="962ac219-0b90-4050-b0bd-b391c4759b86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdultPrototype/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyBad.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/Backgrounds/EfficiencyBad.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Endings/endings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Endings/endings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/ScenarioEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ScenarioEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Ending.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Ending.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Endings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Endings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Scenarios/Choices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Scenarios/Choices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Scenarios/Scenario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Scenarios/Scenario.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Scenarios/Scenarios.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FileLoading/Scenarios/Scenarios.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundBehaviour.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,42 +52,23 @@
     <option name="projectConfigVersion" value="2" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Editor/ScenarioGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../../Unity Versions/2020.1.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/49F4E7E7-91CC-4FFF-ACD8-8F729E2B1E4C/28/096eb8a4/InvokableCall.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/93CC9D9D-D3CB-438F-827B-811749B7E486/73/9c64a67b/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/ScenarioGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Unity Versions/2020.1.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Files/FileReader.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Scenarios/ScenarioHolder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Scenarios/Scenario.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Scenarios/Scenarios.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Scenarios.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Setupsd.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Setup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/oldTest.json" />
-        <option value="$PROJECT_DIR$/Assets/Resources/test.json" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Choice.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scenarios/llamas.json" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scenarios/alpacas.json" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scenarios/test.json" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Scenario.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Choices.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Ending.cs" />
-        <option value="$PROJECT_DIR$/Assets/Editor/ScenarioGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Editor/ScenarioEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios_old.json" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Ending.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Endings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Scenarios/Scenarios.json" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Endings/endings.json" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Editor/ScenarioEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Scenarios/Scenario.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Scenarios/Scenarios.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Scenarios/Choices.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Ending.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/FileLoading/Endings/Endings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SoundBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1iYzJv20GZVepHbgnjBZCMYUxAE" />
   <component name="ProjectLevelVcsManager">
@@ -95,6 +84,7 @@
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -120,7 +110,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -129,7 +119,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -162,7 +152,9 @@
       <workItem from="1603754354218" duration="292000" />
       <workItem from="1603761176914" duration="4152000" />
       <workItem from="1603768329373" duration="1391000" />
-      <workItem from="1603771521026" duration="809000" />
+      <workItem from="1603771521026" duration="829000" />
+      <workItem from="1605388126279" duration="807000" />
+      <workItem from="1611880519157" duration="2340000" />
     </task>
     <servers />
   </component>

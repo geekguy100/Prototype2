@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+    THIS IS CURRENTLY BROKEN, DO NOT USE!!!!!!!!!!!!!!!!!!!!
+    Intended use is load the Scenarios.json file into an Editor window
+    and allow for easy modification to it
+*/
+
+using System;
 using System.Collections.Generic;
 using FileLoading;
 using UnityEditor;

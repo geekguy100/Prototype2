@@ -1,3 +1,6 @@
+/*
+ * Unused, should be safe to delete.
+ */
 namespace FileLoading
 {
     [System.Serializable]
