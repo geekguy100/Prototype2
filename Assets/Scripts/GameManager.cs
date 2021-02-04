@@ -247,8 +247,13 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void NextSetup()
     {
+        //REDACTED by Ein
         // Pick a random choice from the valid ones left
-        int choiceIndex = Random.Range(0, validChoices.Count);
+        //int choiceIndex = Random.Range(0, validChoices.Count);
+
+        //Added by Ein
+        //select the bottom choice from the valid ones left
+        int choiceIndex = 0;
 
         // Set the current setup to the one chosen
         currentSetup = currentScenario.Setups[validChoices[choiceIndex]];
