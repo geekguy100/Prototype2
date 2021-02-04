@@ -26,6 +26,11 @@ public class GameManager : MonoBehaviour
     private int choicesMade;
 
     /// <summary>
+    /// Holds choice that the player has clicked but not submitted
+    /// </summary>
+    private int currentSelection;
+
+    /// <summary>
     /// Paths to the different backgrounds for the approval endings
     /// </summary>
     private string[] approvalEndingBackgrounds = 
@@ -271,7 +276,7 @@ public class GameManager : MonoBehaviour
 
         // Which choice the players made
         //int decisionIndex = choiceSelect.value;
-        int decisionIndex = 1;
+        int decisionIndex = currentSelection;
         
         // Below line ties approval into the decision system directly
         //int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
@@ -285,6 +290,16 @@ public class GameManager : MonoBehaviour
         stats[1] += efficiencyAdjust;
         stats[2] += envrionmentAdjust;
         stats[3] += costAdjust;
+
+        // Resets choice variables/buttons
+        // 0 is default for now, need to add popup if player tries to submit without making a selection
+        currentSelection = 0;
+        // Resets button colors - change later for efficiency
+        foreach (Button b in choiceButtons)
+        {
+            b.GetComponent<Image>().color = Color.white;
+        }
+
         // Approval is the average of the 3 other stats.
         stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
         
@@ -328,22 +343,27 @@ public class GameManager : MonoBehaviour
             // Set the text with the proper letter prefix
             //choicesText.text += currentLetter + ": " + choice.Choice + "\n";
             choiceTexts[currentText].GetComponent<Text>().text = currentLetter + ": " + choice.Choice;
+
+            // Activates any choice buttons that are inactive and will be used
             if (!choiceTexts[currentText].transform.parent.gameObject.activeInHierarchy)
             {
                 choiceTexts[currentText].transform.parent.gameObject.SetActive(true);
             }
+
             // Add the choice to the list to be added to the dropdown
             availableChoices.Add(currentText.ToString());
             // Increment the prefix
             ++currentText;
             ++currentLetter;
         }
+
+        // Sets all unused choice buttons to inactive
         while (currentText <= 3)
         {
             choiceTexts[currentText].transform.parent.gameObject.SetActive(false);
             currentText++;
         }
-        currentText = 0;
+
 
         // Change the persistant background (black one) depending on the values of the stats
         approvalSprite.sprite = UpdateBackground(stats[0], approvalBackgrounds);
@@ -564,4 +584,22 @@ public class GameManager : MonoBehaviour
        
         
     }
+
+    /// <summary>
+    /// Holds the index of the choice and changes the color of the button when the player
+    /// clicks one of the choice buttons.
+    /// </summary>
+    /// <param name="index">Index of the player's choice</param>
+    public void HoldSelection(int index)
+    {
+        Debug.Log(index);
+        currentSelection = index;
+        foreach (Button b in choiceButtons)
+        {
+            b.GetComponent<Image>().color = Color.white;
+        }
+        choiceButtons[index].GetComponent<Image>().color = Color.yellow;
+    }
+
+
 }
