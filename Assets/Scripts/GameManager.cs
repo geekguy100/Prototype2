@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    // uncomment lines 320, 267 to go back to dropdown system
+
     [Tooltip("All the text files for each setup, one per setup. The ID is the files index in the array")]
     private string[] scenarioFiles;
 
@@ -106,7 +108,7 @@ public class GameManager : MonoBehaviour
     public GameObject restartButton;
 
     [Tooltip("Button for selecting the current choice")]
-    public GameObject choiceButton;
+    public GameObject submitButton;
     
     [Tooltip("Backgrounds for approval, lower indecies are worse")]
     public List<Sprite> approvalBackgrounds = new List<Sprite>();
@@ -140,6 +142,12 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("A holder for all the sliders")]
     public GameObject sliderHolder;
+
+    [Tooltip("Buttons to track player choice")]
+    public Button[] choiceButtons;
+
+    [Tooltip("Text on each choice button")]
+    public Text[] choiceTexts;
 
 
     #endregion
@@ -260,9 +268,10 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-        
+
         // Which choice the players made
-        int decisionIndex = choiceSelect.value;
+        //int decisionIndex = choiceSelect.value;
+        int decisionIndex = 1;
         
         // Below line ties approval into the decision system directly
         //int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
@@ -307,20 +316,34 @@ public class GameManager : MonoBehaviour
         
         // Load the background image (the red ones)
         scenarioIcon.sprite = Resources.Load<Sprite>("Icons/" + currentSetup.Icon);
-        
+
         // Set up a char to increment. By adding 1 to a char, it moves to the next letter (A -> B -> C etc...)
         char currentLetter = 'A';
+        int currentText = 0;
         List<string> availableChoices = new List<string>();
         // Load the dropdown with the choices
+        
         foreach (var choice in currentSetup.Decisions)
         {
             // Set the text with the proper letter prefix
-            choicesText.text += currentLetter + ": " + choice.Choice + "\n";
+            //choicesText.text += currentLetter + ": " + choice.Choice + "\n";
+            choiceTexts[currentText].GetComponent<Text>().text = currentLetter + ": " + choice.Choice;
+            if (!choiceTexts[currentText].transform.parent.gameObject.activeInHierarchy)
+            {
+                choiceTexts[currentText].transform.parent.gameObject.SetActive(true);
+            }
             // Add the choice to the list to be added to the dropdown
-            availableChoices.Add(currentLetter.ToString());
+            availableChoices.Add(currentText.ToString());
             // Increment the prefix
+            ++currentText;
             ++currentLetter;
         }
+        while (currentText <= 3)
+        {
+            choiceTexts[currentText].transform.parent.gameObject.SetActive(false);
+            currentText++;
+        }
+        currentText = 0;
 
         // Change the persistant background (black one) depending on the values of the stats
         approvalSprite.sprite = UpdateBackground(stats[0], approvalBackgrounds);
@@ -350,9 +373,13 @@ public class GameManager : MonoBehaviour
 
         // Turn off all the gameplay UI objects
         choicesText.text = "";
+        foreach(Button b in choiceButtons)
+        {
+            b.gameObject.SetActive(false);
+        }
         scenarioIcon.gameObject.SetActive(false);
         choiceSelect.gameObject.SetActive(false);
-        choiceButton.SetActive(false);
+        submitButton.SetActive(false);
         backgroundStuff.SetActive(false);
         sliderHolder.SetActive(false);
         
