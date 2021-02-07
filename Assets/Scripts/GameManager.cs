@@ -7,10 +7,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    // uncomment lines 320, 267 to go back to dropdown system
 
     [Tooltip("All the text files for each setup, one per setup. The ID is the files index in the array")]
     private string[] scenarioFiles;
+
+    public GameObject noSelectionPanel;
 
     public GameObject endPanel;
     public GameObject gamePanel;
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Holds choice that the player has clicked but not submitted
     /// </summary>
-    private int currentSelection;
+    private int currentSelection = -1;
 
     /// <summary>
     /// Paths to the different backgrounds for the approval endings
@@ -282,42 +283,50 @@ public class GameManager : MonoBehaviour
         // Which choice the players made
         //int decisionIndex = choiceSelect.value;
         int decisionIndex = currentSelection;
-        
-        // Below line ties approval into the decision system directly
-        //int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
-        // Set the adjustments for the stats
-        int efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
-        int envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment;
-        int costAdjust = currentSetup.Decisions[decisionIndex].Finance;
-        
-        
-        // Actually update the stats
-        stats[1] += efficiencyAdjust;
-        stats[2] += envrionmentAdjust;
-        stats[3] += costAdjust;
 
-        // Resets choice variables/buttons
-        // 0 is default for now, need to add popup if player tries to submit without making a selection
-        currentSelection = 0;
-        // Resets button colors - change later for efficiency
-        foreach (Button b in choiceButtons)
+        if (decisionIndex < 0)
         {
-            b.GetComponent<Image>().color = Color.white;
-        }
-
-        // Approval is the average of the 3 other stats.
-        stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
-        
-        ++choicesMade;
-        // If all choices have been made, end the game
-        if (choicesMade <= maxChoices)
-        {
-            NextSetup();
-            UpdateText();
+            noSelectionPanel.SetActive(true);
+            Invoke("HideNoSelectionPanel", 2.5f);
         }
         else
         {
-            EndGame();
+            // Below line ties approval into the decision system directly
+            //int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
+            // Set the adjustments for the stats
+            int efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
+            int envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment;
+            int costAdjust = currentSetup.Decisions[decisionIndex].Finance;
+
+
+            // Actually update the stats
+            stats[1] += efficiencyAdjust;
+            stats[2] += envrionmentAdjust;
+            stats[3] += costAdjust;
+
+            // Resets choice variables/buttons
+            // Sets currentSelection to -1 to make sure player makes a selection before submitting
+            currentSelection = -1;
+            // Resets button colors - change later for efficiency
+            foreach (Button b in choiceButtons)
+            {
+                b.GetComponent<Image>().color = Color.white;
+            }
+
+            // Approval is the average of the 3 other stats.
+            stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
+
+            ++choicesMade;
+            // If all choices have been made, end the game
+            if (choicesMade <= maxChoices)
+            {
+                NextSetup();
+                UpdateText();
+            }
+            else
+            {
+                EndGame();
+            }
         }
     }
 
@@ -597,8 +606,16 @@ public class GameManager : MonoBehaviour
     /// <param name="index">Index of the player's choice</param>
     public void HoldSelection(int index)
     {
-        Debug.Log(index);
+        // Hides no selection panel
+        if (noSelectionPanel.activeInHierarchy)
+        {
+            noSelectionPanel.SetActive(false);
+        }
+
+        // Stores index of player's current selection
         currentSelection = index;
+
+        // Sets all buttons except the one clicked to white, one clicked goes to yellow
         foreach (Button b in choiceButtons)
         {
             b.GetComponent<Image>().color = Color.white;
