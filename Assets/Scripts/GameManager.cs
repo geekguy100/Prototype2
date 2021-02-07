@@ -34,13 +34,13 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Paths to the different backgrounds for the approval endings
     /// </summary>
-    private string[] approvalEndingBackgrounds = 
+    private string[] approvalEndingBackgrounds =
         {"Endings/Backgrounds/ApprovalBad", "Endings/Backgrounds/ApprovalNeutral", "Endings/Backgrounds/ApprovalGood"};
 
     /// <summary>
     /// Paths to the different backgrounds for the efficiency endings
     /// </summary>
-    private string[]efficiencyEndingBackgrounds = 
+    private string[]efficiencyEndingBackgrounds =
     {
         "Endings/Backgrounds/EfficiencyBad", "Endings/Backgrounds/EfficiencyNeutral",
         "Endings/Backgrounds/EfficiencyGood"
@@ -49,16 +49,16 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Paths to the different backgrounds for the envrionment endings
     /// </summary>
-    private string[] envrionmentEndingBackgrounds = 
+    private string[] envrionmentEndingBackgrounds =
     {
         "Endings/Backgrounds/EnvironmentBad", "Endings/Backgrounds/EnvironmentNeutral",
         "Endings/Backgrounds/EnvironmentGood"
     };
-    
+
     /// <summary>
     /// Paths to the different backgrounds for the finance endings
     /// </summary>
-    private string[] financeEndingBackgrounds = 
+    private string[] financeEndingBackgrounds =
         {"Endings/Backgrounds/FinanceBad", "Endings/Backgrounds/FinanceNeutral", "Endings/Backgrounds/FinanceGood"};
 
     /// <summary>
@@ -70,31 +70,31 @@ public class GameManager : MonoBehaviour
         /// The text of the ending
         /// </summary>
         public string text;
-        
+
         /// <summary>
-        /// The path to the background of the ending 
+        /// The path to the background of the ending
         /// </summary>
         public string backgroundPath;
     }
     #endregion
-    
+
     #region GameObjects
     [Header("GameObjects modified throughout the game")]
     [Tooltip("The text to show the current setup")]
     public Text setupText;
-    
+
     [Tooltip("The text to show option A")]
     public Text choiceAText;
-    
+
     [Tooltip("The text to show option B")]
     public Text choiceBText;
-    
+
     [Tooltip("The parent of all the above objects. Used to turn them on and off")]
     public GameObject gameplayObject;
 
     [Tooltip("The first UI object visible, allows the user to configure the game")]
     public GameObject setupObject;
-    
+
     [Tooltip("Dropdown to select what scenario to play")]
     public Dropdown scenarioSelect;
 
@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Text that displays all the options")]
     public Text choicesText;
-    
+
     [Tooltip("The object that shows the scenario's icon")]
     public SpriteRenderer scenarioIcon;
 
@@ -115,28 +115,28 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Button for selecting the current choice")]
     public GameObject submitButton;
-    
+
     [Tooltip("Backgrounds for approval, lower indecies are worse")]
     public List<Sprite> approvalBackgrounds = new List<Sprite>();
-    
+
     [Tooltip("Backgrounds for efficnency, lower indecies are worse")]
     public List<Sprite> efficiencyBackgrounds = new List<Sprite>();
-    
+
     [Tooltip("Backgrounds for envrionment, lower indecies are worse")]
     public List<Sprite> environmentBackgrounds = new List<Sprite>();
-    
+
     [Tooltip("Backgrounds for finance, lower indecies are worse")]
     public List<Sprite> financeBackgrounds = new List<Sprite>();
-    
+
     [Tooltip("Sprite showing the current state of approval")]
     public SpriteRenderer approvalSprite;
-    
+
     [Tooltip("Sprite showing the current state of effienency")]
     public SpriteRenderer efficiencySprite;
-    
+
     [Tooltip("Sprite showing the current state of the environment")]
     public SpriteRenderer envrionmentSprite;
-    
+
     [Tooltip("Sprite showing the current state of finance")]
     public SpriteRenderer financeSprite;
 
@@ -160,9 +160,9 @@ public class GameManager : MonoBehaviour
 
 
     #endregion
-    
+
     #region Scenario and Setup management
-    
+
     /// <summary>
     /// Object containing all the setups and their values
     /// </summary>
@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour
     /// Object containing the setup currently shown to the players
     /// </summary>
     private Scenario currentSetup;
-    
+
     /// <summary>
     /// Keeps track of what choices are valid to ask by index. Once a choice has been asked it is
     /// removed from this list
@@ -191,7 +191,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region Stat variables
-    
+
     /// <summary>
     /// Stats are in the order approval, efficiency, envrionment, finance
     /// </summary>
@@ -228,10 +228,10 @@ public class GameManager : MonoBehaviour
         //{
         //    scenarioListTrimmed.Add(Path.GetFileNameWithoutExtension(scenarioArray[i]));
         //}
-        
+
         // Default the game to loading "Scenarios.json"
         scenarioFiles = new string[] {"Scenarios"};
-        
+
         // The below code is for allowing the user to select a scenario file instead of defaulting to Scenarios.json
         //scenarioFiles = scenarioListTrimmed.ToArray();
         //scenarioListTrimmed.Insert(0, "Random");
@@ -240,8 +240,8 @@ public class GameManager : MonoBehaviour
         TextAsset endingsData = Resources.Load("Endings/endings") as TextAsset;
         endings = JsonUtility.FromJson<Endings>(endingsData.text);
     }
-    
-    
+
+
     /// <summary>
     /// Load a specific scenario and its corresponding setups
     /// </summary>
@@ -251,14 +251,14 @@ public class GameManager : MonoBehaviour
         // Load the json file. scenarioID is the order of the file in the array, not used anywhere else except here
         TextAsset scenarioData = Resources.Load("Scenarios/" + scenarioFiles[scenarioID]) as TextAsset;
         Scenarios scenarioJson = JsonUtility.FromJson<Scenarios>(scenarioData.text);
-        
-        
-        // Fill the valid choices with all the valid indecies 
+
+
+        // Fill the valid choices with all the valid indecies
         for (int i = 0; i < scenarioJson.Setups.Length; ++i)
         {
             validChoices.Add(i);
         }
-        
+
         return scenarioJson;
     }
 
@@ -361,10 +361,10 @@ public class GameManager : MonoBehaviour
         // Clear old question and choices
         choicesText.text = "";
         choiceSelect.ClearOptions();
-        
+
         // Update the question ID
         setupText.text = "ID: " + currentSetup.ID + "\n" + currentSetup.Setup;
-        
+
         // Load the background image (the red ones)
         scenarioIcon.sprite = Resources.Load<Sprite>("Icons/" + currentSetup.Icon);
 
@@ -373,7 +373,7 @@ public class GameManager : MonoBehaviour
         int currentText = 0;
         List<string> availableChoices = new List<string>();
         // Load the dropdown with the choices
-        
+
         foreach (var choice in currentSetup.Decisions)
         {
             // Set the text with the proper letter prefix
@@ -406,7 +406,7 @@ public class GameManager : MonoBehaviour
         efficiencySprite.sprite = UpdateBackground(stats[1], efficiencyBackgrounds);
         envrionmentSprite.sprite = UpdateBackground(stats[2], environmentBackgrounds);
         financeSprite.sprite = UpdateBackground(stats[3], financeBackgrounds);
-        
+
         // Add the choices loaded above to the dropdown
         choiceSelect.AddOptions(availableChoices);
 
@@ -438,7 +438,7 @@ public class GameManager : MonoBehaviour
         submitButton.SetActive(false);
         backgroundStuff.SetActive(false);
         sliderHolder.SetActive(false);
-        
+
         // Turn on the restart button
         restartButton.SetActive(true);
         // Set the text alignment so it does not run offscreen
@@ -461,11 +461,11 @@ public class GameManager : MonoBehaviour
         }
         // Load the scenario passed
         currentScenario = LoadScenario(scenario);
-        
+
         // Ensure the right UI objects are visible
         setupObject.SetActive(false);
         gameplayObject.SetActive(true);
-        
+
         // Load and display the first setup from the scenario
         NextSetup();
         UpdateText();
@@ -513,7 +513,7 @@ public class GameManager : MonoBehaviour
     {
         // Default to the background to the lowest index, the worst one
         Sprite background = sprites[0];
-        
+
         // Compare the stat to the designated thresholds. If above, change the background
         // to be shown to the one just checked
         for (int i = 0; i < sprites.Count; ++i)
@@ -568,7 +568,7 @@ public class GameManager : MonoBehaviour
         {
             LoadScene("SampleScene");
         }
-        
+
         // The ending currently being shown
         Ending switcher;
         // Keep track of which endings have been seen already
@@ -590,7 +590,7 @@ public class GameManager : MonoBehaviour
             restartButton.transform.GetChild(0).GetComponent<Text>().text = "Restart Game";
         }
         setupText.text = switcher.text;
-        
+
         // Increment the number of endings seen
         ++endingsSeen;
         // Add the path to a list. Used for the rare Godzilla ending
@@ -611,14 +611,14 @@ public class GameManager : MonoBehaviour
         int randZilla = Random.Range(0, allEndings.Count);
         // Load the sprite picked above
         backgroundRenderer.sprite = Resources.Load<Sprite>(allEndings[randZilla]);
-        
+
         // If godzilla was picked, set the flag to false so he cannot appear again.
         if(randZilla == 1)
         {
             hadGodzilla = false;
         }
-       
-        
+
+
     }
 
     /// <summary>
@@ -635,7 +635,6 @@ public class GameManager : MonoBehaviour
             return;
 
         Debug.Log(index);
-=======
         // Hides no selection panel
         if (noSelectionPanel.activeInHierarchy)
         {
