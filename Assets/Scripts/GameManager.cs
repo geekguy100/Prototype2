@@ -155,6 +155,7 @@ public class GameManager : MonoBehaviour
     [Tooltip("Text on each choice button")]
     public Text[] choiceTexts;
 
+    //Added by Kyle Grenier
     [Tooltip("The timer used to track time on each question.")]
     public Timer timer;
 
@@ -205,6 +206,7 @@ public class GameManager : MonoBehaviour
 
     /// <summary>
     /// Subscribe the ChoiceSelect event to OnTimerEnd, meaning ChoiceSelect() will be called once the timer ends.
+    /// Added by Kyle Grenier
     /// </summary>
     private void Awake()
     {
@@ -213,6 +215,7 @@ public class GameManager : MonoBehaviour
 
     /// <summary>
     /// Unsubscribe to the OnTimerEnd event in the case GameManager is disabled or destroyed.
+    /// Added by Kyle Grenier
     /// </summary>
     private void OnDisable()
     {
@@ -267,6 +270,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void NextSetup()
     {
+        print("Next setup");
         //REDACTED by Ein
         // Pick a random choice from the valid ones left
         //int choiceIndex = Random.Range(0, validChoices.Count);
@@ -274,6 +278,12 @@ public class GameManager : MonoBehaviour
         //Added by Ein
         //select the bottom choice from the valid ones left
         int choiceIndex = 0;
+
+        //Reset the timer. Added by Kyle Grenier
+        timer.Reset();
+
+        //Hide the no selection panel - Kyle Grenier & TJ Caron
+        noSelectionPanel.SetActive(false);
 
         // Set the current setup to the one chosen
         currentSetup = currentScenario.Setups[validChoices[choiceIndex]];
@@ -286,9 +296,6 @@ public class GameManager : MonoBehaviour
 
         // Remove the selected choice from the valid list
         validChoices.RemoveAt(choiceIndex);
-
-        //Reset the timer.
-        timer.Reset();
     }
 
     /// <summary>
@@ -309,6 +316,7 @@ public class GameManager : MonoBehaviour
         if (decisionIndex < 0)
         {
             noSelectionPanel.SetActive(true);
+            CancelInvoke("HideNoSelectionPanel");
             Invoke("HideNoSelectionPanel", 2.5f);
         }
         else
@@ -352,6 +360,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Hides the no selection panel.
+    /// </summary>
+    private void HideNoSelectionPanel()
+    {
+        noSelectionPanel.SetActive(false);
+    }
 
     /// <summary>
     /// Update the UI text objects to the current setup
@@ -426,6 +441,7 @@ public class GameManager : MonoBehaviour
         // Turn on the end panel and off the game panel
         endPanel.SetActive(true);
         gamePanel.SetActive(false);
+        timer.gameObject.SetActive(false); //Added by Kyle Grenier
 
         // Turn off all the gameplay UI objects
         choicesText.text = "";
@@ -628,22 +644,19 @@ public class GameManager : MonoBehaviour
     /// <param name="index">Index of the player's choice</param>
     public void HoldSelection(int index)
     {
-<<<<<<< HEAD
-        print(timer.Completed);
-        //Do not let the player select another option if the timer has run out.
-        if (timer.Completed)
-            return;
+        //TODO: Do not let the player select another option if the timer has run out. Added by Kyle Grenier
+        //if (timer.Completed)
+        //    return;
+        //    return;
 
         Debug.Log(index);
-=======
-        // Hides no selection panel
-        if (noSelectionPanel.activeInHierarchy)
-        {
-            noSelectionPanel.SetActive(false);
-        }
+        //// Hides no selection panel
+        //if (noSelectionPanel.activeInHierarchy)
+        //{
+        //    noSelectionPanel.SetActive(false);
+        //}
 
         // Stores index of player's current selection
->>>>>>> 943c310a27db319d639d8689c20f59138106806f
         currentSelection = index;
 
         // Sets all buttons except the one clicked to white, one clicked goes to yellow
