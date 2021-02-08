@@ -210,7 +210,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void Awake()
     {
-        timer.OnTimerEnd += ChoiceSelect;
+        //timer.OnTimerEnd += ChoiceSelect;
     }
 
     /// <summary>
@@ -219,7 +219,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void OnDisable()
     {
-        timer.OnTimerEnd -= ChoiceSelect;
+        //timer.OnTimerEnd -= ChoiceSelect;
     }
 
     private void Start()

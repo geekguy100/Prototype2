@@ -3,7 +3,7 @@
 // Author :            Kyle Grenier
 // Creation Date :     02/04/2021
 //
-// Brief Description : Timer class that counts down. Next question on timer finish.
+// Brief Description : Timer class that counts down. Next scenario loads on timer finish.
 *****************************************************************************/
 using UnityEngine;
 using System.Collections;
@@ -26,6 +26,9 @@ public class Timer : MonoBehaviour
     public delegate void TimerEndHandler();
     public event TimerEndHandler OnTimerEnd;
 
+    //The Coroutine previously called to Countdown - used to make sure the timer stops and resets properly.
+    private Coroutine lastCall = null;
+
     private void Awake()
     {
         timerImg.fillAmount = 1;
@@ -36,11 +39,14 @@ public class Timer : MonoBehaviour
     /// </summary>
     public void Reset()
     {
-        StopCoroutine("Countdown");
         completed = false;
+
+        if (lastCall != null)
+            StopCoroutine(lastCall);
+
         timerImg.fillAmount = 1;
 
-        StartCoroutine(Countdown());
+        lastCall = StartCoroutine(Countdown());
     }
 
     /// <summary>
@@ -54,17 +60,15 @@ public class Timer : MonoBehaviour
         {
             time -= Time.deltaTime;
             timerImg.fillAmount -= Time.deltaTime / timePerQuestion;
-
             yield return null;
         }
 
         completed = true;
 
-        ////TODO: Play a timer ran out SFX
-        ////TODO: uncomment this to let the timer invoke any subscribed methods.
-        //yield return new WaitForSeconds(eventWaitTime);
+        //TODO: Play a timer ran out SFX
+        yield return new WaitForSeconds(eventWaitTime);
 
-        ////Call any methods that have subscribed to the OnTimerEnd event.
-        //OnTimerEnd?.Invoke();
+        //Call any methods that have subscribed to the OnTimerEnd event.
+        OnTimerEnd?.Invoke();
     }
 }
