@@ -279,7 +279,7 @@ public class GameManager : MonoBehaviour
         //select the bottom choice from the valid ones left
         int choiceIndex = 0;
 
-        //Reset the timer. Added by Kyle Grenier
+        //Reset the timer. Added by Kyle Grenierf
         timer.Reset();
 
         //Hide the no selection panel - Kyle Grenier & TJ Caron

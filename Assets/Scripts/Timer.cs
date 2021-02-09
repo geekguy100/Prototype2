@@ -9,7 +9,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public class Timer : MonoBehaviour
+public abstract class Timer : MonoBehaviour
 {
     [Tooltip("The timer per question in seconds.")]
     [SerializeField] private float timePerQuestion = 25f;
@@ -68,7 +68,11 @@ public class Timer : MonoBehaviour
         //TODO: Play a timer ran out SFX
         yield return new WaitForSeconds(eventWaitTime);
 
-        //Call any methods that have subscribed to the OnTimerEnd event.
+        TimerEndAction();
+    }
+
+    protected virtual void TimerEndAction()
+    {
         OnTimerEnd?.Invoke();
     }
 }
