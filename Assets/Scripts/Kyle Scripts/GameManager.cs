@@ -282,7 +282,7 @@ namespace Kyle
             int choiceIndex = 0;
 
             //Reset the timer. Added by Kyle Grenierf
-            timer.Reset();
+            //timer.Reset();
 
             //Hide the no selection panel - Kyle Grenier & TJ Caron
             noSelectionPanel.SetActive(false);
@@ -443,7 +443,7 @@ namespace Kyle
             // Turn on the end panel and off the game panel
             endPanel.SetActive(true);
             gamePanel.SetActive(false);
-            timer.gameObject.SetActive(false); //Added by Kyle Grenier
+            //timer.gameObject.SetActive(false); //Added by Kyle Grenier
 
             // Turn off all the gameplay UI objects
             choicesText.text = "";
