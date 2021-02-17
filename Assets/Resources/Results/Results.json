@@ -2,7 +2,6 @@
   {
     "Decisions":[
       {
-        "Choice":"Yes",
         "Result":"You win"
       },
       {
@@ -11,6 +10,6 @@
       }
     ],
     "ID":1,
-  },
+  }
 ]
 }

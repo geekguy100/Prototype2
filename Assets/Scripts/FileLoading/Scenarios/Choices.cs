@@ -14,5 +14,8 @@ namespace FileLoading
         public float Efficiency;
         public float Environment;
         public float Finance;
+
+        //The result to display from choosing this choice.
+        public string Result;
     }
 }

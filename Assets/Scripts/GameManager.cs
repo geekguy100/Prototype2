@@ -303,6 +303,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void ChoiceSelect()
     {
+        print("CHOUCE");
         // Prevent any changes from happening once the max number of choices is reached
         if (choicesMade > maxChoices)
         {

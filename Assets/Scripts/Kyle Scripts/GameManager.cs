@@ -364,6 +364,7 @@ namespace Kyle
 
                 ++choicesMade;
                 print("Choices Made: " + choicesMade + " / " + maxChoices + " max.");
+                print(currentSetup.Decisions[decisionIndex].Result);
                 // If all choices have been made, end the game
                 //Kyle Grenier
                 if (choicesMade < maxChoices)

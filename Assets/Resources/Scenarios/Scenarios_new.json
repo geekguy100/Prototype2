@@ -6,42 +6,48 @@
         "Approval":20,
         "Efficiency":10,
         "Environment":-5,
-        "Finance":-20
+        "Finance":-20,
+        "Result": "TEST1"
       },
       {
         "Choice":"Perform trial studies on the current homes to see where issues are popping up and where to address them.",
         "Approval":-20,
         "Efficiency":-5,
         "Environment":5,
-        "Finance":20
+        "Finance":20,
+        "Result": "TEST2"
       },
       {
         "Choice":"Research how Smart Meter Homes affects environmental effects and focus on getting an environmental grant for the efforts done.",
         "Approval":-20,
         "Efficiency":-5,
         "Environment":5,
-        "Finance":20
+        "Finance":20,
+        "Result": "TEST3"
       },
       {
         "Choice":"Commit to urban development in order to add space for new homes and power sources. Join forces with deforestation organizations to gain space by the nearby countryside. ",
         "Approval":-20,
         "Efficiency":-5,
         "Environment":5,
-        "Finance":20
+        "Finance":20,
+        "Result": "TEST4"
       },
       {
         "Choice":"Prioritize more customers rather than our current customers by quickly rolling out Smart Meters into as many homes as possible.",
         "Approval":-20,
         "Efficiency":-5,
         "Environment":5,
-        "Finance":20
+        "Finance":20,
+        "Result": "TEST5"
       },
       {
         "Choice":"Slow down on adding more homes to the smart grid system, focusing instead on adding additional power sources into the smart grid system.",
         "Approval":-20,
         "Efficiency":-5,
         "Environment":5,
-        "Finance":20
+        "Finance":20,
+        "Result": "TEST6"
       }
     ],
     "Setup": "Smart Meter is most effective when every house in an area is under its effect. After successfully implementing Smart Meters into multiple homes, the company is curious what next step should be taken?",
@@ -55,28 +61,32 @@
         "Approval":-20,
         "Efficiency":-5,
         "Environment":5,
-        "Finance":20
+        "Finance":20,
+        "Result": ""
       },
       {
         "Choice":"Hide",
         "Approval":-20,
         "Efficiency":-5,
         "Environment":5,
-        "Finance":20
+        "Finance":20,
+        "Result": ""
       },
       {
         "Choice":"Jump",
         "Approval":-20,
         "Efficiency":-5,
         "Environment":5,
-        "Finance":20
+        "Finance":20,
+        "Result": ""
       },
       {
         "Choice":"Run",
         "Approval":-20,
         "Efficiency":-5,
         "Environment":5,
-        "Finance":20
+        "Finance":20,
+        "Result": ""
       }
     ],
     "Setup": "The world is about to end. What do you do?",
