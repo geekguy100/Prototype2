@@ -13,6 +13,7 @@ namespace TJ
         [Tooltip("All the text files for each setup, one per setup. The ID is the files index in the array")]
         private string[] scenarioFiles;
 
+        [Tooltip("Panel that shows up when player tries to confirm without selecting an option")]
         public GameObject noSelectionPanel;
 
         public GameObject endPanel;
@@ -212,7 +213,7 @@ namespace TJ
         /// </summary>
         private void Awake()
         {
-            //timer.OnTimerEnd += ChoiceSelect;
+            timer.OnTimerEnd += ChoiceSelect;
         }
 
         /// <summary>
@@ -331,15 +332,16 @@ namespace TJ
                 int costAdjust = currentSetup.Decisions[decisionIndex].Finance;
 
 
+
                 // Actually update the stats
                 stats[1] += efficiencyAdjust;
                 stats[2] += envrionmentAdjust;
                 stats[3] += costAdjust;
 
                 // Resets choice variables/buttons
-                // Sets currentSelection to -1 to make sure player makes a selection before submitting
+                // Sets currentSelection to -1 to make sure player makes a selection before submitting - TJ
                 currentSelection = -1;
-                // Resets button colors - change later for efficiency
+                // Resets button colors - TJ
                 foreach (Button b in choiceButtons)
                 {
                     b.GetComponent<Image>().color = Color.white;
@@ -387,10 +389,14 @@ namespace TJ
 
             // Set up a char to increment. By adding 1 to a char, it moves to the next letter (A -> B -> C etc...)
             char currentLetter = 'A';
+
+            // Added by TJ
             int currentText = 0;
             List<string> availableChoices = new List<string>();
             // Load the dropdown with the choices
 
+
+            // Changed by TJ
             foreach (var choice in currentSetup.Decisions)
             {
                 // Set the text with the proper letter prefix
@@ -410,7 +416,8 @@ namespace TJ
                 ++currentLetter;
             }
 
-            // Sets all unused choice buttons to inactive
+            
+            // Sets all unused choice buttons to inactive - TJ
             while (currentText <= 3)
             {
                 choiceTexts[currentText].transform.parent.gameObject.SetActive(false);
@@ -644,6 +651,7 @@ namespace TJ
         /// clicks one of the choice buttons.
         /// </summary>
         /// <param name="index">Index of the player's choice</param>
+        /// Added by TJ
         public void HoldSelection(int index)
         {
             //TODO: Do not let the player select another option if the timer has run out. Added by Kyle Grenier

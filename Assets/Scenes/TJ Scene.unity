@@ -1831,8 +1831,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2042046201}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2042046204}
+        m_TargetAssemblyTypeName: TJ.GameManager, Assembly-CSharp
         m_MethodName: ChoiceSelect
         m_Mode: 1
         m_Arguments:
@@ -1955,8 +1955,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2042046201}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2042046204}
+        m_TargetAssemblyTypeName: TJ.GameManager, Assembly-CSharp
         m_MethodName: HoldSelection
         m_Mode: 3
         m_Arguments:
@@ -3049,8 +3049,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2042046201}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2042046204}
+        m_TargetAssemblyTypeName: TJ.GameManager, Assembly-CSharp
         m_MethodName: HoldSelection
         m_Mode: 3
         m_Arguments:
@@ -3283,8 +3283,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2042046201}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2042046204}
+        m_TargetAssemblyTypeName: TJ.GameManager, Assembly-CSharp
         m_MethodName: endingButton
         m_Mode: 1
         m_Arguments:
@@ -3395,8 +3395,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2042046201}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2042046204}
+        m_TargetAssemblyTypeName: TJ.GameManager, Assembly-CSharp
         m_MethodName: HoldSelection
         m_Mode: 3
         m_Arguments:
@@ -3771,7 +3771,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2042046201}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: ExitGame
         m_Mode: 1
@@ -4813,8 +4813,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2042046201}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2042046204}
+        m_TargetAssemblyTypeName: TJ.GameManager, Assembly-CSharp
         m_MethodName: HoldSelection
         m_Mode: 3
         m_Arguments:
@@ -5024,8 +5024,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2042046201}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 2042046204}
+        m_TargetAssemblyTypeName: TJ.GameManager, Assembly-CSharp
         m_MethodName: ConfirmScenarioSelection
         m_Mode: 1
         m_Arguments:
@@ -7111,7 +7111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2042046202}
-  - component: {fileID: 2042046201}
+  - component: {fileID: 2042046204}
   - component: {fileID: 2042046203}
   m_Layer: 0
   m_Name: GameManager
@@ -7120,7 +7120,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2042046201
+--- !u!4 &2042046202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042046200}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2042046203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7129,7 +7143,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2042046200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05cf6753267cb5f4687d71fccbe898f0, type: 3}
+  m_Script: {fileID: 11500000, guid: f54523f4aab26994d8ef95bed1d7047e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click: {fileID: 293366451}
+--- !u!114 &2042046204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042046200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ede1faaa5993f84db8cd1f75ca7863d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   noSelectionPanel: {fileID: 1043135928}
@@ -7137,8 +7164,8 @@ MonoBehaviour:
   gamePanel: {fileID: 1114290037}
   maxChoices: 12
   setupText: {fileID: 1790946470}
-  choiceAText: {fileID: 1157898379}
-  choiceBText: {fileID: 1562514789}
+  choiceAText: {fileID: 991170051}
+  choiceBText: {fileID: 776580242}
   gameplayObject: {fileID: 47492377}
   setupObject: {fileID: 1252764811}
   scenarioSelect: {fileID: 0}
@@ -7153,23 +7180,23 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1b5fccdf0def78347bc0e9337af765d1, type: 3}
   - {fileID: 21300000, guid: 8abb44576e89e234084ff339021bd566, type: 3}
   - {fileID: 21300000, guid: 32b34c1d0fed4e84380ee5289c473fd7, type: 3}
-  - {fileID: 21300000, guid: 35fc1a90c5d0f9f4584aaaa45922b03b, type: 3}
-  - {fileID: 21300000, guid: 381ac4326df6f024a9e43f06a7c1ee79, type: 3}
   - {fileID: 21300000, guid: 4b700a7cf6478fd43bc27d87db50b3bb, type: 3}
+  - {fileID: 21300000, guid: 381ac4326df6f024a9e43f06a7c1ee79, type: 3}
+  - {fileID: 21300000, guid: 35fc1a90c5d0f9f4584aaaa45922b03b, type: 3}
   efficiencyBackgrounds:
   - {fileID: 21300000, guid: edae097da31bbe7439b11cba37b8089b, type: 3}
   - {fileID: 21300000, guid: 7ab7b0812226bf140986027a42b73981, type: 3}
   - {fileID: 21300000, guid: 053061467625c9141bf8c261a7a41da2, type: 3}
   - {fileID: 21300000, guid: fb0e3591028f4344fae6492ea7a31b8a, type: 3}
-  - {fileID: 21300000, guid: 803b9bb8859b75144a1c0504e8d1f978, type: 3}
-  - {fileID: 21300000, guid: cf585c43f1f636e4eb59b28c49d2da2f, type: 3}
   - {fileID: 21300000, guid: e5d8a5273af2fc140b0f6e2657b59c67, type: 3}
+  - {fileID: 21300000, guid: cf585c43f1f636e4eb59b28c49d2da2f, type: 3}
+  - {fileID: 21300000, guid: 803b9bb8859b75144a1c0504e8d1f978, type: 3}
   environmentBackgrounds:
   - {fileID: 21300000, guid: 28b5995e91a516245aaf41fc2dec9671, type: 3}
   - {fileID: 21300000, guid: 0ef8d08472e5ae348bf7e2b9a60ec12a, type: 3}
   - {fileID: 21300000, guid: 839c53a2146f3ce4a8e5addd97e58835, type: 3}
-  - {fileID: 21300000, guid: e32a249ef60b33246b0ee9fa34594c12, type: 3}
   - {fileID: 21300000, guid: f08013d3347bae141beec06cdfaf0d9f, type: 3}
+  - {fileID: 21300000, guid: e32a249ef60b33246b0ee9fa34594c12, type: 3}
   financeBackgrounds:
   - {fileID: 21300000, guid: daa0eb42627ffd84f8e24d92db975ad0, type: 3}
   - {fileID: 21300000, guid: 70622f0edeaa82f42a7c79651c9626fb, type: 3}
@@ -7199,35 +7226,8 @@ MonoBehaviour:
   - {fileID: 776580242}
   - {fileID: 954372149}
   - {fileID: 239045974}
-  timer: {fileID: 0}
+  timer: {fileID: 2129113988}
   thresholds: 09000000170000002500000032000000410000004f0000005d000000
---- !u!4 &2042046202
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042046200}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2042046203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042046200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f54523f4aab26994d8ef95bed1d7047e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  click: {fileID: 293366451}
 --- !u!1 &2069424466
 GameObject:
   m_ObjectHideFlags: 0
@@ -7357,6 +7357,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2129113986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19b8a47d4e22b2842b5a0cca03926ab1, type: 3}
+  m_Script: {fileID: 11500000, guid: aee2213454dd23e47939f0b9cd7bce90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timePerQuestion: 30
+  eventWaitTime: 2
+  timerImg: {fileID: 1928420667}
+  graceTimePerQuestion: 12
+  decayTime: 6
+  maxDecay: 0.5
