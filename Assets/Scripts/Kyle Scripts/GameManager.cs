@@ -86,6 +86,12 @@ namespace Kyle
         [Tooltip("The text to show the current setup")]
         public TextMeshProUGUI setupText;
 
+        [Tooltip("The text to show the stats change after a question setup")]
+        public TextMeshProUGUI resultsText;
+
+        [Tooltip("The text to show your impact from your choices over the entire game")]
+        public TextMeshProUGUI endingText;
+
         //[Tooltip("The text to show option A")]
         //public Text choiceAText;
 
@@ -619,7 +625,7 @@ namespace Kyle
                 switcher = TestEnding(stats[3], endings.Finance, financeEndingBackgrounds);
                 restartButton.transform.GetChild(0).GetComponent<Text>().text = "Restart Game";
             }
-            setupText.text = switcher.text;
+            endingText.text = switcher.text;
 
             // Increment the number of endings seen
             ++endingsSeen;
