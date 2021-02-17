@@ -13,6 +13,7 @@ namespace TJ
         [Tooltip("All the text files for each setup, one per setup. The ID is the files index in the array")]
         private string[] scenarioFiles;
 
+        [Tooltip("Panel that shows up when player tries to confirm without selecting an option")]
         public GameObject noSelectionPanel;
 
         public GameObject endPanel;
@@ -198,11 +199,14 @@ namespace TJ
         /// <summary>
         /// Stats are in the order approval, efficiency, envrionment, finance
         /// </summary>
-        private int[] stats = { 50, 50, 50, 50 };
+        private float[] stats = { 50, 50, 50, 50 };
         [Header("Thresholds for various changes and backgrounds")]
 
         [Tooltip("Thresholds for the different backgrounds and endings")]
         public int[] thresholds;
+
+        [Tooltip("Amount of stat loss if player runs out of time")]
+        [SerializeField] private float statLoss = 5;
 
         #endregion
 
@@ -212,7 +216,7 @@ namespace TJ
         /// </summary>
         private void Awake()
         {
-            //timer.OnTimerEnd += ChoiceSelect;
+            timer.OnTimerEnd += ChoiceSelect;
         }
 
         /// <summary>
@@ -317,19 +321,52 @@ namespace TJ
 
             if (decisionIndex < 0)
             {
-                noSelectionPanel.SetActive(true);
-                CancelInvoke("HideNoSelectionPanel");
-                Invoke("HideNoSelectionPanel", 2.5f);
+                // Checks if timer has run out
+                if (timer.GetTimeLeft() > 0)
+                {
+                    noSelectionPanel.SetActive(true);
+                    CancelInvoke("HideNoSelectionPanel");
+                    Invoke("HideNoSelectionPanel", 2.5f);
+                }
+                // If player ran out of time deducts stats and moves to next question - TJ
+                else
+                {
+
+                    for (int i = 1; i < stats.Length; i++)
+                    {
+                        stats[i] -= statLoss;
+                    }
+                  
+                    foreach (Button b in choiceButtons)
+                    {
+                        b.GetComponent<Image>().color = Color.white;
+                    }
+
+                    // TODO: Get rid of 4th stat on all scripts - keeping in 4th stat for now 
+                    // Approval is the average of the 3 other stats.
+                    stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
+
+                    ++choicesMade;
+                    // If all choices have been made, end the game
+                    if (choicesMade <= maxChoices)
+                    {
+                        NextSetup();
+                        UpdateText();
+                    }
+                    else
+                    {
+                        EndGame();
+                    }
+                }
             }
             else
             {
                 // Below line ties approval into the decision system directly
                 //int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
                 // Set the adjustments for the stats
-                int efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
-                int envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment;
-                int costAdjust = currentSetup.Decisions[decisionIndex].Finance;
-
+                float efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency * timer.GetStatMultiplier();
+                float envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment * timer.GetStatMultiplier();
+                float costAdjust = currentSetup.Decisions[decisionIndex].Finance * timer.GetStatMultiplier();
 
                 // Actually update the stats
                 stats[1] += efficiencyAdjust;
@@ -337,9 +374,9 @@ namespace TJ
                 stats[3] += costAdjust;
 
                 // Resets choice variables/buttons
-                // Sets currentSelection to -1 to make sure player makes a selection before submitting
+                // Sets currentSelection to -1 to make sure player makes a selection before submitting - TJ
                 currentSelection = -1;
-                // Resets button colors - change later for efficiency
+                // Resets button colors - TJ
                 foreach (Button b in choiceButtons)
                 {
                     b.GetComponent<Image>().color = Color.white;
@@ -387,10 +424,14 @@ namespace TJ
 
             // Set up a char to increment. By adding 1 to a char, it moves to the next letter (A -> B -> C etc...)
             char currentLetter = 'A';
+
+            // Added by TJ
             int currentText = 0;
             List<string> availableChoices = new List<string>();
             // Load the dropdown with the choices
 
+
+            // Changed by TJ
             foreach (var choice in currentSetup.Decisions)
             {
                 // Set the text with the proper letter prefix
@@ -410,7 +451,8 @@ namespace TJ
                 ++currentLetter;
             }
 
-            // Sets all unused choice buttons to inactive
+            
+            // Sets all unused choice buttons to inactive - TJ
             while (currentText <= 3)
             {
                 choiceTexts[currentText].transform.parent.gameObject.SetActive(false);
@@ -527,7 +569,7 @@ namespace TJ
         /// <param name="stat">Which stat to find the background for</param>
         /// <param name="sprites">The sprites to select a background from</param>
         /// <returns>The appropriate background for the stat</returns>
-        private Sprite UpdateBackground(int stat, List<Sprite> sprites)
+        private Sprite UpdateBackground(float stat, List<Sprite> sprites)
         {
             // Default to the background to the lowest index, the worst one
             Sprite background = sprites[0];
@@ -552,7 +594,7 @@ namespace TJ
         /// <param name="endings">The list of endings to choose from</param>
         /// <param name="backgroundPaths">The list of backgrounds to choose from</param>
         /// <returns>Data about the correct ending for the stat</returns>
-        private Ending TestEnding(int stat, string[] endings, string[] backgroundPaths)
+        private Ending TestEnding(float stat, string[] endings, string[] backgroundPaths)
         {
             Ending ending;
             // Default to the worst text and background
@@ -644,6 +686,7 @@ namespace TJ
         /// clicks one of the choice buttons.
         /// </summary>
         /// <param name="index">Index of the player's choice</param>
+        /// Added by TJ
         public void HoldSelection(int index)
         {
             //TODO: Do not let the player select another option if the timer has run out. Added by Kyle Grenier
