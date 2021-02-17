@@ -1,0 +1,16 @@
+{"Setups":[
+  {
+    "Decisions":[
+      {
+        "Choice":"Yes",
+        "Result":"You win"
+      },
+      {
+        "Choice":"No",
+        "Result": "You died"
+      }
+    ],
+    "ID":1,
+  },
+]
+}
