@@ -199,11 +199,14 @@ namespace TJ
         /// <summary>
         /// Stats are in the order approval, efficiency, envrionment, finance
         /// </summary>
-        private int[] stats = { 50, 50, 50, 50 };
+        private float[] stats = { 50, 50, 50, 50 };
         [Header("Thresholds for various changes and backgrounds")]
 
         [Tooltip("Thresholds for the different backgrounds and endings")]
         public int[] thresholds;
+
+        [Tooltip("Amount of stat loss if player runs out of time")]
+        [SerializeField] private float statLoss = 5;
 
         #endregion
 
@@ -318,20 +321,52 @@ namespace TJ
 
             if (decisionIndex < 0)
             {
-                noSelectionPanel.SetActive(true);
-                CancelInvoke("HideNoSelectionPanel");
-                Invoke("HideNoSelectionPanel", 2.5f);
+                // Checks if timer has run out
+                if (timer.GetTimeLeft() > 0)
+                {
+                    noSelectionPanel.SetActive(true);
+                    CancelInvoke("HideNoSelectionPanel");
+                    Invoke("HideNoSelectionPanel", 2.5f);
+                }
+                // If player ran out of time deducts stats and moves to next question - TJ
+                else
+                {
+
+                    for (int i = 1; i < stats.Length; i++)
+                    {
+                        stats[i] -= statLoss;
+                    }
+                  
+                    foreach (Button b in choiceButtons)
+                    {
+                        b.GetComponent<Image>().color = Color.white;
+                    }
+
+                    // TODO: Get rid of 4th stat on all scripts - keeping in 4th stat for now 
+                    // Approval is the average of the 3 other stats.
+                    stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
+
+                    ++choicesMade;
+                    // If all choices have been made, end the game
+                    if (choicesMade <= maxChoices)
+                    {
+                        NextSetup();
+                        UpdateText();
+                    }
+                    else
+                    {
+                        EndGame();
+                    }
+                }
             }
             else
             {
                 // Below line ties approval into the decision system directly
                 //int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
                 // Set the adjustments for the stats
-                int efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
-                int envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment;
-                int costAdjust = currentSetup.Decisions[decisionIndex].Finance;
-
-
+                float efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency * timer.GetStatMultiplier();
+                float envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment * timer.GetStatMultiplier();
+                float costAdjust = currentSetup.Decisions[decisionIndex].Finance * timer.GetStatMultiplier();
 
                 // Actually update the stats
                 stats[1] += efficiencyAdjust;
@@ -534,7 +569,7 @@ namespace TJ
         /// <param name="stat">Which stat to find the background for</param>
         /// <param name="sprites">The sprites to select a background from</param>
         /// <returns>The appropriate background for the stat</returns>
-        private Sprite UpdateBackground(int stat, List<Sprite> sprites)
+        private Sprite UpdateBackground(float stat, List<Sprite> sprites)
         {
             // Default to the background to the lowest index, the worst one
             Sprite background = sprites[0];
@@ -559,7 +594,7 @@ namespace TJ
         /// <param name="endings">The list of endings to choose from</param>
         /// <param name="backgroundPaths">The list of backgrounds to choose from</param>
         /// <returns>Data about the correct ending for the stat</returns>
-        private Ending TestEnding(int stat, string[] endings, string[] backgroundPaths)
+        private Ending TestEnding(float stat, string[] endings, string[] backgroundPaths)
         {
             Ending ending;
             // Default to the worst text and background

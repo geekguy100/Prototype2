@@ -199,7 +199,7 @@ namespace Kyle
         /// <summary>
         /// Stats are in the order approval, efficiency, envrionment, finance
         /// </summary>
-        private int[] stats = { 50, 50, 50, 50 };
+        private float[] stats = { 50, 50, 50, 50 };
         [Header("Thresholds for various changes and backgrounds")]
 
         [Tooltip("Thresholds for the different backgrounds and endings")]
@@ -334,9 +334,9 @@ namespace Kyle
                 // Below line ties approval into the decision system directly
                 //int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
                 // Set the adjustments for the stats
-                int efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
-                int envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment;
-                int costAdjust = currentSetup.Decisions[decisionIndex].Finance;
+                float efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
+                float envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment;
+                float costAdjust = currentSetup.Decisions[decisionIndex].Finance;
 
 
                 // Actually update the stats
@@ -538,7 +538,7 @@ namespace Kyle
         /// <param name="stat">Which stat to find the background for</param>
         /// <param name="sprites">The sprites to select a background from</param>
         /// <returns>The appropriate background for the stat</returns>
-        private Sprite UpdateBackground(int stat, List<Sprite> sprites)
+        private Sprite UpdateBackground(float stat, List<Sprite> sprites)
         {
             // Default to the background to the lowest index, the worst one
             Sprite background = sprites[0];
@@ -563,7 +563,7 @@ namespace Kyle
         /// <param name="endings">The list of endings to choose from</param>
         /// <param name="backgroundPaths">The list of backgrounds to choose from</param>
         /// <returns>Data about the correct ending for the stat</returns>
-        private Ending TestEnding(int stat, string[] endings, string[] backgroundPaths)
+        private Ending TestEnding(float stat, string[] endings, string[] backgroundPaths)
         {
             Ending ending;
             // Default to the worst text and background

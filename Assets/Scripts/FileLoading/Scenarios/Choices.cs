@@ -10,9 +10,9 @@ namespace FileLoading
         public string Choice;
         
         // How the choice changes the stats
-        public int Approval;
-        public int Efficiency;
-        public int Environment;
-        public int Finance;
+        public float Approval;
+        public float Efficiency;
+        public float Environment;
+        public float Finance;
     }
 }

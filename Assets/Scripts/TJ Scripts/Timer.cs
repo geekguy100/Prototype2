@@ -47,6 +47,11 @@ namespace TJ
         /// </summary>
         private float statMultiplier = 1;
 
+        /// <summary>
+        /// Amount of time left on timer
+        /// </summary>
+        private float time = 0;
+
         private bool completed = false;
         public bool Completed { get { return completed; } }
 
@@ -77,7 +82,10 @@ namespace TJ
             if (lastCall != null)
                 StopCoroutine(lastCall);
 
+            statMultiplier = 1;
+
             timerImg.fillAmount = 1;
+            timerImg.color = Color.green;
 
             lastCall = StartCoroutine(Countdown());
         }
@@ -87,7 +95,7 @@ namespace TJ
         /// </summary>
         private IEnumerator Countdown()
         {
-            float time = timePerQuestion;
+            time = timePerQuestion;
 
             while (time > 0)
             {
@@ -119,7 +127,7 @@ namespace TJ
             completed = true;
 
             //TODO: Play a timer ran out SFX
-            yield return new WaitForSeconds(eventWaitTime);
+            //yield return new WaitForSeconds(eventWaitTime);
 
             TimerEndAction();
         }
@@ -141,6 +149,15 @@ namespace TJ
                 statMultiplier = minStatMultiplier;
             }
             return statMultiplier;
+        }
+
+        /// <summary>
+        /// Returns the time left on the current timer
+        /// </summary>
+        /// <returns>Time left on timer</returns>
+        public float GetTimeLeft()
+        {
+            return time;
         }
     }
 }

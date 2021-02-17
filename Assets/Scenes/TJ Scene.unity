@@ -7228,6 +7228,7 @@ MonoBehaviour:
   - {fileID: 239045974}
   timer: {fileID: 2129113988}
   thresholds: 09000000170000002500000032000000410000004f0000005d000000
+  statLoss: 5
 --- !u!1 &2069424466
 GameObject:
   m_ObjectHideFlags: 0
@@ -7360,9 +7361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee2213454dd23e47939f0b9cd7bce90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timePerQuestion: 30
+  timePerQuestion: 15
   eventWaitTime: 2
   timerImg: {fileID: 1928420667}
-  graceTimePerQuestion: 12
-  decayTime: 6
-  maxDecay: 0.5
+  graceTimePerQuestion: 6
+  decayTime: 3
+  minStatMultiplier: 0.5

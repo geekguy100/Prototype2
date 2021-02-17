@@ -9,7 +9,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public abstract class Timer : MonoBehaviour
+public class Timer : MonoBehaviour
 {
     [Tooltip("The timer per question in seconds.")]
     [SerializeField] private float timePerQuestion = 25f;
