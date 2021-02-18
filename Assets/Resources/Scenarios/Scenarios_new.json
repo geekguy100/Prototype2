@@ -7,7 +7,7 @@
         "Efficiency":10,
         "Environment":-5,
         "Finance":-20,
-        "Result": "TEST1"
+        "Result": "More Smart Meter systems would bring in more money as well as allow for testing to be done on a larger scale, however, this would leave existing users with unpolished versions of the system."
       },
       {
         "Choice":"Perform trial studies on the current homes to see where issues are popping up and where to address them.",
@@ -23,7 +23,7 @@
         "Efficiency":-5,
         "Environment":5,
         "Finance":20,
-        "Result": "TEST3"
+        "Result": "The outside grant increases your budget and the public's view of the company due to the positive environmental support, but the lack of focus on the grid damages efficiency."
       },
       {
         "Choice":"Commit to urban development in order to add space for new homes and power sources. Join forces with deforestation organizations to gain space by the nearby countryside. ",
@@ -31,7 +31,7 @@
         "Efficiency":-5,
         "Environment":5,
         "Finance":20,
-        "Result": "TEST4"
+        "Result": "The new homes added to the smart grid system result in increased profits but at the cost of the overall efficiency of the smart grid, as well as the public perception of your company as a whole."
       },
       {
         "Choice":"Prioritize more customers rather than our current customers by quickly rolling out Smart Meters into as many homes as possible.",
@@ -39,7 +39,7 @@
         "Efficiency":-5,
         "Environment":5,
         "Finance":20,
-        "Result": "TEST5"
+        "Result": "The massive influx in new customers results in a major increase in profits, as well as said profits going towards making the Smart Grid more efficient, however, the reputation of the company has been heavily diminished in the eyes of our customers."
       },
       {
         "Choice":"Slow down on adding more homes to the smart grid system, focusing instead on adding additional power sources into the smart grid system.",
@@ -47,7 +47,7 @@
         "Efficiency":-5,
         "Environment":5,
         "Finance":20,
-        "Result": "TEST6"
+        "Result": "There would be a decrease of source income due to the slow implementation, but as our attention on adding more power sources increases our efficiency grows and so does the consumer's appreciation of our efforts."
       }
     ],
     "Setup": "Smart Meter is most effective when every house in an area is under its effect. After successfully implementing Smart Meters into multiple homes, the company is curious what next step should be taken?",

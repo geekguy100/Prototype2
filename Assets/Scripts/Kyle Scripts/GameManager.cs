@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using System.IO;
 using FileLoading;
 using UnityEngine;
@@ -198,6 +199,11 @@ namespace Kyle
         /// Did the players get the godzilla setup
         /// </summary>
         private bool hadGodzilla = false;
+
+        /// <summary>
+        /// The ResultsHandler to manage displaying the results and updating values after each question.
+        /// </summary>
+        [SerializeField] private ResultsHandler resultsHandler;
         #endregion
 
         #region Stat variables
@@ -364,18 +370,33 @@ namespace Kyle
 
                 ++choicesMade;
                 print("Choices Made: " + choicesMade + " / " + maxChoices + " max.");
-                print(currentSetup.Decisions[decisionIndex].Result);
-                // If all choices have been made, end the game
-                //Kyle Grenier
-                if (choicesMade < maxChoices)
-                {
-                    NextSetup();
-                    UpdateText();
-                }
-                else
-                {
-                    EndGame();
-                }
+
+                // Hide gameplay screen and display results screen.
+                gameplayObject.SetActive(false);
+                resultsHandler.gameObject.SetActive(true);
+                resultsHandler.Display(stats, currentSetup.Decisions[decisionIndex].Result);
+            }
+        }
+
+        /// <summary>
+        /// Called when pressing the Continue button from the results screen.
+        /// </summary>
+        public void ContinueFromResults()
+        {
+            // Disable the results screen and reenable the gameplay screen.
+            resultsHandler.gameObject.SetActive(false);
+            gameplayObject.SetActive(false);
+
+            // If all choices have been made, end the game
+            //Kyle Grenier
+            if (choicesMade < maxChoices)
+            {
+                NextSetup();
+                UpdateText();
+            }
+            else
+            {
+                EndGame();
             }
         }
 
