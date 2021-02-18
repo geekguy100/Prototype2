@@ -28,6 +28,19 @@ public class ResultsHandler : MonoBehaviour
     [Tooltip("Text to hold the result from the most recent scenario.")]
     [SerializeField] private TextMeshProUGUI resultsText;
 
+
+    /// <summary>
+    /// Sets the sliders to the correct initial values.
+    /// </summary>
+    /// <param name="stats"></param>
+    public void Init(float[] stats)
+    {
+        prSlider.value = stats[0] / 100f;
+        efficiencySlider.value = stats[1] / 100f;
+        environmentSlider.value = stats[2] / 100f;
+        financeSlider.value = stats[3] / 100f;
+    }
+
     /// <summary>
     /// Display the results screen.
     /// </summary>
@@ -65,8 +78,6 @@ public class ResultsHandler : MonoBehaviour
             default:
                 break;
         }
-
-        ++slider;
     }
 
     /// <summary>
@@ -83,6 +94,7 @@ public class ResultsHandler : MonoBehaviour
             yield return null;
         }
 
+        ++this.slider;
         AnimateSlider();
     }
 

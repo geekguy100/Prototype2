@@ -257,6 +257,9 @@ namespace Kyle
             // Load the endings from endings.json
             TextAsset endingsData = Resources.Load("Endings/endings") as TextAsset;
             endings = JsonUtility.FromJson<Endings>(endingsData.text);
+
+            // Initialize the ResultsHandler's sliders to the correct starting values.
+            resultsHandler.Init(stats);
         }
 
 
@@ -385,7 +388,7 @@ namespace Kyle
         {
             // Disable the results screen and reenable the gameplay screen.
             resultsHandler.gameObject.SetActive(false);
-            gameplayObject.SetActive(false);
+            gameplayObject.SetActive(true);
 
             // If all choices have been made, end the game
             //Kyle Grenier
