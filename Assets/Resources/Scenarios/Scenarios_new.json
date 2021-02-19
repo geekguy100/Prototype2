@@ -62,7 +62,7 @@
         "Efficiency":-5,
         "Environment":5,
         "Finance":20,
-        "Result": ""
+        "Result": "You sleep it off without a worry."
       },
       {
         "Choice":"Hide",
@@ -70,7 +70,7 @@
         "Efficiency":-5,
         "Environment":5,
         "Finance":20,
-        "Result": ""
+        "Result": "You hide, but get caught and die."
       },
       {
         "Choice":"Jump",
@@ -78,15 +78,15 @@
         "Efficiency":-5,
         "Environment":5,
         "Finance":20,
-        "Result": ""
+        "Result": "You jump. Upon landing, the world shatters into one-million pieces."
       },
       {
         "Choice":"Run",
-        "Approval":-20,
-        "Efficiency":-5,
-        "Environment":5,
-        "Finance":20,
-        "Result": ""
+        "Approval":100,
+        "Efficiency":100,
+        "Environment":100,
+        "Finance":-100,
+        "Result": "You run away into the Nether."
       }
     ],
     "Setup": "The world is about to end. What do you do?",

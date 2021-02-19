@@ -6,6 +6,7 @@
 // Brief Description : Handles displaying the results after each question.
 *****************************************************************************/
 using UnityEngine;
+using System;
 using UnityEngine.UI;
 using System.Collections;
 using TMPro;
@@ -17,6 +18,13 @@ public class ResultsHandler : MonoBehaviour
     [SerializeField] private Slider efficiencySlider = null;
     [SerializeField] private Slider environmentSlider = null;
     [SerializeField] private Slider financeSlider = null;
+
+    [Header("Percent Change Texts")]
+    [SerializeField] private TextMeshProUGUI prText = null;
+    [SerializeField] private TextMeshProUGUI efficiencyText = null;
+    [SerializeField] private TextMeshProUGUI environmentText = null;
+    [SerializeField] private TextMeshProUGUI financeText = null;
+
     private float[] stats;
     private int slider = 0; // The slider to animate.
 
@@ -26,13 +34,13 @@ public class ResultsHandler : MonoBehaviour
 
     [Header("Results Text")]
     [Tooltip("Text to hold the result from the most recent scenario.")]
-    [SerializeField] private TextMeshProUGUI resultsText;
+    [SerializeField] private TextMeshProUGUI resultsText = null;
 
 
     /// <summary>
     /// Sets the sliders to the correct initial values.
     /// </summary>
-    /// <param name="stats"></param>
+    /// <param name="stats">The initial stats.</param>
     public void Init(float[] stats)
     {
         prSlider.value = stats[0] / 100f;
@@ -63,19 +71,16 @@ public class ResultsHandler : MonoBehaviour
         switch (slider)
         {
             case 0:
-                StartCoroutine(AnimateSliderCoroutine(prSlider, stats[0] / 100f));
+                StartCoroutine(AnimateSliderCoroutine(prSlider, prText, stats[0] / 100f));
                 break;
             case 1:
-                StartCoroutine(AnimateSliderCoroutine(efficiencySlider, stats[1]/100f));
+                StartCoroutine(AnimateSliderCoroutine(efficiencySlider, efficiencyText, stats[1]/100f));
                 break;
             case 2:
-                StartCoroutine(AnimateSliderCoroutine(environmentSlider, stats[2] / 100f));
+                StartCoroutine(AnimateSliderCoroutine(environmentSlider, environmentText, stats[2] / 100f));
                 break;
             case 3:
-                StartCoroutine(AnimateSliderCoroutine(financeSlider, stats[3] / 100f));
-                break;
-
-            default:
+                StartCoroutine(AnimateSliderCoroutine(financeSlider, financeText, stats[3] / 100f));
                 break;
         }
     }
@@ -86,21 +91,46 @@ public class ResultsHandler : MonoBehaviour
     /// <param name="slider">The slider to animate.</param>
     /// <param name="newValue">The value to animate the slider to.</param>
     /// <returns></returns>
-    private IEnumerator AnimateSliderCoroutine(Slider slider, float newValue)
+    private IEnumerator AnimateSliderCoroutine(Slider slider, TextMeshProUGUI changeText, float newValue)
     {
-        while (Mathf.Abs(slider.value - newValue) > 0.05f)
+        float previousValue = slider.value;
+
+        if (newValue > 1)
+            print("new value error: " + newValue);
+
+        while (Mathf.Abs(slider.value - newValue) > 0.005f)
         {
             slider.value = Mathf.Lerp(slider.value, newValue, Time.deltaTime * animationSpeed);
             yield return null;
         }
 
+
+        double change = newValue - previousValue;
+        //print("ResultsHandler: slider[" + this.slider + "] value: " + slider.value);
+
+        // Add a '+' to the front of the change text if we had an increase.
+        string frontString = change > 0 ? "+" : string.Empty;
+
+        // Set the font ocolor to green if we had an increase, and to red if we had a decrease.
+        Color color = change > 0 ? Color.green : Color.red;
+
+        changeText.color = color;
+        changeText.text = frontString + Math.Round(change, 2).ToString();
+       
+
         ++this.slider;
         AnimateSlider();
     }
 
-    public void Continue()
+    /// <summary>
+    /// Sets all of the change texts to empty strings and resets the slider counter back to 0.
+    /// </summary>
+    public void Reset()
     {
         slider = 0;
+        prText.text = string.Empty;
+        efficiencyText.text = string.Empty;
+        environmentText.text = string.Empty;
+        financeText.text = string.Empty;
     }
-
 }

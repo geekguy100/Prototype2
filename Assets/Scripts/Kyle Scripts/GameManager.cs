@@ -203,7 +203,7 @@ namespace Kyle
         /// <summary>
         /// The ResultsHandler to manage displaying the results and updating values after each question.
         /// </summary>
-        [SerializeField] private ResultsHandler resultsHandler;
+        [SerializeField] private ResultsHandler resultsHandler = null;
         #endregion
 
         #region Stat variables
@@ -219,23 +219,6 @@ namespace Kyle
 
         #endregion
 
-        /// <summary>
-        /// Subscribe the ChoiceSelect event to OnTimerEnd, meaning ChoiceSelect() will be called once the timer ends.
-        /// Added by Kyle Grenier
-        /// </summary>
-        private void Awake()
-        {
-            //timer.OnTimerEnd += ChoiceSelect;
-        }
-
-        /// <summary>
-        /// Unsubscribe to the OnTimerEnd event in the case GameManager is disabled or destroyed.
-        /// Added by Kyle Grenier
-        /// </summary>
-        private void OnDisable()
-        {
-            //timer.OnTimerEnd -= ChoiceSelect;
-        }
 
         private void Start()
         {
@@ -359,6 +342,11 @@ namespace Kyle
                 stats[2] += envrionmentAdjust;
                 stats[3] += costAdjust;
 
+                // Make sure our stats can't go over 100!
+                stats[1] = Mathf.Clamp(stats[1], 0f, 100f);
+                stats[2] = Mathf.Clamp(stats[2], 0f, 100f);
+                stats[3] = Mathf.Clamp(stats[3], 0f, 100f);
+
                 // Resets choice variables/buttons
                 // Sets currentSelection to -1 to make sure player makes a selection before submitting
                 currentSelection = -1;
@@ -475,6 +463,11 @@ namespace Kyle
             sliders[1].value = stats[1] / 100f;
             sliders[2].value = stats[2] / 100f;
             sliders[3].value = stats[3] / 100f;
+
+            //for (int i = 0; i < stats.Length; ++i)
+            //{
+            //    print("GameManager: slider[" + i + "] value: " + sliders[i].value);
+            //}
         }
 
         /// <summary>
