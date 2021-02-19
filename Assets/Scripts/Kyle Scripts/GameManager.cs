@@ -357,6 +357,7 @@ namespace Kyle
                 }
 
                 // Approval is the average of the 3 other stats.
+                // Right now, we are ignoring the original approval stat in favor of using Environment as Public Approval.
                 stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
 
                 ++choicesMade;
@@ -459,15 +460,10 @@ namespace Kyle
 
             // Update the stat sliders to show the proper value
             // 0 to 4 is approval, efficiency, envrionment, finance
-            sliders[0].value = stats[0] / 100f;
+            //sliders[0].value = stats[0] / 100f;   // At the moment, approval is not being used, and we are replacing environment with public approval.
             sliders[1].value = stats[1] / 100f;
             sliders[2].value = stats[2] / 100f;
             sliders[3].value = stats[3] / 100f;
-
-            //for (int i = 0; i < stats.Length; ++i)
-            //{
-            //    print("GameManager: slider[" + i + "] value: " + sliders[i].value);
-            //}
         }
 
         /// <summary>

@@ -14,19 +14,17 @@ using TMPro;
 public class ResultsHandler : MonoBehaviour
 {
     [Header("Sliders")]
-    [SerializeField] private Slider prSlider = null;
     [SerializeField] private Slider efficiencySlider = null;
-    [SerializeField] private Slider environmentSlider = null;
+    [SerializeField] private Slider approvalSlider = null;
     [SerializeField] private Slider financeSlider = null;
 
     [Header("Percent Change Texts")]
-    [SerializeField] private TextMeshProUGUI prText = null;
     [SerializeField] private TextMeshProUGUI efficiencyText = null;
-    [SerializeField] private TextMeshProUGUI environmentText = null;
+    [SerializeField] private TextMeshProUGUI approvalText = null;
     [SerializeField] private TextMeshProUGUI financeText = null;
 
     private float[] stats;
-    private int slider = 0; // The slider to animate.
+    private int slider = 1; // The slider to animate.
 
     [Header("Animation Settings")]
     [Tooltip("The speed of the slider change animation.")]
@@ -43,9 +41,8 @@ public class ResultsHandler : MonoBehaviour
     /// <param name="stats">The initial stats.</param>
     public void Init(float[] stats)
     {
-        prSlider.value = stats[0] / 100f;
         efficiencySlider.value = stats[1] / 100f;
-        environmentSlider.value = stats[2] / 100f;
+        approvalSlider.value = stats[2] / 100f;
         financeSlider.value = stats[3] / 100f;
     }
 
@@ -70,14 +67,11 @@ public class ResultsHandler : MonoBehaviour
     {
         switch (slider)
         {
-            case 0:
-                StartCoroutine(AnimateSliderCoroutine(prSlider, prText, stats[0] / 100f));
-                break;
             case 1:
                 StartCoroutine(AnimateSliderCoroutine(efficiencySlider, efficiencyText, stats[1]/100f));
                 break;
             case 2:
-                StartCoroutine(AnimateSliderCoroutine(environmentSlider, environmentText, stats[2] / 100f));
+                StartCoroutine(AnimateSliderCoroutine(approvalSlider, approvalText, stats[2] / 100f));
                 break;
             case 3:
                 StartCoroutine(AnimateSliderCoroutine(financeSlider, financeText, stats[3] / 100f));
@@ -115,7 +109,7 @@ public class ResultsHandler : MonoBehaviour
         Color color = change > 0 ? Color.green : Color.red;
 
         changeText.color = color;
-        changeText.text = frontString + Math.Round(change, 2).ToString();
+        changeText.text = frontString + Math.Round(change * 100).ToString();
        
 
         ++this.slider;
@@ -127,10 +121,9 @@ public class ResultsHandler : MonoBehaviour
     /// </summary>
     public void Reset()
     {
-        slider = 0;
-        prText.text = string.Empty;
+        slider = 1;
         efficiencyText.text = string.Empty;
-        environmentText.text = string.Empty;
+        approvalText.text = string.Empty;
         financeText.text = string.Empty;
     }
 }
