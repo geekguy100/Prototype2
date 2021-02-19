@@ -4,6 +4,7 @@ using FileLoading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 namespace Ein
 {
@@ -83,13 +84,19 @@ namespace Ein
         #region GameObjects
         [Header("GameObjects modified throughout the game")]
         [Tooltip("The text to show the current setup")]
-        public Text setupText;
+        public TextMeshProUGUI setupText;
 
-        [Tooltip("The text to show option A")]
-        public Text choiceAText;
+        [Tooltip("The text to show the stats change after a question setup")]
+        public TextMeshProUGUI resultsText;
 
-        [Tooltip("The text to show option B")]
-        public Text choiceBText;
+        [Tooltip("The text to show your impact from your choices over the entire game")]
+        public TextMeshProUGUI endingText;
+
+        //[Tooltip("The text to show option A")]
+        //public Text choiceAText;
+
+        //[Tooltip("The text to show option B")]
+        //public Text choiceBText;
 
         [Tooltip("The parent of all the above objects. Used to turn them on and off")]
         public GameObject gameplayObject;
@@ -235,7 +242,7 @@ namespace Ein
             //}
 
             // Default the game to loading "Scenarios.json"
-            scenarioFiles = new string[] { "Scenarios" };
+            scenarioFiles = new string[] { "Scenarios_new" };
 
             // The below code is for allowing the user to select a scenario file instead of defaulting to Scenarios.json
             //scenarioFiles = scenarioListTrimmed.ToArray();
@@ -248,7 +255,7 @@ namespace Ein
 
 
         /// <summary>
-        /// Load a specific scenario and its corresponding setups
+        /// Load a specific scenario and its corresponding setups. Only runs at the start.
         /// </summary>
         /// <param name="scenarioID">The ID of the scenario to load</param>
         public Scenarios LoadScenario(int scenarioID)
@@ -263,6 +270,10 @@ namespace Ein
             {
                 validChoices.Add(i);
             }
+
+            // Make sure we won't have more max choices than there actually are.
+            if (maxChoices > validChoices.Count)
+                maxChoices = validChoices.Count;
 
             return scenarioJson;
         }
@@ -282,12 +293,13 @@ namespace Ein
             int choiceIndex = 0;
 
             //Reset the timer. Added by Kyle Grenierf
-            timer.Reset();
+            //timer.Reset();
 
             //Hide the no selection panel - Kyle Grenier & TJ Caron
             noSelectionPanel.SetActive(false);
 
             // Set the current setup to the one chosen
+            print("Valid choices count: " + validChoices.Count);
             currentSetup = currentScenario.Setups[validChoices[choiceIndex]];
 
             // If the godzilla setup occured, set the flag so the godzilla ending can occur
@@ -314,9 +326,11 @@ namespace Ein
             // Which choice the players made
             //int decisionIndex = choiceSelect.value;
             int decisionIndex = currentSelection;
+            print("Decision Index: " + decisionIndex);
 
             if (decisionIndex < 0)
             {
+                print("Decision Index less than 0.");
                 noSelectionPanel.SetActive(true);
                 CancelInvoke("HideNoSelectionPanel");
                 Invoke("HideNoSelectionPanel", 2.5f);
@@ -349,8 +363,11 @@ namespace Ein
                 stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
 
                 ++choicesMade;
+                print("Choices Made: " + choicesMade + " / " + maxChoices + " max.");
+                print(currentSetup.Decisions[decisionIndex].Result);
                 // If all choices have been made, end the game
-                if (choicesMade <= maxChoices)
+                //Kyle Grenier
+                if (choicesMade < maxChoices)
                 {
                     NextSetup();
                     UpdateText();
@@ -411,7 +428,8 @@ namespace Ein
             }
 
             // Sets all unused choice buttons to inactive
-            while (currentText <= 3)
+            //Kyle Grenier - changed from a hardcoded to value to something more modular.
+            while (currentText < choiceTexts.Length)
             {
                 choiceTexts[currentText].transform.parent.gameObject.SetActive(false);
                 currentText++;
@@ -443,7 +461,7 @@ namespace Ein
             // Turn on the end panel and off the game panel
             endPanel.SetActive(true);
             gamePanel.SetActive(false);
-            timer.gameObject.SetActive(false); //Added by Kyle Grenier
+            //timer.gameObject.SetActive(false); //Added by Kyle Grenier
 
             // Turn off all the gameplay UI objects
             choicesText.text = "";
@@ -459,8 +477,8 @@ namespace Ein
 
             // Turn on the restart button
             restartButton.SetActive(true);
-            // Set the text alignment so it does not run offscreen
-            setupText.alignment = TextAnchor.UpperLeft;
+            // Set the text alignment so it does not run offscreen - Taken out by Kyle Grenier b/c using TMPro.
+            //setupText.alignment = TextAnchor.UpperLeft;
 
             // Set the text and sprites to the first ending screen
             endingButton();
@@ -584,7 +602,8 @@ namespace Ein
             //set setup text to text that needs to be shown, and set ending background to background that needs to be shown
             if (endingsSeen > 3)
             {
-                LoadScene("SampleScene");
+                //Kyle Grenier - reload my scene.
+                LoadScene("KylesScene");
             }
 
             // The ending currently being shown
@@ -607,7 +626,7 @@ namespace Ein
                 switcher = TestEnding(stats[3], endings.Finance, financeEndingBackgrounds);
                 restartButton.transform.GetChild(0).GetComponent<Text>().text = "Restart Game";
             }
-            setupText.text = switcher.text;
+            endingText.text = switcher.text;
 
             // Increment the number of endings seen
             ++endingsSeen;
@@ -651,7 +670,6 @@ namespace Ein
             //    return;
             //    return;
 
-            Debug.Log(index);
             //// Hides no selection panel
             //if (noSelectionPanel.activeInHierarchy)
             //{
