@@ -16,6 +16,9 @@ namespace TJ
         [Tooltip("Panel that shows up when player tries to confirm without selecting an option")]
         public GameObject noSelectionPanel;
 
+        [Tooltip("Panel that holds the stats - opened when player clicks stats button")]
+        public GameObject statsPanel;
+
         public GameObject endPanel;
         public GameObject gamePanel;
 
@@ -319,6 +322,12 @@ namespace TJ
             //int decisionIndex = choiceSelect.value;
             int decisionIndex = currentSelection;
 
+            // Closes stats panel if it is open - TJ
+            if (statsPanel.activeInHierarchy)
+            {
+                statsPanel.SetActive(false);
+            }
+
             if (decisionIndex < 0)
             {
                 // Checks if timer has run out
@@ -363,15 +372,18 @@ namespace TJ
             {
                 // Below line ties approval into the decision system directly
                 //int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
-                // Set the adjustments for the stats
+                // Set the adjustments for the stats (Changed environment to approval - TJ)
                 float efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency * timer.GetStatMultiplier();
-                float envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment * timer.GetStatMultiplier();
+                float approvalAdjust = currentSetup.Decisions[decisionIndex].Environment * timer.GetStatMultiplier();
                 float costAdjust = currentSetup.Decisions[decisionIndex].Finance * timer.GetStatMultiplier();
 
                 // Actually update the stats
-                stats[1] += efficiencyAdjust;
-                stats[2] += envrionmentAdjust;
-                stats[3] += costAdjust;
+                stats[0] += efficiencyAdjust;
+                stats[1] += approvalAdjust;
+                stats[2] += costAdjust;
+                print("Efficiency adj - " + efficiencyAdjust);
+                print("Approval adj - " + approvalAdjust);
+                print("Finance adj - " + costAdjust);
 
                 // Resets choice variables/buttons
                 // Sets currentSelection to -1 to make sure player makes a selection before submitting - TJ
@@ -382,8 +394,8 @@ namespace TJ
                     b.GetComponent<Image>().color = Color.white;
                 }
 
-                // Approval is the average of the 3 other stats.
-                stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
+                // Approval is the average of the 3 other stats. Not needed - TJ
+                // stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
 
                 ++choicesMade;
                 // If all choices have been made, end the game
@@ -461,20 +473,21 @@ namespace TJ
 
 
             // Change the persistant background (black one) depending on the values of the stats
+            // Both approval and environment use same stat for now - stats[0] - TJ
             approvalSprite.sprite = UpdateBackground(stats[0], approvalBackgrounds);
             efficiencySprite.sprite = UpdateBackground(stats[1], efficiencyBackgrounds);
-            envrionmentSprite.sprite = UpdateBackground(stats[2], environmentBackgrounds);
+            envrionmentSprite.sprite = UpdateBackground(stats[0], environmentBackgrounds);
             financeSprite.sprite = UpdateBackground(stats[3], financeBackgrounds);
 
             // Add the choices loaded above to the dropdown
             choiceSelect.AddOptions(availableChoices);
 
             // Update the stat sliders to show the proper value
-            // 0 to 4 is approval, efficiency, envrionment, finance
+            // 0 to 2 is efficiency, approval, finance - Changed by TJ
             sliders[0].value = stats[0] / 100f;
             sliders[1].value = stats[1] / 100f;
             sliders[2].value = stats[2] / 100f;
-            sliders[3].value = stats[3] / 100f;
+            //sliders[3].value = stats[3] / 100f;
         }
 
         /// <summary>
@@ -712,6 +725,27 @@ namespace TJ
             choiceButtons[index].GetComponent<Image>().color = Color.yellow;
         }
 
+        /// <summary>
+        /// Opens stats panel, called when player clicks stat button - TJ
+        /// </summary>
+        public void OpenStatsPanel()
+        {
+            if (!statsPanel.activeInHierarchy)
+            {
+                statsPanel.SetActive(true);
+            }
+        }
+
+        /// <summary>
+        /// Closes stats panel, called when player hits the X button in the stats panel
+        /// </summary>
+        public void CloseStatsPanel()
+        {
+            if (statsPanel.activeInHierarchy)
+            {
+                statsPanel.SetActive(false);
+            }
+        }
 
     }
 }
