@@ -10,9 +10,10 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-namespace TJ
+
+namespace Kyle
 {
-    public  class Timer : MonoBehaviour
+    public class Timer : MonoBehaviour
     {
         [Tooltip("The timer per question in seconds.")]
         [SerializeField] protected float timePerQuestion = 25f;
@@ -70,6 +71,8 @@ namespace TJ
             timerImg.fillAmount = 1;
             skipTime = timePerQuestion - graceTimePerQuestion - decayTime;
             decayPerSecond = (statMultiplier - minStatMultiplier) / decayTime;
+
+            StartCoroutine(Countdown());
         }
 
         /// <summary>

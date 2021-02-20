@@ -17,6 +17,9 @@ namespace Kyle
 
         public GameObject noSelectionPanel;
 
+        [Tooltip("Panel that holds the stats - opened when player clicks stats button")]
+        public GameObject statsPanel;
+
         public GameObject endPanel;
         public GameObject gamePanel;
 
@@ -217,8 +220,29 @@ namespace Kyle
         [Tooltip("Thresholds for the different backgrounds and endings")]
         public int[] thresholds;
 
+        [Tooltip("Amount of stat loss if player runs out of time")]
+        [SerializeField] private float statLoss = -5;
+
         #endregion
 
+
+        /// <summary>
+        /// Subscribe the ChoiceSelect event to OnTimerEnd, meaning ChoiceSelect() will be called once the timer ends.
+        /// Added by Kyle Grenier
+        /// </summary>
+        private void Awake()
+        {
+            timer.OnTimerEnd += ChoiceSelect;
+        }
+
+        /// <summary>
+        /// Unsubscribe to the OnTimerEnd event in the case GameManager is disabled or destroyed.
+        /// Added by Kyle Grenier
+        /// </summary>
+        private void OnDisable()
+        {
+            timer.OnTimerEnd -= ChoiceSelect;
+        }
 
         private void Start()
         {
@@ -322,10 +346,46 @@ namespace Kyle
 
             if (decisionIndex < 0)
             {
-                print("Decision Index less than 0.");
-                noSelectionPanel.SetActive(true);
-                CancelInvoke("HideNoSelectionPanel");
-                Invoke("HideNoSelectionPanel", 2.5f);
+                // Checks if timer has run out
+                if (timer.GetTimeLeft() > 0)
+                {
+                    print("Decision Index less than 0.");
+                    noSelectionPanel.SetActive(true);
+                    CancelInvoke("HideNoSelectionPanel");
+                    Invoke("HideNoSelectionPanel", 2.5f);
+                }
+                // If player ran out of time deducts stats and moves to next question - TJ
+                else
+                {
+
+                    for (int i = 1; i < stats.Length; i++)
+                    {
+                        stats[i] -= statLoss;
+                        stats[i] = Mathf.Clamp(stats[i], 0f, 100f);
+                    }
+
+
+                    foreach (Button b in choiceButtons)
+                    {
+                        b.GetComponent<Image>().color = Color.white;
+                    }
+
+                    // TODO: Get rid of 4th stat on all scripts - keeping in 4th stat for now 
+                    // Approval is the average of the 3 other stats.
+                    stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
+
+                    ++choicesMade;
+                    // If all choices have been made, end the game
+                    if (choicesMade <= maxChoices)
+                    {
+                        NextSetup();
+                        UpdateText();
+                    }
+                    else
+                    {
+                        EndGame();
+                    }
+                }               
             }
             else
             {
@@ -450,7 +510,8 @@ namespace Kyle
 
 
             // Change the persistant background (black one) depending on the values of the stats
-            approvalSprite.sprite = UpdateBackground(stats[0], approvalBackgrounds);
+            // Both approval and environment use same stat for now - stats[2] - TJ
+            approvalSprite.sprite = UpdateBackground(stats[2], approvalBackgrounds);
             efficiencySprite.sprite = UpdateBackground(stats[1], efficiencyBackgrounds);
             envrionmentSprite.sprite = UpdateBackground(stats[2], environmentBackgrounds);
             financeSprite.sprite = UpdateBackground(stats[3], financeBackgrounds);
@@ -485,6 +546,7 @@ namespace Kyle
             scenarioIcon.gameObject.SetActive(false);
             choiceSelect.gameObject.SetActive(false);
             submitButton.SetActive(false);
+            statsPanel.SetActive(false);
             backgroundStuff.SetActive(false);
             sliderHolder.SetActive(false);
 
@@ -700,6 +762,27 @@ namespace Kyle
             choiceButtons[index].GetComponent<Image>().color = Color.yellow;
         }
 
+        /// <summary>
+        /// opens stats panel, called when player clicks stat button - tj
+        /// </summary>
+        public void OpenStatsPanel()
+        {
+            if (!statsPanel.activeInHierarchy)
+            {
+                statsPanel.SetActive(true);
+            }
+        }
+
+        /// <summary>
+        /// closes stats panel, called when player hits the x button in the stats panel
+        /// </summary>
+        public void CloseStatsPanel()
+        {
+            if (statsPanel.activeInHierarchy)
+            {
+                statsPanel.SetActive(false);
+            }
+        }
 
     }
 }
