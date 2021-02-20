@@ -9659,11 +9659,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee2213454dd23e47939f0b9cd7bce90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timePerQuestion: 15
+  timePerQuestion: 300
   eventWaitTime: 2
   timerImg: {fileID: 885629117}
-  graceTimePerQuestion: 6
-  decayTime: 3
+  graceTimePerQuestion: 180
+  decayTime: 60
   minStatMultiplier: 0.5
 --- !u!1 &1725511260
 GameObject:
