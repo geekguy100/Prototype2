@@ -221,7 +221,7 @@ namespace Kyle
         public int[] thresholds;
 
         [Tooltip("Amount of stat loss if player runs out of time")]
-        [SerializeField] private float statLoss = -5;
+        [SerializeField] private float statLoss = 5;
 
         #endregion
 
@@ -375,16 +375,10 @@ namespace Kyle
                     stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
 
                     ++choicesMade;
-                    // If all choices have been made, end the game
-                    if (choicesMade <= maxChoices)
-                    {
-                        NextSetup();
-                        UpdateText();
-                    }
-                    else
-                    {
-                        EndGame();
-                    }
+                    // Hide gameplay screen and display results screen.
+                    gameplayObject.SetActive(false);
+                    resultsHandler.gameObject.SetActive(true);
+                    resultsHandler.Display(stats, "No valid choice was selected!");
                 }               
             }
             else
@@ -392,9 +386,9 @@ namespace Kyle
                 // Below line ties approval into the decision system directly
                 //int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
                 // Set the adjustments for the stats
-                float efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
-                float envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment;
-                float costAdjust = currentSetup.Decisions[decisionIndex].Finance;
+                float efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency * timer.GetStatMultiplier();
+                float envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment * timer.GetStatMultiplier();
+                float costAdjust = currentSetup.Decisions[decisionIndex].Finance * timer.GetStatMultiplier();
 
 
                 // Actually update the stats
@@ -421,7 +415,10 @@ namespace Kyle
                 stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
 
                 ++choicesMade;
-                print("Choices Made: " + choicesMade + " / " + maxChoices + " max.");
+
+                sliders[1].value = stats[1] / 100f;
+                sliders[2].value = stats[2] / 100f;
+                sliders[3].value = stats[3] / 100f;
 
                 // Hide gameplay screen and display results screen.
                 gameplayObject.SetActive(false);
