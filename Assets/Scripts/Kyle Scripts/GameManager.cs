@@ -166,7 +166,7 @@ namespace Kyle
         public Button[] choiceButtons;
 
         [Tooltip("Text on each choice button")]
-        public Text[] choiceTexts;
+        public TextMeshProUGUI[] choiceTexts;
 
         //Added by Kyle Grenier
         [Tooltip("The timer used to track time on each question.")]
@@ -482,7 +482,7 @@ namespace Kyle
             {
                 // Set the text with the proper letter prefix
                 //choicesText.text += currentLetter + ": " + choice.Choice + "\n";
-                choiceTexts[currentText].GetComponent<Text>().text = currentLetter + ": " + choice.Choice;
+                choiceTexts[currentText].text = currentLetter + ": " + choice.Choice;
 
                 // Activates any choice buttons that are inactive and will be used
                 if (!choiceTexts[currentText].transform.parent.gameObject.activeInHierarchy)
