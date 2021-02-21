@@ -172,6 +172,9 @@ namespace Kyle
         [Tooltip("The timer used to track time on each question.")]
         public Timer timer;
 
+        [Tooltip("The on-screen character who interacts with the player's choices.")]
+        public Character character;
+
 
         #endregion
 
@@ -308,7 +311,7 @@ namespace Kyle
             //select the bottom choice from the valid ones left
             int choiceIndex = 0;
 
-            //Reset the timer. Added by Kyle Grenierf
+            //Reset the timer. Added by Kyle Grenier
             //timer.Reset();
 
             //Hide the no selection panel - Kyle Grenier & TJ Caron
@@ -379,6 +382,9 @@ namespace Kyle
                     gameplayObject.SetActive(false);
                     resultsHandler.gameObject.SetActive(true);
                     resultsHandler.Display(stats, "No valid choice was selected!");
+
+                    // Make the character shocked because no choice was selected.
+                    character.SetEmotion(CharacterSprite.Emotion.SHOCKED);
                 }               
             }
             else
@@ -390,6 +396,8 @@ namespace Kyle
                 float envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment * timer.GetStatMultiplier();
                 float costAdjust = currentSetup.Decisions[decisionIndex].Finance * timer.GetStatMultiplier();
 
+                // Keep track of our stats before changing them.
+                float[] previousStats = stats.Clone() as float[];
 
                 // Actually update the stats
                 stats[1] += efficiencyAdjust;
@@ -414,6 +422,12 @@ namespace Kyle
                 // Right now, we are ignoring the original approval stat in favor of using Environment as Public Approval.
                 stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
 
+                // Keep track of the change in stats.
+                // This will be sent to the character to judge their emotion.
+                float[] statsDelta = new float[stats.Length];
+                for (int i = 0; i < statsDelta.Length; ++i)
+                    statsDelta[i] = stats[i] - previousStats[i];
+
                 ++choicesMade;
 
                 sliders[1].value = stats[1] / 100f;
@@ -424,6 +438,9 @@ namespace Kyle
                 gameplayObject.SetActive(false);
                 resultsHandler.gameObject.SetActive(true);
                 resultsHandler.Display(stats, currentSetup.Decisions[decisionIndex].Result);
+
+                // Set the character's emotion based on our current stats.
+                character.SetEmotion(statsDelta);
             }
         }
 

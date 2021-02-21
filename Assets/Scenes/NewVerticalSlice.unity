@@ -11566,6 +11566,17 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1900324364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2452901176725187562, guid: 260bc2de6035d0f48b5985dbaedb9e6f, type: 3}
+  m_PrefabInstance: {fileID: 48778374}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f0b66f93f7e34408a9740414da0c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1938414962 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114076530150876742, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
@@ -11921,6 +11932,7 @@ MonoBehaviour:
   - {fileID: 1154528307}
   - {fileID: 1437635460}
   timer: {fileID: 1658177701}
+  character: {fileID: 1900324364}
   resultsHandler: {fileID: 1251475128}
   thresholds: 09000000170000002500000032000000410000004f0000005d000000
   statLoss: 5
