@@ -1,0 +1,922 @@
+fileFormatVersion: 2
+guid: 1ba31bf912d283f4bbe2187084147b8a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9101103253415492260
+    second: Default face blinking SpriteSheet_0
+  - first:
+      213: -770763659460342088
+    second: Default face blinking SpriteSheet_1
+  - first:
+      213: -8860321364011081695
+    second: Default face blinking SpriteSheet_2
+  - first:
+      213: -7147016413604096009
+    second: Default face blinking SpriteSheet_3
+  - first:
+      213: 4506566782778747299
+    second: Default face blinking SpriteSheet_4
+  - first:
+      213: 3662461786868536462
+    second: Default face blinking SpriteSheet_5
+  - first:
+      213: 3963497646982789310
+    second: Default face blinking SpriteSheet_6
+  - first:
+      213: -3739840593490952305
+    second: Default face blinking SpriteSheet_7
+  - first:
+      213: -2718714476373376877
+    second: Default face blinking SpriteSheet_8
+  - first:
+      213: 6378165108165931979
+    second: Default face blinking SpriteSheet_9
+  - first:
+      213: -6077650016799278769
+    second: Default face blinking SpriteSheet_10
+  - first:
+      213: -4163543209523728732
+    second: Default face blinking SpriteSheet_11
+  - first:
+      213: -4573468260086206614
+    second: Default face blinking SpriteSheet_12
+  - first:
+      213: 452224766951676930
+    second: Default face blinking SpriteSheet_13
+  - first:
+      213: -2414269951515451531
+    second: Default face blinking SpriteSheet_14
+  - first:
+      213: 1005554179569261093
+    second: Default face blinking SpriteSheet_15
+  - first:
+      213: -7733452940325258241
+    second: Default face blinking SpriteSheet_16
+  - first:
+      213: -270974273968298229
+    second: Default face blinking SpriteSheet_17
+  - first:
+      213: -6475846120645163886
+    second: Default face blinking SpriteSheet_18
+  - first:
+      213: 8976625480189694208
+    second: Default face blinking SpriteSheet_19
+  - first:
+      213: 8691821777184166533
+    second: Default face blinking SpriteSheet_20
+  - first:
+      213: -6414782891718168014
+    second: Default face blinking SpriteSheet_21
+  - first:
+      213: 1285788088297243141
+    second: Default face blinking SpriteSheet_22
+  - first:
+      213: -7508219632213390390
+    second: Default face blinking SpriteSheet_23
+  - first:
+      213: 10476261740598733
+    second: Default face blinking SpriteSheet_24
+  - first:
+      213: 2197996202952659540
+    second: Default face blinking SpriteSheet_25
+  - first:
+      213: 3776999753768226839
+    second: Default face blinking SpriteSheet_26
+  - first:
+      213: 188080193068012149
+    second: Default face blinking SpriteSheet_27
+  - first:
+      213: 4512740619955256346
+    second: Default face blinking SpriteSheet_28
+  - first:
+      213: 2229419655735345089
+    second: Default face blinking SpriteSheet_29
+  - first:
+      213: 4058018652595898068
+    second: Default face blinking SpriteSheet_30
+  - first:
+      213: 3990507920911833115
+    second: Default face blinking SpriteSheet_31
+  - first:
+      213: 4460885204066638281
+    second: Default face blinking SpriteSheet_32
+  - first:
+      213: 135322896385506994
+    second: Default face blinking SpriteSheet_33
+  - first:
+      213: 3840503580815771214
+    second: Default face blinking SpriteSheet_34
+  - first:
+      213: 2864064855466533744
+    second: Default face blinking SpriteSheet_35
+  - first:
+      213: -2949536577965106621
+    second: Default face blinking SpriteSheet_36
+  - first:
+      213: 1018726564626737512
+    second: Default face blinking SpriteSheet_37
+  - first:
+      213: -7683572445271681517
+    second: Default face blinking SpriteSheet_38
+  - first:
+      213: 218229727163026113
+    second: Default face blinking SpriteSheet_39
+  - first:
+      213: -8605331893695811460
+    second: Default face blinking SpriteSheet_40
+  - first:
+      213: -7097001373036281448
+    second: Default face blinking SpriteSheet_41
+  - first:
+      213: -2371430907641938308
+    second: Default face blinking SpriteSheet_42
+  - first:
+      213: 698935405595160373
+    second: Default face blinking SpriteSheet_43
+  - first:
+      213: -7695101382732598952
+    second: Default face blinking SpriteSheet_44
+  - first:
+      213: 4667019776871717884
+    second: Default face blinking SpriteSheet_45
+  - first:
+      213: -5613649076179875419
+    second: Default face blinking SpriteSheet_46
+  - first:
+      213: 6281456623751853009
+    second: Default face blinking SpriteSheet_47
+  - first:
+      213: 4974373723651475847
+    second: Default face blinking SpriteSheet_48
+  - first:
+      213: 4891442190431357662
+    second: Default face blinking SpriteSheet_49
+  - first:
+      213: -3282702671002002011
+    second: Default face blinking SpriteSheet_50
+  - first:
+      213: 533365430941710021
+    second: Default face blinking SpriteSheet_51
+  - first:
+      213: -4926288333381525184
+    second: Default face blinking SpriteSheet_52
+  - first:
+      213: -7437778828595461894
+    second: Default face blinking SpriteSheet_53
+  - first:
+      213: -6305780494798114328
+    second: Default face blinking SpriteSheet_54
+  - first:
+      213: -7008509921114809567
+    second: Default face blinking SpriteSheet_55
+  - first:
+      213: -3243525853988320881
+    second: Default face blinking SpriteSheet_56
+  - first:
+      213: 1490127219211672938
+    second: Default face blinking SpriteSheet_57
+  - first:
+      213: -3375414546683109292
+    second: Default face blinking SpriteSheet_58
+  - first:
+      213: -4227326339510121037
+    second: Default face blinking SpriteSheet_59
+  - first:
+      213: -1633675485174895921
+    second: Default face blinking SpriteSheet_60
+  - first:
+      213: 7004562518496630077
+    second: Default face blinking SpriteSheet_61
+  - first:
+      213: -4649608390607371594
+    second: Default face blinking SpriteSheet_62
+  - first:
+      213: 885375610633042514
+    second: Default face blinking SpriteSheet_63
+  - first:
+      213: 5415510608313732257
+    second: Default face blinking SpriteSheet_64
+  - first:
+      213: -4523908738671344076
+    second: Default face blinking SpriteSheet_65
+  - first:
+      213: -8195892048619954691
+    second: Default face blinking SpriteSheet_66
+  - first:
+      213: -6598123916840634687
+    second: Default face blinking SpriteSheet_67
+  - first:
+      213: -1816955943404405580
+    second: Default face blinking SpriteSheet_68
+  - first:
+      213: 6894838647625374091
+    second: Default face blinking SpriteSheet_69
+  - first:
+      213: -5989581975069497936
+    second: Default face blinking SpriteSheet_70
+  - first:
+      213: -211575237315122227
+    second: Default face blinking SpriteSheet_71
+  - first:
+      213: 2594391186523351122
+    second: Default face blinking SpriteSheet_72
+  - first:
+      213: -2666518600855588582
+    second: Default face blinking SpriteSheet_73
+  - first:
+      213: 1781368047867550552
+    second: Default face blinking SpriteSheet_74
+  - first:
+      213: -3534484489949186595
+    second: Default face blinking SpriteSheet_75
+  - first:
+      213: 543938944784043172
+    second: Default face blinking SpriteSheet_76
+  - first:
+      213: 6700683302182902805
+    second: Default face blinking SpriteSheet_77
+  - first:
+      213: -4863185899761999636
+    second: Default face blinking SpriteSheet_78
+  - first:
+      213: 4203061250055705376
+    second: Default face blinking SpriteSheet_79
+  - first:
+      213: -7773498634808228444
+    second: Default face blinking SpriteSheet_80
+  - first:
+      213: -7820390580985225318
+    second: Default face blinking SpriteSheet_81
+  - first:
+      213: -2726262819414841551
+    second: Default face blinking SpriteSheet_82
+  - first:
+      213: 1915669634284605621
+    second: Default face blinking SpriteSheet_83
+  - first:
+      213: -2834514623159707942
+    second: Default face blinking SpriteSheet_84
+  - first:
+      213: 1505611876954882922
+    second: Default face blinking SpriteSheet_85
+  - first:
+      213: 1726107031085857262
+    second: Default face blinking SpriteSheet_86
+  - first:
+      213: 6288780586654269798
+    second: Default face blinking SpriteSheet_87
+  - first:
+      213: -6062930227616410704
+    second: Default face blinking SpriteSheet_88
+  - first:
+      213: -4906623751049528122
+    second: Default face blinking SpriteSheet_89
+  - first:
+      213: -4325619048528841089
+    second: Default face blinking SpriteSheet_90
+  - first:
+      213: 1786588352781097520
+    second: Default face blinking SpriteSheet_91
+  - first:
+      213: 8955712561580760056
+    second: Default face blinking SpriteSheet_92
+  - first:
+      213: 7283000383347541209
+    second: Default face blinking SpriteSheet_93
+  - first:
+      213: 3052733153059444285
+    second: Default face blinking SpriteSheet_94
+  - first:
+      213: 8549742837688175164
+    second: Default face blinking SpriteSheet_95
+  - first:
+      213: -1801856696594911564
+    second: Default face blinking SpriteSheet_96
+  - first:
+      213: -3258909629071216861
+    second: Default face blinking SpriteSheet_97
+  - first:
+      213: -2397293430450659775
+    second: Default face blinking SpriteSheet_98
+  - first:
+      213: 932670163358061278
+    second: Default face blinking SpriteSheet_99
+  - first:
+      213: -3818430598162058479
+    second: Default face blinking SpriteSheet_100
+  - first:
+      213: 7392720740764203969
+    second: Default face blinking SpriteSheet_101
+  - first:
+      213: -7067538423522616983
+    second: Default face blinking SpriteSheet_102
+  - first:
+      213: -219839765372497405
+    second: Default face blinking SpriteSheet_103
+  - first:
+      213: 653156981114820117
+    second: Default face blinking SpriteSheet_104
+  - first:
+      213: -8555392517311057289
+    second: Default face blinking SpriteSheet_105
+  - first:
+      213: -2596987274256076012
+    second: Default face blinking SpriteSheet_106
+  - first:
+      213: -8306565783608830837
+    second: Default face blinking SpriteSheet_107
+  - first:
+      213: 8469822419942351095
+    second: Default face blinking SpriteSheet_108
+  - first:
+      213: -966031257178131193
+    second: Default face blinking SpriteSheet_109
+  - first:
+      213: 5087221570048805448
+    second: Default face blinking SpriteSheet_110
+  - first:
+      213: 1694806805816950313
+    second: Default face blinking SpriteSheet_111
+  - first:
+      213: 3067662191567808411
+    second: Default face blinking SpriteSheet_112
+  - first:
+      213: -43450316357757719
+    second: Default face blinking SpriteSheet_113
+  - first:
+      213: 5715748357884928620
+    second: Default face blinking SpriteSheet_114
+  - first:
+      213: 6911033828860790674
+    second: Default face blinking SpriteSheet_115
+  - first:
+      213: 2718801487430916459
+    second: Default face blinking SpriteSheet_116
+  - first:
+      213: -2444942574236567607
+    second: Default face blinking SpriteSheet_117
+  - first:
+      213: -3739757331081077367
+    second: Default face blinking SpriteSheet_118
+  - first:
+      213: 8103995260206230137
+    second: Default face blinking SpriteSheet_119
+  - first:
+      213: -3659088968140770704
+    second: Default face blinking SpriteSheet_120
+  - first:
+      213: 8917219108241452776
+    second: Default face blinking SpriteSheet_121
+  - first:
+      213: -7409433545946360952
+    second: Default face blinking SpriteSheet_122
+  - first:
+      213: -5090772387925255951
+    second: Default face blinking SpriteSheet_123
+  - first:
+      213: -8735012611034205342
+    second: Default face blinking SpriteSheet_124
+  - first:
+      213: 795373798382366249
+    second: Default face blinking SpriteSheet_125
+  - first:
+      213: -4043712759606844112
+    second: Default face blinking SpriteSheet_126
+  - first:
+      213: 4574809665136494734
+    second: Default face blinking SpriteSheet_127
+  - first:
+      213: -753510949665848286
+    second: Default face blinking SpriteSheet_128
+  - first:
+      213: -3381795730809791553
+    second: Default face blinking SpriteSheet_129
+  - first:
+      213: 1574432535041232591
+    second: Default face blinking SpriteSheet_130
+  - first:
+      213: 4892555796889538604
+    second: Default face blinking SpriteSheet_131
+  - first:
+      213: -5503514435882327306
+    second: Default face blinking SpriteSheet_132
+  - first:
+      213: 2424564586209674861
+    second: Default face blinking SpriteSheet_133
+  - first:
+      213: -7881870498404214533
+    second: Default face blinking SpriteSheet_134
+  - first:
+      213: 8485879685970684863
+    second: Default face blinking SpriteSheet_135
+  - first:
+      213: -3717590750757179556
+    second: Default face blinking SpriteSheet_136
+  - first:
+      213: -7941568613087102557
+    second: Default face blinking SpriteSheet_137
+  - first:
+      213: 8455727280250332522
+    second: Default face blinking SpriteSheet_138
+  - first:
+      213: 5900734382000071467
+    second: Default face blinking SpriteSheet_139
+  - first:
+      213: -1112342429616611140
+    second: Default face blinking SpriteSheet_140
+  - first:
+      213: -1806760353335358214
+    second: Default face blinking SpriteSheet_141
+  - first:
+      213: 7607302614341116351
+    second: Default face blinking SpriteSheet_142
+  - first:
+      213: -7289488892404868003
+    second: Default face blinking SpriteSheet_143
+  - first:
+      213: -7609704534535091203
+    second: Default face blinking SpriteSheet_144
+  - first:
+      213: 6629693477545962978
+    second: Default face blinking SpriteSheet_145
+  - first:
+      213: 1078938664069637180
+    second: Default face blinking SpriteSheet_146
+  - first:
+      213: 2142630209971614245
+    second: Default face blinking SpriteSheet_147
+  - first:
+      213: -4859344930424563497
+    second: Default face blinking SpriteSheet_148
+  - first:
+      213: 7674028639616552431
+    second: Default face blinking SpriteSheet_149
+  - first:
+      213: 6358142773841024243
+    second: Default face blinking SpriteSheet_150
+  - first:
+      213: 1044100596429315182
+    second: Default face blinking SpriteSheet_151
+  - first:
+      213: -2022378936774236122
+    second: Default face blinking SpriteSheet_152
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55840c8fc262b180800000000000000
+      internalID: -9101103253415492260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 160
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be06101982bd45f0800000000000000
+      internalID: -770763659460342088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 160
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120a056d9a0d90580800000000000000
+      internalID: -8860321364011081695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 160
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f7dd373072b0dc90800000000000000
+      internalID: -7147016413604096009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 160
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a92a14bc9a8a8e30800000000000000
+      internalID: 4506566782778747299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 160
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84ddb1379da3d230800000000000000
+      internalID: 3662461786868536462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 160
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb871844c1c210730800000000000000
+      internalID: 3963497646982789310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 160
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8fb2647bca691cc0800000000000000
+      internalID: -3739840593490952305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 160
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3908d0e869f254ad0800000000000000
+      internalID: -2718714476373376877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 28
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc375077f5bc38850800000000000000
+      internalID: 6378165108165931979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 28
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49388fa289d7aba0800000000000000
+      internalID: -6077650016799278769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 28
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae2955a28f1836c0800000000000000
+      internalID: -4163543209523728732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 28
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fa90649d6c780c0800000000000000
+      internalID: -4573468260086206614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 28
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20cd9c09700a64600800000000000000
+      internalID: 452224766951676930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 28
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f950c354ace7ed0800000000000000
+      internalID: -2414269951515451531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 28
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a92abd23274fd00800000000000000
+      internalID: 1005554179569261093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Default face blinking SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 28
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb76bc36814da490800000000000000
+      internalID: -7733452940325258241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
