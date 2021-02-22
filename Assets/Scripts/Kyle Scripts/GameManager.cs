@@ -777,13 +777,17 @@ namespace Kyle
         }
 
         /// <summary>
-        /// opens stats panel, called when player clicks stat button - tj
+        /// opens stats panel, called when player clicks stat button / Also closes stats panel if it is already open - tj
         /// </summary>
         public void OpenStatsPanel()
         {
             if (!statsPanel.activeInHierarchy)
             {
                 statsPanel.SetActive(true);
+            }
+            else
+            {
+                statsPanel.SetActive(false);
             }
         }
 
