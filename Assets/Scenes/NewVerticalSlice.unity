@@ -855,7 +855,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5864690215705941622, guid: 260bc2de6035d0f48b5985dbaedb9e6f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 36584cb0e526bac4fbd393a98320cd98, type: 2}
+    m_RemovedComponents:
+    - {fileID: 5864690215705941622, guid: 260bc2de6035d0f48b5985dbaedb9e6f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 260bc2de6035d0f48b5985dbaedb9e6f, type: 3}
 --- !u!1 &77587474
 GameObject:

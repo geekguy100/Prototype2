@@ -112,6 +112,27 @@ MonoBehaviour:
   leftArm: {fileID: 3650283459617272531}
   rightArm: {fileID: 1831486885874313759}
   antenna: {fileID: 4343756315254443234}
+  emotionThreshold: 6
+  statDecreaseThreshold: 2
+--- !u!95 &5864690215705941622
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4542715039507070854}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2452901176358513558
 PrefabInstance:
   m_ObjectHideFlags: 0
