@@ -3950,10 +3950,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: You are a team of professionals that have to decide on how to implement
-    the smart grid in the world. Not all choices are clear and concise as you will
-    have to make sacrifices on the path to improve the accessibility of energy to
-    the world. You could benefit the entire human race, or you could be their downfall.
-    Will you be motivated by profit, the environment, or something else?
+    the Smart Grid into the world. Not all choices are clear and concise, as you
+    will have to make sacrifices along the way to improve the accessibility of energy
+    to the world. You can help the entire human race, or you could be its downfall.
+    Will you be motivated by profit, public approval, efficiency, or something else?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10670,11 +10670,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Only one person can play the actual digital game. Whoever will be playing
-    this must be the Manager. They will have to screenshare so the other players
-    can see the screen. This is so only the Manager can physically choose the choices
-    without anyone else clicking which choice to go with. The other roles must convince
-    the Manager to go with the choice that best benefits their respective role.
+  m_text: Only one person should be playing the digital game. This person will act
+    as the Manager. The Manager should screenshare the game so that the other players
+    can see their screen. This ensures that only the Manager can select the choice
+    the team will go with. The other players must convince the Manager to choose
+    the option that most benefits their role.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

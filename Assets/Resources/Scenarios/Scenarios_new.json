@@ -2,52 +2,52 @@
   {
     "Decisions": [
       {
-        "Choice": "Keep rolling out Smart Meters into homes as-is. Ensuring everyone in your target area has a Smart Meter before improvements occur.",
+        "Choice": "Keep rolling out Smart Meters into homes, ensuring that everyone in your target area has a Smart Meter before looking into possible improvements.",
         "Approval": 0,
         "Efficiency": 5,
         "Environment": -5,
         "Finance": 5,
-        "Result": "Increased number of Smart Meter systems bring in more money as well as allow for testing to be done on a larger scale, however, this leaves existing users with unpolished versions of the system."
+        "Result": "The increased number of implemented Smart Meters brings in a large profit and also allows the system to be tested on a larger scale. However, this leaves existing users with unpolished versions of the system."
       },
       {
-        "Choice": "Perform trial studies on the current homes to see where issues are popping up and where to address them.",
+        "Choice": "Perform trial studies on current Smart Meter homes to see what issues need to be addressed and where they are occurring.",
         "Approval": 0,
         "Efficiency": 5,
         "Environment": 10,
         "Finance": -5,
-        "Result": "Through the studies, ways to improve the system are found and increase information productivity. The efforts made to improve the system also make the consumers and future consumers more interested in it, but this has diminished your source of new income."
+        "Result": "Through these studies, ways to improve the system have been found and they increase information productivity. The efforts made to improve the system have caused current and future consumers to become more interested in your work, but your revenue has diminished."
       },
       {
-        "Choice": "Research how Smart Meter homes affect the environment and focus on getting an environmental grant for the efforts done.",
+        "Choice": "Research how the implementation of Smart Meters into homes affects the environment and focus on receiving an environmental grant for your efforts.",
         "Approval": 0,
         "Efficiency": -5,
         "Environment": 5,
         "Finance": 5,
-        "Result": "The outside grant increases your budget and the public's view of the company due to the positive environmental support, but the lack of focus on the grid damages efficiency."
+        "Result": "The outside grant increased your budget and your focus on the environment improved the public’s opinion of your company. However, your lack of attention to the Smart Grid has led to decreased efficiency in the system."
       },
       {
-        "Choice": "Commit to urban development in order to add space for new homes and power sources. Join forces with deforestation organizations to gain space by the nearby countryside. ",
+        "Choice": "Commit to urban development by joining forces with deforestation organizations to create space in the nearby countryside for new homes and power plants. ",
         "Approval": 0,
         "Efficiency": -5,
         "Environment": -10,
         "Finance": 5,
-        "Result": "The new homes added to the Smart Grid system result in increased profits but at the cost of the overall efficiency of the Smart Grid, as well as the public perception of your company, due to the lack of attention to the first users of Smart Grid."
+        "Result": "The new homes added to the Smart Grid system has resulted in increased profits. However, your lack of attention to your existing users and your deforestation efforts have led to worsening public perception of your company and decreased efficiency of the Smart Grid."
       },
       {
-        "Choice": "Heavily prioritize more customers rather than our current customers by quickly rolling out Smart Meters into as many homes as possible regardless of any issues old customers have.",
+        "Choice": "Prioritize gaining more customers over fixing existing issues by quickly rolling out Smart Meters to as many homes as possible.",
         "Approval": 0,
         "Efficiency": 5,
         "Environment": -10,
         "Finance": 10,
-        "Result": "The massive influx in new customers results in a major increase in profits, as well as said profits going towards making the Smart Grid more efficient, however, the reputation of the company has been heavily diminished in the eyes of customers due to their view on the approach taken."
+        "Result": "The massive influx of new customers resulted in a major increase in profits, which have gone towards making the Smart Grid more efficient. However, the reputation of the company has diminished due to your lack of concern for customer complaints."
       },
       {
-        "Choice": "Slow down on adding more homes to the Smart Grid system, focusing instead on adding additional power sources into the Smart Grid system.",
+        "Choice": "Slow down the implementation of Smart Meters into homes and instead focus on adding additional power sources to the Smart Grid.",
         "Approval": 0,
         "Efficiency": 10,
         "Environment": 10,
         "Finance": -5,
-        "Result": "There is a decrease of source income due to the slow implementation, but your attention on adding more power sources increases your efficiency and the consumer's appreciation of your efforts."
+        "Result": "Your slower Smart Meter implementation led to a decrease in income, but your focus on adding more power sources has increased efficiency, and consumers appreciated your efforts. "
       }
     ],
     "Setup": "The Smart Grid is most effective when every house in an area is under its effect. After successfully implementing Smart Meters into multiple homes, the company is curious which step should be taken next.",
