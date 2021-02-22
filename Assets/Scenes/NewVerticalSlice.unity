@@ -6239,7 +6239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -75.6, y: 30.1}
+  m_AnchoredPosition: {x: -75.6, y: 30.099976}
   m_SizeDelta: {x: 208, y: 60}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1043135930
@@ -10132,12 +10132,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Only one person can play the actual digital game. Whoever will be playing
-    this must be the\r\n\n Manager. They will have to screenshare so the other players
-    can see the screen. This is so only\r\n\n the Manager can physically choose the
-    choices without anyone else clicking which choice to go\r\n with.\r\n\nThe other
-    roles must convince the Manager to go with the choice that best benefits their\r\nrespective
-    role."
+  m_text: Only one person can play the actual digital game. Whoever will be playing
+    this must be the Manager. They will have to screenshare so the other players
+    can see the screen. This is so only the Manager can physically choose the choices
+    without anyone else clicking which choice to go with. The other roles must convince
+    the Manager to go with the choice that best benefits their respective role.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10164,13 +10163,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11.7
-  m_fontSizeBase: 11.7
+  m_fontSize: 15.9
+  m_fontSizeBase: 15.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
