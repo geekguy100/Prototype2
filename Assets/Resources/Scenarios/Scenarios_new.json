@@ -23,7 +23,7 @@
         "Efficiency": -5,
         "Environment": 5,
         "Finance": 5,
-        "Result": "The outside grant increased your budget and your focus on the environment improved the public’s opinion of your company. However, your lack of attention to the Smart Grid has led to decreased efficiency in the system."
+        "Result": "The outside grant increased your budget, and your focus on the environment improved the public's opinion of your company. However, your lack of attention to the Smart Grid has led to decreased efficiency in the system."
       },
       {
         "Choice": "Commit to urban development by joining forces with deforestation organizations to create space in the nearby countryside for new homes and power plants. ",
@@ -47,7 +47,7 @@
         "Efficiency": 10,
         "Environment": 10,
         "Finance": -5,
-        "Result": "Your slower Smart Meter implementation led to a decrease in income, but your focus on adding more power sources has increased efficiency, and consumers appreciated your efforts. "
+        "Result": "Your slower Smart Meter implementation led to a decrease in income, but your focus on adding more power sources has increased efficiency. Consumers appreciated your efforts. "
       }
     ],
     "Setup": "The Smart Grid is most effective when every house in an area is under its effect. After successfully implementing Smart Meters into multiple homes, the company is curious which step should be taken next.",
