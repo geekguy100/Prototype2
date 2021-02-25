@@ -621,6 +621,14 @@ namespace Kyle
         }
 
         /// <summary>
+        /// Loads the current scene - useful for going back to menu without needing scene name
+        /// </summary>
+        public void LoadCurrentScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        /// <summary>
         /// Quits the game
         /// </summary>
         public void ExitGame()

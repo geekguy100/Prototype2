@@ -1,9 +1,9 @@
-/*
+﻿/*
  * Plays the sound when the buttons are clicked
  */
 using UnityEngine;
 
-namespace TJ
+namespace TJ 
 {
     public class SoundBehaviour : MonoBehaviour
     {
@@ -17,3 +17,5 @@ namespace TJ
         }
     }
 }
+
+

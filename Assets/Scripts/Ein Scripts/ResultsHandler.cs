@@ -11,7 +11,7 @@ using UnityEngine.UI;
 using System.Collections;
 using TMPro;
 
-namespace Kyle
+namespace Ein
 {
     public class ResultsHandler : MonoBehaviour
     {

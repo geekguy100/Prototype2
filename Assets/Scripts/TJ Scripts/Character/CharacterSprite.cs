@@ -7,7 +7,8 @@
 *****************************************************************************/
 using UnityEngine;
 
-namespace Kyle
+
+namespace TJ
 {
     public class CharacterSprite : MonoBehaviour
     {

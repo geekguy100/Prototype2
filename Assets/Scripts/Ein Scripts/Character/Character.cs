@@ -9,7 +9,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 
-namespace Kyle
+namespace Ein
 {
     public class Character : MonoBehaviour
     {

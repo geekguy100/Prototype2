@@ -8,8 +8,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-
-namespace Kyle
+namespace TJ
 {
     public class Character : MonoBehaviour
     {

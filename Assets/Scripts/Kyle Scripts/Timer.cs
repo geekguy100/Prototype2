@@ -11,7 +11,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 
-namespace Ein
+namespace Kyle
 {
     public class Timer : MonoBehaviour
     {

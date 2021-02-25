@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using System.IO;
 using FileLoading;
 using UnityEngine;
@@ -15,6 +16,9 @@ namespace Ein
         private string[] scenarioFiles;
 
         public GameObject noSelectionPanel;
+
+        [Tooltip("Panel that holds the stats - opened when player clicks stats button")]
+        public GameObject statsPanel;
 
         public GameObject endPanel;
         public GameObject gamePanel;
@@ -162,11 +166,14 @@ namespace Ein
         public Button[] choiceButtons;
 
         [Tooltip("Text on each choice button")]
-        public Text[] choiceTexts;
+        public TextMeshProUGUI[] choiceTexts;
 
         //Added by Kyle Grenier
         [Tooltip("The timer used to track time on each question.")]
         public Timer timer;
+
+        [Tooltip("The on-screen character who interacts with the player's choices.")]
+        public Character character;
 
 
         #endregion
@@ -198,6 +205,11 @@ namespace Ein
         /// Did the players get the godzilla setup
         /// </summary>
         private bool hadGodzilla = false;
+
+        /// <summary>
+        /// The ResultsHandler to manage displaying the results and updating values after each question.
+        /// </summary>
+        [SerializeField] private ResultsHandler resultsHandler = null;
         #endregion
 
         #region Stat variables
@@ -211,7 +223,11 @@ namespace Ein
         [Tooltip("Thresholds for the different backgrounds and endings")]
         public int[] thresholds;
 
+        [Tooltip("Amount of stat loss if player runs out of time")]
+        [SerializeField] private float statLoss = 5;
+
         #endregion
+
 
         /// <summary>
         /// Subscribe the ChoiceSelect event to OnTimerEnd, meaning ChoiceSelect() will be called once the timer ends.
@@ -219,7 +235,7 @@ namespace Ein
         /// </summary>
         private void Awake()
         {
-            //timer.OnTimerEnd += ChoiceSelect;
+            timer.OnTimerEnd += ChoiceSelect;
         }
 
         /// <summary>
@@ -228,7 +244,7 @@ namespace Ein
         /// </summary>
         private void OnDisable()
         {
-            //timer.OnTimerEnd -= ChoiceSelect;
+            timer.OnTimerEnd -= ChoiceSelect;
         }
 
         private void Start()
@@ -251,6 +267,9 @@ namespace Ein
             // Load the endings from endings.json
             TextAsset endingsData = Resources.Load("Endings/endings") as TextAsset;
             endings = JsonUtility.FromJson<Endings>(endingsData.text);
+
+            // Initialize the ResultsHandler's sliders to the correct starting values.
+            resultsHandler.Init(stats);
         }
 
 
@@ -292,7 +311,7 @@ namespace Ein
             //select the bottom choice from the valid ones left
             int choiceIndex = 0;
 
-            //Reset the timer. Added by Kyle Grenierf
+            //Reset the timer. Added by Kyle Grenier
             //timer.Reset();
 
             //Hide the no selection panel - Kyle Grenier & TJ Caron
@@ -330,25 +349,65 @@ namespace Ein
 
             if (decisionIndex < 0)
             {
-                print("Decision Index less than 0.");
-                noSelectionPanel.SetActive(true);
-                CancelInvoke("HideNoSelectionPanel");
-                Invoke("HideNoSelectionPanel", 2.5f);
+                // Checks if timer has run out
+                if (timer.GetTimeLeft() > 0)
+                {
+                    print("Decision Index less than 0.");
+                    noSelectionPanel.SetActive(true);
+                    CancelInvoke("HideNoSelectionPanel");
+                    Invoke("HideNoSelectionPanel", 2.5f);
+                }
+                // If player ran out of time deducts stats and moves to next question - TJ
+                else
+                {
+
+                    for (int i = 1; i < stats.Length; i++)
+                    {
+                        stats[i] -= statLoss;
+                        stats[i] = Mathf.Clamp(stats[i], 0f, 100f);
+                    }
+
+
+                    foreach (Button b in choiceButtons)
+                    {
+                        b.GetComponent<Image>().color = Color.white;
+                    }
+
+                    // TODO: Get rid of 4th stat on all scripts - keeping in 4th stat for now 
+                    // Approval is the average of the 3 other stats.
+                    stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
+
+                    ++choicesMade;
+                    // Hide gameplay screen and display results screen.
+                    gameplayObject.SetActive(false);
+                    resultsHandler.gameObject.SetActive(true);
+                    resultsHandler.Display(stats, "No valid choice was selected!");
+
+                    // Make the character shocked because no choice was selected.
+                    character.SetEmotion(CharacterSprite.Emotion.SHOCKED);
+                }               
             }
             else
             {
                 // Below line ties approval into the decision system directly
                 //int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
                 // Set the adjustments for the stats
-                float efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency;
-                float envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment;
-                float costAdjust = currentSetup.Decisions[decisionIndex].Finance;
+                float efficiencyAdjust = currentSetup.Decisions[decisionIndex].Efficiency * timer.GetStatMultiplier();
+                float envrionmentAdjust = currentSetup.Decisions[decisionIndex].Environment * timer.GetStatMultiplier();
+                float costAdjust = currentSetup.Decisions[decisionIndex].Finance * timer.GetStatMultiplier();
 
+                // Keep track of our stats before changing them.
+                float[] previousStats = stats.Clone() as float[];
 
                 // Actually update the stats
                 stats[1] += efficiencyAdjust;
                 stats[2] += envrionmentAdjust;
                 stats[3] += costAdjust;
+
+                // Make sure our stats can't go over 100!
+                stats[1] = Mathf.Clamp(stats[1], 0f, 100f);
+                stats[2] = Mathf.Clamp(stats[2], 0f, 100f);
+                stats[3] = Mathf.Clamp(stats[3], 0f, 100f);
 
                 // Resets choice variables/buttons
                 // Sets currentSelection to -1 to make sure player makes a selection before submitting
@@ -360,22 +419,50 @@ namespace Ein
                 }
 
                 // Approval is the average of the 3 other stats.
+                // Right now, we are ignoring the original approval stat in favor of using Environment as Public Approval.
                 stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
 
+                // Keep track of the change in stats.
+                // This will be sent to the character to judge their emotion.
+                float[] statsDelta = new float[stats.Length];
+                for (int i = 0; i < statsDelta.Length; ++i)
+                    statsDelta[i] = stats[i] - previousStats[i];
+
                 ++choicesMade;
-                print("Choices Made: " + choicesMade + " / " + maxChoices + " max.");
-                print(currentSetup.Decisions[decisionIndex].Result);
-                // If all choices have been made, end the game
-                //Kyle Grenier
-                if (choicesMade < maxChoices)
-                {
-                    NextSetup();
-                    UpdateText();
-                }
-                else
-                {
-                    EndGame();
-                }
+
+                sliders[1].value = stats[1] / 100f;
+                sliders[2].value = stats[2] / 100f;
+                sliders[3].value = stats[3] / 100f;
+
+                // Hide gameplay screen and display results screen.
+                gameplayObject.SetActive(false);
+                resultsHandler.gameObject.SetActive(true);
+                resultsHandler.Display(stats, currentSetup.Decisions[decisionIndex].Result);
+
+                // Set the character's emotion based on our current stats.
+                character.SetEmotion(statsDelta);
+            }
+        }
+
+        /// <summary>
+        /// Called when pressing the Continue button from the results screen.
+        /// </summary>
+        public void ContinueFromResults()
+        {
+            // Disable the results screen and reenable the gameplay screen.
+            resultsHandler.gameObject.SetActive(false);
+            gameplayObject.SetActive(true);
+
+            // If all choices have been made, end the game
+            //Kyle Grenier
+            if (choicesMade < maxChoices)
+            {
+                NextSetup();
+                UpdateText();
+            }
+            else
+            {
+                EndGame();
             }
         }
 
@@ -412,7 +499,7 @@ namespace Ein
             {
                 // Set the text with the proper letter prefix
                 //choicesText.text += currentLetter + ": " + choice.Choice + "\n";
-                choiceTexts[currentText].GetComponent<Text>().text = currentLetter + ": " + choice.Choice;
+                choiceTexts[currentText].text = currentLetter + ": " + choice.Choice;
 
                 // Activates any choice buttons that are inactive and will be used
                 if (!choiceTexts[currentText].transform.parent.gameObject.activeInHierarchy)
@@ -437,7 +524,8 @@ namespace Ein
 
 
             // Change the persistant background (black one) depending on the values of the stats
-            approvalSprite.sprite = UpdateBackground(stats[0], approvalBackgrounds);
+            // Both approval and environment use same stat for now - stats[2] - TJ
+            approvalSprite.sprite = UpdateBackground(stats[2], approvalBackgrounds);
             efficiencySprite.sprite = UpdateBackground(stats[1], efficiencyBackgrounds);
             envrionmentSprite.sprite = UpdateBackground(stats[2], environmentBackgrounds);
             financeSprite.sprite = UpdateBackground(stats[3], financeBackgrounds);
@@ -447,7 +535,7 @@ namespace Ein
 
             // Update the stat sliders to show the proper value
             // 0 to 4 is approval, efficiency, envrionment, finance
-            sliders[0].value = stats[0] / 100f;
+            //sliders[0].value = stats[0] / 100f;   // At the moment, approval is not being used, and we are replacing environment with public approval.
             sliders[1].value = stats[1] / 100f;
             sliders[2].value = stats[2] / 100f;
             sliders[3].value = stats[3] / 100f;
@@ -472,6 +560,7 @@ namespace Ein
             scenarioIcon.gameObject.SetActive(false);
             choiceSelect.gameObject.SetActive(false);
             submitButton.SetActive(false);
+            statsPanel.SetActive(false);
             backgroundStuff.SetActive(false);
             sliderHolder.SetActive(false);
 
@@ -529,6 +618,14 @@ namespace Ein
             // This scene has not has godzilla
             hadGodzilla = false;
             SceneManager.LoadScene(sceneName);
+        }
+
+        /// <summary>
+        /// Loads the current scene - useful for going back to menu without needing scene name
+        /// </summary>
+        public void LoadCurrentScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         /// <summary>
@@ -687,6 +784,31 @@ namespace Ein
             choiceButtons[index].GetComponent<Image>().color = Color.yellow;
         }
 
+        /// <summary>
+        /// opens stats panel, called when player clicks stat button / Also closes stats panel if it is already open - tj
+        /// </summary>
+        public void OpenStatsPanel()
+        {
+            if (!statsPanel.activeInHierarchy)
+            {
+                statsPanel.SetActive(true);
+            }
+            else
+            {
+                statsPanel.SetActive(false);
+            }
+        }
+
+        /// <summary>
+        /// closes stats panel, called when player hits the x button in the stats panel
+        /// </summary>
+        public void CloseStatsPanel()
+        {
+            if (statsPanel.activeInHierarchy)
+            {
+                statsPanel.SetActive(false);
+            }
+        }
 
     }
 }
