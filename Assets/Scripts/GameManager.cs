@@ -10,6 +10,10 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    /// <summary>
+    /// Holds whether or not the player has completed the tutorial in this play session
+    /// </summary>
+    private static bool completedTutorial = false;
 
     [Tooltip("All the text files for each setup, one per setup. The ID is the files index in the array")]
     private string[] scenarioFiles;
@@ -106,6 +110,9 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("The first UI object visible, allows the user to configure the game")]
     public GameObject setupObject;
+
+    [Tooltip("The parent object of the tutorial")]
+    public GameObject tutorialObject;
 
     [Tooltip("Dropdown to select what scenario to play")]
     public Dropdown scenarioSelect;
@@ -604,8 +611,21 @@ public class GameManager : MonoBehaviour
         // Below line is if the user selects the secnario file instead of autoloading Scenarios.json
         //scenarioSelect.value - 1;
         // Autoload Scenarios.json (the first one found)
-        int selected = 0;
-        ScenarioSelect(selected);
+        if (completedTutorial)
+        {
+            if (tutorialObject.activeInHierarchy)
+            {
+                tutorialObject.SetActive(false);
+            }
+            int selected = 0;
+            ScenarioSelect(selected);
+        }
+        else
+        {
+            setupObject.SetActive(false);
+            tutorialObject.SetActive(true);
+        }
+
     }
 
     /// <summary>
@@ -807,6 +827,11 @@ public class GameManager : MonoBehaviour
         {
             statsPanel.SetActive(false);
         }
+    }
+
+    public void CompleteTutorial()
+    {
+        completedTutorial = true;
     }
 
 }
