@@ -8,8 +8,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace TJ
-{
+
+
     public class Character : MonoBehaviour
     {
         [Header("Expression Prefabs")]
@@ -146,4 +146,4 @@ namespace TJ
             expressionContainer = Instantiate(chosen, transform);
         }
     }
-}
+

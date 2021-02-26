@@ -7,8 +7,7 @@
 *****************************************************************************/
 using UnityEngine;
 
-namespace Ein
-{
+
     public class CharacterSprite : MonoBehaviour
     {
         public enum Emotion { ANY, DEFAULT, CONCERNED, HAPPY, SHOCKED, THINKING };
@@ -21,4 +20,4 @@ namespace Ein
             return emotion;
         }
     }
-}
+
