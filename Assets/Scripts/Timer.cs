@@ -23,14 +23,30 @@ public class Timer : MonoBehaviour
     [Tooltip("The timer's fill area image.")]
     [SerializeField] private Image timerImg = null;
 
-    [Tooltip("Time given to answer a question before stat gain begins to decay")]
-    [SerializeField] private float graceTimePerQuestion = 25f;
+    
+    // Old variable - not used with new timer art
+    //[Tooltip("Time given to answer a question before stat gain begins to decay")]
+    //[SerializeField] private float graceTimePerQuestion = 25f;
 
-    [Tooltip("Time before stat gain decays to 50%")]
-    [SerializeField] private float decayTime = 25f;
+    /// <summary>
+    /// Time it takes for full stat decay - equal to 1/4 of full timer
+    /// </summary>
+    private float decayTime = 0;
 
     [Tooltip("Lowest the stat gain multiplier can go")]
     [SerializeField] private float minStatMultiplier = .5f;
+
+    [Tooltip("How long the warnings stay on screen")]
+    [SerializeField] private float warningTime = 3f;
+
+    [Tooltip("Spinner showing timer's progress")]
+    [SerializeField] private GameObject spinnerObj;
+
+    [Tooltip("Warning saying timer is 3/4 over")]
+    [SerializeField] private GameObject quarterWarning;
+
+    [Tooltip("Warning saying timer is half over")]
+    [SerializeField] private GameObject halfWarning;
 
     /// <summary>
     /// Time from stat decay ending to question being skipped
@@ -52,13 +68,24 @@ public class Timer : MonoBehaviour
     /// </summary>
     private float time = 0;
 
+    /// <summary>
+    /// Number of degrees in full timer rotation
+    /// </summary>
+    private float fullRot = 360f;
+
+    /// <summary>
+    /// Change in rotation of timer
+    /// </summary>
+    private float rotChange = 0;
+
     private bool completed = false;
     public bool Completed { get { return completed; } }
 
     public delegate void TimerEndHandler();
     public event TimerEndHandler OnTimerEnd;
 
-    Color orange = new Color(1, .64f, 0);
+    private bool halfWarningSent, quarterWarningSent;
+  
 
     //public Image background;
 
@@ -67,8 +94,8 @@ public class Timer : MonoBehaviour
 
     private void Awake()
     {
-        timerImg.fillAmount = 1;
-        skipTime = timePerQuestion - graceTimePerQuestion - decayTime;
+        skipTime = timePerQuestion / 4f;
+        decayTime = timePerQuestion / 4f;
         decayPerSecond = (statMultiplier - minStatMultiplier) / decayTime;
 
         StartCoroutine(Countdown());
@@ -86,8 +113,10 @@ public class Timer : MonoBehaviour
 
         statMultiplier = 1;
 
-        timerImg.fillAmount = 1;
-        timerImg.color = Color.green;
+        spinnerObj.transform.rotation = Quaternion.identity;
+
+        halfWarningSent = false;
+        quarterWarningSent = false;
 
         lastCall = StartCoroutine(Countdown());
     }
@@ -101,28 +130,41 @@ public class Timer : MonoBehaviour
 
         while (time > 0)
         {
-            // Checks if stat decay has already finished
-            if (time < skipTime)
+            // Checks if timer is 3/4 over (send warning here)
+            if (time < timePerQuestion / 4)
             {
-                // Changes color to orange if not orange yet
-                if (timerImg.color != orange)
+                // Sends quarter warning
+                if (!quarterWarningSent)
                 {
-                    timerImg.color = orange;
+                    quarterWarningSent = true;
+                    quarterWarning.SetActive(true);
+                    Invoke("HideWarnings", warningTime);
                 }
             }
             // Checks if grace time is over and start decay should start
-            else if (time < (timePerQuestion - graceTimePerQuestion))
+            else if (time < timePerQuestion / 2)
             {
-                // Changes color to yellow if not yellow yet
-                if (timerImg.color != Color.yellow)
+                // Sends half warning 
+                if (!halfWarningSent)
                 {
-                    timerImg.color = Color.yellow;
+                    halfWarningSent = true;
+                    halfWarning.SetActive(true);
+                    Invoke("HideWarnings", warningTime);
                 }
                 // Decays stat multiplier
                 statMultiplier -= decayPerSecond * Time.deltaTime;
             }
+
             time -= Time.deltaTime;
-            timerImg.fillAmount -= Time.deltaTime / timePerQuestion;
+
+            // Gets rotation change
+            rotChange = Time.deltaTime * fullRot / timePerQuestion;
+
+            // Adds rotation change to old rotation and applied new rotation to spinner
+            Vector3 oldRot = spinnerObj.transform.rotation.eulerAngles;
+            Vector3 newRot = oldRot + new Vector3(0, 0, -rotChange);
+            spinnerObj.transform.rotation = Quaternion.Euler(newRot);
+
             yield return null;
         }
 
@@ -151,6 +193,15 @@ public class Timer : MonoBehaviour
             statMultiplier = minStatMultiplier;
         }
         return statMultiplier;
+    }
+
+    /// <summary>
+    /// Hides timer warnings
+    /// </summary>
+    private void HideWarnings()
+    {
+        quarterWarning.SetActive(false);
+        halfWarning.SetActive(false);
     }
 
     /// <summary>
