@@ -20,11 +20,10 @@ public class Timer : MonoBehaviour
     [Tooltip("The time to wait before the event is invoked in seconds.")]
     [SerializeField] private float eventWaitTime = 2f;
 
-    [Tooltip("The timer's fill area image.")]
-    [SerializeField] private Image timerImg = null;
 
-    
-    // Old variable - not used with new timer art
+    // Old variables - not used with new timer art
+    //[Tooltip("The timer's fill area image.")]
+    //[SerializeField] private Image timerImg = null;   
     //[Tooltip("Time given to answer a question before stat gain begins to decay")]
     //[SerializeField] private float graceTimePerQuestion = 25f;
 
