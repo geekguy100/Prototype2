@@ -391,13 +391,7 @@ public class GameManager : MonoBehaviour
                 stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
 
                 ++choicesMade;
-                // Hide gameplay screen and display results screen.
-                gameplayObject.SetActive(false);
-                resultsHandler.gameObject.SetActive(true);
-                resultsHandler.Display(stats, "No valid choice was selected!");
-
-                // Make the character shocked because no choice was selected.
-                character.SetEmotion(CharacterSprite.Emotion.SHOCKED);
+                StartCoroutine(FadeToResultsNoSelection());
             }               
         }
         else
@@ -448,7 +442,7 @@ public class GameManager : MonoBehaviour
             sliders[3].value = stats[3] / 100f;
 
             // Hide gameplay screen and display results screen.
-            StartCoroutine(FadeToResults(decisionIndex, statsDelta));
+            StartCoroutine(FadeToResultsStandard(decisionIndex, statsDelta));
         }
     }
 
@@ -850,8 +844,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Changes whether or not the GameManager realizes the fade animation has compelted.
     /// </summary>
-    /// <param name="fadeComplete">True if the fade animation has been completed.</param>
-    public IEnumerator FadeToResults(int decisionIndex, float[] statsDelta)
+    public IEnumerator FadeToResultsStandard(int decisionIndex, float[] statsDelta)
     {
         fadeAnimator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(fadeWaitTime);
@@ -863,6 +856,25 @@ public class GameManager : MonoBehaviour
 
         // Set the character's emotion based on our current stats.
         character.SetEmotion(statsDelta);
+    }
+
+    /// <summary>
+    /// Changes whether or not the GameManager realizes the fade animation has compelted.
+    /// </summary>
+    public IEnumerator FadeToResultsNoSelection()
+    {
+        fadeAnimator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(fadeWaitTime);
+        fadeAnimator.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(fadeWaitTime);
+        // Hide gameplay screen and display results screen.
+        gameplayObject.SetActive(false);
+        resultsHandler.gameObject.SetActive(true);
+        resultsHandler.Display(stats, "No valid choice was selected!");
+
+        // Make the character shocked because no choice was selected.
+        character.SetEmotion(CharacterSprite.Emotion.SHOCKED);
+        yield return null;
     }
 
 }
