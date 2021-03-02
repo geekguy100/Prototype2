@@ -181,6 +181,13 @@ public class GameManager : MonoBehaviour
     [Tooltip("The on-screen character who interacts with the player's choices.")]
     public Character character;
 
+    [Tooltip("The Animator that controls the fading between screens.")]
+    public Animator fadeAnimator;
+    private bool fadeComplete = false;
+
+    [Tooltip("The time to wait after fading in.")]
+    public float fadeWaitTime;
+
 
     #endregion
 
@@ -441,12 +448,7 @@ public class GameManager : MonoBehaviour
             sliders[3].value = stats[3] / 100f;
 
             // Hide gameplay screen and display results screen.
-            gameplayObject.SetActive(false);
-            resultsHandler.gameObject.SetActive(true);
-            resultsHandler.Display(stats, currentSetup.Decisions[decisionIndex].Result);
-
-            // Set the character's emotion based on our current stats.
-            character.SetEmotion(statsDelta);
+            StartCoroutine(FadeToResults(decisionIndex, statsDelta));
         }
     }
 
@@ -607,6 +609,16 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void ConfirmScenarioSelection()
     {
+        StartCoroutine(FadeFromScenarioSelection());
+    }
+
+    private IEnumerator FadeFromScenarioSelection()
+    {
+        fadeAnimator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(fadeWaitTime);
+        fadeAnimator.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(fadeWaitTime);
+
         // Subtracting 1 because Random is the 0-th element
         // Below line is if the user selects the secnario file instead of autoloading Scenarios.json
         //scenarioSelect.value - 1;
@@ -626,6 +638,7 @@ public class GameManager : MonoBehaviour
             tutorialObject.SetActive(true);
         }
 
+        yield return null;
     }
 
     /// <summary>
@@ -832,6 +845,24 @@ public class GameManager : MonoBehaviour
     public void CompleteTutorial()
     {
         completedTutorial = true;
+    }
+
+    /// <summary>
+    /// Changes whether or not the GameManager realizes the fade animation has compelted.
+    /// </summary>
+    /// <param name="fadeComplete">True if the fade animation has been completed.</param>
+    public IEnumerator FadeToResults(int decisionIndex, float[] statsDelta)
+    {
+        fadeAnimator.SetTrigger("FadeIn");
+        yield return new WaitForSeconds(fadeWaitTime);
+        fadeAnimator.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(fadeWaitTime);
+        gameplayObject.SetActive(false);
+        resultsHandler.gameObject.SetActive(true);
+        resultsHandler.Display(stats, currentSetup.Decisions[decisionIndex].Result);
+
+        // Set the character's emotion based on our current stats.
+        character.SetEmotion(statsDelta);
     }
 
 }
