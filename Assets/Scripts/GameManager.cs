@@ -181,12 +181,7 @@ public class GameManager : MonoBehaviour
     [Tooltip("The on-screen character who interacts with the player's choices.")]
     public Character character;
 
-    [Tooltip("The Animator that controls the fading between screens.")]
-    public Animator fadeAnimator;
-    private bool fadeComplete = false;
 
-    [Tooltip("The time to wait after fading in.")]
-    public float fadeWaitTime;
 
 
     #endregion
@@ -231,6 +226,7 @@ public class GameManager : MonoBehaviour
     /// Stats are in the order approval, efficiency, envrionment, finance
     /// </summary>
     private float[] stats = { 50, 50, 50, 50 };
+    private float[] statsDelta;
     [Header("Thresholds for various changes and backgrounds")]
 
     [Tooltip("Thresholds for the different backgrounds and endings")]
@@ -347,6 +343,8 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Fired when a choice is made. Adjusts the stats and picks the next setup
     /// </summary>
+
+    int decisionIndex;
     public void ChoiceSelect()
     {
         // Prevent any changes from happening once the max number of choices is reached
@@ -357,7 +355,7 @@ public class GameManager : MonoBehaviour
 
         // Which choice the players made
         //int decisionIndex = choiceSelect.value;
-        int decisionIndex = currentSelection;
+        decisionIndex = currentSelection;
         print("Decision Index: " + decisionIndex);
 
         if (decisionIndex < 0)
@@ -391,7 +389,10 @@ public class GameManager : MonoBehaviour
                 stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
 
                 ++choicesMade;
-                StartCoroutine(FadeToResultsNoSelection());
+
+
+                print("NO CHOICE");
+                Transition.instance.StartTransition(NoChoiceSelected);
             }               
         }
         else
@@ -431,7 +432,7 @@ public class GameManager : MonoBehaviour
 
             // Keep track of the change in stats.
             // This will be sent to the character to judge their emotion.
-            float[] statsDelta = new float[stats.Length];
+            statsDelta = new float[stats.Length];
             for (int i = 0; i < statsDelta.Length; ++i)
                 statsDelta[i] = stats[i] - previousStats[i];
 
@@ -441,10 +442,33 @@ public class GameManager : MonoBehaviour
             sliders[2].value = stats[2] / 100f;
             sliders[3].value = stats[3] / 100f;
 
-            // Hide gameplay screen and display results screen.
-            StartCoroutine(FadeToResultsStandard(decisionIndex, statsDelta));
+            print("CHOICE");
+            Transition.instance.StartTransition(FinishChoiceSelect);
         }
     }
+
+    private void FinishChoiceSelect()
+    {
+        // Hide gameplay screen and display results screen.
+        gameplayObject.SetActive(false);
+        resultsHandler.gameObject.SetActive(true);
+        resultsHandler.Display(stats, currentSetup.Decisions[decisionIndex].Result);
+
+        // Set the character's emotion based on our current stats.
+        character.SetEmotion(statsDelta);
+    }
+
+    private void NoChoiceSelected()
+    {
+        // Hide gameplay screen and display results screen.
+        gameplayObject.SetActive(false);
+        resultsHandler.gameObject.SetActive(true);
+        resultsHandler.Display(stats, "No valid choice was selected!");
+
+        // Make the character shocked because no choice was selected.
+        character.SetEmotion(CharacterSprite.Emotion.SHOCKED);
+    }
+
 
     /// <summary>
     /// Called when pressing the Continue button from the results screen.
@@ -603,16 +627,11 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void ConfirmScenarioSelection()
     {
-        StartCoroutine(FadeFromScenarioSelection());
+        Transition.instance.StartTransition(AfterConfirmScenarioSelection);
     }
 
-    private IEnumerator FadeFromScenarioSelection()
+    private void AfterConfirmScenarioSelection()
     {
-        fadeAnimator.SetTrigger("FadeIn");
-        yield return new WaitForSeconds(fadeWaitTime);
-        fadeAnimator.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(fadeWaitTime);
-
         // Subtracting 1 because Random is the 0-th element
         // Below line is if the user selects the secnario file instead of autoloading Scenarios.json
         //scenarioSelect.value - 1;
@@ -631,8 +650,6 @@ public class GameManager : MonoBehaviour
             setupObject.SetActive(false);
             tutorialObject.SetActive(true);
         }
-
-        yield return null;
     }
 
     /// <summary>
@@ -840,41 +857,4 @@ public class GameManager : MonoBehaviour
     {
         completedTutorial = true;
     }
-
-    /// <summary>
-    /// Changes whether or not the GameManager realizes the fade animation has compelted.
-    /// </summary>
-    public IEnumerator FadeToResultsStandard(int decisionIndex, float[] statsDelta)
-    {
-        fadeAnimator.SetTrigger("FadeIn");
-        yield return new WaitForSeconds(fadeWaitTime);
-        fadeAnimator.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(fadeWaitTime);
-        gameplayObject.SetActive(false);
-        resultsHandler.gameObject.SetActive(true);
-        resultsHandler.Display(stats, currentSetup.Decisions[decisionIndex].Result);
-
-        // Set the character's emotion based on our current stats.
-        character.SetEmotion(statsDelta);
-    }
-
-    /// <summary>
-    /// Changes whether or not the GameManager realizes the fade animation has compelted.
-    /// </summary>
-    public IEnumerator FadeToResultsNoSelection()
-    {
-        fadeAnimator.SetTrigger("FadeIn");
-        yield return new WaitForSeconds(fadeWaitTime);
-        fadeAnimator.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(fadeWaitTime);
-        // Hide gameplay screen and display results screen.
-        gameplayObject.SetActive(false);
-        resultsHandler.gameObject.SetActive(true);
-        resultsHandler.Display(stats, "No valid choice was selected!");
-
-        // Make the character shocked because no choice was selected.
-        character.SetEmotion(CharacterSprite.Emotion.SHOCKED);
-        yield return null;
-    }
-
 }

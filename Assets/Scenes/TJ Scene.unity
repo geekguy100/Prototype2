@@ -21669,6 +21669,7 @@ GameObject:
   - component: {fileID: 1601565795}
   - component: {fileID: 1601565794}
   - component: {fileID: 1601565793}
+  - component: {fileID: 1601565796}
   m_Layer: 5
   m_Name: FadeParent
   m_TagString: Untagged
@@ -21735,6 +21736,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601565791}
   m_CullTransparentMesh: 0
+--- !u!114 &1601565796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601565791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b17e2e8223e424989739c4c179eda4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeWaitTime: 0.45
 --- !u!1001 &1601907679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26942,8 +26956,6 @@ MonoBehaviour:
   - {fileID: 1437635460}
   timer: {fileID: 1658177701}
   character: {fileID: 1900324364}
-  fadeAnimator: {fileID: 1601565793}
-  fadeWaitTime: 0.45
   resultsHandler: {fileID: 1251475128}
   thresholds: 09000000170000002500000032000000410000004f0000005d000000
   statLoss: 5
