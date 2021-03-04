@@ -1,4 +1,4 @@
-﻿/*****************************************************************************
+/*****************************************************************************
 // File Name :         Tutorial.cs
 // Author :            TJ Caron
 // Creation Date :     02/25/2021
@@ -77,6 +77,9 @@ public class Tutorial : MonoBehaviour
                                   "Then you click the confirm button in the bottom right of the screen to lock in that choice. " +
                                   "Select one of the choices below then confirm it to continue.";
 
+    [Tooltip("The GameObject holding all assets relating to the interactive tutorial.")]
+    [SerializeField] private GameObject tutorialGameplayPanel;
+
     /// <summary>
     /// Step of the tutorial that explains the timer
     /// </summary>
@@ -120,10 +123,24 @@ public class Tutorial : MonoBehaviour
     /// </summary>
     public void NextStep()
     {
-        // Hides old panel, increases step, shows new panel
-        panels[step].SetActive(false);
         step++;
-        panels[step].SetActive(true);
+
+        // Shows start button instead of next button if its the last step
+        // This will happen when the tutorial transitions to an explanation of the 
+        // gameplay 
+        if (step >= panels.Length - 1)
+        {
+            Transition.instance.StartTransition(StartInteractiveTutorial);
+            return;
+        }
+        // If we're not on the last step of the tutorial (before going to the interactive section), 
+        // make sure to hide the previous slide and show the current one.
+        else
+        {
+            panels[step - 1].SetActive(false);
+            panels[step].SetActive(true);
+        }
+
 
         // Shows previous button if it isn't showing
         if (!prevButton.gameObject.activeInHierarchy && step < panels.Length)
@@ -136,16 +153,16 @@ public class Tutorial : MonoBehaviour
             nextButton.gameObject.SetActive(false);
             prevButton.gameObject.SetActive(true);
         }
-        // Shows start button instead of next button if its the last step
-        // This will happen when the tutorial transitions to an explanation of the 
-        // gameplay 
-        else if (step == panels.Length - 1)
-        {
-            prevButton.gameObject.SetActive(false);
-            nextButton.gameObject.SetActive(false);
-            tutorialBackground.SetActive(false);
-            projector.SetActive(false);
-        }
+    }
+
+    private void StartInteractiveTutorial()
+    {
+        prevButton.gameObject.SetActive(false);
+        nextButton.gameObject.SetActive(false);
+        panels[step - 1].SetActive(false);
+        tutorialBackground.SetActive(false);
+        projector.SetActive(false);
+        tutorialGameplayPanel.SetActive(true);
     }
 
     /// <summary>
@@ -183,8 +200,9 @@ public class Tutorial : MonoBehaviour
     private void OpenResultsStep()
     {
         step++;
+        tutorialGameplayPanel.SetActive(false);
         tutorialResults.SetActive(true);
-        panels[statsStep].SetActive(false);
+
         // Marks that the player has completed the tutorial - this is the last step
         gameManager.CompleteTutorial();
     }
@@ -265,6 +283,7 @@ public class Tutorial : MonoBehaviour
     /// </summary>
     public void TutorialStatsPanel()
     {
+        print(step + "  " + statsStep);
         if (step == statsStep)
         {
             OpenTimerStep();

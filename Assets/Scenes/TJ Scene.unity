@@ -9671,7 +9671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -15296,7 +15296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   step: 0
   roleSelectStep: 3
-  statsStep: 7
+  statsStep: 6
   panels:
   - {fileID: 625898331}
   - {fileID: 1390223556}
@@ -15305,7 +15305,6 @@ MonoBehaviour:
   - {fileID: 303795872}
   - {fileID: 1555537217}
   - {fileID: 379766726}
-  - {fileID: 641858637}
   financeBooklet: {fileID: 2048000213}
   prBooklet: {fileID: 1550606539}
   tutorialStatsPanel: {fileID: 1353186456}
@@ -15336,6 +15335,7 @@ MonoBehaviour:
     you want to go with. Then you click the confirm button in the bottom right of
     the screen to lock in that choice. Select one of the choices below then confirm
     it to continue.
+  tutorialGameplayPanel: {fileID: 641858637}
 --- !u!1 &1173891099
 GameObject:
   m_ObjectHideFlags: 0
@@ -21726,7 +21726,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 0
   m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!222 &1601565795
 CanvasRenderer:
