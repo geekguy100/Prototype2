@@ -32,6 +32,9 @@ public class Timer : MonoBehaviour
     /// </summary>
     private float decayTime = 0;
 
+    [Tooltip("Whether or not this timer is part of the tutorial")]
+    public bool isTutorialTimer = false;
+
     [Tooltip("Lowest the stat gain multiplier can go")]
     [SerializeField] private float minStatMultiplier = .5f;
 
@@ -177,7 +180,10 @@ public class Timer : MonoBehaviour
 
     protected virtual void TimerEndAction()
     {
-        OnTimerEnd?.Invoke();
+        if (!isTutorialTimer)
+        {
+            OnTimerEnd?.Invoke();
+        }
     }
 
     /// <summary>
