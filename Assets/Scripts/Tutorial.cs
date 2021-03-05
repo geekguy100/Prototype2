@@ -100,6 +100,18 @@ public class Tutorial : MonoBehaviour
     [Tooltip("The speed of the tutorial zoom")]
     [SerializeField] private float zoomSpeed = .5f;
 
+    [Tooltip("The tutorial ResultsHandler")]
+    [SerializeField] private ResultsHandler resultsHandler;
+
+
+    [Tooltip("Text showing on the tutorial results screen")]
+    [SerializeField]
+    private string resultsString = "This screen will show you the results of your choice, including how your stats changed." +
+                                   "\n\nWhen you are ready to start playing the game, press the Start Game button below your stats.";
+
+    [Tooltip("The tutorial stats (used for animating results screen)")]
+    [SerializeField] private float[] stats;
+
     /// <summary>
     /// Step of the tutorial that explains the timer
     /// </summary>
@@ -241,6 +253,7 @@ public class Tutorial : MonoBehaviour
         tutorialGameplayPanel.SetActive(false);
         tutorialResults.SetActive(true);
 
+        resultsHandler.Display(stats, resultsString);
         // Marks that the player has completed the tutorial - this is the last step
         gameManager.CompleteTutorial();
     }
