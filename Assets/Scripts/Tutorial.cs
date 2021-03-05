@@ -8,6 +8,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class Tutorial : MonoBehaviour
 {
@@ -59,8 +60,18 @@ public class Tutorial : MonoBehaviour
     [Tooltip("The Game Manager script")]
     [SerializeField] private GameManager gameManager;
 
+    [Tooltip("The role description panel")]
+    [SerializeField] private GameObject roleDescriptionPanel;
+
+    [Tooltip("The role description text")]
+    [SerializeField] private TextMeshProUGUI roleDescriptionText;
+
+    [Tooltip("Role descriptions")]
+    public string[] roleDescriptions;
+
     [Tooltip("Buttons to track player choice")]
     public Button[] tutorialChoiceButtons;
+
 
     [Tooltip("Gameobject holding the PR booklet link")]
     [SerializeField]
@@ -80,6 +91,15 @@ public class Tutorial : MonoBehaviour
     [Tooltip("The GameObject holding all assets relating to the interactive tutorial.")]
     [SerializeField] private GameObject tutorialGameplayPanel;
 
+    [Tooltip("The scale of the tutorial background during role select step")]
+    [SerializeField] private Vector3 zoomedScale = new Vector3(1.2f, 1.2f);
+
+    [Tooltip("The default scale of the tutorial background")]
+    [SerializeField] private Vector3 originalScale = new Vector3(1f, 1f);
+
+    [Tooltip("The speed of the tutorial zoom")]
+    [SerializeField] private float zoomSpeed = .5f;
+
     /// <summary>
     /// Step of the tutorial that explains the timer
     /// </summary>
@@ -89,6 +109,12 @@ public class Tutorial : MonoBehaviour
     /// Step of the tutorial that selecting a choice
     /// </summary>
     private int choiceSelectStep = -1;
+
+
+    /// <summary>
+    /// Whether or not the tutorial background has been zoomed in 
+    /// </summary>
+    private bool zoomed = false;
 
     /// <summary>
     /// Holds which role the player selects
@@ -136,14 +162,26 @@ public class Tutorial : MonoBehaviour
         // If we're not on the last step of the tutorial (before going to the interactive section), 
         // make sure to hide the previous slide and show the current one.
         else
-        {
-            panels[step - 1].SetActive(false);
-            panels[step].SetActive(true);
+        {           
+            if (step == roleSelectStep)
+            {
+                StartCoroutine(ZoomIn());
+            }
+            else if (step == (roleSelectStep + 1))
+            {
+                panels[step - 1].SetActive(false);
+                StartCoroutine(ZoomOut());
+            }
+            else
+            {
+                panels[step - 1].SetActive(false);
+                panels[step].SetActive(true);
+            }
         }
 
 
         // Shows previous button if it isn't showing
-        if (!prevButton.gameObject.activeInHierarchy && step < panels.Length)
+        if (!prevButton.gameObject.activeInHierarchy && step < panels.Length && step != roleSelectStep)
         {
             prevButton.gameObject.SetActive(true);
         }
@@ -151,9 +189,9 @@ public class Tutorial : MonoBehaviour
         if (step == roleSelectStep)
         {
             nextButton.gameObject.SetActive(false);
-            prevButton.gameObject.SetActive(true);
         }
     }
+
 
     private void StartInteractiveTutorial()
     {
@@ -212,10 +250,21 @@ public class Tutorial : MonoBehaviour
     /// </summary>
     public void PreviousStep()
     {
+        // Zooms out if coming from role select step
+        if (step == roleSelectStep)
+        {
+            panels[step].SetActive(false);
+            step--;
+            StartCoroutine(ZoomOut());           
+        }
         // Hides old panel, decreases step, shows new panel
-        panels[step].SetActive(false);
-        step--;
-        panels[step].SetActive(true);
+        else
+        {
+            panels[step].SetActive(false);
+            step--;
+            panels[step].SetActive(true);
+        }
+
 
         // Hides previous button if its the first step
         if (step == 0)
@@ -224,10 +273,85 @@ public class Tutorial : MonoBehaviour
         }
 
         // Shows next button if start button is showing instead
-        if (!nextButton.gameObject.activeInHierarchy)
+        if (!nextButton.gameObject.activeInHierarchy && (step + 1) != roleSelectStep)
         {
             nextButton.gameObject.SetActive(true);
         }        
+    }
+
+    /// <summary>
+    /// Zooms in on tutorial background to provide more space for the role select panel
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator ZoomIn()
+    {
+        Vector3 newScale = new Vector3();
+        float change = 0;
+        panels[step - 1].SetActive(false);
+        prevButton.gameObject.SetActive(false);
+        nextButton.gameObject.SetActive(false);
+        
+        while (!zoomed)
+        {
+            // Checks if it hit target scale
+            if (tutorialBackground.transform.localScale.x >= zoomedScale.x)
+            {
+                tutorialBackground.transform.localScale = zoomedScale;
+                zoomed = true;
+            }
+            else
+            {
+                // Increases scale over time
+                change = Time.deltaTime * zoomSpeed;
+                newScale = new Vector3(tutorialBackground.transform.localScale.x + change,
+                                       tutorialBackground.transform.localScale.y + change);
+                tutorialBackground.transform.localScale = newScale;
+            }
+            yield return 0;
+        }
+        // Shows new panel
+        panels[step].SetActive(true);
+        prevButton.gameObject.SetActive(true);
+    }
+
+    /// <summary>
+    /// Zooms in on tutorial background to provide more space for the role select panel
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator ZoomOut()
+    {
+        Vector3 newScale = new Vector3();
+        float change = 0;
+
+        // Hides buttons
+        prevButton.gameObject.SetActive(false);
+        nextButton.gameObject.SetActive(false);
+
+        while (zoomed)
+        {
+            // Checks if it hit original scale
+            if (tutorialBackground.transform.localScale.x <= originalScale.x)
+            {
+                tutorialBackground.transform.localScale = originalScale;
+                zoomed = false;
+            }
+            else
+            {
+                // Decreases scale over time
+                change = Time.deltaTime * zoomSpeed;
+                newScale = new Vector3(tutorialBackground.transform.localScale.x - change,
+                                       tutorialBackground.transform.localScale.y - change);
+                tutorialBackground.transform.localScale = newScale;
+            }
+            yield return 0;
+        }
+        // Shows new panel
+        panels[step].SetActive(true);
+        if (step < roleSelectStep)
+        {
+            prevButton.gameObject.SetActive(true);
+        }
+        nextButton.gameObject.SetActive(true);
     }
 
     /// <summary>
@@ -324,4 +448,28 @@ public class Tutorial : MonoBehaviour
             OpenResultsStep();
         }
     }
+
+
+    /// <summary>
+    /// Opens the role panel when player hovers over the icon
+    /// </summary>
+    /// <param name="roleNum">The role the player selected
+    ///                       0 = Manager
+    ///                       1 = Finance
+    ///                       2 = PR
+    ///                       3 = Efficiency </param>
+    public void OpenRolePanel(int role)
+    {
+        roleDescriptionPanel.SetActive(true);
+        roleDescriptionText.text = roleDescriptions[role];
+    }
+
+    /// <summary>
+    /// Closes the role panel when player's mouse leaves the icon
+    /// </summary>
+    public void CloseRolePanel()
+    {
+        roleDescriptionPanel.SetActive(false);
+    }
+
 }
