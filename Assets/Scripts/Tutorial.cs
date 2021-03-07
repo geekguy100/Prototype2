@@ -24,6 +24,9 @@ public class Tutorial : MonoBehaviour
     [Tooltip("Tutorial panels in order")]
     [SerializeField] private GameObject[] panels;
 
+    [Tooltip("First tutorial text box for each panel in order")]
+    [SerializeField] private GameObject[] texts;
+
     [Tooltip("Gameobject holding the finance booklet link")]
     [SerializeField] private GameObject financeBooklet;
 
@@ -191,6 +194,7 @@ public class Tutorial : MonoBehaviour
             {
                 panels[step - 1].SetActive(false);
                 panels[step].SetActive(true);
+                texts[step - 1].GetComponent<TextScroll>().FinishScroll();
             }
         }
 
@@ -216,16 +220,6 @@ public class Tutorial : MonoBehaviour
         tutorialBackground.SetActive(false);
         projector.SetActive(false);
         tutorialGameplayPanel.SetActive(true);
-    }
-
-    /// <summary>
-    /// Opens the final step of the tutorial, completes the tutorial so that if
-    /// player goes back to main menu they don't have to do it again.
-    /// </summary>
-    private void OpenFinalStep()
-    {            
-        //startButton.gameObject.SetActive(true);
-        gameManager.CompleteTutorial();       
     }
 
     /// <summary>
@@ -266,6 +260,7 @@ public class Tutorial : MonoBehaviour
     /// </summary>
     public void PreviousStep()
     {
+        texts[step].GetComponent<TextScroll>().ResetScroll();
         // Zooms out if coming from role select step
         if (step == roleSelectStep)
         {
@@ -334,6 +329,7 @@ public class Tutorial : MonoBehaviour
         }
         // Shows new panel
         panels[step].SetActive(true);
+        texts[step].SetActive(true);
         prevButton.gameObject.SetActive(true);
 
         // Make the chibi character point to the projector screen.
