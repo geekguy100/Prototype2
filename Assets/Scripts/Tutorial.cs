@@ -112,6 +112,9 @@ public class Tutorial : MonoBehaviour
     [Tooltip("The tutorial stats (used for animating results screen)")]
     [SerializeField] private float[] stats;
 
+    [Tooltip("The Chibi Character who walks the player through the tutorial.")]
+    [SerializeField] private ChibiCharacter chibiCharacter;
+
     /// <summary>
     /// Step of the tutorial that explains the timer
     /// </summary>
@@ -268,7 +271,14 @@ public class Tutorial : MonoBehaviour
         {
             panels[step].SetActive(false);
             step--;
-            StartCoroutine(ZoomOut());           
+            StartCoroutine(ZoomOut());
+        }
+        else if (step == roleSelectStep + 1)
+        {
+            panels[step].SetActive(false);
+            step--;
+            nextButton.gameObject.SetActive(false);
+            StartCoroutine(ZoomIn());
         }
         // Hides old panel, decreases step, shows new panel
         else
@@ -325,6 +335,9 @@ public class Tutorial : MonoBehaviour
         // Shows new panel
         panels[step].SetActive(true);
         prevButton.gameObject.SetActive(true);
+
+        // Make the chibi character point to the projector screen.
+        chibiCharacter.PointToProjector();
     }
 
     /// <summary>
@@ -365,6 +378,7 @@ public class Tutorial : MonoBehaviour
             prevButton.gameObject.SetActive(true);
         }
         nextButton.gameObject.SetActive(true);
+        chibiCharacter.StopPointing();
     }
 
     /// <summary>
