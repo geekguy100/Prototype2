@@ -295,11 +295,11 @@ public class Tutorial : MonoBehaviour
             prevButton.gameObject.SetActive(false);
         }
 
-        // Shows next button if start button is showing instead
-        if (!nextButton.gameObject.activeInHierarchy && (step + 1) != roleSelectStep)
-        {
-            nextButton.gameObject.SetActive(true);
-        }        
+        //// Shows next button if start button is showing instead
+        //if (!nextButton.gameObject.activeInHierarchy && (step + 1) != roleSelectStep)
+        //{
+        //    nextButton.gameObject.SetActive(true);
+        //}        
     }
 
     /// <summary>
