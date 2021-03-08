@@ -25,7 +25,7 @@ public class ChibiCharacter : MonoBehaviour
 
     private void Start()
     {
-        float blinkTime = Random.Range(2f, 7f);
+        float blinkTime = Random.Range(5f, 7f);
         StartCoroutine(RepeatFacialAnimation("Blink", blinkTime));
 
         float tapTime = Random.Range(10f, 30f);
