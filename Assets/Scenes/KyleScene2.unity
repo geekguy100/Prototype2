@@ -16492,6 +16492,7 @@ MonoBehaviour:
   - {fileID: 1555537217}
   - {fileID: 647814585}
   - {fileID: 379766726}
+  texts: []
   financeBooklet: {fileID: 1018801454}
   prBooklet: {fileID: 767771529}
   tutorialStatsPanel: {fileID: 1353186456}
@@ -28474,6 +28475,7 @@ MonoBehaviour:
   - {fileID: 1437635460}
   timer: {fileID: 1658177701}
   character: {fileID: 1900324364}
+  settingsPanel: {fileID: 0}
   resultsHandler: {fileID: 1251475128}
   thresholds: 09000000170000002500000032000000410000004f0000005d000000
   statLoss: 5
@@ -29637,14 +29639,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 647980186}
     m_Modifications:
-    - target: {fileID: 4943489364300771328, guid: 02a96390522be354daeb894b34b1741c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4943489364300771328, guid: 02a96390522be354daeb894b34b1741c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 17.6
-      objectReference: {fileID: 0}
     - target: {fileID: 4943489364550590084, guid: 02a96390522be354daeb894b34b1741c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
