@@ -25,6 +25,9 @@ using System.Collections.Generic;
         [Tooltip("The antennas to display on the character.")]
         [SerializeField] private CharacterSprite[] antennas = null;
 
+        [Tooltip("The bows to display on the character.")]
+        [SerializeField] private CharacterSprite[] bows = null;
+
 
         [Header("Expression GameObjects attached to the Character.")]
         [Tooltip("The character's face.")]
@@ -38,6 +41,9 @@ using System.Collections.Generic;
 
         [Tooltip("The character's antenna.")]
         [SerializeField] private GameObject antenna = null;
+
+        [Tooltip("The character's bow")]
+        [SerializeField] private GameObject bow = null;
 
         [Tooltip("If a player's stat decreases or increases by at least this amount, select the appropriate emotion.")]
         [SerializeField] private int emotionThreshold = 6;
@@ -109,6 +115,7 @@ using System.Collections.Generic;
         /// <param name="emotion">The emotion of the character.</param>
         public void SetEmotion(CharacterSprite.Emotion emotion)
         {
+            UpdateSprite(emotion, ref bow, bows);
             UpdateSprite(emotion, ref face, faces);
             UpdateSprite(emotion, ref leftArm, leftArms);
             UpdateSprite(emotion, ref rightArm, rightArms);
