@@ -26,17 +26,8 @@ public class GameManager : MonoBehaviour
     public GameObject endPanel;
     public GameObject gamePanel;
 
-    [Tooltip("Animator for title transparency")]
-    public Animator titleTransparency;
-
-    [Tooltip("Animator for title zoom")]
-    public Animator titleZoom;
-
-    [Tooltip("Animator for title sides")]
-    public Animator titleSides;
-
-    [Tooltip("Animator for title button transparency")]
-    public Animator titleButtons;
+    [Tooltip("Used for referencing the title animation sequence")]
+    public GameObject animationHolder;
 
     #region Choice Tracking
     [Header("Tracking and changing how many choices the players have")]
@@ -648,10 +639,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            titleZoom.SetBool("TitleZoom", true);
-            titleSides.SetBool("TitleSides", true);
-            titleTransparency.SetBool("TitleTransparent", true);
-            titleButtons.SetBool("TitleTransparent", true);
+            animationHolder.GetComponent<AnimationController>().TitleSequence();
             Invoke("TitleAnimation", 1.5f);
         }
     }
