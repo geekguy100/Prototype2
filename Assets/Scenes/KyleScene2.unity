@@ -16492,7 +16492,6 @@ MonoBehaviour:
   - {fileID: 1555537217}
   - {fileID: 647814585}
   - {fileID: 379766726}
-  texts: []
   financeBooklet: {fileID: 1018801454}
   prBooklet: {fileID: 767771529}
   tutorialStatsPanel: {fileID: 1353186456}
@@ -17242,7 +17241,6 @@ RectTransform:
   - {fileID: 1018801455}
   - {fileID: 767771530}
   - {fileID: 1460227057}
-  - {fileID: 1417666353}
   m_Father: {fileID: 1164707613}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21759,19 +21757,23 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1202997320}
+    m_TransformParent: {fileID: 1896074030}
     m_Modifications:
     - target: {fileID: 2883418944182707876, guid: eda8c60359fcc84459420482a503ce34, type: 3}
       propertyPath: m_Name
       value: Roomba Holder
       objectReference: {fileID: 0}
+    - target: {fileID: 2883418944182707876, guid: eda8c60359fcc84459420482a503ce34, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6152489198345647655, guid: eda8c60359fcc84459420482a503ce34, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 182.00002
+      value: 182
       objectReference: {fileID: 0}
     - target: {fileID: 6152489198345647655, guid: eda8c60359fcc84459420482a503ce34, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -287.1
+      value: -271
       objectReference: {fileID: 0}
     - target: {fileID: 6152489198345647655, guid: eda8c60359fcc84459420482a503ce34, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21795,7 +21797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6152489198345647655, guid: eda8c60359fcc84459420482a503ce34, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6152489198345647655, guid: eda8c60359fcc84459420482a503ce34, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -21808,6 +21810,18 @@ PrefabInstance:
     - target: {fileID: 6152489198345647655, guid: eda8c60359fcc84459420482a503ce34, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152489198345647655, guid: eda8c60359fcc84459420482a503ce34, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 52.38649
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152489198345647655, guid: eda8c60359fcc84459420482a503ce34, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 52.38649
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152489198345647655, guid: eda8c60359fcc84459420482a503ce34, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 52.38649
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eda8c60359fcc84459420482a503ce34, type: 3}
@@ -23295,7 +23309,7 @@ RectTransform:
   m_Children:
   - {fileID: 672618263}
   m_Father: {fileID: 1896074030}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -27068,6 +27082,7 @@ RectTransform:
   - {fileID: 649734553}
   - {fileID: 725809325}
   - {fileID: 1164707613}
+  - {fileID: 1417666353}
   - {fileID: 1601565792}
   m_Father: {fileID: 0}
   m_RootOrder: 2
