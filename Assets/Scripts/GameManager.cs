@@ -181,6 +181,9 @@ public class GameManager : MonoBehaviour
     [Tooltip("The on-screen character who interacts with the player's choices.")]
     public Character character;
 
+    //Added by Ein
+    public GameObject settingsPanel;
+
 
 
 
@@ -628,6 +631,26 @@ public class GameManager : MonoBehaviour
     public void ConfirmScenarioSelection()
     {
         Transition.instance.StartTransition(AfterConfirmScenarioSelection);
+    }
+
+    /// <summary>
+    /// Open Up SettingsMenu
+    /// Added by Ein
+    /// </summary>
+    public void SettingMenuToggle()
+    {
+        settingsPanel.SetActive(true);
+        setupObject.SetActive(false);
+    }
+
+    /// <summary>
+    /// Close SettingsMenu
+    /// Added by Ein
+    /// </summary>
+    public void ReturnToSetupMenuFromSettings()
+    {
+        settingsPanel.SetActive(false);
+        setupObject.SetActive(true);
     }
 
     private void AfterConfirmScenarioSelection()
