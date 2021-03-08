@@ -26,6 +26,18 @@ public class GameManager : MonoBehaviour
     public GameObject endPanel;
     public GameObject gamePanel;
 
+    [Tooltip("Animator for title transparency")]
+    public Animator titleTransparency;
+
+    [Tooltip("Animator for title zoom")]
+    public Animator titleZoom;
+
+    [Tooltip("Animator for title sides")]
+    public Animator titleSides;
+
+    [Tooltip("Animator for title button transparency")]
+    public Animator titleButtons;
+
     #region Choice Tracking
     [Header("Tracking and changing how many choices the players have")]
     [Tooltip("What is the maximum number of choices the players will have")]
@@ -628,7 +640,23 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Fired when the button to select the scenario is pressed. Starts the loading scenario chain
     /// </summary>
-    public void ConfirmScenarioSelection()
+    public void ConfirmScenarioSelection(bool fromTitle)
+    {
+        if (!fromTitle)
+        {
+            Transition.instance.StartTransition(AfterConfirmScenarioSelection);
+        }
+        else
+        {
+            titleZoom.SetBool("TitleZoom", true);
+            titleSides.SetBool("TitleSides", true);
+            titleTransparency.SetBool("TitleTransparent", true);
+            titleButtons.SetBool("TitleTransparent", true);
+            Invoke("TitleAnimation", 1.5f);
+        }
+    }
+
+    public void TitleAnimation()
     {
         Transition.instance.StartTransition(AfterConfirmScenarioSelection);
     }
