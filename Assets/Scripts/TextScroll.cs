@@ -19,6 +19,12 @@ public class TextScroll : MonoBehaviour
     [Tooltip("The audio source to play the typewriter sound effect")]
     public AudioSource typewriterSource;
 
+    [Tooltip("The audio source to play when the player skips the typing effect")]
+    public AudioSource dingSource;
+
+    [Tooltip("The audio clip to play when the player skips the typing effect")]
+    public AudioClip dingClip;
+
     [Tooltip("The next text to scroll on this panel if there is one")]
     public GameObject text2;
 
@@ -60,6 +66,7 @@ public class TextScroll : MonoBehaviour
                 completed = true;
                 thisText.text = targetString;
                 typewriterSource.Stop();
+                dingSource.PlayOneShot(dingClip);
             }
             if (!started && gameObject.activeInHierarchy)
             {
@@ -67,6 +74,13 @@ public class TextScroll : MonoBehaviour
                 StartScroll();
             }
         }
+    }
+    /// <summary>
+    /// Stops the typewriter sounds from playing
+    /// </summary>
+    public void StopTypeWriter()
+    {
+        typewriterSource.Stop();
     }
     /// <summary>
     /// Starts text scrolling on this textbox
@@ -99,7 +113,9 @@ public class TextScroll : MonoBehaviour
     /// </summary>
     public void FinishScroll()
     {
+        typewriterSource.Stop();
         thisText.text = targetString;
+        completed = true;
         if (text2 != null)
         {
             text2.GetComponent<TextScroll>().FinishScroll();

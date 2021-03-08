@@ -25,7 +25,7 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private GameObject[] panels;
 
     [Tooltip("First tutorial text box for each panel in order")]
-    [SerializeField] private GameObject[] texts;
+    [SerializeField] private TextScroll[] texts;
 
     [Tooltip("Gameobject holding the finance booklet link")]
     [SerializeField] private GameObject financeBooklet;
@@ -134,6 +134,9 @@ public class Tutorial : MonoBehaviour
     /// </summary>
     private bool zoomed = false;
 
+    [Tooltip("The AudioSource that plays the typewriter sound")]
+    public GameObject typeWriterSource;
+
     /// <summary>
     /// Holds which role the player selects
     /// </summary>
@@ -167,6 +170,7 @@ public class Tutorial : MonoBehaviour
     /// </summary>
     public void NextStep()
     {
+        texts[step].StopTypeWriter();
         step++;
 
         // Shows start button instead of next button if its the last step
@@ -194,7 +198,7 @@ public class Tutorial : MonoBehaviour
             {
                 panels[step - 1].SetActive(false);
                 panels[step].SetActive(true);
-                texts[step - 1].GetComponent<TextScroll>().FinishScroll();
+                texts[step - 1].FinishScroll();
             }
         }
 
@@ -217,6 +221,7 @@ public class Tutorial : MonoBehaviour
         prevButton.gameObject.SetActive(false);
         nextButton.gameObject.SetActive(false);
         panels[step - 1].SetActive(false);
+        texts[step - 1].StopTypeWriter();
         tutorialBackground.SetActive(false);
         projector.SetActive(false);
         tutorialGameplayPanel.SetActive(true);
@@ -260,18 +265,20 @@ public class Tutorial : MonoBehaviour
     /// </summary>
     public void PreviousStep()
     {
-        texts[step].GetComponent<TextScroll>().ResetScroll();
+        texts[step].ResetScroll();
         // Zooms out if coming from role select step
         if (step == roleSelectStep)
         {
             panels[step].SetActive(false);
             step--;
+            texts[step].FinishScroll();
             StartCoroutine(ZoomOut());
         }
         else if (step == roleSelectStep + 1)
         {
             panels[step].SetActive(false);
             step--;
+            texts[step].FinishScroll();
             nextButton.gameObject.SetActive(false);
             StartCoroutine(ZoomIn());
         }
@@ -329,7 +336,7 @@ public class Tutorial : MonoBehaviour
         }
         // Shows new panel
         panels[step].SetActive(true);
-        texts[step].SetActive(true);
+        texts[step].gameObject.SetActive(true);
         prevButton.gameObject.SetActive(true);
 
         // Make the chibi character point to the projector screen.
