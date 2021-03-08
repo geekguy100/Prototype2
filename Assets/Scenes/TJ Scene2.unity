@@ -12498,7 +12498,6 @@ MonoBehaviour:
 --- !u!1001 &797800308
 PrefabInstance:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 1158379335}
     m_Modifications:
@@ -23387,7 +23386,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
-<<<<<<< Updated upstream
 --- !u!1001 &1505426939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29337,7 +29335,6 @@ Transform:
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Modification:
     m_TransformParent: {fileID: 647980186}
     m_Modifications:
     - target: {fileID: 2883418944182707876, guid: eda8c60359fcc84459420482a503ce34, type: 3}
