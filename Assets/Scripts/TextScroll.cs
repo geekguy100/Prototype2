@@ -95,6 +95,10 @@ public class TextScroll : MonoBehaviour
     /// </summary>
     public void ResetScroll()
     {
+        if (text2 != null)
+        {
+            text2.GetComponent<TextScroll>().ResetScroll();
+        }
         if (!completed)
         {
             typewriterSource.Stop();
@@ -102,7 +106,6 @@ public class TextScroll : MonoBehaviour
             thisText.text = "";
             if (text2 != null)
             {
-                text2.GetComponent<TextScroll>().ResetScroll();
                 text2.SetActive(false);
             }
         }

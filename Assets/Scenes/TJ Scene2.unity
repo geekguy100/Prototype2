@@ -18686,7 +18686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1164707613
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18781,10 +18781,10 @@ MonoBehaviour:
     each scenario, the more effective your choice will be. Click one of the choice
     buttons below to continue.
   choiceSelectText: To decide how you are going to respond to each scenario, you
-    need to click two buttons. First, you need to click on the choice button that
-    you want to go with. Then you click the confirm button in the bottom right of
-    the screen to lock in that choice. Select one of the choices below then confirm
-    it to continue.
+    need to click two buttons. First, you need to click on the choice button of your
+    preferred choice. Then you click the confirm button in the bottom right of the
+    screen to lock in that choice. Select one of the choices below then confirm it
+    to continue.
   tutorialGameplayPanel: {fileID: 641858637}
   zoomedScale: {x: 1.2, y: 1.2, z: 0}
   originalScale: {x: 1, y: 1, z: 0}
