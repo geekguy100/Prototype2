@@ -14,7 +14,7 @@ public class TextScroll : MonoBehaviour
     /// <summary>
     /// Number of characters per second that show up on screen
     /// </summary>
-    private float charPerSeconds = 15;
+    private float charPerSeconds = 16;
 
     [Tooltip("The audio source to play the typewriter sound effect")]
     public AudioSource typewriterSource;

@@ -176,7 +176,7 @@ public class Tutorial : MonoBehaviour
         // Shows start button instead of next button if its the last step
         // This will happen when the tutorial transitions to an explanation of the 
         // gameplay 
-        if (step >= panels.Length - 1)
+        if (step > panels.Length - 1)
         {
             Transition.instance.StartTransition(StartInteractiveTutorial);
             return;
