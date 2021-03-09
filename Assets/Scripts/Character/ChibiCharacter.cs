@@ -30,6 +30,9 @@ public class ChibiCharacter : MonoBehaviour
 
         float tapTime = Random.Range(10f, 30f);
         StartCoroutine(RepeatBodyAnimation("TapFoot", tapTime));
+
+        float walkTime = Random.Range(15f, 30f);
+        StartCoroutine(RepeatBodyAnimation("Walk", walkTime));
     }
     
     /// <summary>
