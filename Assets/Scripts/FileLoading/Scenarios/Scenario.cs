@@ -16,7 +16,10 @@ namespace FileLoading
 
         // Question ID. Used to track what questions have been asked already
         public int ID;
-        
+
+        // Name of the question to display
+        public string Name;
+
         // What icon/background art (ones in red) to show while the question is onscreen
         public string Icon;
 

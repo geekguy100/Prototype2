@@ -11,7 +11,7 @@
           "Result": "The installation reaches a large number of customers and those customers are happy about the affordable price. Your company must cover some of the installation costs."
         },
         {
-          "Choice": "Partner with a local cable company to have a packaged deal with installing Smart Meters alongside a cable upgrade, showing the customers you care about supporting their local businesses.",
+          "Choice": "Partner with a local cable company to have a packaged deal with installing Smart Meters alongside a cable upgrade. Showing the customers you care about supporting their local businesses.",
           "Approval": 0,
           "Efficiency": 2,
           "Environment": 8,
@@ -53,6 +53,7 @@
       ],
       "Setup": "Your company is planning to roll out Smart Meters to all of its customers as an optional upgrade. You are tasked with marketing this upgrade in a way to make the most people in that area as possible buy into Smart Meters. What would be the best approach to bring as many people on board as possible?",
       "ID": 1,
+      "Name": "The Upgrade",
       "Icon": "Scenario 1"
     },
     {
@@ -108,6 +109,7 @@
       ],
       "Setup": "The Smart Grid is most effective when every house in an area is under its effect. After successfully implementing Smart Meters into multiple homes, the company is curious which step should be taken next.",
       "ID": 2,
+      "Name": "The Expansion",
       "Icon": "Scenario 2"
     },
     {
@@ -161,8 +163,9 @@
           "Result": "The status quo does not change at all and you are not offered any more deals from the fossil fuel company."
         }
       ],
-      "Setup": "The Immense ‘Beautiful Clean Fossil Fuels company has offered you a large sum of money in order to work alongside them with a new coal powered version of 'Smart Grid'. How does your company respond to this offer?",
+      "Setup": "The Immense Beautiful Clean Fossil Fuels company has offered you a large sum of money in order to work alongside them with a new coal powered version of 'Smart Grid'. How does your company respond to this offer?",
       "ID": 3,
+      "Name": "The Source",
       "Icon": "Scenario 3"
     }
   ]

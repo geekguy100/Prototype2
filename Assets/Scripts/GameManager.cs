@@ -516,7 +516,7 @@ public class GameManager : MonoBehaviour
         choiceSelect.ClearOptions();
 
         // Update the question ID
-        setupText.text = "ID: " + currentSetup.ID + "\n" + currentSetup.Setup;
+        setupText.text = "ID: " + currentSetup.Name + "\n" + currentSetup.Setup;
 
         // Load the background image (the red ones)
         scenarioIcon.sprite = Resources.Load<Sprite>("Icons/" + currentSetup.Icon);
