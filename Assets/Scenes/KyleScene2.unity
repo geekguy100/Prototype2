@@ -5866,6 +5866,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426997844}
   m_CullTransparentMesh: 0
+--- !u!1 &427221647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 427221649}
+  - component: {fileID: 427221648}
+  m_Layer: 0
+  m_Name: Leaderboard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &427221648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427221647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afeb2f61ade8c0345aa85ea645d8c442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &427221649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427221647}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &427788519
 GameObject:
   m_ObjectHideFlags: 0
@@ -16423,7 +16466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1164707613
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16514,6 +16557,8 @@ MonoBehaviour:
     you want to go with. Then you click the confirm button in the bottom right of
     the screen to lock in that choice. Select one of the choices below then confirm
     it to continue.
+  closeStatsText: 'Press the Stats button or the X in the upper right corner of the
+    Stats panel to close it. Close the Stats panel to continue. '
   tutorialGameplayPanel: {fileID: 641858637}
   zoomedScale: {x: 1.2, y: 1.2, z: 0}
   originalScale: {x: 1, y: 1, z: 0}
@@ -29620,10 +29665,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 647980186}
     m_Modifications:
-    - target: {fileID: 4355325935009385802, guid: 02a96390522be354daeb894b34b1741c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 5.899994
-      objectReference: {fileID: 0}
     - target: {fileID: 4943489364550590084, guid: 02a96390522be354daeb894b34b1741c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
