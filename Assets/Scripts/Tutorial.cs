@@ -76,20 +76,24 @@ public class Tutorial : MonoBehaviour
     public Button[] tutorialChoiceButtons;
 
 
-    [Tooltip("Gameobject holding the PR booklet link")]
+    [Tooltip("Text for tutorial step explaining timer")]
     [SerializeField]
-    private string timerText = "Press the Stats button or the X in the upper right corner of the Stats panel to close it. " +
-                               "Each scenario will have a time limit in which you need to decide how to respond. " +
+    private string timerText = "Each scenario will have a time limit in which you need to decide how to respond. " +
                                "The timer in the upper right corner of the screen shows you how much time you have left for this scenario. " +
                                "The faster you respond to each scenario, the more effective your choice will be. " +
                                "Click one of the choice buttons below to continue.";
 
-    [Tooltip("Gameobject holding the PR booklet link")]
+    [Tooltip("Text for tutorial step explaining choice selection")]
     [SerializeField]
     private string choiceSelectText = "To decide how you are going to respond to each scenario, you need to click two buttons. " +
                                   "First, you need to click on the choice button that you want to go with. " +
                                   "Then you click the confirm button in the bottom right of the screen to lock in that choice. " +
                                   "Select one of the choices below then confirm it to continue.";
+
+    [Tooltip("Text for tutorial step explaining closing the stats panel")]
+    [SerializeField]
+    private string closeStatsText = "Press the Stats button or the X in the upper right corner of the Stats panel to close it. " +
+                                    "Close the Stats panel to continue. ";
 
     [Tooltip("The GameObject holding all assets relating to the interactive tutorial.")]
     [SerializeField] private GameObject tutorialGameplayPanel;
@@ -122,6 +126,11 @@ public class Tutorial : MonoBehaviour
     /// Step of the tutorial that explains the timer
     /// </summary>
     private int timerStep = -1;
+
+    /// <summary>
+    /// Step of the tutorial that explains closing the stats panel
+    /// </summary>
+    private int statsCloseStep = -1;
 
     /// <summary>
     /// Step of the tutorial that selecting a choice
@@ -160,7 +169,8 @@ public class Tutorial : MonoBehaviour
 
         panels[step].SetActive(true);
 
-        timerStep = statsStep + 1;
+        statsCloseStep = statsStep + 1;
+        timerStep = statsCloseStep + 1;
         choiceSelectStep = timerStep + 1;
     }
 
@@ -234,6 +244,15 @@ public class Tutorial : MonoBehaviour
     {
         step++;
         setUpText.text = timerText;
+    }
+
+    /// <summary>
+    /// Switches to close stats step of the tutorial
+    /// </summary>
+    private void OpenStatsCloseStep()
+    {
+        step++;
+        setUpText.text = closeStatsText;
     }
 
     /// <summary>
@@ -439,6 +458,10 @@ public class Tutorial : MonoBehaviour
     {
         print(step + "  " + statsStep);
         if (step == statsStep)
+        {
+            OpenStatsCloseStep();
+        }
+        else if (step == statsCloseStep)
         {
             OpenTimerStep();
         }

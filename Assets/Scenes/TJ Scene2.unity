@@ -18922,17 +18922,18 @@ MonoBehaviour:
   - {fileID: 1961460015}
   - {fileID: 41379988}
   - {fileID: 586315728}
-  timerText: Press the Stats button or the X in the upper right corner of the Stats
-    panel to close it. Each scenario will have a time limit in which you need to
-    decide how to respond. The timer in the upper right corner of the screen shows
-    you how much time you have left for this scenario. The faster you respond to
-    each scenario, the more effective your choice will be. Click one of the choice
-    buttons below to continue.
+  timerText: Each scenario will have a time limit in which you need to decide how
+    to respond. The timer in the upper right corner of the screen shows you how much
+    time you have left for this scenario. The faster you respond to each scenario,
+    the more effective your choice will be. Click one of the choice buttons below
+    to continue.
   choiceSelectText: To decide how you are going to respond to each scenario, you
     need to click two buttons. First, you need to click on the choice button of your
     preferred choice. Then you click the confirm button in the bottom right of the
     screen to lock in that choice. Select one of the choices below then confirm it
     to continue.
+  closeStatsText: 'Press the Stats button or the X in the upper right corner of the
+    Stats panel to close it. Close the Stats panel to continue. '
   tutorialGameplayPanel: {fileID: 641858637}
   zoomedScale: {x: 1.2, y: 1.2, z: 0}
   originalScale: {x: 1, y: 1, z: 0}
@@ -31788,8 +31789,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "This screen will show you the results of your choice, including how your
-    stats changed. \n\nWhen you are ready to start playing the game, press the Start
-    Game button below your stats."
+    stats changed. \n\nMake sure all of your advisors have their booklets open and
+    are ready to play.\n\nWhen you are ready to start playing the game, press the
+    Start Game button below your stats."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31816,12 +31818,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 12.75
+  m_fontSizeBase: 13
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 14
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -31882,8 +31884,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: -20.000002}
+  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_SizeDelta: {x: -20, y: -21.039352}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1961460013
 GameObject:
