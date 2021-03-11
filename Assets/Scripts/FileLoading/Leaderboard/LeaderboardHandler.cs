@@ -34,13 +34,26 @@ namespace LeaderboardInfo
             {
                 IncrementScore("Answer1A");
             }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                IncrementScore("Answer1B");
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                IncrementScore("Answer1C");
+            }
             else if (Input.GetKeyDown(KeyCode.Return))
             {
                 StartCoroutine(PushScore("Answer1A"));
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha0))
+                //Debug.Log("Sum of question 1: " + ParticipantsForQuestion(1));
+            else if (Input.GetKeyDown(KeyCode.U))
             {
-                StartCoroutine(ResetScore("Answer1A"));
+                StartCoroutine(PushScore("Answer1A"));
+            }
+            else if (Input.GetKeyDown(KeyCode.B))
+            {
+                Debug.Log((PercentChosen(1, "Answer1B")) + "%");
             }
         }
 
@@ -110,6 +123,47 @@ namespace LeaderboardInfo
             return leaderboardParent.dreamlo.leaderboard.entry
                 .Where(t => t.name == answerName)
                 .FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Gets the total number of people who answered the given question.
+        /// </summary>
+        /// <param name="questionNumber">The question number.</param>
+        /// <returns>The total number of people who answered the given question.</returns>
+        public int ParticipantsForQuestion(int questionNumber)
+        {
+            // First, we get all of the entries that contain the 
+            // question number we are looking for.
+            // Then we sum the scores and return the sum.
+            int sum = GetEntries()
+                .Where(t => t.name.Contains(questionNumber.ToString()))
+                .Sum(t => t.score);
+
+            return sum;
+        }
+
+        /// <summary>
+        /// Gets the percent of people who chose the given answer.
+        /// </summary>
+        /// <param name="questionNumber">The question number.</param>
+        /// <param name="answerName">The name of the answer selected in the following format:
+        /// Answer#$, where # is the question number and $ is an answer option, typically a letter A - F.</param>
+        public float PercentChosen(int questionNumber, string answerName)
+        {
+            LeaderboardEntry entry = GetEntryByName(answerName);
+            if (entry == null)
+            {
+                Debug.LogWarning("LEADERBOARD: Cannot get the percent chosen because answer '" + answerName + "' is non-existant...");
+                return 0;
+            }
+
+            float participantsForQuestion = ParticipantsForQuestion(questionNumber);
+            float participantsForAnswer = entry.score;
+           
+
+            // The percent of people who chose the same answer as the player.
+            float percentChosen = Mathf.Round((participantsForAnswer / participantsForQuestion) * 100f);
+            return percentChosen;
         }
 
         #endregion
