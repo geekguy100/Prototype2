@@ -111,9 +111,9 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private ResultsHandler resultsHandler;
 
 
-    [Tooltip("Text showing on the tutorial results screen")]
-    [SerializeField]
+
     private string resultsString = "This screen will show you the results of your choice, including how your stats changed." +
+                                   "\n\nMake sure all of your advisors have their booklets open and are ready to play." +
                                    "\n\nWhen you are ready to start playing the game, press the Start Game button below your stats.";
 
     [Tooltip("The tutorial stats (used for animating results screen)")]
