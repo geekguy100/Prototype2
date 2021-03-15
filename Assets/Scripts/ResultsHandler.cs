@@ -111,10 +111,22 @@ public class ResultsHandler : MonoBehaviour
     private IEnumerator AnimateSliderCoroutine(Slider slider, TextMeshProUGUI changeText, float newValue)
     {
         float previousValue = slider.value;
-
+        
         if (newValue > 1)
             print("new value error: " + newValue);
 
+        if (newValue < (float)(statThresholds[0] / 100))
+        {
+            slider.fillRect.gameObject.GetComponent<Image>().color = Color.red;
+        }
+        else if (newValue < (float)(statThresholds[1] / 100))
+        {
+            slider.fillRect.gameObject.GetComponent<Image>().color = Color.yellow;
+        }
+        else
+        {
+            slider.fillRect.gameObject.GetComponent<Image>().color = Color.green;
+        }
         while (Mathf.Abs(slider.value - newValue) > 0.005f)
         {
             slider.value = Mathf.Lerp(slider.value, newValue, Time.deltaTime * animationSpeed);
