@@ -24039,8 +24039,8 @@ MonoBehaviour:
   animationSpeed: 4
   resultsText: {fileID: 1235360999}
   statThresholds:
-  - 45
-  - 55
+  - 30
+  - 70
   efficiencyObjs:
   - {fileID: 1118859027}
   - {fileID: 1394533547}
