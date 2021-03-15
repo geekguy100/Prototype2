@@ -35,7 +35,28 @@ public class ResultsHandler : MonoBehaviour
     [Tooltip("Text to hold the result from the most recent scenario.")]
     [SerializeField] private TextMeshProUGUI resultsText = null;
 
+    [Header("Stat Variables and Objects")]
+    [Tooltip("Text to hold the result from the most recent scenario.")]
+    public float[] statThresholds;
 
+    [Tooltip("Efficiency Background objects")]
+    public GameObject[] efficiencyObjs;
+
+    [Tooltip("Approval Background objects")]
+    public GameObject[] approvalObjs;
+
+    [Tooltip("Finance Background objects")]
+    public GameObject[] financeObjs;
+
+    /// <summary>
+    /// What state each stat is in
+    /// 0 = bad
+    /// 1 = neutral
+    /// 2 = good
+    /// </summary>
+    private int[] statStates = {0,0,0};
+
+    
     /// <summary>
     /// Sets the sliders to the correct initial values.
     /// </summary>
@@ -57,6 +78,7 @@ public class ResultsHandler : MonoBehaviour
 
         resultsText.text = result;
 
+        ShowBackgroundObjs();
         AnimateSlider();
     }
 
@@ -117,6 +139,72 @@ public class ResultsHandler : MonoBehaviour
         AnimateSlider();
     }
 
+    /// <summary>
+    /// Shows correct background objects for each stat
+    /// </summary>
+    private void ShowBackgroundObjs()
+    {
+        for(int i = 1; i < stats.Length; i++)
+        {
+            // Changes statState to correct number based on thresholds
+            if (stats[i] < statThresholds[0])
+            {
+                statStates[i - 1] = 0;
+            }
+            else if (stats[i] < statThresholds[1])
+            {
+                statStates[i - 1] = 1;
+            }
+            else
+            {
+                statStates[i - 1] = 2;
+            }
+        }
+        
+        // Hides all background objects so only correct ones will be shown
+        HideAllBackgroundObjs();
+
+
+        // Shows the correct background objects for each stat
+        // statStates[0] = efficiency
+        // statStates[1] = approval
+        // statStates[2] = finance
+        for (int i = 0; i < statStates.Length; i++)
+        {
+            switch (i)
+            {
+                case 0:
+                    efficiencyObjs[statStates[i]].SetActive(true);
+                    break;
+                case 1:
+                    approvalObjs[statStates[i]].SetActive(true);
+                    break;
+                case 2:
+                    financeObjs[statStates[i]].SetActive(true);
+                    break;
+            }
+        }
+
+    }
+
+    /// <summary>
+    /// Hides all background objects
+    /// </summary>
+    private void HideAllBackgroundObjs()
+    {
+        foreach(GameObject obj in efficiencyObjs)
+        {
+            obj.SetActive(false);
+        }
+        foreach(GameObject obj in approvalObjs)
+        {
+            obj.SetActive(false);
+        }
+        foreach(GameObject obj in financeObjs)
+        {
+            obj.SetActive(false);
+        }
+    }
     /// <summary>
     /// Sets all of the change texts to empty strings and resets the slider counter back to 0.
     /// </summary>

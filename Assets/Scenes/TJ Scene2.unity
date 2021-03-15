@@ -8612,6 +8612,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 293366451}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &470761250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20077,6 +20089,21 @@ MonoBehaviour:
   financeText: {fileID: 343768068}
   animationSpeed: 4
   resultsText: {fileID: 1951089570}
+  statThresholds:
+  - 30
+  - 70
+  efficiencyObjs:
+  - {fileID: 1118859027}
+  - {fileID: 1394533547}
+  - {fileID: 2142937318}
+  approvalObjs:
+  - {fileID: 659569132}
+  - {fileID: 798019004}
+  - {fileID: 2003603821}
+  financeObjs:
+  - {fileID: 1678176865}
+  - {fileID: 204702882}
+  - {fileID: 52527890}
 --- !u!224 &1183313295
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21657,6 +21684,21 @@ MonoBehaviour:
   financeText: {fileID: 1745741905}
   animationSpeed: 4
   resultsText: {fileID: 1235360999}
+  statThresholds:
+  - 30
+  - 70
+  efficiencyObjs:
+  - {fileID: 1118859027}
+  - {fileID: 1394533547}
+  - {fileID: 2142937318}
+  approvalObjs:
+  - {fileID: 659569132}
+  - {fileID: 798019004}
+  - {fileID: 2003603821}
+  financeObjs:
+  - {fileID: 1678176865}
+  - {fileID: 204702882}
+  - {fileID: 52527890}
 --- !u!114 &1251475129
 MonoBehaviour:
   m_ObjectHideFlags: 0

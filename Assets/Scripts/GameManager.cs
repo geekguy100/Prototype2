@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Holds whether or not the player has completed the tutorial in this play session
     /// </summary>
-    private static bool completedTutorial = false;
+    public static bool completedTutorial = false;
 
     [Tooltip("All the text files for each setup, one per setup. The ID is the files index in the array")]
     private string[] scenarioFiles;
