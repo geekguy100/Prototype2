@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 
@@ -53,7 +53,7 @@ namespace TMPro.Examples
             Matrix4x4 matrix;
 
             m_TextComponent.havePropertiesChanged = true; // Need to force the TextMeshPro Object to be updated.
-            CurveScale *= 10;
+            //CurveScale *= 10; -- Kyle commented this out.
             float old_CurveScale = CurveScale;
             AnimationCurve old_curve = CopyAnimationCurve(VertexCurve);
 
