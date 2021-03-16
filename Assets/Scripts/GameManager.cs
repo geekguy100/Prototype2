@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     public GameObject endPanel;
     public GameObject gamePanel;
 
+    [Tooltip("Color that the choice buttons change to when they are chosen")]
+    public Color chosenColor;
+
     [Tooltip("Used for referencing the title animation sequence")]
     public GameObject animationHolder;
 
@@ -863,7 +866,7 @@ public class GameManager : MonoBehaviour
         {
             b.GetComponent<Image>().color = Color.white;
         }
-        choiceButtons[index].GetComponent<Image>().color = Color.yellow;
+        choiceButtons[index].GetComponent<Image>().color = chosenColor;
     }
 
     /// <summary>

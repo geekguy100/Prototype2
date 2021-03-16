@@ -146,6 +146,9 @@ public class Tutorial : MonoBehaviour
     [Tooltip("The AudioSource that plays the typewriter sound")]
     public GameObject typeWriterSource;
 
+    [Tooltip("Color that the choice buttons change to when they are chosen")]
+    public Color chosenColor;
+
     /// <summary>
     /// Holds which role the player selects
     /// </summary>
@@ -484,7 +487,7 @@ public class Tutorial : MonoBehaviour
         {
             b.GetComponent<Image>().color = Color.white;
         }
-        tutorialChoiceButtons[buttonNum].GetComponent<Image>().color = Color.yellow;
+        tutorialChoiceButtons[buttonNum].GetComponent<Image>().color = chosenColor;
         if (step == timerStep)
         {
             OpenChoiceSelectStep();
