@@ -48,6 +48,12 @@ public class ResultsHandler : MonoBehaviour
     [Tooltip("Finance Background objects")]
     public GameObject[] financeObjs;
 
+    [Tooltip("Color used for positive stat change text")]
+    public Color darkGreen;
+
+    //[Tooltip("Color used for negative stat change text")]
+    //public Color darkRed;
+
     /// <summary>
     /// What state each stat is in
     /// 0 = bad
@@ -115,11 +121,11 @@ public class ResultsHandler : MonoBehaviour
         if (newValue > 1)
             print("new value error: " + newValue);
 
-        if (newValue < (float)(statThresholds[0] / 100))
+        if (newValue < (statThresholds[0] / 100f))
         {
             slider.fillRect.gameObject.GetComponent<Image>().color = Color.red;
         }
-        else if (newValue < (float)(statThresholds[1] / 100))
+        else if (newValue < (statThresholds[1] / 100f))
         {
             slider.fillRect.gameObject.GetComponent<Image>().color = Color.yellow;
         }
@@ -141,7 +147,7 @@ public class ResultsHandler : MonoBehaviour
         string frontString = change > 0 ? "+" : string.Empty;
 
         // Set the font ocolor to green if we had an increase, and to red if we had a decrease.
-        Color color = change > 0 ? Color.green : Color.red;
+        Color color = change > 0 ? darkGreen : Color.red;
 
         changeText.color = color;
         changeText.text = frontString + Math.Round(change * 100).ToString();

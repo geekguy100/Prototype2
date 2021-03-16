@@ -190,6 +190,10 @@ public class GameManager : MonoBehaviour
     //Added by Ein
     public GameObject settingsPanel;
 
+    /// <summary>
+    /// The values at which the stat sliders change colors
+    /// </summary>
+    private float[] statSliderThresholds;
 
 
 
@@ -286,6 +290,7 @@ public class GameManager : MonoBehaviour
         TextAsset endingsData = Resources.Load("Endings/endings") as TextAsset;
         endings = JsonUtility.FromJson<Endings>(endingsData.text);
 
+        statSliderThresholds = resultsHandler.statThresholds;
         // Initialize the ResultsHandler's sliders to the correct starting values.
         resultsHandler.Init(stats);
     }
@@ -447,9 +452,24 @@ public class GameManager : MonoBehaviour
 
             ++choicesMade;
 
-            sliders[1].value = stats[1] / 100f;
-            sliders[2].value = stats[2] / 100f;
-            sliders[3].value = stats[3] / 100f;
+            // Changes slider values and color if needed - TJ
+            for(int i = 1; i < sliders.Length; i++) 
+            {
+                sliders[i].value = stats[i] / 100f;
+                if (sliders[i].value < (statSliderThresholds[0] / 100f))
+                {
+                    sliders[i].fillRect.gameObject.GetComponent<Image>().color = Color.red;
+                }
+                else if (sliders[i].value < (statSliderThresholds[1] / 100f))
+                {
+                    sliders[i].fillRect.gameObject.GetComponent<Image>().color = Color.yellow;
+                }
+                else
+                {
+                    sliders[i].fillRect.gameObject.GetComponent<Image>().color = Color.green;
+                }
+            }
+
 
             print("CHOICE");
             Transition.instance.StartTransition(FinishChoiceSelect);
