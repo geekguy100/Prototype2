@@ -25,6 +25,8 @@ public class PauseManager : MonoBehaviour
     [Tooltip("Whether or not the game is paused")]
     [SerializeField]private bool paused = false;
 
+    
+
     // Update is called once per frame
     void Update()
     {
