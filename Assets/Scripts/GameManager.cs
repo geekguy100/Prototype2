@@ -23,9 +23,6 @@ public class GameManager : MonoBehaviour
     [Tooltip("Panel that holds the stats - opened when player clicks stats button")]
     public GameObject statsPanel;
 
-    public GameObject endPanel;
-    public GameObject gamePanel;
-
     [Tooltip("Color that the choice buttons change to when they are chosen")]
     public Color chosenColor;
 
@@ -63,15 +60,6 @@ public class GameManager : MonoBehaviour
     };
 
     /// <summary>
-    /// Paths to the different backgrounds for the envrionment endings
-    /// </summary>
-    private string[] envrionmentEndingBackgrounds =
-    {
-    "Endings/Backgrounds/EnvironmentBad", "Endings/Backgrounds/EnvironmentNeutral",
-    "Endings/Backgrounds/EnvironmentGood"
-    };
-
-    /// <summary>
     /// Paths to the different backgrounds for the finance endings
     /// </summary>
     private string[] financeEndingBackgrounds =
@@ -105,12 +93,6 @@ public class GameManager : MonoBehaviour
     [Tooltip("The text to show your impact from your choices over the entire game")]
     public TextMeshProUGUI endingText;
 
-    //[Tooltip("The text to show option A")]
-    //public Text choiceAText;
-
-    //[Tooltip("The text to show option B")]
-    //public Text choiceBText;
-
     [Tooltip("The parent of all the above objects. Used to turn them on and off")]
     public GameObject gameplayObject;
 
@@ -120,11 +102,20 @@ public class GameManager : MonoBehaviour
     [Tooltip("The parent object of the tutorial")]
     public GameObject tutorialObject;
 
-    [Tooltip("Dropdown to select what scenario to play")]
-    public Dropdown scenarioSelect;
+    [Tooltip("The parent object of the ending")]
+    public GameObject endingObject;
 
-    [Tooltip("Dropdown that lets the players choose their option")]
-    public Dropdown choiceSelect;
+    [Tooltip("The background of the ending")]
+    public Image endingBackground;
+
+    [Tooltip("The Main Menu button on the end screen")]
+    public GameObject endMainMenuButton;
+
+    [Tooltip("The Quit button on the end screen")]
+    public GameObject endQuitButton;
+
+    [Tooltip("The Next button on the end screen")]
+    public GameObject endNextButton;
 
     [Tooltip("Text that displays all the options")]
     public Text choicesText;
@@ -132,26 +123,13 @@ public class GameManager : MonoBehaviour
     [Tooltip("The object that shows the scenario's icon")]
     public SpriteRenderer scenarioIcon;
 
-    [Tooltip("The SpriteRenderer for the background")]
-    public SpriteRenderer backgroundRenderer;
-
     [Tooltip("Button that shows on the game over screen")]
     public GameObject restartButton;
 
     [Tooltip("Button for selecting the current choice")]
     public GameObject submitButton;
 
-    [Tooltip("Backgrounds for approval, lower indecies are worse")]
-    public List<Sprite> approvalBackgrounds = new List<Sprite>();
 
-    [Tooltip("Backgrounds for efficnency, lower indecies are worse")]
-    public List<Sprite> efficiencyBackgrounds = new List<Sprite>();
-
-    [Tooltip("Backgrounds for envrionment, lower indecies are worse")]
-    public List<Sprite> environmentBackgrounds = new List<Sprite>();
-
-    [Tooltip("Backgrounds for finance, lower indecies are worse")]
-    public List<Sprite> financeBackgrounds = new List<Sprite>();
 
     [Tooltip("Sprite showing the current state of approval")]
     public SpriteRenderer approvalSprite;
@@ -536,7 +514,6 @@ public class GameManager : MonoBehaviour
     {
         // Clear old question and choices
         choicesText.text = "";
-        choiceSelect.ClearOptions();
 
         // Update the question ID
         setupText.text = "ID: " + currentSetup.Name + "\n" + currentSetup.Setup;
@@ -577,17 +554,6 @@ public class GameManager : MonoBehaviour
             currentText++;
         }
 
-
-        // Change the persistant background (black one) depending on the values of the stats
-        // Both approval and environment use same stat for now - stats[2] - TJ
-        approvalSprite.sprite = UpdateBackground(stats[2], approvalBackgrounds);
-        efficiencySprite.sprite = UpdateBackground(stats[1], efficiencyBackgrounds);
-        envrionmentSprite.sprite = UpdateBackground(stats[2], environmentBackgrounds);
-        financeSprite.sprite = UpdateBackground(stats[3], financeBackgrounds);
-
-        // Add the choices loaded above to the dropdown
-        choiceSelect.AddOptions(availableChoices);
-
         // Update the stat sliders to show the proper value
         // 0 to 4 is approval, efficiency, envrionment, finance
         //sliders[0].value = stats[0] / 100f;   // At the moment, approval is not being used, and we are replacing environment with public approval.
@@ -602,27 +568,11 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         // Turn on the end panel and off the game panel
-        endPanel.SetActive(true);
-        gamePanel.SetActive(false);
-        //timer.gameObject.SetActive(false); //Added by Kyle Grenier
-
-        // Turn off all the gameplay UI objects
-        choicesText.text = "";
-        foreach (Button b in choiceButtons)
-        {
-            b.gameObject.SetActive(false);
-        }
-        scenarioIcon.gameObject.SetActive(false);
-        choiceSelect.gameObject.SetActive(false);
-        submitButton.SetActive(false);
-        statsPanel.SetActive(false);
-        backgroundStuff.SetActive(false);
-        sliderHolder.SetActive(false);
+        endingObject.SetActive(true);
+        gameplayObject.SetActive(false);
 
         // Turn on the restart button
         restartButton.SetActive(true);
-        // Set the text alignment so it does not run offscreen - Taken out by Kyle Grenier b/c using TMPro.
-        //setupText.alignment = TextAnchor.UpperLeft;
 
         // Set the text and sprites to the first ending screen
         endingButton();
@@ -742,30 +692,6 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Find the correct background for the given stat value
-    /// </summary>
-    /// <param name="stat">Which stat to find the background for</param>
-    /// <param name="sprites">The sprites to select a background from</param>
-    /// <returns>The appropriate background for the stat</returns>
-    private Sprite UpdateBackground(float stat, List<Sprite> sprites)
-    {
-        // Default to the background to the lowest index, the worst one
-        Sprite background = sprites[0];
-
-        // Compare the stat to the designated thresholds. If above, change the background
-        // to be shown to the one just checked
-        for (int i = 0; i < sprites.Count; ++i)
-        {
-            if (stat >= thresholds[i])
-            {
-                background = sprites[i];
-            }
-        }
-
-        return background;
-    }
-
-    /// <summary>
     /// Determine the correct ending text and background based on the passed stat
     /// </summary>
     /// <param name="stat">The stat to determine the ending of</param>
@@ -779,17 +705,28 @@ public class GameManager : MonoBehaviour
         ending.text = endings[0];
         ending.backgroundPath = backgroundPaths[0];
 
+        // Temporary alpha code - good ending shows at 50 or above, bad ending at 49 or below - TJ
+        if (stat <= 49)
+        {
+            ending.backgroundPath = backgroundPaths[0];
+            ending.text = endings[0];
+        }
+        else
+        {
+            ending.backgroundPath = backgroundPaths[2];
+            ending.text = endings[2];
+        }
         // If the stat is higher than the threshold, set the ending
         // text and background to the one for that threshold
-        for (int i = 0; i < thresholds.Length; i += 3)
-        {
-            if (stat >= thresholds[i])
-            {
-                // Making sure not to go over the ending's length
-                ending.text = endings[i / 3];
-                ending.backgroundPath = backgroundPaths[i / 3];
-            }
-        }
+        //for (int i = 0; i < thresholds.Length; i += 3)
+        //{
+        //    if (stat >= thresholds[i])
+        //    {
+        //        // Making sure not to go over the ending's length
+        //        ending.text = endings[i / 3];
+        //        ending.backgroundPath = backgroundPaths[i / 3];
+        //    }
+        //}
 
         return ending;
     }
@@ -800,62 +737,62 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void endingButton()
     {
-        List<string> allEndings = new List<string>();
-        //set setup text to text that needs to be shown, and set ending background to background that needs to be shown
-        if (endingsSeen > 3)
+        //List<string> allEndings = new List<string>();
+
+        // All endings have been seen - changes buttons to let player leave
+        if (endingsSeen >= 2)
         {
-            //Kyle Grenier - reload my scene.
-            LoadScene("KylesScene");
+            endNextButton.SetActive(false);
+            endMainMenuButton.SetActive(true);
+            endQuitButton.SetActive(true);
         }
 
         // The ending currently being shown
         Ending switcher;
         // Keep track of which endings have been seen already
-        if (endingsSeen == 0)//approval
-        {
-            switcher = TestEnding(stats[0], endings.Approval, approvalEndingBackgrounds);
-        }
-        else if (endingsSeen == 1)//efficiency
+        if (endingsSeen == 0) // Efficiency
         {
             switcher = TestEnding(stats[1], endings.Efficiency, efficiencyEndingBackgrounds);
+
         }
-        else if (endingsSeen == 2)//environment
+        else if (endingsSeen == 1) // Approval
         {
-            switcher = TestEnding(stats[2], endings.Envrionment, envrionmentEndingBackgrounds);
+            switcher = TestEnding(stats[2], endings.Approval, approvalEndingBackgrounds);
+
         }
-        else//finance
+        else // Finance
         {
             switcher = TestEnding(stats[3], endings.Finance, financeEndingBackgrounds);
-            restartButton.transform.GetChild(0).GetComponent<Text>().text = "Restart Game";
+            // Last ending - restart/main menu buttons here
         }
         endingText.text = switcher.text;
-
+        endingBackground.sprite = Resources.Load<Sprite>(switcher.backgroundPath);
         // Increment the number of endings seen
         ++endingsSeen;
         // Add the path to a list. Used for the rare Godzilla ending
-        allEndings.Add(switcher.backgroundPath);
+        //allEndings.Add(switcher.backgroundPath);
         // If the godzilla setup occured
-        if (hadGodzilla)
-        {
-            // Add the godzilla ending path to the list. Inserts at index 1 every time
-            allEndings.Add("Endings/Backgrounds/GodzillaEnd");
-            // Add the regular path 9 more times, making Godzilla a 1/11 chance
-            for (int i = 0; i < 9; i++)
-            {
-                allEndings.Add(switcher.backgroundPath);
-            }
-        }
+        //if (hadGodzilla)
+        //{
+        //    // Add the godzilla ending path to the list. Inserts at index 1 every time
+        //    allEndings.Add("Endings/Backgrounds/GodzillaEnd");
+        //    // Add the regular path 9 more times, making Godzilla a 1/11 chance
+        //    for (int i = 0; i < 9; i++)
+        //    {
+        //        allEndings.Add(switcher.backgroundPath);
+        //    }
+        //}
 
         // Pick what ending to be shown randomly. If godzilla did not appear, this line is redundant
-        int randZilla = Random.Range(0, allEndings.Count);
+        //int randZilla = Random.Range(0, allEndings.Count);
         // Load the sprite picked above
-        backgroundRenderer.sprite = Resources.Load<Sprite>(allEndings[randZilla]);
+        //backgroundRenderer.sprite = Resources.Load<Sprite>(allEndings[randZilla]);
 
         // If godzilla was picked, set the flag to false so he cannot appear again.
-        if (randZilla == 1)
-        {
-            hadGodzilla = false;
-        }
+        //if (randZilla == 1)
+        //{
+        //    hadGodzilla = false;
+        //}
 
 
     }
