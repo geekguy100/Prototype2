@@ -474,7 +474,7 @@ public class GameManager : MonoBehaviour
         // Disable the results screen and reenable the gameplay screen.
         resultsHandler.gameObject.SetActive(false);
         gameplayObject.SetActive(true);
-
+        timer.Reset();
         // If all choices have been made, end the game
         //Kyle Grenier
         if (choicesMade < maxChoices)

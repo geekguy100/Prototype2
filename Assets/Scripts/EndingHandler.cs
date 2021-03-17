@@ -77,8 +77,8 @@ public class EndingHandler : MonoBehaviour
         numEndings++;
 
         // Sets text panel/buttons to be transparent
-        textPanel.color = new Color(textPanel.color.r, textPanel.color.g, textPanel.color.g, 0);
-        endText.color = new Color(endText.color.r, endText.color.g, endText.color.g, 0);
+        //textPanel.color = new Color(textPanel.color.r, textPanel.color.g, textPanel.color.g, 0);
+        //endText.color = new Color(endText.color.r, endText.color.g, endText.color.g, 0);
 
         // Checks if player has seen all the endings
         if (numEndings >= maxEndings)
@@ -93,7 +93,7 @@ public class EndingHandler : MonoBehaviour
         endBackground.sprite = background;
 
         // Starts to fade text panel in after wait time
-        Invoke("FadeIn", waitTime);
+        //Invoke("FadeIn", waitTime);
     }
 
     /// <summary>
