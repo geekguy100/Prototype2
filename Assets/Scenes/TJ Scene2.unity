@@ -40480,6 +40480,7 @@ GameObject:
   - component: {fileID: 2042046204}
   - component: {fileID: 2042046203}
   - component: {fileID: 2042046201}
+  - component: {fileID: 2042046205}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -40555,13 +40556,8 @@ MonoBehaviour:
   setupObject: {fileID: 1347828859}
   tutorialObject: {fileID: 1164707612}
   endingObject: {fileID: 538041730}
-  endingBackground: {fileID: 1318855581}
-  endMainMenuButton: {fileID: 1095243393}
-  endQuitButton: {fileID: 1254064790}
-  endNextButton: {fileID: 1009423202}
   choicesText: {fileID: 1164516547}
   scenarioIcon: {fileID: 938468898}
-  restartButton: {fileID: 666610067}
   submitButton: {fileID: 305985798}
   approvalSprite: {fileID: 1858148169}
   efficiencySprite: {fileID: 92429654}
@@ -40594,6 +40590,27 @@ MonoBehaviour:
   resultsHandler: {fileID: 1251475128}
   thresholds: 09000000170000002500000032000000410000004f0000005d000000
   statLoss: 5
+--- !u!114 &2042046205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042046200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca9ff1d978f44d45bdccad803292e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endBackground: {fileID: 1318855581}
+  textPanel: {fileID: 1827151868}
+  endText: {fileID: 1291743926}
+  nextButton: {fileID: 1009423202}
+  mainMenuButton: {fileID: 1095243393}
+  quitButton: {fileID: 1254064790}
+  maxEndings: 3
+  waitTime: 3
+  fadeTime: 10
 --- !u!1 &2052621706
 GameObject:
   m_ObjectHideFlags: 0

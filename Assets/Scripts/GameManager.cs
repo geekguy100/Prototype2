@@ -105,26 +105,11 @@ public class GameManager : MonoBehaviour
     [Tooltip("The parent object of the ending")]
     public GameObject endingObject;
 
-    [Tooltip("The background of the ending")]
-    public Image endingBackground;
-
-    [Tooltip("The Main Menu button on the end screen")]
-    public GameObject endMainMenuButton;
-
-    [Tooltip("The Quit button on the end screen")]
-    public GameObject endQuitButton;
-
-    [Tooltip("The Next button on the end screen")]
-    public GameObject endNextButton;
-
     [Tooltip("Text that displays all the options")]
     public Text choicesText;
 
     [Tooltip("The object that shows the scenario's icon")]
     public SpriteRenderer scenarioIcon;
-
-    [Tooltip("Button that shows on the game over screen")]
-    public GameObject restartButton;
 
     [Tooltip("Button for selecting the current choice")]
     public GameObject submitButton;
@@ -228,6 +213,10 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    /// <summary>
+    /// Reference to script that handles displaying endings
+    /// </summary>
+    private EndingHandler endingHandler;
 
     /// <summary>
     /// Subscribe the ChoiceSelect event to OnTimerEnd, meaning ChoiceSelect() will be called once the timer ends.
@@ -267,7 +256,7 @@ public class GameManager : MonoBehaviour
         // Load the endings from endings.json
         TextAsset endingsData = Resources.Load("Endings/endings") as TextAsset;
         endings = JsonUtility.FromJson<Endings>(endingsData.text);
-
+        endingHandler = GetComponent<EndingHandler>();
         statSliderThresholds = resultsHandler.statThresholds;
         // Initialize the ResultsHandler's sliders to the correct starting values.
         resultsHandler.Init(stats);
@@ -571,9 +560,6 @@ public class GameManager : MonoBehaviour
         endingObject.SetActive(true);
         gameplayObject.SetActive(false);
 
-        // Turn on the restart button
-        restartButton.SetActive(true);
-
         // Set the text and sprites to the first ending screen
         endingButton();
     }
@@ -739,14 +725,6 @@ public class GameManager : MonoBehaviour
     {
         //List<string> allEndings = new List<string>();
 
-        // All endings have been seen - changes buttons to let player leave
-        if (endingsSeen >= 2)
-        {
-            endNextButton.SetActive(false);
-            endMainMenuButton.SetActive(true);
-            endQuitButton.SetActive(true);
-        }
-
         // The ending currently being shown
         Ending switcher;
         // Keep track of which endings have been seen already
@@ -765,8 +743,12 @@ public class GameManager : MonoBehaviour
             switcher = TestEnding(stats[3], endings.Finance, financeEndingBackgrounds);
             // Last ending - restart/main menu buttons here
         }
-        endingText.text = switcher.text;
-        endingBackground.sprite = Resources.Load<Sprite>(switcher.backgroundPath);
+
+        // Display ending
+        Sprite endSprite = Resources.Load<Sprite>(switcher.backgroundPath);
+
+        endingHandler.StartNewEnding(switcher.text, endSprite);
+
         // Increment the number of endings seen
         ++endingsSeen;
         // Add the path to a list. Used for the rare Godzilla ending
