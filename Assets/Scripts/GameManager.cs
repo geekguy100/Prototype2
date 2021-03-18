@@ -466,8 +466,10 @@ public class GameManager : MonoBehaviour
         resultsHandler.Display(stats, currentSetup.Decisions[decisionIndex].Result);
 
         leaderboardStamp.gameObject.SetActive(true);
+
         int setupID = currentSetup.ID;
-        leaderboardStamp.Display(setupID, "Answer" + setupID + ((char)('A' + setupID)));
+        print("STAMP: char is " + (char)('A' + setupID));
+        leaderboardStamp.Display(setupID, "Answer" + setupID + ((char)('A' + currentSelection)));
 
         // Set the character's emotion based on our current stats.
         character.SetEmotion(statsDelta);
