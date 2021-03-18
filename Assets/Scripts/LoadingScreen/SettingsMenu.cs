@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SettingsMenu : MonoBehaviour
 {
+    public AudioMixer music;
+    public AudioMixer ui;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +20,16 @@ public class SettingsMenu : MonoBehaviour
         
     }
 
-    //adjust master volume
-    public void AdjustVolume(float newVolume)
+    //adjust ui volume
+    public void AdjustUIVolume(float newVolume)
     {
-        AudioListener.volume = newVolume;
+        ui.SetFloat("UIVolume", newVolume);
+    }
+
+    //adjust music volume
+    public void AdjustMusicVolume(float newVolume)
+    {
+        music.SetFloat("MusicVolume",newVolume);
     }
 
     public void SetFullscreen(bool isFullscreen)
