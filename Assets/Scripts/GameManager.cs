@@ -149,6 +149,9 @@ public class GameManager : MonoBehaviour
     [Tooltip("Text on each choice button")]
     public TextMeshProUGUI[] choiceTexts;
 
+    [Tooltip("The leaderboard stamp to display percent of ppl who chose an answer to a question.")]
+    public LeaderboardStamp leaderboardStamp;
+
     //Added by Kyle Grenier
     [Tooltip("The timer used to track time on each question.")]
     public Timer timer;
@@ -462,6 +465,10 @@ public class GameManager : MonoBehaviour
         resultsHandler.gameObject.SetActive(true);
         resultsHandler.Display(stats, currentSetup.Decisions[decisionIndex].Result);
 
+        leaderboardStamp.gameObject.SetActive(true);
+        int setupID = currentSetup.ID;
+        leaderboardStamp.Display(setupID, "Answer" + setupID + ((char)('A' + setupID)));
+
         // Set the character's emotion based on our current stats.
         character.SetEmotion(statsDelta);
     }
@@ -485,6 +492,7 @@ public class GameManager : MonoBehaviour
     {
         // Disable the results screen and reenable the gameplay screen.
         resultsHandler.gameObject.SetActive(false);
+        leaderboardStamp.gameObject.SetActive(false);
         gameplayObject.SetActive(true);
         timer.Reset();
         // If all choices have been made, end the game
