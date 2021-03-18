@@ -5,6 +5,7 @@
 //
 // Brief Description : Handles showing endings for each stat
 *****************************************************************************/
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -102,28 +103,17 @@ public class EndingHandler : MonoBehaviour
     /// <summary>
     /// Fades in the text panel and text over time
     /// </summary>
-    private void FadeIn()
+    private IEnumerator FadeIn()
     {
+        yield return new WaitForSeconds(waitTime);
         for (float t = 0; t < fadeTime; t += Time.deltaTime)
         {
             float normalized = t / fadeTime;
-            textPanel.color = Color.Lerp(Color.clear, Color.white, normalized);
+            textPanel.color = Color.Lerp(Color.clear, panelTarget, normalized);
             endText.color = Color.Lerp(Color.clear, Color.black, normalized);
-        }
-        textPanel.color = Color.white;
-        endText.color = Color.white;
-        float alpha = 0;
-        bool finished = false;
-        while (!finished)
-        {
-            alpha += Time.deltaTime * (1 / fadeTime);
-            if (alpha > 1)
-            {
-                alpha = 1;
-                finished = true;
-            }
-            textPanel.color = new Color(textPanel.color.r, textPanel.color.g, textPanel.color.g, alpha);
-            endText.color = new Color(endText.color.r, endText.color.g, endText.color.g, alpha);
-        }
+            yield return null;
+        }        
+        textPanel.color = panelTarget;
+        endText.color = Color.black;      
     }
 }
