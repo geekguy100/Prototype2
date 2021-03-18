@@ -15,9 +15,9 @@ public class SettingsMenu : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void AdjustMasterVolume(float newVolume)
     {
-        
+        AudioListener.volume = newVolume;
     }
 
     //adjust ui volume
