@@ -656,7 +656,7 @@ public class GameManager : MonoBehaviour
     public void SettingMenuToggle()
     {
         settingsPanel.SetActive(true);
-        setupObject.SetActive(false);
+ 
     }
 
     /// <summary>
@@ -666,7 +666,7 @@ public class GameManager : MonoBehaviour
     public void ReturnToSetupMenuFromSettings()
     {
         settingsPanel.SetActive(false);
-        setupObject.SetActive(true);
+
     }
 
     private void AfterConfirmScenarioSelection()
