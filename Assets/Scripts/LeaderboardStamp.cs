@@ -30,7 +30,7 @@ public class LeaderboardStamp : MonoBehaviour
         float percent = leaderboard.PercentChosen(questionNumber, answerName);
         string tempText = string.Empty;
 
-        if (percent == 100)
+        if (percent == 0)
             tempText = "You're the first to choose this answer!";
         else
             tempText = percent + "% of people chose this answer!";

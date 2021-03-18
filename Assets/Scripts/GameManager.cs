@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using LeaderboardInfo;
 
 
 public class GameManager : MonoBehaviour
@@ -161,6 +162,8 @@ public class GameManager : MonoBehaviour
 
     //Added by Ein
     public GameObject settingsPanel;
+
+    public LeaderboardHandler leaderboardHandler;
 
     /// <summary>
     /// The values at which the stat sliders change colors
@@ -413,9 +416,7 @@ public class GameManager : MonoBehaviour
             stats[2] = Mathf.Clamp(stats[2], 0f, 100f);
             stats[3] = Mathf.Clamp(stats[3], 0f, 100f);
 
-            // Resets choice variables/buttons
-            // Sets currentSelection to -1 to make sure player makes a selection before submitting
-            currentSelection = -1;
+            // Resets choice buttons
             // Resets button colors - change later for efficiency
             foreach (Button b in choiceButtons)
             {
@@ -452,8 +453,9 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-
+            
             print("CHOICE");
+            leaderboardHandler.IncrementScore("Answer" + currentSetup.ID + ((char)('A' + currentSelection)));
             Transition.instance.StartTransition(FinishChoiceSelect);
         }
     }
@@ -497,6 +499,10 @@ public class GameManager : MonoBehaviour
         leaderboardStamp.gameObject.SetActive(false);
         gameplayObject.SetActive(true);
         timer.Reset();
+
+        // Sets currentSelection to -1 to make sure player makes a selection before submitting
+        currentSelection = -1;
+
         // If all choices have been made, end the game
         //Kyle Grenier
         if (choicesMade < maxChoices)

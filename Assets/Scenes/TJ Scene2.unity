@@ -18961,7 +18961,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &867179057
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29709,7 +29709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1347828860
 Transform:
   m_ObjectHideFlags: 0
@@ -43818,7 +43818,7 @@ MonoBehaviour:
   - {fileID: 239045974}
   - {fileID: 1154528307}
   - {fileID: 1437635460}
-  leaderboardStamp: {fileID: 0}
+  leaderboardStamp: {fileID: 867179058}
   timer: {fileID: 1658177701}
   character: {fileID: 1900324364}
   settingsPanel: {fileID: 1273463459}

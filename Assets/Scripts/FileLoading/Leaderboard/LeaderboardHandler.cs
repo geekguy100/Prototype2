@@ -192,6 +192,7 @@ namespace LeaderboardInfo
             {
                 ++entry.score;
                 Debug.Log("LEADERBOARD: Entry '" + entry.name + "' score changed from " + (entry.score - 1) + " to " + entry.score);
+                StartCoroutine(PushScore(answerName));
             }
  
         }
