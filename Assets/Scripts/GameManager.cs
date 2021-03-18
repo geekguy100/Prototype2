@@ -454,7 +454,6 @@ public class GameManager : MonoBehaviour
             }
 
             
-            print("CHOICE");
             leaderboardHandler.IncrementScore("Answer" + currentSetup.ID + ((char)('A' + currentSelection)));
             Transition.instance.StartTransition(FinishChoiceSelect);
         }
@@ -470,7 +469,7 @@ public class GameManager : MonoBehaviour
         leaderboardStamp.gameObject.SetActive(true);
 
         int setupID = currentSetup.ID;
-        print("STAMP: char is " + (char)('A' + setupID));
+        //print("STAMP: char is " + (char)('A' + setupID));
         leaderboardStamp.Display(setupID, "Answer" + setupID + ((char)('A' + currentSelection)));
 
         // Set the character's emotion based on our current stats.

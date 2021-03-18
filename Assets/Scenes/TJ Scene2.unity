@@ -43822,6 +43822,7 @@ MonoBehaviour:
   timer: {fileID: 1658177701}
   character: {fileID: 1900324364}
   settingsPanel: {fileID: 1273463459}
+  leaderboardHandler: {fileID: 1949504579}
   resultsHandler: {fileID: 1251475128}
   thresholds: 09000000170000002500000032000000410000004f0000005d000000
   statLoss: 5

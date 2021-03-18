@@ -164,7 +164,7 @@
         }
       ],
       "Setup": "The Immense Beautiful Clean Fossil Fuels company has offered you a large sum of money in order to work alongside them with a new coal powered version of 'Smart Grid'. How does your company respond to this offer?",
-      "ID": 3,
+      "ID": 4,
       "Name": "The Source",
       "Icon": "Scenario 3"
     },
@@ -212,7 +212,7 @@
         }
       ],
       "Setup": "Your company is planning to roll out Smart Meters to all of its customers as an optional upgrade. You are tasked with marketing this upgrade in a way to make the most people in that area as possible buy into Smart Meters. What would be the best approach to bring as many people on board as possible?",
-      "ID": 4,
+      "ID": 5,
       "Name": "The Upgrade",
       "Icon": "Scenario 1"
     },
@@ -240,7 +240,7 @@
           "Efficiency": -4,
           "Environment": 8,
           "Finance": 2,
-          "Result": "The outside grant increased your budget and your focus on the environment improved the public’s opinion of your company. However, your lack of attention to the Smart Grid has led to decreased efficiency in the system."
+          "Result": "The outside grant increased your budget and your focus on the environment improved the publicï¿½s opinion of your company. However, your lack of attention to the Smart Grid has led to decreased efficiency in the system."
         },
         {
           "Choice": "Commit to urban development in order to add space for new homes and power sources, within an urban environment not assimilated into Smart Grid. Commit to deforestation efforts in order to gain space in the nearby countryside.",
@@ -268,7 +268,7 @@
         }
       ],
       "Setup": "Smart Meter is most effective when every house in an area is under its effect. After successfully implementing Smart Meters into multiple homes, the company is curious what next step should be taken.",
-      "ID": 5,
+      "ID": 6,
       "Name": "The Expansion",
       "Icon": "Scenario 1"
     }

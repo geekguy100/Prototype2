@@ -10,6 +10,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
 using System.Linq;
+using FileLoading;
 
 namespace LeaderboardInfo
 {
@@ -230,6 +231,39 @@ namespace LeaderboardInfo
             // No error occured, meaning we successfully pushed our score.
             else
                 Debug.Log("LEADERBOARD: Successfully pushed leaderboard entry: " + entry.name + " -> " + entry.score);
+        }
+
+        public IEnumerator MassAddScores()
+        {
+            TextAsset scenarioData = Resources.Load("Scenarios/Scenarios_new") as TextAsset;
+            Scenarios scenarioJson = JsonUtility.FromJson<Scenarios>(scenarioData.text);
+
+            Scenario[] setups = scenarioJson.Setups;
+            foreach (Scenario setup in setups)
+            {
+                Choices[] choices = setup.Decisions;
+                int i = 0;
+
+                foreach(Choices choice in choices)
+                {
+                    string name = "Answer" + setup.ID + (char)('A' + i);
+                    ++i;
+
+                    // Start a web request to retrieve the JSON leaderboard data.
+                    UnityWebRequest www = new UnityWebRequest(DREAMLO_UPLOAD_URL + name + "/" + 0);
+                    www.downloadHandler = new DownloadHandlerBuffer();
+
+                    yield return www.SendWebRequest();
+
+                    // If an error occured, log it.
+                    if (www.isNetworkError || www.isHttpError)
+                        Debug.LogError(www.error);
+
+                    // No error occured, meaning we successfully pushed our score.
+                    else
+                        Debug.Log("LEADERBOARD: Successfully pushed leaderboard entry: " + name + " -> " + 0);
+                }
+            }
         }
 
         /// <summary>
