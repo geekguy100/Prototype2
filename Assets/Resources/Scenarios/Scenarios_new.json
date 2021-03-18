@@ -167,6 +167,86 @@
       "ID": 3,
       "Name": "The Source",
       "Icon": "Scenario 3"
+    },
+    {
+      "Decisions": [
+        {
+          "Choice": "Install the Smart Meters for dirt cheap in order to ensure more homes get them in to better improve the system.",
+          "Approval": 0,
+          "Efficiency": 8,
+          "Environment": 4,
+          "Finance": -10,
+          "Result": "The installation reaches a large number of customers and those customers are happy about the affordable price. Your company must cover some of the installation costs."
+        },
+        {
+          "Choice": "Partner with a local cable company to have a packaged deal with installing Smart Meters alongside a cable upgrade. Showing the customers you care about supporting their local businesses.",
+          "Approval": 0,
+          "Efficiency": 2,
+          "Environment": 8,
+          "Finance": -3,
+          "Result": "Your company gains widespread support in the community you targeted. However, the effort was slightly costly and slowed your expansion. "
+        },
+        {
+          "Choice": "Push an expensive warranty from your company in order to gain more money off of installations.",
+          "Approval": 0,
+          "Efficiency": 1,
+          "Environment": -7,
+          "Finance": 9,
+          "Result": "Your company makes a large profit from those who expect the warranty you offer. This comes without any financial risks, but the public sees this as a very scummy business practice."
+        }
+      ],
+      "Setup": "Your company is planning to roll out Smart Meters to all of its customers as an optional upgrade. You are tasked with marketing this upgrade in a way to make the most people in that area as possible buy into Smart Meters. What would be the best approach to bring as many people on board as possible?",
+      "ID": 4,
+      "Name": "The Upgrade",
+      "Icon": "Scenario 1"
+    },
+    {
+      "Decisions": [
+        {
+          "Choice": "Install the Smart Meters for dirt cheap in order to ensure more homes get them in to better improve the system.",
+          "Approval": 0,
+          "Efficiency": 8,
+          "Environment": 4,
+          "Finance": -10,
+          "Result": "The installation reaches a large number of customers and those customers are happy about the affordable price. Your company must cover some of the installation costs."
+        },
+        {
+          "Choice": "Partner with a local cable company to have a packaged deal with installing Smart Meters alongside a cable upgrade. Showing the customers you care about supporting their local businesses.",
+          "Approval": 0,
+          "Efficiency": 2,
+          "Environment": 8,
+          "Finance": -3,
+          "Result": "Your company gains widespread support in the community you targeted. However, the effort was slightly costly and slowed your expansion. "
+        },
+        {
+          "Choice": "Push an expensive warranty from your company in order to gain more money off of installations.",
+          "Approval": 0,
+          "Efficiency": 1,
+          "Environment": -7,
+          "Finance": 9,
+          "Result": "Your company makes a large profit from those who expect the warranty you offer. This comes without any financial risks, but the public sees this as a very scummy business practice."
+        },
+        {
+          "Choice": "Push an expensive warranty from your company in order to gain more money off of installations.",
+          "Approval": 0,
+          "Efficiency": 1,
+          "Environment": -7,
+          "Finance": 9,
+          "Result": "4th button offer. This comes without any financial risks, but the public sees this as a very scummy business practice."
+        },
+        {
+          "Choice": "Push an expensive warranty from your company in order to gain more money off of installations.",
+          "Approval": 0,
+          "Efficiency": 1,
+          "Environment": -7,
+          "Finance": 9,
+          "Result": "5th buttonprofit from those who expect the warranty you offer. This comes without any financial risks, but the public sees this as a very scummy business practice."
+        }
+      ],
+      "Setup": "Your company is planning to roll out Smart Meters to all of its customers as an optional upgrade. You are tasked with marketing this upgrade in a way to make the most people in that area as possible buy into Smart Meters. What would be the best approach to bring as many people on board as possible?",
+      "ID": 4,
+      "Name": "The Upgrade",
+      "Icon": "Scenario 1"
     }
   ]
 }

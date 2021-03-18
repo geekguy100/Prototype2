@@ -140,6 +140,12 @@ public class GameManager : MonoBehaviour
     [Tooltip("Buttons to track player choice")]
     public Button[] choiceButtons;
 
+    [Tooltip("Buttons to track player choice - only show if number of options is odd")]
+    public Button[] middleChoiceButtons;
+
+    [Tooltip("Objects holding each row of choice buttons")]
+    public GameObject[] choiceButtonRows;
+
     [Tooltip("Text on each choice button")]
     public TextMeshProUGUI[] choiceTexts;
 
@@ -194,6 +200,11 @@ public class GameManager : MonoBehaviour
     /// The ResultsHandler to manage displaying the results and updating values after each question.
     /// </summary>
     [SerializeField] private ResultsHandler resultsHandler = null;
+
+    /// <summary>
+    /// Whether or not there are an odd number of choices for this setup
+    /// </summary>
+    private bool oddNumChoices = false;
     #endregion
 
     #region Stat variables
@@ -217,6 +228,7 @@ public class GameManager : MonoBehaviour
     /// Reference to script that handles displaying endings
     /// </summary>
     private EndingHandler endingHandler;
+
 
     /// <summary>
     /// Subscribe the ChoiceSelect event to OnTimerEnd, meaning ChoiceSelect() will be called once the timer ends.
@@ -513,8 +525,14 @@ public class GameManager : MonoBehaviour
         // Set up a char to increment. By adding 1 to a char, it moves to the next letter (A -> B -> C etc...)
         char currentLetter = 'A';
         int currentText = 0;
-        List<string> availableChoices = new List<string>();
-        // Load the dropdown with the choices
+        foreach (GameObject obj in choiceButtonRows)
+        {
+            obj.SetActive(true);
+        }
+
+        middleChoiceButtons[0].gameObject.transform.parent.gameObject.SetActive(false);
+        middleChoiceButtons[1].gameObject.transform.parent.gameObject.SetActive(false);
+        oddNumChoices = false;
 
         foreach (var choice in currentSetup.Decisions)
         {
@@ -528,11 +546,34 @@ public class GameManager : MonoBehaviour
                 choiceTexts[currentText].transform.parent.gameObject.SetActive(true);
             }
 
-            // Add the choice to the list to be added to the dropdown
-            availableChoices.Add(currentText.ToString());
+
             // Increment the prefix
             ++currentText;
             ++currentLetter;
+        }
+
+        // Checks if there are an odd number of choices
+        if (currentText % 2 == 1)
+        {
+            oddNumChoices = true;
+
+            // Decrements variables to stay on last choice
+            currentText--;
+            currentLetter--;
+            
+            // Finds which middle choice button is needed
+            int index = (currentText / 2) - 1;
+            middleChoiceButtons[index].gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = currentLetter + ": " + currentSetup.Decisions[currentText].Choice;
+            middleChoiceButtons[index].gameObject.transform.parent.gameObject.SetActive(true);
+            
+            // Deactivates the row the middle choice button is replacing
+            choiceButtonRows[index + 1].SetActive(false);
+
+            // Deactivates the next row if there are only 3 choices
+            if (index + 2 < choiceButtonRows.Length)
+            {
+                choiceButtonRows[index + 2].SetActive(false);
+            }           
         }
 
         // Sets all unused choice buttons to inactive
@@ -805,7 +846,34 @@ public class GameManager : MonoBehaviour
         {
             b.GetComponent<Image>().color = Color.white;
         }
-        choiceButtons[index].GetComponent<Image>().color = chosenColor;
+        foreach(Button b in middleChoiceButtons)
+        {
+            b.GetComponent<Image>().color = Color.white;
+        }
+
+        if (!oddNumChoices)
+        {
+            choiceButtons[index].GetComponent<Image>().color = chosenColor;
+        }
+        else
+        {
+            // First middle button was pressed
+            if (index == 2)
+            {                
+                middleChoiceButtons[0].GetComponent<Image>().color = chosenColor;
+            }
+            // Second middle button was pressed
+            else if (index == 4)
+            {
+                middleChoiceButtons[1].GetComponent<Image>().color = chosenColor;
+            }
+            // Neither middle button was pressed
+            else
+            {
+                choiceButtons[index].GetComponent<Image>().color = chosenColor;
+            }
+        }
+        
     }
 
     /// <summary>
