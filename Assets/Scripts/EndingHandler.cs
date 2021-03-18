@@ -43,6 +43,9 @@ public class EndingHandler : MonoBehaviour
     [Tooltip("Time it should take to fade in - in seconds")]
     public float fadeTime;
 
+    [Tooltip("Final color of the text panel")]
+    public Color panelTarget;
+
     /// <summary>
     /// Image on the next button
     /// </summary>
@@ -93,7 +96,7 @@ public class EndingHandler : MonoBehaviour
         endBackground.sprite = background;
 
         // Starts to fade text panel in after wait time
-        Invoke("FadeIn", waitTime);
+        StartCoroutine("FadeIn");
     }
 
     /// <summary>
@@ -101,14 +104,14 @@ public class EndingHandler : MonoBehaviour
     /// </summary>
     private void FadeIn()
     {
-        //for (float t = 0; t < fadeTime; t += Time.deltaTime)
-        //{
-        //    float normalized = t / fadeTime;
-        //    textPanel.color = Color.Lerp(Color.clear, Color.white, normalized);
-        //    endText.color = Color.Lerp(Color.clear, Color.white, normalized);
-        //}
-        //textPanel.color = Color.white;
-        //endText.color = Color.white;
+        for (float t = 0; t < fadeTime; t += Time.deltaTime)
+        {
+            float normalized = t / fadeTime;
+            textPanel.color = Color.Lerp(Color.clear, Color.white, normalized);
+            endText.color = Color.Lerp(Color.clear, Color.black, normalized);
+        }
+        textPanel.color = Color.white;
+        endText.color = Color.white;
         float alpha = 0;
         bool finished = false;
         while (!finished)

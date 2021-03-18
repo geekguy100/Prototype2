@@ -3,113 +3,113 @@
     {
       "Decisions": [
         {
-          "Choice": "Install the Smart Meters for dirt cheap in order to ensure more homes get them in to better improve the system.",
-          "Approval": 0,
-          "Efficiency": 8,
-          "Environment": 4,
-          "Finance": -10,
-          "Result": "The installation reaches a large number of customers and those customers are happy about the affordable price. Your company must cover some of the installation costs."
-        },
-        {
-          "Choice": "Partner with a local cable company to have a packaged deal with installing Smart Meters alongside a cable upgrade. Showing the customers you care about supporting their local businesses.",
-          "Approval": 0,
-          "Efficiency": 2,
-          "Environment": 8,
-          "Finance": -3,
-          "Result": "Your company gains widespread support in the community you targeted. However, the effort was slightly costly and slowed your expansion. "
-        },
-        {
-          "Choice": "Push an expensive warranty from your company in order to gain more money off of installations.",
-          "Approval": 0,
-          "Efficiency": 1,
-          "Environment": -7,
-          "Finance": 9,
-          "Result": "Your company makes a large profit from those who expect the warranty you offer. This comes without any financial risks, but the public sees this as a very scummy business practice."
-        },
-        {
-          "Choice": "Start a door to door marketing campaign in order to cheaply spread information about Smart Meter to the areas population.",
+          "Choice": "Explain how Smart Meters will ensure that power outages are significantly reduced and they'll save on their power bill.",
           "Approval": 0,
           "Efficiency": 6,
-          "Environment": -2,
-          "Finance": 3,
-          "Result": "This ensures that information on Smart Meter reaches the entire area's population. It is a cheap initiative that can lead to more installations of smart meters but it can annoy members of that community. "
+          "Environment": 2,
+          "Finance": 0,
+          "Result": "Being clear and concise to your consumer base about the effectiveness and efficiency of Smart Meters will guide politicians make the best decision possible to positively affect the efficiency of the smart grid as a whole. This will also put your company in a slightly better light in the eyes of the general public."
         },
         {
-          "Choice": "Pay for an expensive advertisement spot on the local TV news channel in order to quickly reach the area's population.",
+          "Choice": "Use your platform in order to push a marketing scheme around promoting the good of smart grid over addressing the concerns.",
           "Approval": 0,
-          "Efficiency": 7,
-          "Environment": 8,
-          "Finance": -8,
-          "Result": "This is an expensive way to be sure that a large amount of the area see's your company's marketing."
+          "Efficiency": 0,
+          "Environment": 2,
+          "Finance": 6,
+          "Result": "The marketing plan will result in a much greater public awareness of the Smart Grid as a whole, and your profits will increase as a result. As more focus is brought towards the positive aspects of Smart Grid, the opinion of your company among the general public will also increase."
         },
         {
-          "Choice": "Send out an email about the upgrade to anyone who already owns Smart Grid. Afterwards you can move your focus to marketing Smart Grid in a new area.",
+          "Choice": "Ensure that all the research put into Smart Grid and Smart Meters will not bring any more radio frequencies than the already existing system.",
           "Approval": 0,
-          "Efficiency": 10,
-          "Environment": 10,
-          "Finance": -5,
-          "Result": "This is a simple, less time consuming way to spread the marketing campaign. Not many people will sign up from it however, you can use that time in order to start new marketing campaigns."
+          "Efficiency": 2,
+          "Environment": 6,
+          "Finance": -1,
+          "Result": "The research will cost a bit of money, but the general public, as well as politicians, will greatly appreciate the effort put forth by your company to directly combat the issue of radio frequencies. The Smart Grid as a whole will also be slightly more efficient as a result of your research."
         }
       ],
-      "Setup": "Your company is planning to roll out Smart Meters to all of its customers as an optional upgrade. You are tasked with marketing this upgrade in a way to make the most people in that area as possible buy into Smart Meters. What would be the best approach to bring as many people on board as possible?",
+      "Setup": "Local politicians are drafting a bill about where Smart Meters should be installed. You are asked to address the public's rising complaints and concerns about the emissions of radio frequencies Smart Meters produce. How would you respond to these worries?",
       "ID": 1,
-      "Name": "The Upgrade",
+      "Name": "The Law",
       "Icon": "Scenario 1"
     },
     {
       "Decisions": [
         {
-          "Choice": "Keep rolling out Smart Meters into homes, ensuring that everyone in your target area has a Smart Meter before looking into possible improvements.",
+          "Choice": "Your company accepts the money and abandons the Smart Grid environmental goals in order to reach higher profit margins.",
           "Approval": 0,
-          "Efficiency": 5,
-          "Environment": -5,
-          "Finance": 5,
-          "Result": "The increased number of implemented Smart Meters brings in a large profit and also allows the system to be tested on a larger scale. However, this leaves existing users with unpolished versions of the system."
+          "Efficiency": 3,
+          "Environment": -7,
+          "Finance": 7,
+          "Result": "Your company gains a large sum of money by embracing a fossil fuel company. This sellout angers the public."
         },
         {
-          "Choice": "Perform trial studies on current Smart Meter homes to see what issues need to be addressed and where they are occurring.",
+          "Choice": "Your company publicly denounces the deal. Citing Beautiful Clean Fossil Fuels as being unethical to convert an environmental friendly company into one focused exclusively on money at the cost of the planet.",
           "Approval": 0,
-          "Efficiency": 5,
+          "Efficiency": -2,
           "Environment": 10,
-          "Finance": -5,
-          "Result": "Through these studies, ways to improve the system have been found and they increase information productivity. The efforts made to improve the system have caused current and future consumers to become more interested in your work, but your revenue has diminished."
+          "Finance": -2,
+          "Result": "Your company's statement brings in large public support but the statement also turns away potential future deals."
         },
         {
-          "Choice": "Research how the implementation of Smart Meters into homes affects the environment and focus on receiving an environmental grant for your efforts.",
+          "Choice": "Your company accepts the deal on the condition that Beautiful Clean Fossil Fuels company must install Smart Meters at all their locations and push to install them at their partner locations.",
           "Approval": 0,
-          "Efficiency": -5,
-          "Environment": 5,
+          "Efficiency": 8,
+          "Environment": -4,
           "Finance": 5,
-          "Result": "The outside grant increased your budget, and your focus on the environment improved the public's opinion of your company. However, your lack of attention to the Smart Grid has led to decreased efficiency in the system."
+          "Result": "Your company gains a large sum of money from the fossil fuel company. In the process your company helps improve the fossil fuel company but mixing in your own environmentally helpful products."
         },
         {
-          "Choice": "Commit to urban development by joining forces with deforestation organizations to create space in the nearby countryside for new homes and power plants. ",
+          "Choice": "Your company refuses the offer but makes effort to stay on good terms with the coal company for future help and deals.",
           "Approval": 0,
-          "Efficiency": -5,
-          "Environment": -10,
-          "Finance": 5,
-          "Result": "The new homes added to the Smart Grid system has resulted in increased profits. However, your lack of attention to your existing users and your deforestation efforts have led to worsening public perception of your company and decreased efficiency of the Smart Grid."
-        },
-        {
-          "Choice": "Prioritize gaining more customers over fixing existing issues by quickly rolling out Smart Meters to as many homes as possible.",
-          "Approval": 0,
-          "Efficiency": 5,
-          "Environment": -10,
-          "Finance": 10,
-          "Result": "The massive influx of new customers resulted in a major increase in profits, which have gone towards making the Smart Grid more efficient. However, the reputation of the company has diminished due to your lack of concern for customer complaints."
-        },
-        {
-          "Choice": "Slow down the implementation of Smart Meters into homes and instead focus on adding additional power sources to the Smart Grid.",
-          "Approval": 0,
-          "Efficiency": 10,
-          "Environment": 10,
-          "Finance": -5,
-          "Result": "Your slower Smart Meter implementation led to a decrease in income, but your focus on adding more power sources has increased efficiency. Consumers appreciated your efforts. "
+          "Efficiency": 2,
+          "Environment": -2,
+          "Finance": 2,
+          "Result": "The status quo of your company does not change much but you can be offered helpful smaller deals from the fossil fuel company in the future."
         }
       ],
-      "Setup": "The Smart Grid is most effective when every house in an area is under its effect. After successfully implementing Smart Meters into multiple homes, the company is curious which step should be taken next.",
+      "Setup": "The immense 'Beautiful Clean Fossil Fuels Company' has offered you a large sum of money in order to work alongside them with a new coal powered version of 'Smart Grid'. How does your company respond to this offer?",
       "ID": 2,
-      "Name": "The Expansion",
+      "Name": "The Source",
+      "Icon": "Scenario 2"
+    },
+    {
+      "Decisions": [
+        {
+          "Choice": "Offer basic position opportunities to the past power grid workers and give them discounts on their own Smart Meter systems.",
+          "Approval": 0,
+          "Efficiency": 3,
+          "Environment": 9,
+          "Finance": -2,
+          "Result": "While it would cost a fair amount of money to keep on the already high salary workers, as well as providing them discounts, the upside to this decision is that the previous workers have experience working in this field, as well as you would be sending a message to the community that you have their best interests at heart."
+        },
+        {
+          "Choice": "Leave behind the concerns of the past power grid workers and instead hire cheap labor from the surrounding area.",
+          "Approval": 0,
+          "Efficiency": -3,
+          "Environment": -7,
+          "Finance": 7,
+          "Result": "New employees won't have the experience or expertise as the previous workers, but their salaries are much cheaper, and you can use said new profits to improve the smart grid in the long term. The community would however be enraged by mass layoffs required to hire new employees."
+        },
+        {
+          "Choice": "Retrain the previous workers and bring them in on the new positions for the new Smart Grid.",
+          "Approval": 0,
+          "Efficiency": 6,
+          "Environment": 4,
+          "Finance": -4,
+          "Result": "The community will greatly appreciate the opportunity to continue working, although the costs that it would take to retrain the employees for Smart Grid will be expensive. The older workers will latch onto the concepts of Smart Grid much quicker than a new employee would, and as a result, the Smart Grid will excel at a faster rate."
+        },
+        {
+          "Choice": "Ignore the concerns of the past power grid employees. Start a marketing campaign to demonize the old power grids policies and promote Smart Grids improvements to drown out any complaints.",
+          "Approval": 0,
+          "Efficiency": 3,
+          "Environment": -6,
+          "Finance": 3,
+          "Result": "The community will not take your decision to ignore them kindly, as well as the negative press being focused on their previous occupations. Financially, the marketing campaign will cost a bit of money, but the benefits in profits as well as efficiency will make up for the initial loss in money as well as the loss of approval from old workers."
+        }
+      ],
+      "Setup": "As the Smart Grid integration is nearing its completion, some of the workers with the power company are concerned about how this will affect their jobs compared to the old system.  What is the best way to handle this situation?",
+      "ID": 3,
+      "Name": "The Workers",
       "Icon": "Scenario 2"
     },
     {
@@ -175,7 +175,7 @@
           "Approval": 0,
           "Efficiency": 8,
           "Environment": 4,
-          "Finance": -10,
+          "Finance": -6,
           "Result": "The installation reaches a large number of customers and those customers are happy about the affordable price. Your company must cover some of the installation costs."
         },
         {
@@ -184,7 +184,7 @@
           "Efficiency": 2,
           "Environment": 8,
           "Finance": -3,
-          "Result": "Your company gains widespread support in the community you targeted. However, the effort was slightly costly and slowed your expansion. "
+          "Result": "Your company gains widespread support in the community you targeted. However, the effort was slightly costly and slowed your expansion."
         },
         {
           "Choice": "Push an expensive warranty from your company in order to gain more money off of installations.",
@@ -192,7 +192,23 @@
           "Efficiency": 1,
           "Environment": -7,
           "Finance": 9,
-          "Result": "Your company makes a large profit from those who expect the warranty you offer. This comes without any financial risks, but the public sees this as a very scummy business practice."
+          "Result": "Your company makes a large profit from those who accept the warranty you offer. This comes without any financial risks, but the public sees this as a very scummy business practice."
+        },
+        {
+          "Choice": "Start a door to door marketing campaign in order to cheaply spread information about Smart Meter to the area's population.",
+          "Approval": 0,
+          "Efficiency": 6,
+          "Environment": -2,
+          "Finance": 3,
+          "Result": "This ensures that information on Smart Meter reaches the entire area's population. It is a cheap initiative that can lead to more installations of smart meters but it can annoy members of the community."
+        },
+        {
+          "Choice": "Pay for an expensive advertisement spot on the local TV news channel in order to quickly reach the area's population.",
+          "Approval": 0,
+          "Efficiency": 4,
+          "Environment": 6,
+          "Finance": -6,
+          "Result": "This is an expensive way to be sure that a large amount of the area sees your company's marketing."
         }
       ],
       "Setup": "Your company is planning to roll out Smart Meters to all of its customers as an optional upgrade. You are tasked with marketing this upgrade in a way to make the most people in that area as possible buy into Smart Meters. What would be the best approach to bring as many people on board as possible?",
@@ -203,49 +219,57 @@
     {
       "Decisions": [
         {
-          "Choice": "Install the Smart Meters for dirt cheap in order to ensure more homes get them in to better improve the system.",
+          "Choice": "Keep rolling out Smart Meters into homes as-is. Ensuring everyone in your target area has a Smart Meter before improvements occur.",
           "Approval": 0,
-          "Efficiency": 8,
-          "Environment": 4,
-          "Finance": -10,
-          "Result": "The installation reaches a large number of customers and those customers are happy about the affordable price. Your company must cover some of the installation costs."
+          "Efficiency": 6,
+          "Environment": -2,
+          "Finance": 2,
+          "Result": "The increased number of implemented Smart Meters brings in a large profit and also allows the system to be tested on a larger scale. However, this leaves existing users with unpolished versions of the system."
         },
         {
-          "Choice": "Partner with a local cable company to have a packaged deal with installing Smart Meters alongside a cable upgrade. Showing the customers you care about supporting their local businesses.",
+          "Choice": "Perform trial studies on the current homes to see where issues are popping up and where to address them.",
           "Approval": 0,
           "Efficiency": 2,
+          "Environment": 4,
+          "Finance": -4,
+          "Result": "Through these studies, ways to improve the system have been found and they increase information productivity. The efforts made to improve the system have caused current and future consumers to become more interested in your work, but your revenue has diminished."
+        },
+        {
+          "Choice": "Research how Smart Meter Homes affects environmental effects and provide an increased focus on getting an environmental grant for the efforts done.",
+          "Approval": 0,
+          "Efficiency": -4,
           "Environment": 8,
-          "Finance": -3,
-          "Result": "Your company gains widespread support in the community you targeted. However, the effort was slightly costly and slowed your expansion. "
+          "Finance": 2,
+          "Result": "The outside grant increased your budget and your focus on the environment improved the public’s opinion of your company. However, your lack of attention to the Smart Grid has led to decreased efficiency in the system."
         },
         {
-          "Choice": "Push an expensive warranty from your company in order to gain more money off of installations.",
+          "Choice": "Commit to urban development in order to add space for new homes and power sources, within an urban environment not assimilated into Smart Grid. Commit to deforestation efforts in order to gain space in the nearby countryside.",
           "Approval": 0,
-          "Efficiency": 1,
+          "Efficiency": 4,
           "Environment": -7,
-          "Finance": 9,
-          "Result": "Your company makes a large profit from those who expect the warranty you offer. This comes without any financial risks, but the public sees this as a very scummy business practice."
+          "Finance": 7,
+          "Result": "The new homes added to the Smart Grid system has resulted in increased profits. However, your lack of attention to your existing users and your deforestation efforts have led to worsening public perception of your company and decreased efficiency of the Smart Grid."
         },
         {
-          "Choice": "Push an expensive warranty from your company in order to gain more money off of installations.",
+          "Choice": "Heavily prioritize more customers rather than our current customers by quickly rolling out Smart Meters into as many homes as possible regardless of any issues old customers have.",
           "Approval": 0,
-          "Efficiency": 1,
-          "Environment": -7,
-          "Finance": 9,
-          "Result": "4th button offer. This comes without any financial risks, but the public sees this as a very scummy business practice."
+          "Efficiency": 2,
+          "Environment": -4,
+          "Finance": 8,
+          "Result": "The massive influx of new customers resulted in a major increase in profits, which have gone towards making the Smart Grid more efficient. However, the reputation of the company has diminished due to your lack of concern for customer complaints."
         },
         {
-          "Choice": "Push an expensive warranty from your company in order to gain more money off of installations.",
+          "Choice": " Slow down on adding more homes to the smart grid system, focusing instead on adding additional power sources into the smart grid system.",
           "Approval": 0,
-          "Efficiency": 1,
-          "Environment": -7,
-          "Finance": 9,
-          "Result": "5th buttonprofit from those who expect the warranty you offer. This comes without any financial risks, but the public sees this as a very scummy business practice."
+          "Efficiency": 3,
+          "Environment": 5,
+          "Finance": -5,
+          "Result": "Your slower Smart Meter implementation led to a decrease in income, but your focus on adding more power sources has increased efficiency, and consumers appreciated your efforts."
         }
       ],
-      "Setup": "Your company is planning to roll out Smart Meters to all of its customers as an optional upgrade. You are tasked with marketing this upgrade in a way to make the most people in that area as possible buy into Smart Meters. What would be the best approach to bring as many people on board as possible?",
-      "ID": 4,
-      "Name": "The Upgrade",
+      "Setup": "Smart Meter is most effective when every house in an area is under its effect. After successfully implementing Smart Meters into multiple homes, the company is curious what next step should be taken.",
+      "ID": 5,
+      "Name": "The Expansion",
       "Icon": "Scenario 1"
     }
   ]
