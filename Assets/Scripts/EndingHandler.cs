@@ -25,7 +25,7 @@ public class EndingHandler : MonoBehaviour
     public GameObject nextButton;
 
     [Tooltip("Ending Main Menu button")]
-    public GameObject mainMenuButton;
+    public GameObject menuButton;
 
     [Tooltip("Ending Quit button")]
     public GameObject quitButton;
@@ -62,12 +62,31 @@ public class EndingHandler : MonoBehaviour
     /// </summary>
     private Image menuButtonImage;
 
+    /// <summary>
+    /// Text on the next button
+    /// </summary>
+    private TextMeshProUGUI nextButtonText;
+
+    /// <summary>
+    /// Text on the menu button
+    /// </summary>
+    private TextMeshProUGUI menuButtonText;
+
+    /// <summary>
+    /// Text on the quit button
+    /// </summary>
+    private TextMeshProUGUI quitButtonText;
+
     // Start is called before the first frame update
     void Start()
     {
+        // Initialize variables
         nextButtonImage = nextButton.GetComponent<Image>();
         quitButtonImage = quitButton.GetComponent<Image>();
-        menuButtonImage = mainMenuButton.GetComponent<Image>();
+        menuButtonImage = menuButton.GetComponent<Image>();
+        nextButtonText = nextButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        menuButtonText = menuButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        quitButtonText = quitButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
     }
 
     /// <summary>
@@ -81,14 +100,20 @@ public class EndingHandler : MonoBehaviour
         numEndings++;
 
         // Sets text panel/buttons to be transparent
-        textPanel.color = new Color(textPanel.color.r, textPanel.color.g, textPanel.color.g, 0);
-        endText.color = new Color(endText.color.r, endText.color.g, endText.color.g, 0);
+        textPanel.color = Color.clear;
+        endText.color = Color.clear;
+        nextButtonImage.color = Color.clear;
+        quitButtonImage.color = Color.clear;
+        menuButtonImage.color = Color.clear;
+        nextButtonText.color = Color.clear;
+        quitButtonText.color = Color.clear;
+        menuButtonText.color = Color.clear;
 
         // Checks if player has seen all the endings
         if (numEndings >= maxEndings)
         {
             nextButton.SetActive(false);
-            mainMenuButton.SetActive(true);
+            menuButton.SetActive(true);
             quitButton.SetActive(true);
         }
 
@@ -111,6 +136,18 @@ public class EndingHandler : MonoBehaviour
             float normalized = t / fadeTime;
             textPanel.color = Color.Lerp(Color.clear, panelTarget, normalized);
             endText.color = Color.Lerp(Color.clear, Color.black, normalized);
+            if (numEndings >= maxEndings)
+            {
+                quitButtonImage.color = Color.Lerp(Color.clear, Color.white, normalized);
+                quitButtonText.color = Color.Lerp(Color.clear, Color.black, normalized);
+                menuButtonImage.color = Color.Lerp(Color.clear, Color.white, normalized);
+                menuButtonText.color = Color.Lerp(Color.clear, Color.black, normalized);
+            }
+            else
+            {
+                nextButtonImage.color = Color.Lerp(Color.clear, Color.white, normalized);
+                nextButtonText.color = Color.Lerp(Color.clear, Color.black, normalized);
+            }
             yield return null;
         }        
         textPanel.color = panelTarget;

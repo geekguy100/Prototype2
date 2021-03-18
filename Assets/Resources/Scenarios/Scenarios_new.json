@@ -111,63 +111,7 @@
       "ID": 3,
       "Name": "The Workers",
       "Icon": "Scenario 2"
-    },
-    {
-      "Decisions": [
-        {
-          "Choice": "Your company accepts the money and abandons the Smart Grid environmental goals in order to reach higher profit margins.",
-          "Approval": 0,
-          "Efficiency": -2,
-          "Environment": -10,
-          "Finance": 10,
-          "Result": "Your company gains a large sum of money by embracing a fossil fuel company. This sellout angers the public."
-        },
-        {
-          "Choice": "Your company publicly denounces the deal. Citing Beautiful Clean Fossil Fuels as being unethical to convert an environmental friendly company into one focused exclusively on money at the cost of the planet.",
-          "Approval": 0,
-          "Efficiency": -3,
-          "Environment": 10,
-          "Finance": -3,
-          "Result": "Your company's statement brings in large public support but the statement also turns away potential future deals."
-        },
-        {
-          "Choice": "Your company agrees to the deal but on the condition that Beautiful Clean Fossil Fuels company must let your company use their resources for greater expansion of Smart Grid.",
-          "Approval": 0,
-          "Efficiency": 10,
-          "Environment": -7,
-          "Finance": 3,
-          "Result": "Your company can expand its reach using the resources from a large fossil fuel company. This can greatly increase your company's expansion but will lead to public ridicule."
-        },
-        {
-          "Choice": "Your company accepts the deal on the condition that Beautiful Clean Fossil Fuels company must install Smart Meters at all their locations and push to install them at their partner locations.",
-          "Approval": 0,
-          "Efficiency": 3,
-          "Environment": -4,
-          "Finance": 6,
-          "Result": "Your company gains a large sum of money from the fossil fuel company. In the process your company helps improve the fossil fuel company but mixing in your own environmentally helpful products."
-        },
-        {
-          "Choice": "Your company refuses the offer but makes effort to stay on good terms with the coal company for future help and deals.",
-          "Approval": 0,
-          "Efficiency": 3,
-          "Environment": -2,
-          "Finance": 2,
-          "Result": "The status quo of your company does not change much but you can be offered helpful smaller deals from the fossil fuel company in the future."
-        },
-        {
-          "Choice": "Your company silently refuses to sign the deal.  Making sure nobody in the company or the public knows what happened",
-          "Approval": 0,
-          "Efficiency": 0,
-          "Environment": 0,
-          "Finance": 0,
-          "Result": "The status quo does not change at all and you are not offered any more deals from the fossil fuel company."
-        }
-      ],
-      "Setup": "The Immense Beautiful Clean Fossil Fuels company has offered you a large sum of money in order to work alongside them with a new coal powered version of 'Smart Grid'. How does your company respond to this offer?",
-      "ID": 4,
-      "Name": "The Source",
-      "Icon": "Scenario 3"
-    },
+    },  
     {
       "Decisions": [
         {
@@ -212,7 +156,7 @@
         }
       ],
       "Setup": "Your company is planning to roll out Smart Meters to all of its customers as an optional upgrade. You are tasked with marketing this upgrade in a way to make the most people in that area as possible buy into Smart Meters. What would be the best approach to bring as many people on board as possible?",
-      "ID": 5,
+      "ID": 4,
       "Name": "The Upgrade",
       "Icon": "Scenario 1"
     },
@@ -240,7 +184,7 @@
           "Efficiency": -4,
           "Environment": 8,
           "Finance": 2,
-          "Result": "The outside grant increased your budget and your focus on the environment improved the public�s opinion of your company. However, your lack of attention to the Smart Grid has led to decreased efficiency in the system."
+          "Result": "The outside grant increased your budget and your focus on the environment improved the public's opinion of your company. However, your lack of attention to the Smart Grid has led to decreased efficiency in the system."
         },
         {
           "Choice": "Commit to urban development in order to add space for new homes and power sources, within an urban environment not assimilated into Smart Grid. Commit to deforestation efforts in order to gain space in the nearby countryside.",
@@ -268,7 +212,7 @@
         }
       ],
       "Setup": "Smart Meter is most effective when every house in an area is under its effect. After successfully implementing Smart Meters into multiple homes, the company is curious what next step should be taken.",
-      "ID": 6,
+      "ID": 5,
       "Name": "The Expansion",
       "Icon": "Scenario 1"
     }
