@@ -11,11 +11,24 @@ using UnityEngine.Networking;
 using System.Collections;
 using System.Linq;
 using FileLoading;
+using System;
 
 namespace LeaderboardInfo
 {
     public class LeaderboardHandler : MonoBehaviour
     {
+        #region --- Singleton ---
+        public static LeaderboardHandler instance;
+
+        private void Awake()
+        {
+            if (instance == null)
+                instance = this;
+            else
+                Destroy(gameObject);
+        }
+        #endregion
+
         private LeaderboardParent leaderboardParent = null;
 
         // The URLs to get and set the leaderboard data.
@@ -27,35 +40,6 @@ namespace LeaderboardInfo
         private void Start()
         {
             StartCoroutine(GetData());
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                IncrementScore("Answer1A");
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                IncrementScore("Answer1B");
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                IncrementScore("Answer1C");
-            }
-            else if (Input.GetKeyDown(KeyCode.Return))
-            {
-                StartCoroutine(PushScore("Answer1A"));
-            }
-                //Debug.Log("Sum of question 1: " + ParticipantsForQuestion(1));
-            else if (Input.GetKeyDown(KeyCode.U))
-            {
-                StartCoroutine(PushScore("Answer1A"));
-            }
-            else if (Input.GetKeyDown(KeyCode.B))
-            {
-                Debug.Log((PercentChosen(1, "Answer1B")) + "%");
-            }
         }
 
         #region ---- Leaderboard Getters ----
@@ -79,9 +63,6 @@ namespace LeaderboardInfo
             {
                 Debug.Log("LEADERBOARD: Successfully received data!");
                 leaderboardParent = JsonUtility.FromJson<LeaderboardParent>(www.downloadHandler.text);
-
-                if (leaderboardParent == null)
-                    Debug.LogError("LEADERBOARD: Could not assign leaderboard data to the leaderboardParent object.");
             }
         }
 
@@ -204,7 +185,7 @@ namespace LeaderboardInfo
         /// </summary>
         /// <param name="answerName">The name of the leaderboard entry in the following format:
         /// Answer#$, where # is the question number and $ is an answer option, typically a letter A - F.</param>
-        public IEnumerator PushScore(string answerName)
+        private IEnumerator PushScore(string answerName)
         {
             LeaderboardEntry entry = GetEntryByName(answerName);
 
@@ -233,10 +214,16 @@ namespace LeaderboardInfo
                 Debug.Log("LEADERBOARD: Successfully pushed leaderboard entry: " + entry.name + " -> " + entry.score);
         }
 
-        public IEnumerator MassAddScores()
+        /// <summary>
+        /// Adds all of the required scores to the Dreamlo leaderboard with values of 0.
+        /// If values already exist, they will not be overwritten.
+        /// </summary>
+        private IEnumerator MassAddScores()
         {
             TextAsset scenarioData = Resources.Load("Scenarios/Scenarios_new") as TextAsset;
             Scenarios scenarioJson = JsonUtility.FromJson<Scenarios>(scenarioData.text);
+
+            bool success = true;
 
             Scenario[] setups = scenarioJson.Setups;
             foreach (Scenario setup in setups)
@@ -257,21 +244,33 @@ namespace LeaderboardInfo
 
                     // If an error occured, log it.
                     if (www.isNetworkError || www.isHttpError)
+                    {
                         Debug.LogError(www.error);
+                        success = false;
+                        break;
+                    }
 
                     // No error occured, meaning we successfully pushed our score.
                     else
                         Debug.Log("LEADERBOARD: Successfully pushed leaderboard entry: " + name + " -> " + 0);
                 }
+
+                if (!success)
+                    break;
             }
+
+            if (success)
+                Debug.Log("LEADERBOARD: Successfully mass added scores.");
         }
 
+        
+
         /// <summary>
-        /// Mainly used for debugging purposes. Resets a score to 0 by deleting it and re-adding it to the leaderboard.
+        /// Used for debugging purposes. Resets a score to 0 by deleting it and re-adding it to the leaderboard.
         /// </summary>
         /// <param name="answerName">The name of the leaderboard entry in the following format:
         /// Answer#$, where # is the question number and $ is an answer option, typically a letter A - F.</param>
-        public IEnumerator ResetScore(string answerName)
+        private IEnumerator ResetScore(string answerName)
         {
             LeaderboardEntry entry = GetEntryByName(answerName);
 
@@ -304,6 +303,15 @@ namespace LeaderboardInfo
                 entry.score = 0;
                 StartCoroutine(PushScore(entry.name));
             }
+        }
+
+        /// <summary>
+        /// Returns true if the leaderboard object has been setup with all of the data needed.
+        /// </summary>
+        /// <returns>True if the leaderboard object has been setup with all of the data needed.</returns>
+        public bool IsSetup()
+        {
+            return (leaderboardParent != null);
         }
 
         #endregion

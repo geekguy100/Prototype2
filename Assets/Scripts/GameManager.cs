@@ -163,8 +163,6 @@ public class GameManager : MonoBehaviour
     //Added by Ein
     public GameObject settingsPanel;
 
-    public LeaderboardHandler leaderboardHandler;
-
     /// <summary>
     /// The values at which the stat sliders change colors
     /// </summary>
@@ -454,7 +452,7 @@ public class GameManager : MonoBehaviour
             }
 
             
-            leaderboardHandler.IncrementScore("Answer" + currentSetup.ID + ((char)('A' + currentSelection)));
+            LeaderboardHandler.instance.IncrementScore("Answer" + currentSetup.ID + ((char)('A' + currentSelection)));
             Transition.instance.StartTransition(FinishChoiceSelect);
         }
     }
@@ -466,11 +464,14 @@ public class GameManager : MonoBehaviour
         resultsHandler.gameObject.SetActive(true);
         resultsHandler.Display(stats, currentSetup.Decisions[decisionIndex].Result);
 
-        leaderboardStamp.gameObject.SetActive(true);
+        if (LeaderboardHandler.instance.IsSetup())
+        {
+            leaderboardStamp.gameObject.SetActive(true);
 
-        int setupID = currentSetup.ID;
-        //print("STAMP: char is " + (char)('A' + setupID));
-        leaderboardStamp.Display(setupID, "Answer" + setupID + ((char)('A' + currentSelection)));
+            int setupID = currentSetup.ID;
+            //print("STAMP: char is " + (char)('A' + setupID));
+            leaderboardStamp.Display(setupID, "Answer" + setupID + ((char)('A' + currentSelection)));
+        }
 
         // Set the character's emotion based on our current stats.
         character.SetEmotion(statsDelta);
@@ -495,7 +496,10 @@ public class GameManager : MonoBehaviour
     {
         // Disable the results screen and reenable the gameplay screen.
         resultsHandler.gameObject.SetActive(false);
-        leaderboardStamp.gameObject.SetActive(false);
+
+        if (LeaderboardHandler.instance.IsSetup())
+            leaderboardStamp.gameObject.SetActive(false);
+
         gameplayObject.SetActive(true);
         timer.Reset();
 

@@ -3,7 +3,7 @@
 // Author :            Kyle Grenier
 // Creation Date :     #CREATIONDATE#
 //
-// Brief Description : ADD BRIEF DESCRIPTION OF THE FILE HERE
+// Brief Description : The Dreamlo object. Holds the Leaderboard.
 *****************************************************************************/
 
 namespace LeaderboardInfo
