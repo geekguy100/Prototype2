@@ -42,6 +42,12 @@ public class ResultsHandler : MonoBehaviour
     [Tooltip("Efficiency Background objects")]
     public GameObject[] efficiencyObjs;
 
+    [Tooltip("Low Efficiency Window Object")]
+    public GameObject lowEfficiencyWindow;
+
+    [Tooltip("High Efficiency Window Object")]
+    public GameObject highEfficiencyWindow;
+
     [Tooltip("Approval Background objects")]
     public GameObject[] approvalObjs;
 
@@ -50,6 +56,8 @@ public class ResultsHandler : MonoBehaviour
 
     [Tooltip("Color used for positive stat change text")]
     public Color darkGreen;
+
+
 
     //[Tooltip("Color used for negative stat change text")]
     //public Color darkRed;
@@ -193,6 +201,15 @@ public class ResultsHandler : MonoBehaviour
             {
                 case 0:
                     efficiencyObjs[statStates[i]].SetActive(true);
+                    // Shows window objects
+                    if (statStates[i] == 0)
+                    {
+                        lowEfficiencyWindow.SetActive(true);
+                    }
+                    else if (statStates[i] == 2)
+                    {
+                        highEfficiencyWindow.SetActive(true);
+                    }
                     break;
                 case 1:
                     approvalObjs[statStates[i]].SetActive(true);
@@ -203,6 +220,7 @@ public class ResultsHandler : MonoBehaviour
             }
         }
 
+        // Shows window objects
     }
 
     /// <summary>
@@ -222,6 +240,10 @@ public class ResultsHandler : MonoBehaviour
         {
             obj.SetActive(false);
         }
+
+        // hides window objects
+        lowEfficiencyWindow.SetActive(false);
+        highEfficiencyWindow.SetActive(false);
     }
     /// <summary>
     /// Sets all of the change texts to empty strings and resets the slider counter back to 0.
