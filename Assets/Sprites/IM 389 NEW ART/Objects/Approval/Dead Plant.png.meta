@@ -1,0 +1,802 @@
+fileFormatVersion: 2
+guid: d6ee47363813b144b9cbf59800ba2aef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8189929543725473588
+    second: Dead Plant_0
+  - first:
+      213: 3928125090098170922
+    second: Dead Plant_1
+  - first:
+      213: 4357306834798937305
+    second: Dead Plant_2
+  - first:
+      213: -7583780614089912669
+    second: Dead Plant_3
+  - first:
+      213: -3994284821537077234
+    second: Dead Plant_4
+  - first:
+      213: -4701847659658493091
+    second: Dead Plant_5
+  - first:
+      213: -2198341745709671234
+    second: Dead Plant_6
+  - first:
+      213: 6216213490407919379
+    second: Dead Plant_7
+  - first:
+      213: -5232378945444592968
+    second: Dead Plant_8
+  - first:
+      213: 2010875536432396063
+    second: Dead Plant_9
+  - first:
+      213: -3628338689567955582
+    second: Dead Plant_10
+  - first:
+      213: -6307966627468154104
+    second: Dead Plant_11
+  - first:
+      213: -5583441552271166383
+    second: Dead Plant_12
+  - first:
+      213: -113310886461476615
+    second: Dead Plant_13
+  - first:
+      213: -8146976290892734768
+    second: Dead Plant_14
+  - first:
+      213: -1069636977172866488
+    second: Dead Plant_15
+  - first:
+      213: 2051598007261484756
+    second: Dead Plant_16
+  - first:
+      213: -2618834472750246730
+    second: Dead Plant_17
+  - first:
+      213: -6411983935088295603
+    second: Dead Plant_18
+  - first:
+      213: -5008418420823814607
+    second: Dead Plant_19
+  - first:
+      213: 4909124654672086819
+    second: Dead Plant_20
+  - first:
+      213: 8025059665575384316
+    second: Dead Plant_21
+  - first:
+      213: 7376780851166136760
+    second: Dead Plant_22
+  - first:
+      213: 2949097310230691639
+    second: Dead Plant_23
+  - first:
+      213: -5507379994871142465
+    second: Dead Plant_24
+  - first:
+      213: 4552145689144976128
+    second: Dead Plant_25
+  - first:
+      213: -1050396262790351051
+    second: Dead Plant_26
+  - first:
+      213: -8554392477404680428
+    second: Dead Plant_27
+  - first:
+      213: 8597139745857383363
+    second: Dead Plant_28
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dead Plant_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 393
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc024cad876875e80800000000000000
+      internalID: -8189929543725473588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_1
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 393
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2cc99415f0838630800000000000000
+      internalID: 3928125090098170922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_2
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 393
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d48291fa73487c30800000000000000
+      internalID: 4357306834798937305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_3
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 393
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae4daa46bff0c690800000000000000
+      internalID: -7583780614089912669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_4
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 393
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e084c801e137198c0800000000000000
+      internalID: -3994284821537077234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_5
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 393
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53cd0a077eafbeb0800000000000000
+      internalID: -4701847659658493091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_6
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 393
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc101064dbed71e0800000000000000
+      internalID: -2198341745709671234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_7
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 393
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f41cf0c3d644650800000000000000
+      internalID: 6216213490407919379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_8
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 393
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2ca8a421bd267b0800000000000000
+      internalID: -5232378945444592968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 262
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17739475a018eb10800000000000000
+      internalID: 2010875536432396063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_10
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 262
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285ee738f2d85adc0800000000000000
+      internalID: -3628338689567955582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_11
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 262
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80bedbaf5c99578a0800000000000000
+      internalID: -6307966627468154104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_12
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 262
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154b8b49d71a382b0800000000000000
+      internalID: -5583441552271166383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_13
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 262
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0774f59507d6ef0800000000000000
+      internalID: -113310886461476615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_14
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 262
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de1fcb5a3020fe80800000000000000
+      internalID: -8146976290892734768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_15
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 262
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a1df026d2e721f0800000000000000
+      internalID: -1069636977172866488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_16
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 262
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d658bc848db87c10800000000000000
+      internalID: 2051598007261484756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_17
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 262
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b49c261ce708abd0800000000000000
+      internalID: -2618834472750246730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 131
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d410d8b459e0407a0800000000000000
+      internalID: -6411983935088295603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_19
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 131
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e06446bf58e7ab0800000000000000
+      internalID: -5008418420823814607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_20
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 131
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32787df1dd6b02440800000000000000
+      internalID: 4909124654672086819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_21
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 131
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf49feb4f3dbe5f60800000000000000
+      internalID: 8025059665575384316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_22
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 131
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b949aba9179f5660800000000000000
+      internalID: 7376780851166136760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_23
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 131
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f3c50f06c4de820800000000000000
+      internalID: 2949097310230691639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_24
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 131
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb7ec92f21bd193b0800000000000000
+      internalID: -5507379994871142465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_25
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 131
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003ef4fc2687c2f30800000000000000
+      internalID: 4552145689144976128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_26
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 131
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537bbfa0a2e3c61f0800000000000000
+      internalID: -1050396262790351051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f250b6d51b84980800000000000000
+      internalID: -8554392477404680428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead Plant_28
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 0
+        width: 223
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cba83c9c0d2f4770800000000000000
+      internalID: 8597139745857383363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
