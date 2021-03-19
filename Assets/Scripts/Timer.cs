@@ -20,13 +20,6 @@ public class Timer : MonoBehaviour
     [Tooltip("The time to wait before the event is invoked in seconds.")]
     [SerializeField] private float eventWaitTime = 2f;
 
-
-    // Old variables - not used with new timer art
-    //[Tooltip("The timer's fill area image.")]
-    //[SerializeField] private Image timerImg = null;   
-    //[Tooltip("Time given to answer a question before stat gain begins to decay")]
-    //[SerializeField] private float graceTimePerQuestion = 25f;
-
     /// <summary>
     /// Time it takes for full stat decay - equal to 1/4 of full timer
     /// </summary>
@@ -87,7 +80,16 @@ public class Timer : MonoBehaviour
     public event TimerEndHandler OnTimerEnd;
 
     private bool halfWarningSent, quarterWarningSent;
-  
+
+    [Tooltip("Sound when timer reaches half point")]
+    public AudioClip halfWarningSound;
+
+    [Tooltip("Sound when timer reaches quarter point")]
+    public AudioClip quarterWarningSound;
+
+    [Tooltip("SFX AudioSource")]
+    public AudioSource sfxSource;
+
 
     //public Image background;
 
@@ -139,6 +141,7 @@ public class Timer : MonoBehaviour
                 if (!quarterWarningSent)
                 {
                     quarterWarningSent = true;
+                    sfxSource.PlayOneShot(quarterWarningSound, .4f);
                     quarterWarning.SetActive(true);
                     Invoke("HideWarnings", warningTime);
                 }
@@ -150,6 +153,7 @@ public class Timer : MonoBehaviour
                 if (!halfWarningSent)
                 {
                     halfWarningSent = true;
+                    sfxSource.PlayOneShot(halfWarningSound, .4f);
                     halfWarning.SetActive(true);
                     Invoke("HideWarnings", warningTime);
                 }
