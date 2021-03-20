@@ -11909,7 +11909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114076530150876742, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
       propertyPath: m_Value
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 114261103525284054, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
       propertyPath: m_Text
@@ -11929,7 +11929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114713974102337248, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
       propertyPath: m_Color.r
-      value: 0.9743725
+      value: 0.009935856
       objectReference: {fileID: 0}
     - target: {fileID: 114713974102337248, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
       propertyPath: m_Color.g
@@ -11945,7 +11945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224440027465348184, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 224580539430823192, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
       propertyPath: m_AnchorMin.x
@@ -23052,7 +23052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114076530150876742, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
       propertyPath: m_Value
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 114261103525284054, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
       propertyPath: m_Text
@@ -23072,11 +23072,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114713974102337248, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
       propertyPath: m_Color.r
-      value: 0.9725491
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114713974102337248, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.06448636
       objectReference: {fileID: 0}
     - target: {fileID: 114713974102337248, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
       propertyPath: m_Color.b
@@ -23088,7 +23088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224440027465348184, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 224580539430823192, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
       propertyPath: m_AnchorMin.x
@@ -31533,10 +31533,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Click the button below to download the Publicist Booklet. You'll be referencing
-    it throughout the game. Make sure you are watching the manager's stream.\n\n
-    After downloading your booklet, you can close the game using the Quit Game button
-    below."
+  m_text: 'Click the button below to download the Publicist Booklet. You''ll be referencing
+    it throughout the game. Make sure you are watching the manager''s stream.
+
+
+    After
+    downloading your booklet, you can close the game using the Quit Game button below.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -38062,10 +38064,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Click the button below to download the Engineer Booklet. You'll be referencing
-    it throughout the game. Make sure you are watching the manager's stream.\n\n
-    After downloading your booklet, you can close the game using the Quit Game button
-    below."
+  m_text: 'Click the button below to download the Engineer Booklet. You''ll be referencing
+    it throughout the game. Make sure you are watching the manager''s stream.
+
+
+    After
+    downloading your booklet, you can close the game using the Quit Game button below.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -43823,7 +43827,6 @@ MonoBehaviour:
   timer: {fileID: 1658177701}
   character: {fileID: 1900324364}
   settingsPanel: {fileID: 1273463459}
-  leaderboardHandler: {fileID: 1949504579}
   resultsHandler: {fileID: 1251475128}
   thresholds: 09000000170000002500000032000000410000004f0000005d000000
   statLoss: 5
