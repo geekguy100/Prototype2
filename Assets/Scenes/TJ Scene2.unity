@@ -25032,8 +25032,8 @@ MonoBehaviour:
   stats:
   - 50
   - 50
-  - 50
-  - 50
+  - 70
+  - 30
   chibiCharacter: {fileID: 1194671155}
   typeWriterSource: {fileID: 0}
   chosenColor: {r: 0.59607846, g: 0.87843144, b: 0.9490197, a: 1}
@@ -25644,8 +25644,8 @@ MonoBehaviour:
   animationSpeed: 4
   resultsText: {fileID: 1951089570}
   statThresholds:
-  - 30
-  - 70
+  - 35
+  - 65
   efficiencyObjs:
   - {fileID: 1118859027}
   - {fileID: 1394533547}
@@ -43524,6 +43524,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1183313294}
+        m_TargetAssemblyTypeName: ResultsHandler, Assembly-CSharp
+        m_MethodName: ResetBackgroundObjs
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

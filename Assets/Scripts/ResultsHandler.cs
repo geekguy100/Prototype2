@@ -255,5 +255,22 @@ public class ResultsHandler : MonoBehaviour
         approvalText.text = string.Empty;
         financeText.text = string.Empty;
     }
+
+    /// <summary>
+    /// Resets all background objects so only the given ones are showing
+    /// </summary>
+    /// <param name="index">
+    /// Which background objects to show
+    /// 0 = bad
+    /// 1 = neutral
+    /// 2 = good
+    /// </param>
+    public void ResetBackgroundObjs(int index)
+    {
+        HideAllBackgroundObjs();
+        approvalObjs[index].SetActive(true);
+        efficiencyObjs[index].SetActive(true);
+        financeObjs[index].SetActive(true);
+    }
 }
 
