@@ -19,15 +19,12 @@ public class SettingsMenu : MonoBehaviour
     {
    
         resolutionDropdown.ClearOptions();
-        resolutions = Screen.resolutions.Distinct().OrderBy(x => x.width).ThenBy(x => x.height).ThenBy(x => x.refreshRate).ToArray();
-        
+        resolutions = Screen.resolutions.Distinct().OrderBy(x => x.refreshRate).ToArray();
+
         int currentResolutionIndex = 0;
 
 
-        foreach (var res in resolutions)
-        {
-            Debug.Log(res.width + "x" + res.height + " : " + res.refreshRate);
-        }
+
 
         System.Collections.Generic.List<Resolution> list = new System.Collections.Generic.List<Resolution>(resolutions);
         list.RemoveAt(0);
@@ -39,7 +36,7 @@ public class SettingsMenu : MonoBehaviour
 
         for (int i = 0; i < resolutions.Length; i++)
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
+            string option = resolutions[i].width + " x " + resolutions[i].height + "     " + resolutions[i].refreshRate + "Hz";
             options.Add(option);
 
             if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
