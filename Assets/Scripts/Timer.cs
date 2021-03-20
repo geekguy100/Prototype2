@@ -90,6 +90,9 @@ public class Timer : MonoBehaviour
     [Tooltip("SFX AudioSource")]
     public AudioSource sfxSource;
 
+    [Tooltip("Warning SFX volume (0-1)")]
+    public float warningVolume;
+
 
     //public Image background;
 
@@ -141,7 +144,7 @@ public class Timer : MonoBehaviour
                 if (!quarterWarningSent)
                 {
                     quarterWarningSent = true;
-                    sfxSource.PlayOneShot(quarterWarningSound, .4f);
+                    sfxSource.PlayOneShot(quarterWarningSound, warningVolume);
                     quarterWarning.SetActive(true);
                     Invoke("HideWarnings", warningTime);
                 }
@@ -153,7 +156,7 @@ public class Timer : MonoBehaviour
                 if (!halfWarningSent)
                 {
                     halfWarningSent = true;
-                    sfxSource.PlayOneShot(halfWarningSound, .4f);
+                    sfxSource.PlayOneShot(halfWarningSound, warningVolume);
                     halfWarning.SetActive(true);
                     Invoke("HideWarnings", warningTime);
                 }
