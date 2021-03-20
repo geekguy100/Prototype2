@@ -25,35 +25,40 @@ public class PauseManager : MonoBehaviour
     [Tooltip("Whether or not the game is paused")]
     [SerializeField]private bool paused = false;
 
-    
+    [Tooltip("Whether or not the game can be paused")]
+    public bool canPause = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (canPause)
         {
-            // Makes sure player is at results/gameplay screen
-            if (resultsObj.activeInHierarchy || gameplayObj.activeInHierarchy)
+            if (Input.GetKeyUp(KeyCode.Escape))
             {
-                // Checks if it is unpaused currently
-                if (!paused)
-                {                   
-                    // Pauses game
-                    Time.timeScale = 0;
-                    paused = true;
-                    pausePanel.SetActive(true);
-                    characterObj.SetActive(false);
-                }
-                else
+                print("canPause = " + canPause);
+                // Makes sure player is at results/gameplay screen
+                if (resultsObj.activeInHierarchy || gameplayObj.activeInHierarchy)
                 {
-                    // Unpauses game
-                    Time.timeScale = 1;
-                    paused = false;
-                    pausePanel.SetActive(false);
-                    characterObj.SetActive(true);
+                    // Checks if it is unpaused currently
+                    if (!paused)
+                    {
+                        // Pauses game
+                        Time.timeScale = 0;
+                        paused = true;
+                        pausePanel.SetActive(true);
+                        characterObj.SetActive(false);
+                    }
+                    else
+                    {
+                        // Unpauses game
+                        Time.timeScale = 1;
+                        paused = false;
+                        pausePanel.SetActive(false);
+                        characterObj.SetActive(true);
+                    }
                 }
             }
-        }
+        }  
     }
 
     /// <summary>

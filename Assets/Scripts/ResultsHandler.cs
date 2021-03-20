@@ -51,6 +51,12 @@ public class ResultsHandler : MonoBehaviour
     [Tooltip("Approval Background objects")]
     public GameObject[] approvalObjs;
 
+    [Tooltip("Low Approval Window Object")]
+    public GameObject lowApprovalWindow;
+
+    [Tooltip("High Approval Window Object")]
+    public GameObject highApprovalWindow;
+
     [Tooltip("Finance Background objects")]
     public GameObject[] financeObjs;
 
@@ -213,6 +219,14 @@ public class ResultsHandler : MonoBehaviour
                     break;
                 case 1:
                     approvalObjs[statStates[i]].SetActive(true);
+                    if (statStates[i] == 0)
+                    {
+                        lowApprovalWindow.SetActive(true);
+                    }
+                    else if (statStates[i] == 2)
+                    {
+                        highApprovalWindow.SetActive(true);
+                    }
                     break;
                 case 2:
                     financeObjs[statStates[i]].SetActive(true);
@@ -244,6 +258,8 @@ public class ResultsHandler : MonoBehaviour
         // hides window objects
         lowEfficiencyWindow.SetActive(false);
         highEfficiencyWindow.SetActive(false);
+        lowApprovalWindow.SetActive(false);
+        highApprovalWindow.SetActive(false);
     }
     /// <summary>
     /// Sets all of the change texts to empty strings and resets the slider counter back to 0.

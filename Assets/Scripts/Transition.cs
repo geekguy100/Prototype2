@@ -19,6 +19,7 @@ public class Transition : MonoBehaviour
             Destroy(gameObject);
 
         fadeAnimator = GetComponent<Animator>();
+        pauseManager = GameObject.Find("GameManager").GetComponent<PauseManager>();
     }
 
     private Animator fadeAnimator;
@@ -26,6 +27,11 @@ public class Transition : MonoBehaviour
     [Tooltip("The time to wait after fading in.")]
     [SerializeField] private float fadeWaitTime;
 
+    [Tooltip("The time to wait after fading in.")]
+    [SerializeField] private float pauseWaitTime;
+
+    [Tooltip("The Pause Manager script on the Game Manager object")]
+    private PauseManager pauseManager;
 
     public delegate void TransitionCallback();
     /// <summary>
@@ -35,13 +41,18 @@ public class Transition : MonoBehaviour
     {
         fadeAnimator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(fadeWaitTime);
+        print("should be false it is: " + pauseManager.canPause);
         fadeAnimator.SetTrigger("FadeOut");
         yield return new WaitForSeconds(fadeWaitTime);
+        print("should be false it is: " + pauseManager.canPause);
         callback?.Invoke();
+        yield return new WaitForSeconds(pauseWaitTime);
+        pauseManager.canPause = true;
     }
 
     public void StartTransition(TransitionCallback callback)
-    {
+    {       
+        pauseManager.canPause = false;
         StartCoroutine(PerformTransition(callback));
     }
 }

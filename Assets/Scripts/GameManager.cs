@@ -877,12 +877,12 @@ public class GameManager : MonoBehaviour
         else
         {
             // First middle button was pressed
-            if (index == 2)
+            if (index == 2 && middleChoiceButtons[0].gameObject.activeInHierarchy)
             {                
                 middleChoiceButtons[0].GetComponent<Image>().color = chosenColor;
             }
             // Second middle button was pressed
-            else if (index == 4)
+            else if (index == 4 && middleChoiceButtons[1].gameObject.activeInHierarchy)
             {
                 middleChoiceButtons[1].GetComponent<Image>().color = chosenColor;
             }

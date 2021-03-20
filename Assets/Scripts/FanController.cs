@@ -31,6 +31,8 @@ public class FanController : MonoBehaviour
     [Tooltip("Question Mark cursor texture")]
     public Texture2D newCursor;
 
+    [Tooltip("Offset from upper left corner of new cursor to middle")]
+    public Vector2 hotspot;
     /// <summary>
     /// Changes the cursor sprite
     /// </summary>
@@ -39,7 +41,7 @@ public class FanController : MonoBehaviour
     {
         if (entering)
         {
-            Cursor.SetCursor(newCursor, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(newCursor, hotspot, CursorMode.Auto);
         }
         else
         {

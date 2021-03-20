@@ -2798,9 +2798,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 671441614}
-  - {fileID: 598846284}
-  - {fileID: 1015163042}
   - {fileID: 1883320869}
+  - {fileID: 1015163042}
+  - {fileID: 598846284}
   - {fileID: 900813032}
   m_Father: {fileID: 806184439}
   m_RootOrder: 1
@@ -8577,7 +8577,8 @@ MonoBehaviour:
   onSound: {fileID: 8300000, guid: 3f32efc32323849498070322b4f7e2c8, type: 3}
   offSound: {fileID: 8300000, guid: d6d02f7f20ba59c4b9b297dcbb1f9372, type: 3}
   sfxSource: {fileID: 768988162}
-  newCursor: {fileID: 2800000, guid: 530ec3a154f2f084996c8272e2961429, type: 3}
+  newCursor: {fileID: 2800000, guid: 28e7b07ee62ee7b498e8320c27d1430f, type: 3}
+  hotspot: {x: 5, y: 5}
 --- !u!58 &424646283
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13728,7 +13729,7 @@ RectTransform:
   m_LocalScale: {x: 0.42, y: 0.42, z: 1}
   m_Children: []
   m_Father: {fileID: 142281384}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -15949,7 +15950,7 @@ GameObject:
   - component: {fileID: 671441616}
   - component: {fileID: 671441615}
   m_Layer: 5
-  m_Name: Window
+  m_Name: Normal Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25677,8 +25678,8 @@ MonoBehaviour:
   stats:
   - 50
   - 50
-  - 70
-  - 30
+  - 60
+  - 40
   chibiCharacter: {fileID: 1194671155}
   typeWriterSource: {fileID: 0}
   chosenColor: {r: 0.59607846, g: 0.87843144, b: 0.9490197, a: 1}
@@ -26301,6 +26302,8 @@ MonoBehaviour:
   - {fileID: 659569132}
   - {fileID: 798019004}
   - {fileID: 2003603821}
+  lowApprovalWindow: {fileID: 1883320868}
+  highApprovalWindow: {fileID: 900813031}
   financeObjs:
   - {fileID: 1678176865}
   - {fileID: 204702882}
@@ -27784,6 +27787,8 @@ MonoBehaviour:
   - {fileID: 659569132}
   - {fileID: 798019004}
   - {fileID: 2003603821}
+  lowApprovalWindow: {fileID: 1883320868}
+  highApprovalWindow: {fileID: 900813031}
   financeObjs:
   - {fileID: 1678176865}
   - {fileID: 204702882}
@@ -36853,6 +36858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeWaitTime: 0.45
+  pauseWaitTime: 1
 --- !u!1001 &1601907679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41497,7 +41503,7 @@ RectTransform:
   m_LocalScale: {x: 0.42, y: 0.42, z: 1}
   m_Children: []
   m_Father: {fileID: 142281384}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -44469,6 +44475,7 @@ MonoBehaviour:
   characterObj: {fileID: 250276286}
   pausePanel: {fileID: 1472428459}
   paused: 0
+  canPause: 1
 --- !u!4 &2042046202
 Transform:
   m_ObjectHideFlags: 0
@@ -44582,7 +44589,7 @@ MonoBehaviour:
   quitButton: {fileID: 1254064790}
   maxEndings: 3
   waitTime: 2
-  fadeTime: 2.5
+  fadeTime: 1
   panelTarget: {r: 1, g: 1, b: 1, a: 0.8627451}
 --- !u!1 &2052621706
 GameObject:
