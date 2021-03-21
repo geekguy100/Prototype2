@@ -46,7 +46,7 @@ public class PauseManager : MonoBehaviour
                         Time.timeScale = 0;
                         paused = true;
                         pausePanel.SetActive(true);
-                        characterObj.SetActive(false);
+                        //characterObj.SetActive(false);
                     }
                     else
                     {
@@ -54,7 +54,7 @@ public class PauseManager : MonoBehaviour
                         Time.timeScale = 1;
                         paused = false;
                         pausePanel.SetActive(false);
-                        characterObj.SetActive(true);
+                        //characterObj.SetActive(true);
                     }
                 }
             }
@@ -69,5 +69,6 @@ public class PauseManager : MonoBehaviour
         // Unpauses game
         Time.timeScale = 1;
         paused = false;
+        //characterObj.SetActive(true);
     }
 }
