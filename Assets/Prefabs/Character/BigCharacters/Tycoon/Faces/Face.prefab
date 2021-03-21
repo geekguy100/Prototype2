@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3197332488162887846}
   - component: {fileID: 3197332488162887833}
   - component: {fileID: 3197332488162887832}
-  - component: {fileID: 3197332488162887835}
   m_Layer: 0
   m_Name: Face
   m_TagString: Untagged
@@ -76,16 +75,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3197332488162887835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3197332488162887847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094131b4b7118c7408f050cbbd1c73ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emotion: 1

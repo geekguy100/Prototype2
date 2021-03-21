@@ -23,5 +23,8 @@ namespace FileLoading
         // What icon/background art (ones in red) to show while the question is onscreen
         public string Icon;
 
+        // The name of the character to display for this question.
+        public string CharacterName;
+
     }
 }

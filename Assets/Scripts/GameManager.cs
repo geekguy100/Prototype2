@@ -19,6 +19,12 @@ public class GameManager : MonoBehaviour
     [Tooltip("All the text files for each setup, one per setup. The ID is the files index in the array")]
     private string[] scenarioFiles;
 
+    // The character GameObject currently on the screen.
+    private GameObject character;
+
+    // The script used to control the character.
+    private Character characterScript;
+
     public GameObject noSelectionPanel;
 
     [Tooltip("Panel that holds the stats - opened when player clicks stats button")]
@@ -157,8 +163,8 @@ public class GameManager : MonoBehaviour
     [Tooltip("The timer used to track time on each question.")]
     public Timer timer;
 
-    [Tooltip("The on-screen character who interacts with the player's choices.")]
-    public Character character;
+    [Tooltip("The parent that will hold the characters.")]
+    public Transform characterParent;
 
     //Added by Ein
     public GameObject settingsPanel;
@@ -323,9 +329,15 @@ public class GameManager : MonoBehaviour
         //Hide the no selection panel - Kyle Grenier & TJ Caron
         noSelectionPanel.SetActive(false);
 
+        if (character != null)
+            Destroy(character);
+        else if (characterParent.transform.GetChild(0) != null)
+            Destroy(characterParent.transform.GetChild(0).gameObject);
         // Set the current setup to the one chosen
         print("Valid choices count: " + validChoices.Count);
         currentSetup = currentScenario.Setups[validChoices[choiceIndex]];
+        string characterName = currentSetup.CharacterName;
+        InstantiateCharacter(characterName);
 
         // If the godzilla setup occured, set the flag so the godzilla ending can occur
         if (currentSetup.ID == 7)
@@ -474,7 +486,8 @@ public class GameManager : MonoBehaviour
         }
 
         // Set the character's emotion based on our current stats.
-        character.SetEmotion(statsDelta);
+        if (characterScript != null)
+            characterScript.SetEmotion(statsDelta);
     }
 
     private void NoChoiceSelected()
@@ -485,7 +498,15 @@ public class GameManager : MonoBehaviour
         resultsHandler.Display(stats, "No valid choice was selected!");
 
         // Make the character shocked because no choice was selected.
-        character.SetEmotion(CharacterSprite.Emotion.SHOCKED);
+        if (character != null)
+            characterScript.SetEmotion(CharacterSprite.Emotion.SHOCKED);
+    }
+
+    private void InstantiateCharacter(string characterName)
+    {
+        GameObject prefab = CharacterFactory.GetCharacter(characterName);
+        character = Instantiate(prefab, characterParent);
+        characterScript = character.GetComponent<Character>();
     }
 
 

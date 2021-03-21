@@ -1,4 +1,4 @@
-﻿/*****************************************************************************
+/*****************************************************************************
 // File Name :         AnimationController.cs
 // Author :            Ashley Wielgos
 // Creation Date :     03/06/2021
@@ -73,7 +73,7 @@ public class AnimationController : MonoBehaviour
         titleZoom.SetBool("TitleZoom", true);
         titleSides.SetBool("TitleSides", true);
         titleTransparency.SetBool("TitleTransparent", true);
-        titleCharacter.SetBool("TitleCharacter", true);
+        //titleCharacter.SetBool("TitleCharacter", true);
         titleStart.SetBool("TitleButton", true);
         titleSettings.SetBool("TitleButton", true);
         titleCredits.SetBool("TitleButton", true);

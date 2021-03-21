@@ -30,7 +30,8 @@
       "Setup": "Local politicians are drafting a bill about where Smart Meters should be installed. You are asked to address the public's rising complaints and concerns about the emissions of radio frequencies Smart Meters produce. How would you respond to these worries?",
       "ID": 1,
       "Name": "The Law",
-      "Icon": "Scenario 1"
+      "Icon": "Scenario 1",
+      "CharacterName": "Committee"
     },
     {
       "Decisions": [
@@ -70,7 +71,8 @@
       "Setup": "The immense 'Beautiful Clean Fossil Fuels Company' has offered you a large sum of money in order to work alongside them with a new coal powered version of 'Smart Grid'. How does your company respond to this offer?",
       "ID": 2,
       "Name": "The Source",
-      "Icon": "Scenario 2"
+      "Icon": "Scenario 2",
+      "CharacterName": "Tycoon"
     },
     {
       "Decisions": [
@@ -110,8 +112,9 @@
       "Setup": "As the Smart Grid integration is nearing its completion, some of the workers with the power company are concerned about how this will affect their jobs compared to the old system.  What is the best way to handle this situation?",
       "ID": 3,
       "Name": "The Workers",
-      "Icon": "Scenario 2"
-    },  
+      "Icon": "Scenario 2",
+      "CharacterName": "Worker"
+    },
     {
       "Decisions": [
         {
@@ -158,7 +161,8 @@
       "Setup": "Your company is planning to roll out Smart Meters to all of its customers as an optional upgrade. You are tasked with marketing this upgrade in a way to make the most people in that area as possible buy into Smart Meters. What would be the best approach to bring as many people on board as possible?",
       "ID": 4,
       "Name": "The Upgrade",
-      "Icon": "Scenario 1"
+      "Icon": "Scenario 1",
+      "CharacterName": "Marketer"
     },
     {
       "Decisions": [
@@ -214,7 +218,8 @@
       "Setup": "Smart Meter is most effective when every house in an area is under its effect. After successfully implementing Smart Meters into multiple homes, the company is curious what next step should be taken.",
       "ID": 5,
       "Name": "The Expansion",
-      "Icon": "Scenario 1"
+      "Icon": "Scenario 1",
+      "CharacterName": "Robot"
     }
   ]
 }
