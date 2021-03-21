@@ -28,8 +28,11 @@ public class ResultsHandler : MonoBehaviour
     private int slider = 1; // The slider to animate.
 
     [Header("Animation Settings")]
-    [Tooltip("The speed of the slider change animation.")]
-    [SerializeField] private float animationSpeed = 1f;
+    [Tooltip("The time it takes to complete the animation of the slider.")]
+    [SerializeField] private float animationTime = 1f;
+
+    [Tooltip("The time to wait in seconds before the sliders animate.")]
+    [SerializeField] private float animationDelayTime = 0f;
 
     [Header("Results Text")]
     [Tooltip("Text to hold the result from the most recent scenario.")]
@@ -99,7 +102,7 @@ public class ResultsHandler : MonoBehaviour
         resultsText.text = result;
 
         ShowBackgroundObjs();
-        AnimateSlider();
+        StartCoroutine(WaitThenAnimate());
     }
 
     /// <summary>
@@ -120,6 +123,15 @@ public class ResultsHandler : MonoBehaviour
                 StartCoroutine(AnimateSliderCoroutine(financeSlider, financeText, stats[3] / 100f));
                 break;
         }
+    }
+
+    /// <summary>
+    /// Waits before animating the sliders.
+    /// </summary>
+    private IEnumerator WaitThenAnimate()
+    {
+        yield return new WaitForSeconds(animationDelayTime);
+        AnimateSlider();
     }
 
     /// <summary>
@@ -147,9 +159,13 @@ public class ResultsHandler : MonoBehaviour
         {
             slider.fillRect.gameObject.GetComponent<Image>().color = Color.green;
         }
-        while (Mathf.Abs(slider.value - newValue) > 0.005f)
+
+        float time = 0f;
+
+        while (time < animationTime)
         {
-            slider.value = Mathf.Lerp(slider.value, newValue, Time.deltaTime * animationSpeed);
+            time += Time.deltaTime;
+            slider.value = Mathf.Lerp(slider.value, newValue, time/animationTime);
             yield return null;
         }
 
