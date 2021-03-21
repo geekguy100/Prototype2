@@ -165,7 +165,7 @@ public class ResultsHandler : MonoBehaviour
         while (time < animationTime)
         {
             time += Time.deltaTime;
-            slider.value = Mathf.Lerp(slider.value, newValue, time/animationTime);
+            slider.value = Mathf.Lerp(previousValue, newValue, time/animationTime);
             yield return null;
         }
 
