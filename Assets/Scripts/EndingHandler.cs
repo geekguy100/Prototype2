@@ -100,14 +100,7 @@ public class EndingHandler : MonoBehaviour
         numEndings++;
 
         // Sets text panel/buttons to be transparent
-        textPanel.color = Color.clear;
-        endText.color = Color.clear;
-        nextButtonImage.color = Color.clear;
-        quitButtonImage.color = Color.clear;
-        menuButtonImage.color = Color.clear;
-        nextButtonText.color = Color.clear;
-        quitButtonText.color = Color.clear;
-        menuButtonText.color = Color.clear;
+        Reset();
 
         // Checks if player has seen all the endings
         if (numEndings >= maxEndings)
@@ -149,8 +142,26 @@ public class EndingHandler : MonoBehaviour
                 nextButtonText.color = Color.Lerp(Color.clear, Color.black, normalized);
             }
             yield return null;
-        }        
+        }
+        nextButton.GetComponent<Button>().interactable = true;
+        quitButton.GetComponent<Button>().interactable = true;
+        menuButton.GetComponent<Button>().interactable = true;
         textPanel.color = panelTarget;
         endText.color = Color.black;      
+    }
+
+    private void Reset()
+    {
+        textPanel.color = Color.clear;
+        endText.color = Color.clear;
+        nextButtonImage.color = Color.clear;
+        quitButtonImage.color = Color.clear;
+        menuButtonImage.color = Color.clear;
+        nextButtonText.color = Color.clear;
+        quitButtonText.color = Color.clear;
+        menuButtonText.color = Color.clear;
+        nextButton.GetComponent<Button>().interactable = false;
+        quitButton.GetComponent<Button>().interactable = false;
+        menuButton.GetComponent<Button>().interactable = false;
     }
 }
