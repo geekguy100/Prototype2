@@ -7,6 +7,7 @@
                        and presses Escape.
 *****************************************************************************/
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
 {
@@ -21,6 +22,12 @@ public class PauseManager : MonoBehaviour
 
     [Tooltip("Canvas object containing pause panel")]
     public GameObject pausePanel;
+
+    [Tooltip("Canvas object containing settings panel")]
+    public GameObject settingsPanel;
+
+    [Tooltip("Transition panel object")]
+    public Image transitionImage;
 
     [Tooltip("Whether or not the game is paused")]
     [SerializeField]private bool paused = false;
@@ -46,6 +53,10 @@ public class PauseManager : MonoBehaviour
                         Time.timeScale = 0;
                         paused = true;
                         pausePanel.SetActive(true);
+                        if (transitionImage.raycastTarget)
+                        {
+                            transitionImage.raycastTarget = false;
+                        }
                         //characterObj.SetActive(false);
                     }
                     else
@@ -54,6 +65,10 @@ public class PauseManager : MonoBehaviour
                         Time.timeScale = 1;
                         paused = false;
                         pausePanel.SetActive(false);
+                        if (settingsPanel.activeInHierarchy)
+                        {
+                            settingsPanel.SetActive(false);
+                        }
                         //characterObj.SetActive(true);
                     }
                 }
@@ -69,6 +84,10 @@ public class PauseManager : MonoBehaviour
         // Unpauses game
         Time.timeScale = 1;
         paused = false;
+        if (settingsPanel.activeInHierarchy)
+        {
+            settingsPanel.SetActive(false);
+        }
         //characterObj.SetActive(true);
     }
 }
