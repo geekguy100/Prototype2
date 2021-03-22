@@ -27,10 +27,7 @@ public class SettingsMenu : MonoBehaviour
 
 
         System.Collections.Generic.List<Resolution> list = new System.Collections.Generic.List<Resolution>(resolutions);
-        list.RemoveAt(0);
-        list.RemoveAt(0);
-        list.RemoveAt(0);
-        list.RemoveAt(0);
+        
         resolutions = list.ToArray();
 
 
