@@ -12917,7 +12917,7 @@ RectTransform:
   - {fileID: 1095243397}
   - {fileID: 1254064794}
   m_Father: {fileID: 1896074030}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15552,7 +15552,7 @@ RectTransform:
   - {fileID: 453025212}
   - {fileID: 247588691}
   m_Father: {fileID: 1896074030}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -26948,7 +26948,7 @@ RectTransform:
   - {fileID: 1202997320}
   - {fileID: 1490231692}
   m_Father: {fileID: 1896074030}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -29302,7 +29302,7 @@ RectTransform:
   m_Children:
   - {fileID: 1741868083}
   m_Father: {fileID: 1896074030}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -29924,7 +29924,7 @@ RectTransform:
   - {fileID: 1746534618}
   - {fileID: 1267880341}
   m_Father: {fileID: 1896074030}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -32041,7 +32041,7 @@ Transform:
   - {fileID: 321341290}
   - {fileID: 1045437156}
   m_Father: {fileID: 1896074030}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1351081947
 GameObject:
@@ -35060,7 +35060,7 @@ RectTransform:
   - {fileID: 711727719}
   - {fileID: 1317430046}
   m_Father: {fileID: 1896074030}
-  m_RootOrder: 5
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -43799,13 +43799,13 @@ RectTransform:
   - {fileID: 1251475127}
   - {fileID: 47492378}
   - {fileID: 867179057}
-  - {fileID: 1472428460}
   - {fileID: 1347828860}
   - {fileID: 1252764812}
-  - {fileID: 1273463463}
   - {fileID: 649734553}
   - {fileID: 538041731}
   - {fileID: 1164707613}
+  - {fileID: 1472428460}
+  - {fileID: 1273463463}
   - {fileID: 1601565792}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -46619,8 +46619,10 @@ MonoBehaviour:
   gameplayObj: {fileID: 47492377}
   characterObj: {fileID: 1809341650}
   pausePanel: {fileID: 1472428459}
+  tutorialPanel: {fileID: 1164707612}
   settingsPanel: {fileID: 1273463459}
   transitionImage: {fileID: 672618264}
+  typeSource: {fileID: 1940758732}
   paused: 0
   canPause: 1
 --- !u!4 &2042046202

@@ -23,17 +23,28 @@ public class PauseManager : MonoBehaviour
     [Tooltip("Canvas object containing pause panel")]
     public GameObject pausePanel;
 
+    [Tooltip("Canvas object containing tutorial panel")]
+    public GameObject tutorialPanel;
+
     [Tooltip("Canvas object containing settings panel")]
     public GameObject settingsPanel;
 
     [Tooltip("Transition panel object")]
     public Image transitionImage;
 
+    [Tooltip("Audio source for tutorial typing")]
+    public AudioSource typeSource;
+
     [Tooltip("Whether or not the game is paused")]
     [SerializeField]private bool paused = false;
 
     [Tooltip("Whether or not the game can be paused")]
     public bool canPause = false;
+
+    /// <summary>
+    /// whether or not the typing source was playing when player paused
+    /// </summary>
+    private bool wasPlaying = false;
 
     // Update is called once per frame
     void Update()
@@ -44,7 +55,7 @@ public class PauseManager : MonoBehaviour
             {
                 print("canPause = " + canPause);
                 // Makes sure player is at results/gameplay screen
-                if (resultsObj.activeInHierarchy || gameplayObj.activeInHierarchy)
+                if (resultsObj.activeInHierarchy || gameplayObj.activeInHierarchy || tutorialPanel.activeInHierarchy)
                 {
                     // Checks if it is unpaused currently
                     if (!paused)
@@ -57,6 +68,14 @@ public class PauseManager : MonoBehaviour
                         {
                             transitionImage.raycastTarget = false;
                         }
+                        if (tutorialPanel.activeInHierarchy)
+                        {
+                            if (typeSource.isPlaying)
+                            {
+                                typeSource.Stop();
+                                wasPlaying = true;
+                            }
+                        }
                         //characterObj.SetActive(false);
                     }
                     else
@@ -68,6 +87,14 @@ public class PauseManager : MonoBehaviour
                         if (settingsPanel.activeInHierarchy)
                         {
                             settingsPanel.SetActive(false);
+                        }
+                        if (tutorialPanel.activeInHierarchy)
+                        {
+                            if (wasPlaying)
+                            {
+                                typeSource.Play();
+                                wasPlaying = false;
+                            }
                         }
                         //characterObj.SetActive(true);
                     }
@@ -87,6 +114,14 @@ public class PauseManager : MonoBehaviour
         if (settingsPanel.activeInHierarchy)
         {
             settingsPanel.SetActive(false);
+        }
+        if (tutorialPanel.activeInHierarchy)
+        {
+            if (wasPlaying)
+            {
+                typeSource.Play();
+                wasPlaying = false;
+            }
         }
         //characterObj.SetActive(true);
     }
