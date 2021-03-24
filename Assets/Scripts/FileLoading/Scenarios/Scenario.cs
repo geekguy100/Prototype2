@@ -23,6 +23,9 @@ namespace FileLoading
         // What icon/background art (ones in red) to show while the question is onscreen
         public string Icon;
 
+        // What music to play while the question is onscreen
+        public string Music;
+
         // The name of the character to display for this question.
         public string CharacterName;
 

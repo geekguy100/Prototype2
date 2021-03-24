@@ -36,6 +36,9 @@ public class GameManager : MonoBehaviour
     [Tooltip("Used for referencing the title animation sequence")]
     public GameObject animationHolder;
 
+    [Tooltip("Reference to script that handles the background music")]
+    public MusicHandler musicHandler;
+
     #region Choice Tracking
     [Header("Tracking and changing how many choices the players have")]
     [Tooltip("What is the maximum number of choices the players will have")]
@@ -238,6 +241,8 @@ public class GameManager : MonoBehaviour
     /// Reference to script that handles displaying endings
     /// </summary>
     private EndingHandler endingHandler;
+
+
 
 
     /// <summary>
@@ -538,6 +543,7 @@ public class GameManager : MonoBehaviour
         {
             EndGame();
         }
+        UpdateMusic(choicesMade < maxChoices);
     }
 
     /// <summary>
@@ -548,11 +554,31 @@ public class GameManager : MonoBehaviour
         noSelectionPanel.SetActive(false);
     }
 
+
+    private void UpdateMusic(bool moreQuestions)
+    {
+        if (moreQuestions)
+        {
+            AudioClip newMusic = Resources.Load<AudioClip>("Music/" + currentSetup.Music);
+            musicHandler.ChangeMusic(newMusic);
+        }
+        else
+        {
+            musicHandler.PlayMenuMusic();
+        }        
+    }
+
+    private void UpdateMusic()
+    {
+        AudioClip newMusic = Resources.Load<AudioClip>("Music/" + currentSetup.Music);
+        musicHandler.ChangeMusic(newMusic);
+    }
     /// <summary>
     /// Update the UI text objects to the current setup
     /// </summary>
     private void UpdateText()
-    {
+    {        
+
         // Clear old question and choices
         choicesText.text = "";
 
@@ -666,6 +692,7 @@ public class GameManager : MonoBehaviour
         // Load and display the first setup from the scenario
         NextSetup();
         UpdateText();
+        UpdateMusic();
     }
 
     /// <summary>

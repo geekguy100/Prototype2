@@ -31,6 +31,7 @@
       "ID": 1,
       "Name": "The Law",
       "Icon": "Scenario 1",
+      "Music": "members_only_edited",
       "CharacterName": "Committee"
     },
     {
@@ -72,6 +73,7 @@
       "ID": 2,
       "Name": "The Source",
       "Icon": "Scenario 2",
+      "Music": "twilight_train_edited",
       "CharacterName": "Tycoon"
     },
     {
@@ -113,6 +115,7 @@
       "ID": 3,
       "Name": "The Workers",
       "Icon": "Scenario 2",
+      "Music": "minor_blues_edited",
       "CharacterName": "Worker"
     },
     {
@@ -162,6 +165,7 @@
       "ID": 4,
       "Name": "The Upgrade",
       "Icon": "Scenario 1",
+      "Music": "sunny_days_edited",
       "CharacterName": "Marketer"
     },
     {
@@ -219,6 +223,7 @@
       "ID": 5,
       "Name": "The Expansion",
       "Icon": "Scenario 1",
+      "Music": "papov",
       "CharacterName": "Robot"
     }
   ]
