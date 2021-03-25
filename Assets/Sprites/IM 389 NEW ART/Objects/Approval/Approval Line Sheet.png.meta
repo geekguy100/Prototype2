@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 9277523116d0bc146b7db8a4e8f59b4b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2540144005398631321
+    second: Approval Line Sheet_0
+  - first:
+      213: -51066172804047132
+    second: Approval Line Sheet_1
+  - first:
+      213: -3117434541291934348
+    second: Approval Line Sheet_2
+  - first:
+      213: 6651018387114459029
+    second: Approval Line Sheet_3
+  - first:
+      213: -1357327696545196303
+    second: Approval Line Sheet_4
+  - first:
+      213: -8582181331340277398
+    second: Approval Line Sheet_5
+  - first:
+      213: -5187503196931144180
+    second: Approval Line Sheet_6
+  - first:
+      213: 6782545216690991904
+    second: Approval Line Sheet_7
+  - first:
+      213: 2491106680975457337
+    second: Approval Line Sheet_8
+  - first:
+      213: 168224189128064076
+    second: Approval Line Sheet_9
+  - first:
+      213: 5755296786554133142
+    second: Approval Line Sheet_10
+  - first:
+      213: 3982630799000840470
+    second: Approval Line Sheet_11
+  - first:
+      213: -3372372221438036349
+    second: Approval Line Sheet_12
+  - first:
+      213: 6540820580094489780
+    second: Approval Line Sheet_13
+  - first:
+      213: -5822000303424831823
+    second: Approval Line Sheet_14
+  - first:
+      213: -8059225643980494257
+    second: Approval Line Sheet_15
+  - first:
+      213: -6249812013144793404
+    second: Approval Line Sheet_16
+  - first:
+      213: 3693539663417727043
+    second: Approval Line Sheet_17
+  - first:
+      213: 9042320479396978636
+    second: Approval Line Sheet_18
+  - first:
+      213: 3487970863011113200
+    second: Approval Line Sheet_19
+  - first:
+      213: -2862347200147562812
+    second: Approval Line Sheet_20
+  - first:
+      213: 7496657796770646173
+    second: Approval Line Sheet_21
+  - first:
+      213: -7619964300696273092
+    second: Approval Line Sheet_22
+  - first:
+      213: 2351450457710253308
+    second: Approval Line Sheet_23
+  - first:
+      213: -4551213029934955353
+    second: Approval Line Sheet_24
+  - first:
+      213: 1840247159235572139
+    second: Approval Line Sheet_25
+  - first:
+      213: -9085999070512244096
+    second: Approval Line Sheet_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Approval Line Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 438
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c60ef3c789fbcd0800000000000000
+      internalID: -2540144005398631321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 438
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eed9fd16939a4ff0800000000000000
+      internalID: -51066172804047132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 438
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47de2c33dc5acb4d0800000000000000
+      internalID: -3117434541291934348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 438
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f7c860cf92d4c50800000000000000
+      internalID: 6651018387114459029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 438
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f6df93c6adc92de0800000000000000
+      internalID: -1357327696545196303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 438
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69497bac87f5e880800000000000000
+      internalID: -8582181331340277398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 438
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0647b3b3594208b0800000000000000
+      internalID: -5187503196931144180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 438
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02334e960f0702e50800000000000000
+      internalID: 6782545216690991904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 219
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93cf421f350329220800000000000000
+      internalID: 2491106680975457337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 219
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c3b9b3207a55200800000000000000
+      internalID: 168224189128064076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 219
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a918b3febeedf40800000000000000
+      internalID: 5755296786554133142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 219
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619a9fd5c95254730800000000000000
+      internalID: 3982630799000840470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 219
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3867aca055de231d0800000000000000
+      internalID: -3372372221438036349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 219
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4b810b9a9a5ca50800000000000000
+      internalID: 6540820580094489780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 219
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be75200299143fa0800000000000000
+      internalID: -5822000303424831823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 219
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ae2d5f9f0e72090800000000000000
+      internalID: -8059225643980494257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 219
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce198346153449a0800000000000000
+      internalID: -6249812013144793404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 219
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34854d131c6124330800000000000000
+      internalID: 3693539663417727043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 219
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf52b75196cc7d70800000000000000
+      internalID: 9042320479396978636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 219
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8a0b41503c76030800000000000000
+      internalID: 3487970863011113200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cede570366e648d0800000000000000
+      internalID: -2862347200147562812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d984d231c8a790860800000000000000
+      internalID: 7496657796770646173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f37df37d2704690800000000000000
+      internalID: -7619964300696273092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4dfb69bb702a020800000000000000
+      internalID: 2351450457710253308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a40995dcd7d6d0c0800000000000000
+      internalID: -4551213029934955353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba178219a0fd98910800000000000000
+      internalID: 1840247159235572139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Line Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 168
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a969c2cfb08e180800000000000000
+      internalID: -9085999070512244096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
