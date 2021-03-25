@@ -2545,7 +2545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ece8fbc5cf70b47b2e910324093b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeFadeTime: 1
+  volumeFadeTime: 0.5
   loadingScreenMusic: {fileID: 0}
   menuMusic: {fileID: 8300000, guid: 4519b7c4e525aa54f98002ff8aa90f75, type: 3}
 --- !u!1 &122087061
@@ -32042,7 +32042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1347828860
 Transform:
   m_ObjectHideFlags: 0

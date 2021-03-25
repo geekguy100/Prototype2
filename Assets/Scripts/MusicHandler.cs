@@ -1,4 +1,4 @@
-﻿/*****************************************************************************
+/*****************************************************************************
 // File Name :         MusicHandler.cs
 // Author :            TJ Caron
 // Creation Date :     03/24/2021
@@ -37,23 +37,39 @@ public class MusicHandler : MonoBehaviour
         desiredVolume = musicSource.volume;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private IEnumerator FadeInMusic(AudioClip newMusic)
     {
-        musicSource.clip = newMusic;
-        musicSource.PlayScheduled(0);
-        musicSource.volume = 0;
-        for (float t = 0; t < volumeFadeTime; t += Time.deltaTime)
-        {          
-            float normalized = t / volumeFadeTime;
-            musicSource.volume = normalized * desiredVolume;
-            musicSource.volume = Mathf.Clamp(musicSource.volume, 0, desiredVolume);
+        //musicSource.volume = 0;
+
+        float t = 0;
+
+        while (t < volumeFadeTime)
+        {
+            t += Time.deltaTime;
+            musicSource.volume = Mathf.Lerp(desiredVolume, 0, t / volumeFadeTime);
             yield return null;
         }
+
+        //for (float t = 0; t < volumeFadeTime; t += Time.deltaTime)
+        //{          
+        //    float normalized = t / volumeFadeTime;
+        //    musicSource.volume = normalized * desiredVolume;
+        //    musicSource.volume = Mathf.Clamp(musicSource.volume, 0, desiredVolume);
+        //    yield return null;
+        //}
+
+        musicSource.clip = newMusic;
+        musicSource.PlayScheduled(0);
+
+        t = 0;
+
+        while (t < volumeFadeTime)
+        {
+            t += Time.deltaTime;
+            musicSource.volume = Mathf.Lerp(0, desiredVolume, t / volumeFadeTime);
+            yield return null;
+        }
+
         musicSource.volume = desiredVolume;
     }
 
