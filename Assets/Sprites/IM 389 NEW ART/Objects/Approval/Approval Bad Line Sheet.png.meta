@@ -1,0 +1,898 @@
+fileFormatVersion: 2
+guid: 4301a636c8e52a24993b9f1eadafe2c8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3847306861192998490
+    second: Approval Bad Line Sheet_0
+  - first:
+      213: 1153347526119448841
+    second: Approval Bad Line Sheet_1
+  - first:
+      213: 7640296495403662841
+    second: Approval Bad Line Sheet_2
+  - first:
+      213: -8824009186621766005
+    second: Approval Bad Line Sheet_3
+  - first:
+      213: 8897417881021026528
+    second: Approval Bad Line Sheet_4
+  - first:
+      213: 7520781790595304468
+    second: Approval Bad Line Sheet_5
+  - first:
+      213: 5992036753252685131
+    second: Approval Bad Line Sheet_6
+  - first:
+      213: 8576732427479652674
+    second: Approval Bad Line Sheet_7
+  - first:
+      213: -4021007906684616269
+    second: Approval Bad Line Sheet_8
+  - first:
+      213: -6964582837697489855
+    second: Approval Bad Line Sheet_9
+  - first:
+      213: 2234630932592634752
+    second: Approval Bad Line Sheet_10
+  - first:
+      213: 1747364553988119131
+    second: Approval Bad Line Sheet_11
+  - first:
+      213: -2040585203384206358
+    second: Approval Bad Line Sheet_12
+  - first:
+      213: 974058399202872492
+    second: Approval Bad Line Sheet_13
+  - first:
+      213: -8612456642925199285
+    second: Approval Bad Line Sheet_14
+  - first:
+      213: 3392612728876814762
+    second: Approval Bad Line Sheet_15
+  - first:
+      213: 5533780563652037728
+    second: Approval Bad Line Sheet_16
+  - first:
+      213: -6947423754436398017
+    second: Approval Bad Line Sheet_17
+  - first:
+      213: 6195897693349190524
+    second: Approval Bad Line Sheet_18
+  - first:
+      213: 6783176479974254649
+    second: Approval Bad Line Sheet_19
+  - first:
+      213: 7212107634550838259
+    second: Approval Bad Line Sheet_20
+  - first:
+      213: 7752511937142366983
+    second: Approval Bad Line Sheet_21
+  - first:
+      213: -1967486064603982610
+    second: Approval Bad Line Sheet_22
+  - first:
+      213: 4067643418483341202
+    second: Approval Bad Line Sheet_23
+  - first:
+      213: -5376909624242508648
+    second: Approval Bad Line Sheet_24
+  - first:
+      213: 5474396560020208840
+    second: Approval Bad Line Sheet_25
+  - first:
+      213: -4847022436959366162
+    second: Approval Bad Line Sheet_26
+  - first:
+      213: -7934138656012624103
+    second: Approval Bad Line Sheet_27
+  - first:
+      213: -3687326998091630045
+    second: Approval Bad Line Sheet_28
+  - first:
+      213: 1035240430951688760
+    second: Approval Bad Line Sheet_29
+  - first:
+      213: 7208572689772827892
+    second: Approval Bad Line Sheet_30
+  - first:
+      213: 6806065469906968342
+    second: Approval Bad Line Sheet_31
+  - first:
+      213: -399390010332432159
+    second: Approval Bad Line Sheet_32
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 798
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ee453d431646530800000000000000
+      internalID: 3847306861192998490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 798
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901ececd673810010800000000000000
+      internalID: 1153347526119448841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 798
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd723bbe29c70a60800000000000000
+      internalID: 7640296495403662841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 798
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8640a87562da8580800000000000000
+      internalID: -8824009186621766005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 798
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e097781c6af97b70800000000000000
+      internalID: 8897417881021026528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 798
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cc8a5113f2f5860800000000000000
+      internalID: 7520781790595304468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 532
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4516be0eadf72350800000000000000
+      internalID: 5992036753252685131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 532
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2499f7983bca60770800000000000000
+      internalID: 8576732427479652674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 532
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1c603fc928238c0800000000000000
+      internalID: -4021007906684616269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 532
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144524e1fc4d85f90800000000000000
+      internalID: -6964582837697489855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 532
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ba84d5ef0030f10800000000000000
+      internalID: 2234630932592634752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 532
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a129dcdc2ef3810800000000000000
+      internalID: 1747364553988119131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 532
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aebbd5aa1926ea3e0800000000000000
+      internalID: -2040585203384206358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 532
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac09fa04fc848d00800000000000000
+      internalID: 974058399202872492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 532
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b408df260586a7880800000000000000
+      internalID: -8612456642925199285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 266
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1db255d4bf41f20800000000000000
+      internalID: 3392612728876814762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 266
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06cc0797a10fbcc40800000000000000
+      internalID: 5533780563652037728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 266
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3435b487eac59f90800000000000000
+      internalID: -6947423754436398017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 266
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b9db4ff104cf550800000000000000
+      internalID: 6195897693349190524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 266
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93866a9d11fa22e50800000000000000
+      internalID: 6783176479974254649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 266
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f31947aead861460800000000000000
+      internalID: 7212107634550838259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 266
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703a8524884769b60800000000000000
+      internalID: 7752511937142366983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 266
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee49fb239d512b4e0800000000000000
+      internalID: -1967486064603982610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 266
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297b7a7432c237830800000000000000
+      internalID: 4067643418483341202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c65a15f216165b0800000000000000
+      internalID: -5376909624242508648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ccff9faaa6f8fb40800000000000000
+      internalID: 5474396560020208840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 0
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee350b236caebbcb0800000000000000
+      internalID: -4847022436959366162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 0
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f1ca1ede644e190800000000000000
+      internalID: -7934138656012624103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 0
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a7a0ca1abf3dcc0800000000000000
+      internalID: -3687326998091630045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 0
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a6fffdfa9ed5e00800000000000000
+      internalID: 1035240430951688760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 0
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4dd7f2baef90460800000000000000
+      internalID: 7208572689772827892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 0
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f5bdb1c70047e50800000000000000
+      internalID: 6806065469906968342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Approval Bad Line Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 0
+        width: 207
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8bb43d6e4157af0800000000000000
+      internalID: -399390010332432159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
