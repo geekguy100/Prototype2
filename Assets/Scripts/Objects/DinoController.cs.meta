@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5a0038526f1c5ad49bc3a754453d58fe
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - revealedCursor: {instanceID: 0}
+  - questionMarkCursor: {instanceID: 0}
+  - sfxSource: {instanceID: 0}
+  - clickSound: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

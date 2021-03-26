@@ -9,7 +9,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FanController : MonoBehaviour
+public class FanController : Interactable
 {
     /// <summary>
     /// Whether or not the fan animation is currently running
@@ -25,46 +25,22 @@ public class FanController : MonoBehaviour
     [Tooltip("Sound that plays when fan gets turned off")]
     public AudioClip offSound;
 
-    [Tooltip("SFX audiosource")]
-    public AudioSource sfxSource;
-
-    [Tooltip("Question Mark cursor texture")]
-    public Texture2D newCursor;
-
-    [Tooltip("Offset from upper left corner of new cursor to middle")]
-    public Vector2 hotspot;
-    /// <summary>
-    /// Changes the cursor sprite
-    /// </summary>
-    /// <param name="entering">Whether or not the cursor is entering the fan</param>
-    public void ChangeCursor(bool entering)
-    {
-        if (entering)
-        {
-            Cursor.SetCursor(newCursor, hotspot, CursorMode.Auto);
-        }
-        else
-        {
-            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-        }
-    }
-
     /// <summary>
     /// Turns the fan animation off if it is on, turns it on if it is off
     /// </summary>
-    public void ClickFan()
+    public void Interact()
     {
         if (isOn)
         {
             isOn = false;
             bladesAnim.SetBool("shouldRun", isOn);
-            sfxSource.PlayOneShot(offSound);
+            PlaySFX(offSound);
         }
         else
         {
             isOn = true;
             bladesAnim.SetBool("shouldRun", isOn);
-            sfxSource.PlayOneShot(onSound);
+            PlaySFX(onSound);
         }
     }
 }

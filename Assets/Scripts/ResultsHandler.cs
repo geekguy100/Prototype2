@@ -46,10 +46,10 @@ public class ResultsHandler : MonoBehaviour
     public GameObject[] efficiencyObjs;
 
     [Tooltip("Low Efficiency Window Object")]
-    public GameObject lowEfficiencyWindow;
+    public GameObject lowFinanceWindow;
 
     [Tooltip("High Efficiency Window Object")]
-    public GameObject highEfficiencyWindow;
+    public GameObject highFinanceWindow;
 
     [Tooltip("Approval Background objects")]
     public GameObject[] approvalObjs;
@@ -223,18 +223,10 @@ public class ResultsHandler : MonoBehaviour
             {
                 case 0:
                     efficiencyObjs[statStates[i]].SetActive(true);
-                    // Shows window objects
-                    if (statStates[i] == 0)
-                    {
-                        lowEfficiencyWindow.SetActive(true);
-                    }
-                    else if (statStates[i] == 2)
-                    {
-                        highEfficiencyWindow.SetActive(true);
-                    }
                     break;
                 case 1:
                     approvalObjs[statStates[i]].SetActive(true);
+                    // Shows window objects
                     if (statStates[i] == 0)
                     {
                         lowApprovalWindow.SetActive(true);
@@ -246,6 +238,15 @@ public class ResultsHandler : MonoBehaviour
                     break;
                 case 2:
                     financeObjs[statStates[i]].SetActive(true);
+                    // Shows window objects
+                    if (statStates[i] == 0)
+                    {
+                        lowFinanceWindow.SetActive(true);
+                    }
+                    else if (statStates[i] == 2)
+                    {
+                        highFinanceWindow.SetActive(true);
+                    }
                     break;
             }
         }
@@ -272,8 +273,8 @@ public class ResultsHandler : MonoBehaviour
         }
 
         // hides window objects
-        lowEfficiencyWindow.SetActive(false);
-        highEfficiencyWindow.SetActive(false);
+        lowFinanceWindow.SetActive(false);
+        highFinanceWindow.SetActive(false);
         lowApprovalWindow.SetActive(false);
         highApprovalWindow.SetActive(false);
     }
