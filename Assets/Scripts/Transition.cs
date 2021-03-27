@@ -30,8 +30,13 @@ public class Transition : MonoBehaviour
     [Tooltip("The time to wait after fading in.")]
     [SerializeField] private float pauseWaitTime;
 
-    [Tooltip("The Pause Manager script on the Game Manager object")]
+    [Tooltip("The possible animator controllers to use for transition animations.")]
+    [SerializeField] private RuntimeAnimatorController[] animatorControllers;
+
     private PauseManager pauseManager;
+
+    private bool variableTransitions = false;
+
 
     public delegate void TransitionCallback();
     /// <summary>
@@ -39,6 +44,9 @@ public class Transition : MonoBehaviour
     /// </summary>
     private IEnumerator PerformTransition(TransitionCallback callback)
     {
+        if (variableTransitions)
+            SetRandomController();
+
         fadeAnimator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(fadeWaitTime);
         print("should be false it is: " + pauseManager.canPause);
@@ -48,6 +56,22 @@ public class Transition : MonoBehaviour
         callback?.Invoke();
         yield return new WaitForSeconds(pauseWaitTime);
         pauseManager.canPause = true;
+    }
+
+    /// <summary>
+    /// Change wheter or not transitions other than the typical fade-in-and-out can play.
+    /// </summary>
+    /// <param name="variableTransitions">True if transitions other than the typical fade-in-and-out can play.</param>
+    public void SetVariableTransitions(bool variableTransitions)
+    {
+        this.variableTransitions = variableTransitions;
+    }
+
+    private void SetRandomController()
+    {
+        int range = animatorControllers.Length;
+        int index = Random.Range(0, range);
+        fadeAnimator.runtimeAnimatorController = animatorControllers[index];
     }
 
     public void StartTransition(TransitionCallback callback)

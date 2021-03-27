@@ -971,6 +971,7 @@ public class GameManager : MonoBehaviour
 
     public void CompleteTutorial()
     {
+        Transition.instance.SetVariableTransitions(true);
         completedTutorial = true;
     }
 }
