@@ -182,7 +182,6 @@ public class ResultsHandler : MonoBehaviour
         changeText.color = color;
         changeText.text = frontString + Math.Round(change * 100).ToString();
 
-
         ++this.slider;
         AnimateSlider();
     }
@@ -279,7 +278,7 @@ public class ResultsHandler : MonoBehaviour
         highApprovalWindow.SetActive(false);
     }
     /// <summary>
-    /// Sets all of the change texts to empty strings and resets the slider counter back to 0.
+    /// Sets all of the change texts to empty strings and resets the slider counter.
     /// </summary>
     public void Reset()
     {
@@ -287,6 +286,11 @@ public class ResultsHandler : MonoBehaviour
         efficiencyText.text = string.Empty;
         approvalText.text = string.Empty;
         financeText.text = string.Empty;
+
+        // Make sure all of the sliders reach their final values.
+        efficiencySlider.value = stats[1] / 100f;
+        approvalSlider.value = stats[2] / 100f;
+        financeSlider.value = stats[3] / 100f;
     }
 
     /// <summary>
