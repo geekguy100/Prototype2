@@ -2657,6 +2657,7 @@ MonoBehaviour:
   volumeFadeTime: 0.5
   loadingScreenMusic: {fileID: 0}
   menuMusic: {fileID: 8300000, guid: 4519b7c4e525aa54f98002ff8aa90f75, type: 3}
+  endingMusic: {fileID: 8300000, guid: bfbf85b9eabe5814ea1ad4e4443d4c88, type: 3}
 --- !u!1 &122087061
 GameObject:
   m_ObjectHideFlags: 0
@@ -36433,7 +36434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee2213454dd23e47939f0b9cd7bce90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timePerQuestion: 20
+  timePerQuestion: 300
   eventWaitTime: 2
   isTutorialTimer: 1
   minStatMultiplier: 0.5

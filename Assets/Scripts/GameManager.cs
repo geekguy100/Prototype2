@@ -564,7 +564,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            musicHandler.PlayMenuMusic();
+            musicHandler.PlayEndingMusic();
         }        
     }
 

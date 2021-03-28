@@ -30,6 +30,9 @@ public class MusicHandler : MonoBehaviour
 
     [Tooltip("Music to play on the main menu")]
     public AudioClip menuMusic;
+
+    [Tooltip("Music to play on the ending screens")]
+    public AudioClip endingMusic;
     // Start is called before the first frame update
     void Start()
     {
@@ -96,5 +99,10 @@ public class MusicHandler : MonoBehaviour
     public void PlayMenuMusic()
     {
         StartCoroutine(FadeInMusic(menuMusic));
+    }
+
+    public void PlayEndingMusic()
+    {
+        StartCoroutine(FadeInMusic(endingMusic));
     }
 }
