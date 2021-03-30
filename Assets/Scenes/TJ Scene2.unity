@@ -21426,14 +21426,14 @@ RectTransform:
   m_GameObject: {fileID: 890075437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
   m_Children: []
   m_Father: {fileID: 2142937319}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -235.13, y: -27.62}
+  m_AnchoredPosition: {x: -235.13, y: -13.51}
   m_SizeDelta: {x: 126, y: 102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890075439
@@ -21456,7 +21456,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 740979b865150bc4b99b719440400458, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b412d70e92d93024d9de75a799d8fbf3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21484,7 +21484,7 @@ Animator:
   m_GameObject: {fileID: 890075437}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40f1fc57f8ad44b439cbab478dbb371b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6ccdd266a9f99734bab895ebb4fc8d6e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -27470,9 +27470,10 @@ MonoBehaviour:
   - {fileID: 586315728}
   timerText: Each scenario will have a time limit in which you need to decide how
     to respond. The timer in the upper right corner of the screen shows you how much
-    time you have left for this scenario. The faster you respond to each scenario,
-    the more effective your choice will be. Click one of the choice buttons below
-    to continue.
+    time you have left for this scenario.  This alarm will play once when you reach
+    the halfway point and again when you only have a quarter of your total time left.
+    The faster you respond to each scenario, the more effective your choice will
+    be. Click one of the choice buttons below to continue.
   choiceSelectText: To decide how you are going to respond to each scenario, you
     need to click two buttons. First, you need to click on the choice button of your
     preferred choice. Then you click the confirm button in the bottom right of the
@@ -27485,6 +27486,10 @@ MonoBehaviour:
   originalScale: {x: 1, y: 1, z: 0}
   zoomSpeed: 0.25
   resultsHandler: {fileID: 1183313294}
+  sfxSource: {fileID: 768988162}
+  timerWarning: {fileID: 8300000, guid: ebd368aafb153354b84db30b248d65e9, type: 3}
+  warningVolume: 0.3
+  halfWarningObj: {fileID: 1855224352}
   stats:
   - 50
   - 50
@@ -49394,7 +49399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2142937319
 RectTransform:
   m_ObjectHideFlags: 0

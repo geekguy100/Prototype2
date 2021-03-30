@@ -110,6 +110,18 @@ public class Tutorial : MonoBehaviour
     [Tooltip("The tutorial ResultsHandler")]
     [SerializeField] private ResultsHandler resultsHandler;
 
+    [Tooltip("SFX Audio Source")]
+    public AudioSource sfxSource;
+
+    [Tooltip("Timer warning audio clip")]
+    public AudioClip timerWarning;
+
+    [Tooltip("Volume timer warning should play at")]
+    public float warningVolume = .3f;
+
+    [Tooltip("Timer half warning object")]
+    public GameObject halfWarningObj;
+
 
 
     private string resultsString = "This screen will show you the results of your choice, including how your stats changed." +
@@ -247,6 +259,25 @@ public class Tutorial : MonoBehaviour
     {
         step++;
         setUpText.text = timerText;
+        Invoke("PlayTimerWarning", 5f);
+    }
+
+    /// <summary>
+    /// Plays the timer warning and shows the warning object
+    /// </summary>
+    private void PlayTimerWarning()
+    {
+        sfxSource.PlayOneShot(timerWarning, warningVolume);
+        halfWarningObj.SetActive(true);
+        Invoke("HideWarningObj", 3f);
+    }
+
+    /// <summary>
+    /// Hides warning object
+    /// </summary>
+    private void HideWarningObj()
+    {
+        halfWarningObj.SetActive(false);
     }
 
     /// <summary>
@@ -263,9 +294,9 @@ public class Tutorial : MonoBehaviour
     /// </summary>
     private void OpenChoiceSelectStep()
     {
+        CancelInvoke("PlayTimerWarning");
         step++;
         setUpText.text = choiceSelectText;
-
     }
 
     /// <summary>
