@@ -8,39 +8,34 @@ using System.Linq;
 
 public class SettingsMenu : MonoBehaviour
 {
-    Resolution[] resolutions;
     public AudioMixer music;
     public AudioMixer ui;
     public TMP_Dropdown resolutionDropdown;
-    public List<string> options = new List<string>();
+    public List<Vector2> options = new List<Vector2>();
+    public List<string> optionsText = new List<string>();
+    public int defaultRefreshRate = 30;
 
     // Start is called before the first frame update
     void Start()
     {
-   
         resolutionDropdown.ClearOptions();
-        resolutions = Screen.resolutions.Distinct().OrderBy(x => x.refreshRate).ToArray();
-
-        int currentResolutionIndex = 0;
 
 
 
 
-        System.Collections.Generic.List<Resolution> list = new System.Collections.Generic.List<Resolution>(resolutions);
-        
-        resolutions = list.ToArray();
+        /*
+         4:3 aspect ratio resolutions: 1024×768, 1280×960, 1400×1050, 1440×1080, 1600×1200, 1856×1392, 1920×1440, and 2048×1536.
+           16:10 aspect ratio resolutions: 1280×800, 1440×900, 1680×1050, and 1920×1200.
+        16:9 aspect ratio resolutions: 1024×576, 1152×648, 1280×720 (HD), 1366×768, 1600×900, and 1920×1080 (FHD)
+         
+         */
 
-
-        for (int i = 0; i < resolutions.Length; i++)
+        for(int i = 0;i<options.Count; i++)
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height + "     " + resolutions[i].refreshRate + "Hz";
-            options.Add(option);
-
-            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
-                currentResolutionIndex = i;
+            optionsText[i] = ((int)options[i].x +"  x  "+ (int)options[i].y).ToString();
         }
 
-        resolutionDropdown.AddOptions(options);
+        resolutionDropdown.AddOptions(optionsText);
         resolutionDropdown.RefreshShownValue();
     }
 
@@ -69,8 +64,7 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetResolution(int resolutionIndex)
     {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width,
-                  resolution.height, Screen.fullScreen);
+ 
+        Screen.SetResolution((int)options[resolutionIndex].x,(int)options[resolutionIndex].y,Screen.fullScreen,defaultRefreshRate);
     }
 }

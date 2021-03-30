@@ -7877,7 +7877,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 45
   m_Viewport: {fileID: 1186812897}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 1425399307}
@@ -25949,7 +25949,7 @@ GameObject:
   - component: {fileID: 1124410384}
   - component: {fileID: 1124410385}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Resolution DropDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30323,7 +30323,45 @@ MonoBehaviour:
   music: {fileID: 24100000, guid: a4409123192addd4ba060cdea234e2c2, type: 2}
   ui: {fileID: 24100000, guid: 272bbe6e6432f314fb4e8bfb657ab927, type: 2}
   resolutionDropdown: {fileID: 2136406109}
-  options: []
+  options:
+  - {x: 1024, y: 768}
+  - {x: 1280, y: 960}
+  - {x: 1400, y: 1050}
+  - {x: 1440, y: 1080}
+  - {x: 1600, y: 1200}
+  - {x: 1856, y: 1392}
+  - {x: 1920, y: 1440}
+  - {x: 2048, y: 1536}
+  - {x: 1280, y: 800}
+  - {x: 1440, y: 900}
+  - {x: 1680, y: 1050}
+  - {x: 1920, y: 1200}
+  - {x: 1024, y: 576}
+  - {x: 1152, y: 648}
+  - {x: 1280, y: 720}
+  - {x: 1366, y: 768}
+  - {x: 1600, y: 900}
+  - {x: 1920, y: 1080}
+  optionsText:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  defaultRefreshRate: 30
 --- !u!114 &1273463461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34723,7 +34761,7 @@ MonoBehaviour:
   m_Direction: 2
   m_Value: 0
   m_Size: 0.2
-  m_NumberOfSteps: 2
+  m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
