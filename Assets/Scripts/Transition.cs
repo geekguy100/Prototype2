@@ -51,10 +51,10 @@ public class Transition : MonoBehaviour
 
         fadeAnimator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(fadeWaitTime);
-        print("should be false it is: " + pauseManager.canPause);
+        //print("should be false it is: " + pauseManager.canPause);
         fadeAnimator.SetTrigger("FadeOut");
         //yield return new WaitForSeconds(fadeWaitTime);
-        print("should be false it is: " + pauseManager.canPause);
+        //print("should be false it is: " + pauseManager.canPause);
         callback?.Invoke();
         yield return new WaitForSeconds(pauseWaitTime);
         pauseManager.canPause = true;

@@ -89,7 +89,8 @@ public class ResultsHandler : MonoBehaviour
     /// <param name="stats">The initial stats.</param>
     public void Init(float[] stats)
     {
-        this.stats = (float[])stats.Clone();
+        this.stats = stats.Clone() as float[];
+
         efficiencySlider.value = stats[1] / 100f;
         approvalSlider.value = stats[2] / 100f;
         financeSlider.value = stats[3] / 100f;
@@ -101,9 +102,14 @@ public class ResultsHandler : MonoBehaviour
     /// <param name="stats">The updated stats.</param>
     public void Display(float[] stats, string result)
     {
-        this.stats = new float[4];
+        if (this.stats == null)
+        {
+            print("NEW ARRAY");
+            this.stats = new float[4];
+        }
+
         SetBackgroundSliders(stats);
-        this.stats = stats;
+        this.stats = stats.Clone() as float[];
 
         resultsText.text = result;
 
@@ -114,6 +120,8 @@ public class ResultsHandler : MonoBehaviour
     private void SetBackgroundSliders(float[] updatedStats)
     {
         float change = updatedStats[1] - stats[1];
+        print("EFF  " + change);
+
         if (change > 0)
             efficiencyBackground.value = updatedStats[1] / 100f;
         else
@@ -121,6 +129,7 @@ public class ResultsHandler : MonoBehaviour
 
 
         change = updatedStats[2] - stats[2];
+        print("APP  " + change);
         if (change > 0)
             approvalBackground.value = updatedStats[2] / 100f;
         else
@@ -128,6 +137,7 @@ public class ResultsHandler : MonoBehaviour
 
 
         change = updatedStats[3] - stats[3];
+        print("FIN  " + change);
         if (change > 0)
             financeBackground.value = updatedStats[3] / 100f;
         else
