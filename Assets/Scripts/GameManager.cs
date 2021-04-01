@@ -39,6 +39,9 @@ public class GameManager : MonoBehaviour
     [Tooltip("Reference to script that handles the background music")]
     public MusicHandler musicHandler;
 
+    [Tooltip("The loading menu")]
+    public GameObject loadingMenu;
+
     #region Choice Tracking
     [Header("Tracking and changing how many choices the players have")]
     [Tooltip("What is the maximum number of choices the players will have")]
@@ -973,5 +976,10 @@ public class GameManager : MonoBehaviour
     {
         Transition.instance.SetVariableTransitions(true);
         completedTutorial = true;
+    }
+
+    public void ActivateLoadingMenu()
+    {
+        loadingMenu.SetActive(true);
     }
 }
