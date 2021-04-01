@@ -9222,7 +9222,7 @@ MonoBehaviour:
   onSound: {fileID: 8300000, guid: 3f32efc32323849498070322b4f7e2c8, type: 3}
   offSound: {fileID: 8300000, guid: d6d02f7f20ba59c4b9b297dcbb1f9372, type: 3}
   breakSound: {fileID: 8300000, guid: 08d4a4250e0c6c449a168ae6e79272df, type: 3}
-  interactTimer: 2.5
+  interactTimer: 3
   breakTime: 4
   breakCount: 10
   brokenParticles: {fileID: 8562086034200742265, guid: e59c15dcee93e3d4e9f1841019667a9d, type: 3}
