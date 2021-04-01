@@ -28,7 +28,8 @@ public class DinoController : Interactable
 
     public void Interact()
     {
-        //revealed = true;
+        revealed = true;
+        ChangeCursor(revealed);
         index++;
 
         if (index >= dinoSprites.Length)

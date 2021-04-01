@@ -18,18 +18,25 @@ public class Interactable : MonoBehaviour
 
     [Tooltip("Cursor texture used when this object has not been interacted with already")]
     public Texture2D questionMarkCursor;
-    
-    [Tooltip("Offset used on the revealed cursor for this object")]
-    public Vector2 revealedOffset;
 
     [Tooltip("SFX audiosource")]
     public AudioSource sfxSource;
 
     /// <summary>
+    /// Offset used on the revealed cursor for this object
+    /// </summary>
+    private Vector2 revealedOffset;
+
+    /// <summary>
     /// Offset used on the question mark cursor for this object
     /// </summary>
-    private Vector2 questionMarkOffset = new Vector2(5, 5);
+    private Vector2 questionMarkOffset;
 
+    private void Start()
+    {
+        questionMarkOffset = new Vector2(questionMarkCursor.width / 2, questionMarkCursor.height / 2);
+        revealedOffset = new Vector2(revealedCursor.width / 2, revealedCursor.height / 2);
+    }
     /// <summary>
     /// Changes the cursor sprite
     /// </summary>
