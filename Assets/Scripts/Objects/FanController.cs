@@ -25,6 +25,9 @@ public class FanController : Interactable
     [Tooltip("Sound that plays when fan gets turned off")]
     public AudioClip offSound;
 
+    [Tooltip("Sound that plays when fan breaks")]
+    public AudioClip breakSound;
+
     [Tooltip("How long fan will track interactions to determine if it breaks")]
     public float interactTimer = 5f;
 
@@ -58,20 +61,28 @@ public class FanController : Interactable
     /// </summary>
     public void Interact()
     {
+        // Checks if fan is currently broken
         if (!broken)
         {
+            // If fan hasnt started counting interactions, start counting
             if (!counting)
             {
                 counting = true;
                 StartCoroutine(CountInteractions());
                 numInteractions = 1;
             }
+            // If it already started, count this interaction
             else
             {
                 numInteractions++;
             }
-            revealed = true;
-            ChangeCursor(revealed);
+            // Change cursor to revealed one if it wasn't already
+            if (!revealed)
+            {
+                revealed = true;
+                ChangeCursor(revealed);
+            }
+            // Turn fan animation on/off
             if (isOn)
             {
                 isOn = false;
@@ -92,6 +103,7 @@ public class FanController : Interactable
         float timer = 0;
         while (counting)
         {
+            // Check if timer should be counting
             if (timer < breakTime)
             {
                 timer += Time.deltaTime;
@@ -100,22 +112,31 @@ public class FanController : Interactable
             {
                 counting = false;
             }
+            // Checks if fan should be broken because player clicked on it too much
             if (numInteractions > breakCount)
             {
+                // Turns fan off if it is on
+                if (isOn)
+                {
+                    isOn = false;
+                    bladesAnim.SetBool("shouldRun", isOn);
+                }
                 counting = false;
                 broken = true;
                 StartCoroutine(BreakFan());
-                numInteractions = 1;
             }
             yield return null;
         }
     }
     private IEnumerator BreakFan()
     {
+        // Plays break sound and spawns particles
+        PlaySFX(breakSound);
         float timer = 0;
-        GameObject particles = Instantiate(brokenParticles, gameObject.transform);
+        GameObject particles = Instantiate(brokenParticles, bladesAnim.gameObject.transform);
         while (broken)
         {
+            // Fan will be broken for however long breakTime is
             if (timer < breakTime)
             {
                 timer += Time.deltaTime;
@@ -126,6 +147,7 @@ public class FanController : Interactable
             }
             yield return null;
         }
+        // Destroys particles when fan is no longer broken
         Destroy(particles);
     }
 }
