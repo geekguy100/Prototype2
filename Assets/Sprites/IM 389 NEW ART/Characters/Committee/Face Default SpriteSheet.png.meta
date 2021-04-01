@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 5cffad278fb2b2c4d83318ed1ce47602
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8147963510264418405
+    second: Face Default SpriteSheet_0
+  - first:
+      213: 59930216064003479
+    second: Face Default SpriteSheet_1
+  - first:
+      213: 1920217966466269303
+    second: Face Default SpriteSheet_2
+  - first:
+      213: 3997305155221694256
+    second: Face Default SpriteSheet_3
+  - first:
+      213: 7538749205188396741
+    second: Face Default SpriteSheet_4
+  - first:
+      213: -8572014320233133710
+    second: Face Default SpriteSheet_5
+  - first:
+      213: 2755936241141179581
+    second: Face Default SpriteSheet_6
+  - first:
+      213: 4569354346452403755
+    second: Face Default SpriteSheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +65,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +97,189 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Face Default SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 229
+        width: 131
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f28df6b5e9cee80800000000000000
+      internalID: -8147963510264418405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Default SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 229
+        width: 131
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79daec7c63ae4d000800000000000000
+      internalID: 59930216064003479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Default SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 229
+        width: 131
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7708b86111cf5aa10800000000000000
+      internalID: 1920217966466269303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Default SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 125
+        width: 131
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037a3db2cd7497730800000000000000
+      internalID: 3997305155221694256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Default SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 124
+        width: 131
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6430ac5740f9860800000000000000
+      internalID: 7538749205188396741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Default SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 124
+        width: 131
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27941f864661a0980800000000000000
+      internalID: -8572014320233133710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Default SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 131
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db468d4e86d0f3620800000000000000
+      internalID: 2755936241141179581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Default SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 19
+        width: 131
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26ce21919b996f30800000000000000
+      internalID: 4569354346452403755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

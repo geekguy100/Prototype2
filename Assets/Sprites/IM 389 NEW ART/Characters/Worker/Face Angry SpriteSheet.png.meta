@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: a4719c034fa4ebf4fa5577176be7941c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7440875791693199956
+    second: Face Angry SpriteSheet_0
+  - first:
+      213: 8163242623829850666
+    second: Face Angry SpriteSheet_1
+  - first:
+      213: -6624443795390112931
+    second: Face Angry SpriteSheet_2
+  - first:
+      213: -7396797594776992516
+    second: Face Angry SpriteSheet_3
+  - first:
+      213: -3924066560733721179
+    second: Face Angry SpriteSheet_4
+  - first:
+      213: 1015860828165912747
+    second: Face Angry SpriteSheet_5
+  - first:
+      213: -4693574805768394847
+    second: Face Angry SpriteSheet_6
+  - first:
+      213: 5645553114711507946
+    second: Face Angry SpriteSheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +65,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +97,189 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Face Angry SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 220
+        width: 137
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a3dadeb1d434760800000000000000
+      internalID: 7440875791693199956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Angry SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 220
+        width: 137
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ab4b86ae9a94170800000000000000
+      internalID: 8163242623829850666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Angry SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 220
+        width: 137
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b5b35477f3114a0800000000000000
+      internalID: -6624443795390112931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Angry SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 137
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf48ad707cb495990800000000000000
+      internalID: -7396797594776992516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Angry SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 118
+        width: 137
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad4a7ce04aea89c0800000000000000
+      internalID: -3924066560733721179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Angry SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 119
+        width: 137
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8301c7a00191e00800000000000000
+      internalID: 1015860828165912747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Angry SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 137
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7a37fe4921ddeb0800000000000000
+      internalID: -4693574805768394847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Angry SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 18
+        width: 137
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3cafa75a8095e40800000000000000
+      internalID: 5645553114711507946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

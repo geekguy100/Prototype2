@@ -1,7 +1,115 @@
 fileFormatVersion: 2
 guid: 90851564eb8167a468cc5de354e745a5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7207665416996787933
+    second: Face Intrigued SpriteSheet_0
+  - first:
+      213: -4392684000065636184
+    second: Face Intrigued SpriteSheet_1
+  - first:
+      213: -2866861910862220793
+    second: Face Intrigued SpriteSheet_2
+  - first:
+      213: -2325959584177723654
+    second: Face Intrigued SpriteSheet_3
+  - first:
+      213: -8545119657384896963
+    second: Face Intrigued SpriteSheet_4
+  - first:
+      213: -1928584444639775189
+    second: Face Intrigued SpriteSheet_5
+  - first:
+      213: 7861945041412468903
+    second: Face Intrigued SpriteSheet_6
+  - first:
+      213: -8478113790373877369
+    second: Face Intrigued SpriteSheet_7
+  - first:
+      213: -771584544794049338
+    second: Face Intrigued SpriteSheet_8
+  - first:
+      213: 5652388064057700959
+    second: Face Intrigued SpriteSheet_9
+  - first:
+      213: 114098290313963615
+    second: Face Intrigued SpriteSheet_10
+  - first:
+      213: 3358519436103076984
+    second: Face Intrigued SpriteSheet_11
+  - first:
+      213: -8591022095881468866
+    second: Face Intrigued SpriteSheet_12
+  - first:
+      213: -5151010440767626621
+    second: Face Intrigued SpriteSheet_13
+  - first:
+      213: -188794483409848007
+    second: Face Intrigued SpriteSheet_14
+  - first:
+      213: 5260881267327130464
+    second: Face Intrigued SpriteSheet_15
+  - first:
+      213: -3194987822217320120
+    second: Face Intrigued SpriteSheet_16
+  - first:
+      213: -16517223783168060
+    second: Face Intrigued SpriteSheet_17
+  - first:
+      213: -4063592624702896730
+    second: Face Intrigued SpriteSheet_18
+  - first:
+      213: 7826831243002322771
+    second: Face Intrigued SpriteSheet_19
+  - first:
+      213: -86359030015435239
+    second: Face Intrigued SpriteSheet_20
+  - first:
+      213: 2628662494375572264
+    second: Face Intrigued SpriteSheet_21
+  - first:
+      213: 7859392867306353795
+    second: Face Intrigued SpriteSheet_22
+  - first:
+      213: -3663366699811476377
+    second: Face Intrigued SpriteSheet_23
+  - first:
+      213: -4765896567187245338
+    second: Face Intrigued SpriteSheet_24
+  - first:
+      213: -4766997462044948237
+    second: Face Intrigued SpriteSheet_25
+  - first:
+      213: 956411162610872677
+    second: Face Intrigued SpriteSheet_26
+  - first:
+      213: 6658490211061265106
+    second: Face Intrigued SpriteSheet_27
+  - first:
+      213: 7495131405089842392
+    second: Face Intrigued SpriteSheet_28
+  - first:
+      213: 2014513569970892111
+    second: Face Intrigued SpriteSheet_29
+  - first:
+      213: 5701499346390184370
+    second: Face Intrigued SpriteSheet_30
+  - first:
+      213: -7041285681841880078
+    second: Face Intrigued SpriteSheet_31
+  - first:
+      213: 3758149170441503978
+    second: Face Intrigued SpriteSheet_32
+  - first:
+      213: -6879173700486684285
+    second: Face Intrigued SpriteSheet_33
+  - first:
+      213: -4777495533144955239
+    second: Face Intrigued SpriteSheet_34
+  - first:
+      213: -8744251815678884419
+    second: Face Intrigued SpriteSheet_35
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +149,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +181,189 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Face Intrigued SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 141
+        width: 73
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329e908bd7a39fb90800000000000000
+      internalID: -7207665416996787933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Intrigued SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 141
+        width: 73
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8bb85ec2d0a03c0800000000000000
+      internalID: -4392684000065636184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Intrigued SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 141
+        width: 73
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702b5f6084cd638d0800000000000000
+      internalID: -2866861910862220793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Intrigued SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 141
+        width: 73
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6eb27e41888bfd0800000000000000
+      internalID: -2325959584177723654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Intrigued SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 141
+        width: 73
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d369d5212f2a96980800000000000000
+      internalID: -8545119657384896963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Intrigued SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 141
+        width: 73
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26f6e96aaa4c35e0800000000000000
+      internalID: -1928584444639775189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Intrigued SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 141
+        width: 73
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0b80d5c5d3b1d60800000000000000
+      internalID: 7861945041412468903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Intrigued SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 26
+        width: 73
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789ac673d60b75a80800000000000000
+      internalID: -8478113790373877369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: f38d5b2b58e612e4c8528e4ead015a96
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4392037607108162608
+    second: Face Horror SpriteSheet_0
+  - first:
+      213: 3690830986782558256
+    second: Face Horror SpriteSheet_1
+  - first:
+      213: 7433498735788708547
+    second: Face Horror SpriteSheet_2
+  - first:
+      213: 2873852238344570612
+    second: Face Horror SpriteSheet_3
+  - first:
+      213: -4261891129449297038
+    second: Face Horror SpriteSheet_4
+  - first:
+      213: 4434858062446406588
+    second: Face Horror SpriteSheet_5
+  - first:
+      213: -2766857165148564806
+    second: Face Horror SpriteSheet_6
+  - first:
+      213: -2653543803164265279
+    second: Face Horror SpriteSheet_7
+  - first:
+      213: 292736914309681408
+    second: Face Horror SpriteSheet_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +68,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +100,210 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Face Horror SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 221
+        width: 130
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db492cf0195c03c0800000000000000
+      internalID: -4392037607108162608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Horror SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 221
+        width: 130
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038cd254a37783330800000000000000
+      internalID: 3690830986782558256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Horror SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 221
+        width: 130
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2500147b7192760800000000000000
+      internalID: 7433498735788708547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Horror SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 221
+        width: 130
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f64d7b6269f1e720800000000000000
+      internalID: 2873852238344570612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Horror SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 221
+        width: 130
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b49c52998bad4c0800000000000000
+      internalID: -4261891129449297038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Horror SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 221
+        width: 130
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb256139e7cb8d30800000000000000
+      internalID: 4434858062446406588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Horror SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 221
+        width: 130
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2531751162a99d0800000000000000
+      internalID: -2766857165148564806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Horror SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 39
+        width: 130
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4747858f7bc2bd0800000000000000
+      internalID: -2653543803164265279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Horror SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 39
+        width: 130
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001921e2ca2001400800000000000000
+      internalID: 292736914309681408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

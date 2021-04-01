@@ -1,7 +1,106 @@
 fileFormatVersion: 2
 guid: 7bd0953b6f77d9744a9aab991f0255d4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -379724392253467705
+    second: Head Shocked SpriteSheet_0
+  - first:
+      213: -2353970582698679251
+    second: Head Shocked SpriteSheet_1
+  - first:
+      213: 6427520222956404434
+    second: Head Shocked SpriteSheet_2
+  - first:
+      213: 5991071178190280009
+    second: Head Shocked SpriteSheet_3
+  - first:
+      213: 5385079821706235134
+    second: Head Shocked SpriteSheet_4
+  - first:
+      213: 728229827687675901
+    second: Head Shocked SpriteSheet_5
+  - first:
+      213: -8984259641182989488
+    second: Head Shocked SpriteSheet_6
+  - first:
+      213: -2015851761295256104
+    second: Head Shocked SpriteSheet_7
+  - first:
+      213: -4365369089144698701
+    second: Head Shocked SpriteSheet_8
+  - first:
+      213: -2185785894841501230
+    second: Head Shocked SpriteSheet_9
+  - first:
+      213: -1702521347058829740
+    second: Head Shocked SpriteSheet_10
+  - first:
+      213: 7974383361756182647
+    second: Head Shocked SpriteSheet_11
+  - first:
+      213: -6141466543585220503
+    second: Head Shocked SpriteSheet_12
+  - first:
+      213: -668071977929809677
+    second: Head Shocked SpriteSheet_13
+  - first:
+      213: -1736598125417456142
+    second: Head Shocked SpriteSheet_14
+  - first:
+      213: -1554969605922403989
+    second: Head Shocked SpriteSheet_15
+  - first:
+      213: -5801405322536821348
+    second: Head Shocked SpriteSheet_16
+  - first:
+      213: 8590646218319891699
+    second: Head Shocked SpriteSheet_17
+  - first:
+      213: -3903864222299745141
+    second: Head Shocked SpriteSheet_18
+  - first:
+      213: -3070800211819460585
+    second: Head Shocked SpriteSheet_19
+  - first:
+      213: 2930774578510061050
+    second: Head Shocked SpriteSheet_20
+  - first:
+      213: -1838905170933657710
+    second: Head Shocked SpriteSheet_21
+  - first:
+      213: 5131359798835328112
+    second: Head Shocked SpriteSheet_22
+  - first:
+      213: -3427091885398581008
+    second: Head Shocked SpriteSheet_23
+  - first:
+      213: 5927393871267742252
+    second: Head Shocked SpriteSheet_24
+  - first:
+      213: -2778257649403575930
+    second: Head Shocked SpriteSheet_25
+  - first:
+      213: -4305000588567227967
+    second: Head Shocked SpriteSheet_26
+  - first:
+      213: -4386783832323718037
+    second: Head Shocked SpriteSheet_27
+  - first:
+      213: 2462321203657537286
+    second: Head Shocked SpriteSheet_28
+  - first:
+      213: -8139606681238971277
+    second: Head Shocked SpriteSheet_29
+  - first:
+      213: -6990774010299362851
+    second: Head Shocked SpriteSheet_30
+  - first:
+      213: -3215873614295752594
+    second: Head Shocked SpriteSheet_31
+  - first:
+      213: -9174428314185195332
+    second: Head Shocked SpriteSheet_32
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +140,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +172,252 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Head Shocked SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 673
+        width: 339
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c35e275da2fabaf0800000000000000
+      internalID: -379724392253467705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Shocked SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 673
+        width: 339
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24a6861a34055fd0800000000000000
+      internalID: -2353970582698679251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Shocked SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 673
+        width: 339
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2deb4fb9693233950800000000000000
+      internalID: 6427520222956404434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Shocked SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 460
+        width: 339
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 945dc189e7f842350800000000000000
+      internalID: 5991071178190280009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Shocked SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 460
+        width: 339
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc8ce30195abba40800000000000000
+      internalID: 5385079821706235134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Shocked SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 460
+        width: 339
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7fa228b213b1a00800000000000000
+      internalID: 728229827687675901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Shocked SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 247
+        width: 339
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053d86df47f715380800000000000000
+      internalID: -8984259641182989488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Shocked SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 247
+        width: 339
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d59628e0814604e0800000000000000
+      internalID: -2015851761295256104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Shocked SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 247
+        width: 339
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b84f0031f71b63c0800000000000000
+      internalID: -4365369089144698701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Shocked SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 339
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9b9e63f478aa1e0800000000000000
+      internalID: -2185785894841501230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Shocked SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 34
+        width: 339
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456f90eeadd6f58e0800000000000000
+      internalID: -1702521347058829740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,0 +1,310 @@
+fileFormatVersion: 2
+guid: 2dc9a2ff2824dfb41977e64afec0fa4e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6266760557409356988
+    second: Face Shocked_Updated_SpriteSheet_0
+  - first:
+      213: 3319749784650872149
+    second: Face Shocked_Updated_SpriteSheet_1
+  - first:
+      213: -4913720930158836494
+    second: Face Shocked_Updated_SpriteSheet_2
+  - first:
+      213: 3830269132891740441
+    second: Face Shocked_Updated_SpriteSheet_3
+  - first:
+      213: 9162528201686965738
+    second: Face Shocked_Updated_SpriteSheet_4
+  - first:
+      213: -5811001969977588572
+    second: Face Shocked_Updated_SpriteSheet_5
+  - first:
+      213: 2625916025036786376
+    second: Face Shocked_Updated_SpriteSheet_6
+  - first:
+      213: -8816974351006509124
+    second: Face Shocked_Updated_SpriteSheet_7
+  - first:
+      213: -7048272707392967368
+    second: Face Shocked_Updated_SpriteSheet_8
+  - first:
+      213: 8459733884089332413
+    second: Face Shocked_Updated_SpriteSheet_9
+  - first:
+      213: 4019456645098971444
+    second: Face Shocked_Updated_SpriteSheet_10
+  - first:
+      213: -3341460630373584867
+    second: Face Shocked_Updated_SpriteSheet_11
+  - first:
+      213: 4367835542331890055
+    second: Face Shocked_Updated_SpriteSheet_12
+  - first:
+      213: -6561366787166783608
+    second: Face Shocked_Updated_SpriteSheet_13
+  - first:
+      213: 3829649344259546104
+    second: Face Shocked_Updated_SpriteSheet_14
+  - first:
+      213: -6790794244162941701
+    second: Face Shocked_Updated_SpriteSheet_15
+  - first:
+      213: 1500934679999693678
+    second: Face Shocked_Updated_SpriteSheet_16
+  - first:
+      213: 5238490613731482524
+    second: Face Shocked_Updated_SpriteSheet_17
+  - first:
+      213: -7128955508597454024
+    second: Face Shocked_Updated_SpriteSheet_18
+  - first:
+      213: -5118705314407871442
+    second: Face Shocked_Updated_SpriteSheet_19
+  - first:
+      213: 2474976126062396046
+    second: Face Shocked_Updated_SpriteSheet_20
+  - first:
+      213: -8081364145688318050
+    second: Face Shocked_Updated_SpriteSheet_21
+  - first:
+      213: -2998305655716547127
+    second: Face Shocked_Updated_SpriteSheet_22
+  - first:
+      213: -6256837185405694477
+    second: Face Shocked_Updated_SpriteSheet_23
+  - first:
+      213: 5011021949851337831
+    second: Face Shocked_Updated_SpriteSheet_24
+  - first:
+      213: 9145554488695795765
+    second: Face Shocked_Updated_SpriteSheet_25
+  - first:
+      213: -5928266044872984287
+    second: Face Shocked_Updated_SpriteSheet_26
+  - first:
+      213: 2709153044198496764
+    second: Face Shocked_Updated_SpriteSheet_27
+  - first:
+      213: 4239653788922311714
+    second: Face Shocked_Updated_SpriteSheet_28
+  - first:
+      213: -5106973929096027416
+    second: Face Shocked_Updated_SpriteSheet_29
+  - first:
+      213: -4012376511595651966
+    second: Face Shocked_Updated_SpriteSheet_30
+  - first:
+      213: 8056066053740758804
+    second: Face Shocked_Updated_SpriteSheet_31
+  - first:
+      213: -7161956985993409129
+    second: Face Shocked_Updated_SpriteSheet_32
+  - first:
+      213: -4868076013188377757
+    second: Face Shocked_Updated_SpriteSheet_33
+  - first:
+      213: -7297657038302268534
+    second: Face Shocked_Updated_SpriteSheet_34
+  - first:
+      213: 6921669432541028344
+    second: Face Shocked_Updated_SpriteSheet_35
+  - first:
+      213: 3128006347710618821
+    second: Face Shocked_Updated_SpriteSheet_36
+  - first:
+      213: -5878040306912000357
+    second: Face Shocked_Updated_SpriteSheet_37
+  - first:
+      213: -648786746315456997
+    second: Face Shocked_Updated_SpriteSheet_38
+  - first:
+      213: 8970810309828560903
+    second: Face Shocked_Updated_SpriteSheet_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Face Shocked_Updated_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 107
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc40d4368108f650800000000000000
+      internalID: 6266760557409356988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Shocked_Updated_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 18
+        width: 107
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5557b4127de121e20800000000000000
+      internalID: 3319749784650872149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Shocked_Updated_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 18
+        width: 107
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f40b7819d4fecbb0800000000000000
+      internalID: -4913720930158836494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Face Shocked_Updated_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 18
+        width: 107
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919d7249b79d72530800000000000000
+      internalID: 3830269132891740441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
