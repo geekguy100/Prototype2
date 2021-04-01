@@ -18,6 +18,9 @@ public class ResultsHandler : MonoBehaviour
     [SerializeField] private Slider efficiencySlider = null;
     [SerializeField] private Slider approvalSlider = null;
     [SerializeField] private Slider financeSlider = null;
+    [SerializeField] private Slider efficiencyBackground = null;
+    [SerializeField] private Slider approvalBackground = null;
+    [SerializeField] private Slider financeBackground = null;
 
     [Header("Percent Change Texts")]
     [SerializeField] private TextMeshProUGUI efficiencyText = null;
@@ -86,6 +89,7 @@ public class ResultsHandler : MonoBehaviour
     /// <param name="stats">The initial stats.</param>
     public void Init(float[] stats)
     {
+        this.stats = (float[])stats.Clone();
         efficiencySlider.value = stats[1] / 100f;
         approvalSlider.value = stats[2] / 100f;
         financeSlider.value = stats[3] / 100f;
@@ -97,12 +101,37 @@ public class ResultsHandler : MonoBehaviour
     /// <param name="stats">The updated stats.</param>
     public void Display(float[] stats, string result)
     {
+        this.stats = new float[4];
+        SetBackgroundSliders(stats);
         this.stats = stats;
 
         resultsText.text = result;
 
         ShowBackgroundObjs();
         StartCoroutine(WaitThenAnimate());
+    }
+
+    private void SetBackgroundSliders(float[] updatedStats)
+    {
+        float change = updatedStats[1] - stats[1];
+        if (change > 0)
+            efficiencyBackground.value = updatedStats[1] / 100f;
+        else
+            efficiencyBackground.value = stats[1] / 100f;
+
+
+        change = updatedStats[2] - stats[2];
+        if (change > 0)
+            approvalBackground.value = updatedStats[2] / 100f;
+        else
+            approvalBackground.value = stats[2] / 100f;
+
+
+        change = updatedStats[3] - stats[3];
+        if (change > 0)
+            financeBackground.value = updatedStats[3] / 100f;
+        else
+            financeBackground.value = stats[3] / 100f;
     }
 
     /// <summary>
