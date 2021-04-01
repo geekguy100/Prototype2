@@ -32521,7 +32521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1347828860
 Transform:
   m_ObjectHideFlags: 0
@@ -39268,11 +39268,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b17e2e8223e424989739c4c179eda4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeWaitTime: 0.45
   pauseWaitTime: 1
   animatorControllers:
   - {fileID: 22100000, guid: 586ba460084733849ab439494ec8e972, type: 2}
   - {fileID: 9100000, guid: ba2d2b2a1e1074741b59781a902cfce9, type: 2}
+  fadeWaitTimes:
+  - 2
+  - 1
 --- !u!114 &1601565797
 MonoBehaviour:
   m_ObjectHideFlags: 0

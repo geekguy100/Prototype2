@@ -24,14 +24,14 @@ public class Transition : MonoBehaviour
 
     private Animator fadeAnimator;
 
-    [Tooltip("The time to wait after fading in.")]
-    [SerializeField] private float fadeWaitTime;
+    private float fadeWaitTime;
 
     [Tooltip("The time to wait after fading in.")]
     [SerializeField] private float pauseWaitTime;
 
     [Tooltip("The possible animator controllers to use for transition animations.")]
     [SerializeField] private RuntimeAnimatorController[] animatorControllers;
+    [SerializeField] private float[] fadeWaitTimes;
 
     private PauseManager pauseManager;
 
@@ -46,12 +46,14 @@ public class Transition : MonoBehaviour
     {
         if (variableTransitions)
             SetRandomController();
+        else
+            fadeWaitTime = fadeWaitTimes[1];
 
         fadeAnimator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(fadeWaitTime);
         print("should be false it is: " + pauseManager.canPause);
         fadeAnimator.SetTrigger("FadeOut");
-        yield return new WaitForSeconds(fadeWaitTime);
+        //yield return new WaitForSeconds(fadeWaitTime);
         print("should be false it is: " + pauseManager.canPause);
         callback?.Invoke();
         yield return new WaitForSeconds(pauseWaitTime);
@@ -72,6 +74,7 @@ public class Transition : MonoBehaviour
         int range = animatorControllers.Length;
         int index = Random.Range(0, range);
         fadeAnimator.runtimeAnimatorController = animatorControllers[index];
+        fadeWaitTime = fadeWaitTimes[index];
     }
 
     public void StartTransition(TransitionCallback callback)
