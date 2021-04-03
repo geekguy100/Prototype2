@@ -1057,7 +1057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f29fd89cced524d86f627f93969a69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBeforeFadeIn: 3
+  timeBeforeFadeIn: 7
   textObject: {fileID: 0}
 --- !u!1 &32626973
 GameObject:
@@ -13196,8 +13196,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2042046204}
-        m_TargetAssemblyTypeName: Kyle.GameManager, Assembly-CSharp
-        m_MethodName: ContinueFromResults
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ActivateLoadingMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22739,6 +22739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 792394240}
   - component: {fileID: 792394241}
+  - component: {fileID: 792394242}
   m_Layer: 5
   m_Name: LoadingMenu
   m_TagString: Untagged
@@ -22798,6 +22799,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &792394242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792394239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5066de101934f7b4c8138ee4d58288d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GM: {fileID: 2042046200}
 --- !u!114 &793081778 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114076530150876742, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
@@ -54990,7 +55004,7 @@ MonoBehaviour:
   chosenColor: {r: 0.5686275, g: 0.85098046, b: 0.9294118, a: 1}
   animationHolder: {fileID: 321341289}
   musicHandler: {fileID: 120202839}
-  loadingMenu: {fileID: 0}
+  loadingMenu: {fileID: 792394239}
   maxChoices: 12
   setupText: {fileID: 1790946470}
   resultsText: {fileID: 1235360999}

@@ -9,7 +9,7 @@ public class LoadingMenuSkip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKey)
+        if (Input.anyKey || Input.anyKeyDown)
         {
             GM.GetComponent<GameManager>().ContinueFromResults();
             gameObject.SetActive(false);
