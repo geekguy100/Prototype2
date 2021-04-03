@@ -40,10 +40,10 @@ public class MusicHandler : MonoBehaviour
         desiredVolume = musicSource.volume;
     }
 
-    private IEnumerator FadeInMusic(AudioClip newMusic)
+    private IEnumerator FadeOutMusic(AudioClip newMusic)
     {
         //musicSource.volume = 0;
-
+        Debug.Log("Starting music fade");
         float t = 0;
 
         while (t < volumeFadeTime)
@@ -63,7 +63,7 @@ public class MusicHandler : MonoBehaviour
 
         musicSource.clip = newMusic;
         musicSource.PlayScheduled(0);
-
+        
         t = 0;
 
         while (t < volumeFadeTime)
@@ -82,7 +82,7 @@ public class MusicHandler : MonoBehaviour
     /// <param name="newMusic">Audio clip of music to play</param>
     public void ChangeMusic(AudioClip newMusic)
     {
-        StartCoroutine(FadeInMusic(newMusic));
+        StartCoroutine(FadeOutMusic(newMusic));
     }
 
     /// <summary>
@@ -90,7 +90,7 @@ public class MusicHandler : MonoBehaviour
     /// </summary>
     public void PlayLoadingScreen()
     {
-        StartCoroutine(FadeInMusic(loadingScreenMusic));
+        StartCoroutine(FadeOutMusic(loadingScreenMusic));
     }
 
     /// <summary>
@@ -98,11 +98,11 @@ public class MusicHandler : MonoBehaviour
     /// </summary>
     public void PlayMenuMusic()
     {
-        StartCoroutine(FadeInMusic(menuMusic));
+        StartCoroutine(FadeOutMusic(menuMusic));
     }
 
     public void PlayEndingMusic()
     {
-        StartCoroutine(FadeInMusic(endingMusic));
+        StartCoroutine(FadeOutMusic(endingMusic));
     }
 }

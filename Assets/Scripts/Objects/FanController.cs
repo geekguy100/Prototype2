@@ -54,7 +54,7 @@ public class FanController : Interactable
     /// <summary>
     /// Number of times player has clicked fan during current breakTime timer
     /// </summary>
-    private int numInteractions = 0;
+    [SerializeField]private int numInteractions = 0;
 
     /// <summary>
     /// Turns the fan animation off if it is on, turns it on if it is off
@@ -123,6 +123,7 @@ public class FanController : Interactable
                 }
                 counting = false;
                 broken = true;
+                numInteractions = 0;
                 StartCoroutine(BreakFan());
             }
             yield return null;

@@ -2889,7 +2889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeFadeTime: 0.5
-  loadingScreenMusic: {fileID: 0}
+  loadingScreenMusic: {fileID: 8300000, guid: 37cc405838d6d6046bc7d1b19768325d, type: 3}
   menuMusic: {fileID: 8300000, guid: 4519b7c4e525aa54f98002ff8aa90f75, type: 3}
   endingMusic: {fileID: 8300000, guid: bfbf85b9eabe5814ea1ad4e4443d4c88, type: 3}
 --- !u!1 &122087061
@@ -9983,6 +9983,7 @@ MonoBehaviour:
   breakTime: 4
   breakCount: 10
   brokenParticles: {fileID: 8562086034200742265, guid: e59c15dcee93e3d4e9f1841019667a9d, type: 3}
+  numInteractions: 0
 --- !u!58 &424646283
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -28996,7 +28997,6 @@ MonoBehaviour:
   - 60
   - 40
   chibiCharacter: {fileID: 1194671155}
-  typeWriterSource: {fileID: 0}
   chosenColor: {r: 0.59607846, g: 0.87843144, b: 0.9490197, a: 1}
 --- !u!1 &1166705054
 GameObject:
@@ -49707,6 +49707,7 @@ MonoBehaviour:
   chosenColor: {r: 0.5686275, g: 0.85098046, b: 0.9294118, a: 1}
   animationHolder: {fileID: 321341289}
   musicHandler: {fileID: 120202839}
+  loadingMenu: {fileID: 0}
   maxChoices: 12
   setupText: {fileID: 1790946470}
   resultsText: {fileID: 1235360999}

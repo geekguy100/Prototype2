@@ -3375,7 +3375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeFadeTime: 0.5
-  loadingScreenMusic: {fileID: 0}
+  loadingScreenMusic: {fileID: 8300000, guid: 37cc405838d6d6046bc7d1b19768325d, type: 3}
   menuMusic: {fileID: 8300000, guid: 4519b7c4e525aa54f98002ff8aa90f75, type: 3}
   endingMusic: {fileID: 8300000, guid: bfbf85b9eabe5814ea1ad4e4443d4c88, type: 3}
 --- !u!1 &122087061
@@ -10062,7 +10062,7 @@ MonoBehaviour:
     called a role booklet that will give them information about their position and
     the Smart Grid system.
 
-    
+
 
     These Advisors will communicate their knowledge
     with the rest of the team and work with the Manager to figure out the best decision
@@ -10449,6 +10449,7 @@ MonoBehaviour:
   breakTime: 4
   breakCount: 10
   brokenParticles: {fileID: 8562086034200742265, guid: e59c15dcee93e3d4e9f1841019667a9d, type: 3}
+  numInteractions: 0
 --- !u!58 &424646283
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10590,10 +10591,10 @@ MonoBehaviour:
     sound. The quicker you respond to each question, the better your resulting stats
     will be.
 
-    
 
-    At the end of each question, the stats will change based
-    on the choice you made and you will see the result of your decision.
+
+    At the end of each question, the stats will change based on the
+    choice you made and you will see the result of your decision.
 
 '
   m_isRightToLeft: 0
@@ -44540,12 +44541,12 @@ MonoBehaviour:
     The Engineer manages efficiency, or how well the Smart Grid is running. The Publicist
     handles approval, which is  how the public views your company.
 
-    
 
-    Your
-    goal as a team is to get all of these stats as high as possible, but sacrifices
-    will often have to be made. Each Advisor will want to prioritize their own stat,
-    but be willing to make compromises.
+
+    Your goal
+    as a team is to get all of these stats as high as possible, but sacrifices will
+    often have to be made. Each Advisor will want to prioritize their own stat, but
+    be willing to make compromises.
 
 
 '

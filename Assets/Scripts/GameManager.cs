@@ -254,6 +254,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void Awake()
     {
+        Application.targetFrameRate = 200;
         timer.OnTimerEnd += ChoiceSelect;
     }
 
