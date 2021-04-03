@@ -10540,16 +10540,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'There are 3 unique types of Advisors. The Engineer, Publicist, and Accountant
-    each have their own field of expertise.They will also receive a packet of information
-    called a role booklet that will give them information about their position and
-    the Smart Grid system.
+  m_text: 'There are 3 types of Advisors: the Engineer, the Publicist, and the Accountant.
+    They each have a different field of expertise. Every Advisor will also receive
+    a packet of information called a role booklet that will give them information
+    about their position and the Smart Grid system.
 
+    
 
-
-    These Advisors will communicate their knowledge
-    with the rest of the team and work with the Manager to figure out the best decision
-    for their company and for their own interests.
+    These Advisors will
+    communicate their knowledge with the rest of the team and work with the Manager
+    to figure out the best decision for their company and for their own interests.
 
 '
   m_isRightToLeft: 0
