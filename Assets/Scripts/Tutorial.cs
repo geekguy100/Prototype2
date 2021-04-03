@@ -155,9 +155,6 @@ public class Tutorial : MonoBehaviour
     /// </summary>
     private bool zoomed = false;
 
-    [Tooltip("The AudioSource that plays the typewriter sound")]
-    public GameObject typeWriterSource;
-
     [Tooltip("Color that the choice buttons change to when they are chosen")]
     public Color chosenColor;
 
@@ -259,7 +256,7 @@ public class Tutorial : MonoBehaviour
     {
         step++;
         setUpText.text = timerText;
-        Invoke("PlayTimerWarning", 5f);
+        //Invoke("PlayTimerWarning", 5f);
     }
 
     /// <summary>

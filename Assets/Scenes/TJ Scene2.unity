@@ -4875,7 +4875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -69, y: -31.9}
+  m_AnchoredPosition: {x: -69, y: -19.3}
   m_SizeDelta: {x: 431.2343, y: 216.7916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206659831
@@ -4898,13 +4898,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Each advisor has their own individual field of expertise. This field of
-    expertise is provided to each advisor via their own personal role booklet. Advisors
-    communicate their knowledge with the team and the manager, so that they can make
-    a more informed decision.
-
-
-    Press the Next button below to continue the tutorial.'
+  m_text: "You are all working for a company implementing the Smart Grid, an upgraded
+    version of the existing power grid, into your community. You will encounter several
+    scenarios where you will need to make the best decision for your company\u2019s
+    interests.\r\n\r\nYour team will have one Manager, who will make the final decisions
+    for each scenario, and the rest of the group will be Advisors.\r\n\r\nPress the
+    \u201CNext\u201D button below to continue the tutorial or the \u201CPrevious\u201D
+    button to go back to the previous screen.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4931,8 +4931,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 14.5
+  m_fontSizeBase: 14.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 14
@@ -6879,7 +6879,7 @@ GameObject:
   - component: {fileID: 303795874}
   - component: {fileID: 303795873}
   m_Layer: 5
-  m_Name: Tutorial Panel 5
+  m_Name: Tutorial Panel 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6907,7 +6907,7 @@ RectTransform:
   - {fileID: 820295701}
   - {fileID: 1796569948}
   m_Father: {fileID: 1202997320}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9221,6 +9221,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353662401}
   m_CullTransparentMesh: 0
+--- !u!1 &367059263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 367059264}
+  - component: {fileID: 367059266}
+  - component: {fileID: 367059265}
+  m_Layer: 5
+  m_Name: Header
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &367059264
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367059263}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1715356637}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -79.1, y: 100.4}
+  m_SizeDelta: {x: 440.8911, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &367059265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367059263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Welcome to POWERful Decisions! \n\n"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 22
+  m_fontSizeBase: 22
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 6, y: 6, z: 2.1308079, w: 6}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &367059266
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367059263}
+  m_CullTransparentMesh: 0
 --- !u!224 &373132382 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224936609725225130, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
@@ -9312,7 +9446,7 @@ GameObject:
   - component: {fileID: 379766728}
   - component: {fileID: 379766727}
   m_Layer: 5
-  m_Name: Tutorial Panel 8
+  m_Name: Tutorial Panel 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9342,7 +9476,7 @@ RectTransform:
   - {fileID: 1975323672}
   - {fileID: 197629431}
   m_Father: {fileID: 1202997320}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9900,7 +10034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -69, y: -31.9}
+  m_AnchoredPosition: {x: -69, y: -32.7}
   m_SizeDelta: {x: 431.2343, y: 216.7916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420239977
@@ -9923,14 +10057,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Each field of expertise has its own individual stat. The stats are as
-    follows: Finance, Efficiency, and Approval. These stats will increase and decrease
-    based on the decisions you make. It is your goal as a team to maximize each of
-    these as much as possible without any of them going to zero.
+  m_text: 'There are 3 unique types of Advisors. The Engineer, Publicist, and Accountant
+    each have their own field of expertise.They will also receive a packet of information
+    called a role booklet that will give them information about their position and
+    the Smart Grid system.
 
+    
 
-    Press the
-    Next button below to continue the tutorial.'
+    These Advisors will communicate their knowledge
+    with the rest of the team and work with the Manager to figure out the best decision
+    for their company and for their own interests.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9957,8 +10095,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 14.5
+  m_fontSizeBase: 14.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 14
@@ -10446,13 +10584,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The group will only have a limited amount of time to make a decision each
-    round. At the end of each round, your company''s stats will change based on your
-    choice. Try to keep all of your stats as high as you can!
+  m_text: 'Your group will only have a limited amount of time to make a decision
+    for each scenario. You will have five minutes to respond to each question and
+    will be notified when half and a quarter of your time is remaining with an alarm
+    sound. The quicker you respond to each question, the better your resulting stats
+    will be.
 
+    
 
-    Press the Next
-    button below to continue the tutorial.
+    At the end of each question, the stats will change based
+    on the choice you made and you will see the result of your decision.
 
 '
   m_isRightToLeft: 0
@@ -10481,8 +10622,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 14.5
+  m_fontSizeBase: 14.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 14
@@ -11113,12 +11254,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Every round, your company will have to navigate a new scenario. Each advisor
-    should find that scenario in their rolebook and read their role\u2019s perspective
-    on the situation. Once they have read their perspective, their job is to convince
-    the manager to choose the choice that most benefits their area of expertise.
-    Ultimately, the manager makes the final decision on how the company responds
-    to each scenario.\n\nPress the Next button below to continue the tutorial.\n"
+  m_text: "Each round, your company will have to navigate a new scenario involving
+    the implementation of the Smart Grid system.\r\n\r\nEach Advisor should find
+    that scenario in their role booklet and read their role\u2019s perspective on
+    the scenario. Afterwards, they should convince the team to go with the choice
+    that best suits their goals and the company, but they must also be open to compromise.\r\n\r\nUltimately,
+    the Manager will be responsible for selecting the final choice.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11145,8 +11286,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 14.5
+  m_fontSizeBase: 14.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 14
@@ -16980,7 +17121,7 @@ RectTransform:
   - {fileID: 1855224353}
   - {fileID: 1416607296}
   m_Father: {fileID: 1202997320}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17225,7 +17366,7 @@ GameObject:
   - component: {fileID: 647814586}
   - component: {fileID: 647814587}
   m_Layer: 5
-  m_Name: Tutorial Panel 7
+  m_Name: Tutorial Panel 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17245,7 +17386,7 @@ RectTransform:
   - {fileID: 674241096}
   - {fileID: 426997845}
   m_Father: {fileID: 1202997320}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20863,7 +21004,7 @@ RectTransform:
   - {fileID: 1089622641}
   - {fileID: 10100446}
   m_Father: {fileID: 1202997320}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21174,8 +21315,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -84.7, y: 2.6}
-  m_SizeDelta: {x: 431.2343, y: 216.7916}
+  m_AnchoredPosition: {x: -84.7, y: 10.1}
+  m_SizeDelta: {x: 520.6, y: 216.7916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &774725397
 MonoBehaviour:
@@ -21197,8 +21338,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Only one person per group should be playing each role. Hover over the
-    icon under each role to learn more about it.
+  m_text: 'One one person should be playing the Manager and the remaining roles should
+    be split up evenly.
+
+    Hover over each icon to learn about that role.
 
 '
   m_isRightToLeft: 0
@@ -22990,7 +23133,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -85.4, y: 115.8}
+  m_AnchoredPosition: {x: -85.4, y: 127.9}
   m_SizeDelta: {x: 440.8911, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853587340
@@ -23690,8 +23833,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Each bar represents the stats of a section within your company. These
-    bars will be affected by the stat changes from the answers you confirm. \n\n"
+  m_text: A bar will indicate the current status of each stat. Confirming your response
+    to a scenario will change your stats. When a stat is high, its bar turns green,
+    and when a stat is low, its bar turns red.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23718,8 +23862,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 14.5
+  m_fontSizeBase: 14.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 14
@@ -26579,7 +26723,7 @@ RectTransform:
   - {fileID: 114735461}
   - {fileID: 1852322271}
   m_Father: {fileID: 1202997320}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -30029,12 +30173,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   step: 0
-  roleSelectStep: 3
-  statsStep: 8
+  roleSelectStep: 4
+  statsStep: 9
   panels:
   - {fileID: 625898331}
   - {fileID: 1390223556}
   - {fileID: 949798889}
+  - {fileID: 1715356636}
   - {fileID: 1715304720}
   - {fileID: 303795872}
   - {fileID: 1555537217}
@@ -30044,6 +30189,7 @@ MonoBehaviour:
   - {fileID: 1298256844}
   - {fileID: 206659833}
   - {fileID: 420239979}
+  - {fileID: 1685253229}
   - {fileID: 774725399}
   - {fileID: 1796569951}
   - {fileID: 446366132}
@@ -30064,15 +30210,15 @@ MonoBehaviour:
   roleDescriptionPanel: {fileID: 1110765233}
   roleDescriptionText: {fileID: 1086172226}
   roleDescriptions:
-  - 'The manager is the final decision maker. They listen to the advice of their
-    advisors and make the decision on what path the company will take. The manager
-    also shares their screen with the rest of the group. '
-  - The accountant oversees the company's finances. They are mainly concerned with
-    making sure the company operates at a profit.
-  - 'The publicist keeps tabs on what the public''s perception of the company is.
-    They know the importance of staying in the public''s good graces. '
-  - 'The engineer is the company''s head engineer. They make sure the company''s
-    Smart Grid is running efficiently and smoothly. '
+  - The Manager must share their screen with the rest of the group. They will make
+    all of the final decisions for the team. Listening to their teammates will help
+    them determine the best decision for the company.
+  - "The Accountant oversees the company\u2019s finances. Their main concern is the
+    company\u2019s profitability."
+  - "The Publicist is responsible for the company\u2019s public approval. Their main
+    concern is the company\u2019s perception by the masses."
+  - "The Engineer maintains the company\u2019s efficiency. Their main concern is
+    how smoothly the system is running."
   tutorialChoiceButtons:
   - {fileID: 805356120}
   - {fileID: 180422474}
@@ -30080,19 +30226,16 @@ MonoBehaviour:
   - {fileID: 1961460015}
   - {fileID: 41379988}
   - {fileID: 586315728}
-  timerText: Each scenario will have a time limit in which you need to decide how
-    to respond. The timer in the upper right corner of the screen shows you how much
-    time you have left for this scenario.  This alarm will play once when you reach
-    the halfway point and again when you only have a quarter of your total time left.
-    The faster you respond to each scenario, the more effective your choice will
-    be. Click one of the choice buttons below to continue.
-  choiceSelectText: To decide how you are going to respond to each scenario, you
-    need to click two buttons. First, you need to click on the choice button of your
-    preferred choice. Then you click the confirm button in the bottom right of the
-    screen to lock in that choice. Select one of the choices below then confirm it
-    to continue.
-  closeStatsText: 'Press the Stats button or the X in the upper right corner of the
-    Stats panel to close it. Close the Stats panel to continue. '
+  timerText: 'Notice the timer to the right of to this question. It will display
+    how long you have to respond to each question. To respond to this scenario, you
+    need to do two things. First, you will need to select the box with the response
+    you want. Select one of the options below to continue. '
+  choiceSelectText: To lock in your answer, press the confirm button below the options.
+    You can change the selected response as many times you want before locking in
+    your selection. Confirm your response to continue.
+  closeStatsText: The Stats panel has now popped up and will show your current stats.
+    You can close the Stats panel by pressing the x in the upper right corner of
+    the panel. Close the Stats panel to continue.
   tutorialGameplayPanel: {fileID: 641858637}
   zoomedScale: {x: 1.2, y: 1.2, z: 0}
   originalScale: {x: 1, y: 1, z: 0}
@@ -30108,7 +30251,6 @@ MonoBehaviour:
   - 60
   - 40
   chibiCharacter: {fileID: 1194671155}
-  typeWriterSource: {fileID: 0}
   chosenColor: {r: 0.59607846, g: 0.87843144, b: 0.9490197, a: 1}
 --- !u!1 &1166705054
 GameObject:
@@ -30755,7 +30897,7 @@ RectTransform:
   - {fileID: 958033434}
   - {fileID: 2029985158}
   m_Father: {fileID: 1202997320}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -31357,6 +31499,7 @@ RectTransform:
   - {fileID: 625898332}
   - {fileID: 1390223558}
   - {fileID: 949798891}
+  - {fileID: 1715356637}
   - {fileID: 1715304722}
   - {fileID: 303795874}
   - {fileID: 1555537218}
@@ -33992,7 +34135,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -69, y: -24.5}
+  m_AnchoredPosition: {x: -69, y: -55.1}
   m_SizeDelta: {x: 431.2343, y: 216.7916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1298256842
@@ -34015,11 +34158,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You can press space at any time to skip the typing effect during the tutorial.\n\nYou
-    are a four person team working for a recent startup company. Your task is to
-    implement Smart Grid for the benefit of the community. Your team consists of
-    one lead manager who makes the final decision for the group, and three advisors.
-    \n\nPress the Next button below to continue the tutorial."
+  m_text: 'You can press space at any time to skip the typing effect during the tutorial.
+
+
+    Press
+    the "Next" button below to continue the tutorial.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -34046,8 +34189,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 14.5
+  m_fontSizeBase: 14.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 14
@@ -38887,7 +39030,7 @@ RectTransform:
   - {fileID: 444129811}
   - {fileID: 1363105902}
   m_Father: {fileID: 1202997320}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -41946,7 +42089,7 @@ GameObject:
   - component: {fileID: 1555537218}
   - component: {fileID: 1555537219}
   m_Layer: 5
-  m_Name: Tutorial Panel 6
+  m_Name: Tutorial Panel 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41966,7 +42109,7 @@ RectTransform:
   - {fileID: 1347177789}
   - {fileID: 446366129}
   m_Father: {fileID: 1202997320}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -44318,6 +44461,170 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684980489}
   m_CullTransparentMesh: 0
+--- !u!1 &1685253227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1685253228}
+  - component: {fileID: 1685253231}
+  - component: {fileID: 1685253230}
+  - component: {fileID: 1685253229}
+  m_Layer: 5
+  m_Name: Body
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1685253228
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685253227}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1715356637}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -69, y: -32.7}
+  m_SizeDelta: {x: 431.2343, y: 216.7916}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1685253229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685253227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a8c0fee77ca6e419ca324c89fb827e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typewriterSource: {fileID: 1940758732}
+  dingSource: {fileID: 605736306}
+  dingClip: {fileID: 8300000, guid: 0507d5b05ab73084d823afa96afa566e, type: 3}
+  text2: {fileID: 0}
+--- !u!114 &1685253230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685253227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Each Advisor has a corresponding stat that they are aiming to maximize.
+    The Accountant oversees finance, which relates to the profits of the company.
+    The Engineer manages efficiency, or how well the Smart Grid is running. The Publicist
+    handles approval, which is  how the public views your company.
+
+    
+
+    Your
+    goal as a team is to get all of these stats as high as possible, but sacrifices
+    will often have to be made. Each Advisor will want to prioritize their own stat,
+    but be willing to make compromises.
+
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 14.5
+  m_fontSizeBase: 14.5
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 14
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 15
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 6, y: 6, z: 6, w: 6}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1685253231
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685253227}
+  m_CullTransparentMesh: 0
 --- !u!1 &1694634295
 GameObject:
   m_ObjectHideFlags: 0
@@ -44574,7 +44881,7 @@ GameObject:
   - component: {fileID: 1715304722}
   - component: {fileID: 1715304721}
   m_Layer: 5
-  m_Name: Tutorial Panel 4
+  m_Name: Tutorial Panel 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44607,6 +44914,44 @@ RectTransform:
   - {fileID: 1695369228}
   - {fileID: 1110765234}
   m_Father: {fileID: 1202997320}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1220, y: 828}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1715356636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1715356637}
+  - component: {fileID: 1715356638}
+  m_Layer: 5
+  m_Name: Tutorial Panel 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1715356637
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715356636}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 367059264}
+  - {fileID: 1685253228}
+  m_Father: {fileID: 1202997320}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -44614,6 +44959,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1220, y: 828}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1715356638
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715356636}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1722700746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46244,9 +46597,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start sharing your screen with the rest of your team. Once you are sharing
-    your screen and all of your advisors are watching, press the Next button below
-    to continue.
+  m_text: "Start sharing your screen with the rest of your team. Once you are sharing
+    your screen and everyone else is watching it, press the \u201CNext\u201D button
+    below to continue."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -46273,8 +46626,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 14.5
+  m_fontSizeBase: 14.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 14
@@ -50472,10 +50825,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "This screen will show you the results of your choice, including how your
-    stats changed. \n\nMake sure all of your advisors have their booklets open and
-    are ready to play.\n\nWhen you are ready to start playing the game, press the
-    Start Game button below your stats."
+  m_text: "This screen will show the results of your choice. It will describe the
+    effects of your decision and display how your stats have changed because of it.\r\n\r\nAlso,
+    you can see how your answer compares to other groups that have played this game
+    in the starburst on the left.\r\n\r\nYou are now ready to begin the game. Make
+    sure all of your advisors are ready, then press the \u201CStart Game\u201D button
+    below to begin.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -50502,7 +50857,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12.75
+  m_fontSize: 11.6
   m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -50959,8 +51314,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.8, y: -60.4}
-  m_SizeDelta: {x: 299, y: 161.51569}
+  m_AnchoredPosition: {x: 5.8, y: -65.6}
+  m_SizeDelta: {x: 287.1, y: 163}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1975323673
 MonoBehaviour:
@@ -50982,10 +51337,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The finance bar shows the wealth your company is accumulating from Smart
-    Grid. \n\nThe efficiency bar reveals how well the Smart Grid system is performing
-    under your control.\n\nLastly, the public approval bar tells you how the general
-    populace feels about Smart Grid."
+  m_text: At the end of the game, you will be shown the final state of your company
+    based on where each stat ends up. Be careful with each of your stats or your
+    company may end up out of business.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -51012,8 +51366,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13
-  m_fontSizeBase: 13
+  m_fontSize: 14.5
+  m_fontSizeBase: 14.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 14
@@ -51187,8 +51541,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: -20}
+  m_AnchoredPosition: {x: 0, y: -1.5}
+  m_SizeDelta: {x: -20, y: -23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1984056567
 MonoBehaviour:
@@ -51210,10 +51564,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Each round will look something like this. The scenario you are responding
-    to will appear in this text box. Your options for how to respond will appear
-    in the boxes below. You can also check your stats using the Stats button in the
-    bottom left corner. Press the Stats button to continue.
+  m_text: "Each round will look something like this. Scenarios you need to respond
+    to will appear in this text box and the response options will appear below.\r\n\r\nYou
+    can check your stats in game by pressing the \u201CStats\u201D button in the
+    bottom left corner. Press the \"Stats\" button to continue.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -51248,7 +51602,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -54368,7 +54722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2142937319
 RectTransform:
   m_ObjectHideFlags: 0
