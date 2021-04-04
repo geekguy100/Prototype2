@@ -10545,11 +10545,11 @@ MonoBehaviour:
     a packet of information called a role booklet that will give them information
     about their position and the Smart Grid system.
 
-    
 
-    These Advisors will
-    communicate their knowledge with the rest of the team and work with the Manager
-    to figure out the best decision for their company and for their own interests.
+
+    These Advisors will communicate
+    their knowledge with the rest of the team and work with the Manager to figure
+    out the best decision for their company and for their own interests.
 
 '
   m_isRightToLeft: 0
@@ -22812,6 +22812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GM: {fileID: 2042046200}
+  Results: {fileID: 1251475126}
 --- !u!114 &793081778 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114076530150876742, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
@@ -32254,6 +32255,9 @@ MonoBehaviour:
   efficiencyBackground: {fileID: 245901812}
   approvalBackground: {fileID: 904998302}
   financeBackground: {fileID: 1204659434}
+  efficiencySliderLoading: {fileID: 1221867206}
+  approvalSliderLoading: {fileID: 1740520776}
+  financeSliderLoading: {fileID: 1405340270}
   efficiencyText: {fileID: 594402624}
   approvalText: {fileID: 1944692344}
   financeText: {fileID: 1154204051}
@@ -33628,6 +33632,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218619973}
   m_CullTransparentMesh: 0
+--- !u!114 &1221867206 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114076530150876742, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
+  m_PrefabInstance: {fileID: 69776263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1223473355
 GameObject:
   m_ObjectHideFlags: 0
@@ -34089,6 +34104,9 @@ MonoBehaviour:
   efficiencyBackground: {fileID: 410425510}
   approvalBackground: {fileID: 1713913595}
   financeBackground: {fileID: 882897345}
+  efficiencySliderLoading: {fileID: 1221867206}
+  approvalSliderLoading: {fileID: 1740520776}
+  financeSliderLoading: {fileID: 1405340270}
   efficiencyText: {fileID: 476236793}
   approvalText: {fileID: 2052621708}
   financeText: {fileID: 1745741905}
@@ -39002,6 +39020,17 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
+--- !u!114 &1405340270 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114076530150876742, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
+  m_PrefabInstance: {fileID: 800074226}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1409114249
 GameObject:
   m_ObjectHideFlags: 0
@@ -47069,6 +47098,17 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1740520776 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114076530150876742, guid: 8d94d3b7393fe4a40832ee37056d0e5a, type: 3}
+  m_PrefabInstance: {fileID: 1336539249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1741868082
 GameObject:
   m_ObjectHideFlags: 0

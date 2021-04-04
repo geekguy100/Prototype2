@@ -704,6 +704,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void ConfirmScenarioSelection(bool fromTitle)
     {
+
+
         if (!fromTitle)
         {
             Transition.instance.StartTransition(AfterConfirmScenarioSelection);
@@ -711,8 +713,9 @@ public class GameManager : MonoBehaviour
         else
         {
             animationHolder.GetComponent<AnimationController>().TitleSequence();
-            Invoke("TitleAnimation", 1.5f);
+           Invoke("TitleAnimation", 1.5f);
         }
+        
     }
 
     public void TitleAnimation()

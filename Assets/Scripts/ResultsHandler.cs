@@ -22,6 +22,11 @@ public class ResultsHandler : MonoBehaviour
     [SerializeField] private Slider approvalBackground = null;
     [SerializeField] private Slider financeBackground = null;
 
+    //added by Ein. These are the sliders in the loading menu
+    [SerializeField] private Slider efficiencySliderLoading = null;
+    [SerializeField] private Slider approvalSliderLoading = null;
+    [SerializeField] private Slider financeSliderLoading = null;
+
     [Header("Percent Change Texts")]
     [SerializeField] private TextMeshProUGUI efficiencyText = null;
     [SerializeField] private TextMeshProUGUI approvalText = null;
@@ -94,6 +99,8 @@ public class ResultsHandler : MonoBehaviour
         efficiencySlider.value = stats[1] / 100f;
         approvalSlider.value = stats[2] / 100f;
         financeSlider.value = stats[3] / 100f;
+
+
     }
 
     /// <summary>
@@ -330,6 +337,11 @@ public class ResultsHandler : MonoBehaviour
         efficiencySlider.value = stats[1] / 100f;
         approvalSlider.value = stats[2] / 100f;
         financeSlider.value = stats[3] / 100f;
+
+        //update the values of sliders in loading menu. Added by Ein :)
+        efficiencySliderLoading.value = stats[1] / 100f;
+        approvalSliderLoading.value = stats[2] / 100f;
+        financeSliderLoading.value = stats[3] / 100f;
     }
 
     /// <summary>
