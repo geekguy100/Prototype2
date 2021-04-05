@@ -32,10 +32,15 @@ public class Interactable : MonoBehaviour
     /// </summary>
     private Vector2 questionMarkOffset;
 
+    /// <summary>
+    /// Whether or not cursor offsets have been set
+    /// </summary>
+    private bool offsetsSet = false;
     private void Start()
     {
         questionMarkOffset = new Vector2(questionMarkCursor.width / 2, questionMarkCursor.height / 2);
         revealedOffset = new Vector2(revealedCursor.width / 2, revealedCursor.height / 2);
+        offsetsSet = true;
     }
     /// <summary>
     /// Changes the cursor sprite
@@ -43,6 +48,12 @@ public class Interactable : MonoBehaviour
     /// <param name="entering">Whether or not the cursor is entering the fan</param>
     public void ChangeCursor(bool entering)
     {
+        if (!offsetsSet)
+        {
+            questionMarkOffset = new Vector2(questionMarkCursor.width / 2, questionMarkCursor.height / 2);
+            revealedOffset = new Vector2(revealedCursor.width / 2, revealedCursor.height / 2);
+            offsetsSet = true;
+        }
         // Checks if player is entering the object
         if (entering)
         {
@@ -71,4 +82,5 @@ public class Interactable : MonoBehaviour
         sfxSource.clip = sound;
         sfxSource.PlayScheduled(0);
     }
+
 }

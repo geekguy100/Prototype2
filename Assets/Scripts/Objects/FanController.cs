@@ -59,7 +59,7 @@ public class FanController : Interactable
     /// <summary>
     /// Turns the fan animation off if it is on, turns it on if it is off
     /// </summary>
-    public void Interact()
+    public void Interact() 
     {
         // Checks if fan is currently broken
         if (!broken)
