@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class LoadingMenuSkip : MonoBehaviour
 {
-    public GameObject GM;
+    public GameManager GM;
     public GameObject Results;
+
 
     // Update is called once per frame
     void Update()
@@ -14,14 +15,13 @@ public class LoadingMenuSkip : MonoBehaviour
         {
             if (Results.activeInHierarchy)
             {
-                GM.GetComponent<GameManager>().ContinueFromResults();
+                GM.ContinueFromResults();
                 gameObject.SetActive(false);
             }
             else
             {
-                GM.GetComponent<GameManager>().ConfirmScenarioSelection(true);
-                
-                gameObject.SetActive(false);
+               GM.ConfirmScenarioSelection(true);              
+               gameObject.SetActive(false);
             }
 
         }

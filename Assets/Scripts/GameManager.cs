@@ -802,21 +802,29 @@ public class GameManager : MonoBehaviour
     private Ending TestEnding(float stat, string[] endings, string[] backgroundPaths)
     {
         Ending ending;
-        // Default to the worst text and background
-        ending.text = endings[0];
-        ending.backgroundPath = backgroundPaths[0];
+        // Default to the best text and background
+        ending.text = endings[2];
+        ending.backgroundPath = backgroundPaths[2];
 
         // Temporary alpha code - good ending shows at 50 or above, bad ending at 49 or below - TJ
-        if (stat <= 49)
+        for (int i = 0; i < 2; i++)
         {
-            ending.backgroundPath = backgroundPaths[0];
-            ending.text = endings[0];
+            if (stat < resultsHandler.statThresholds[i])
+            {
+                ending.backgroundPath = backgroundPaths[i];
+                ending.text = endings[i];
+            }
         }
-        else
-        {
-            ending.backgroundPath = backgroundPaths[2];
-            ending.text = endings[2];
-        }
+        //if (stat < resultsHandler.statThresholds[0])
+        //{
+        //    ending.backgroundPath = backgroundPaths[0];
+        //    ending.text = endings[0];
+        //}
+        //else if (stat < resultsHandler.statThresholds[1])
+        //{
+        //    ending.backgroundPath = backgroundPaths[1];
+        //    ending.text = endings[1];
+        //}
         // If the stat is higher than the threshold, set the ending
         // text and background to the one for that threshold
         //for (int i = 0; i < thresholds.Length; i += 3)
@@ -985,5 +993,6 @@ public class GameManager : MonoBehaviour
     public void ActivateLoadingMenu()
     {
         loadingMenu.SetActive(true);
+        musicHandler.PlayLoadingScreen();
     }
 }
