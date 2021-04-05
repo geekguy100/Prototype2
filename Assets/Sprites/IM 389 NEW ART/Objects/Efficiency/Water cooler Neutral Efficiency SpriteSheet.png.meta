@@ -1,0 +1,394 @@
+fileFormatVersion: 2
+guid: 01c7bf462bf3d0f4da90adf67fe1b93c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5764134123349226070
+    second: Water cooler Neutral Efficiency SpriteSheet_0
+  - first:
+      213: 8165286380130514302
+    second: Water cooler Neutral Efficiency SpriteSheet_1
+  - first:
+      213: 2164445112710632363
+    second: Water cooler Neutral Efficiency SpriteSheet_2
+  - first:
+      213: -6155579305482655618
+    second: Water cooler Neutral Efficiency SpriteSheet_3
+  - first:
+      213: 7111818391576141784
+    second: Water cooler Neutral Efficiency SpriteSheet_4
+  - first:
+      213: -7923042006412742418
+    second: Water cooler Neutral Efficiency SpriteSheet_5
+  - first:
+      213: 8924288100743772936
+    second: Water cooler Neutral Efficiency SpriteSheet_6
+  - first:
+      213: -2869950525214196728
+    second: Water cooler Neutral Efficiency SpriteSheet_7
+  - first:
+      213: -6017867599592175020
+    second: Water cooler Neutral Efficiency SpriteSheet_8
+  - first:
+      213: 2400958369894601862
+    second: Water cooler Neutral Efficiency SpriteSheet_9
+  - first:
+      213: -5547485744167095603
+    second: Water cooler Neutral Efficiency SpriteSheet_10
+  - first:
+      213: 1336014490877681695
+    second: Water cooler Neutral Efficiency SpriteSheet_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Water cooler Neutral Efficiency SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 62
+        width: 166
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadcf04fd8ea100b0800000000000000
+      internalID: -5764134123349226070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water cooler Neutral Efficiency SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 62
+        width: 166
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75b30183bce05170800000000000000
+      internalID: 8165286380130514302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water cooler Neutral Efficiency SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 62
+        width: 166
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba392febc57a90e10800000000000000
+      internalID: 2164445112710632363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water cooler Neutral Efficiency SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 62
+        width: 166
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78e5fd3c3df29aa0800000000000000
+      internalID: -6155579305482655618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water cooler Neutral Efficiency SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 62
+        width: 166
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df5cf8a52142b260800000000000000
+      internalID: 7111818391576141784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water cooler Neutral Efficiency SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 62
+        width: 166
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee03543f543bb0290800000000000000
+      internalID: -7923042006412742418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water cooler Neutral Efficiency SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 62
+        width: 166
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80bf316aeb079db70800000000000000
+      internalID: 8924288100743772936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water cooler Neutral Efficiency SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 62
+        width: 166
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c79a5f333eb28d0800000000000000
+      internalID: -2869950525214196728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water cooler Neutral Efficiency SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 62
+        width: 166
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ac9fc5d4d3c7ca0800000000000000
+      internalID: -6017867599592175020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water cooler Neutral Efficiency SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 62
+        width: 166
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6849116aaeae15120800000000000000
+      internalID: 2400958369894601862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water cooler Neutral Efficiency SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 62
+        width: 166
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc270668b1f5303b0800000000000000
+      internalID: -5547485744167095603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Water cooler Neutral Efficiency SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1826
+        y: 62
+        width: 166
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10e987d91a7a8210800000000000000
+      internalID: 1336014490877681695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
