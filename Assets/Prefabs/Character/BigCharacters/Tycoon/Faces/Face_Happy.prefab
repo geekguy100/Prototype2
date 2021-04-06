@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8418182756637377186}
   - component: {fileID: 8418182756637377185}
   m_Layer: 0
-  m_Name: Face
+  m_Name: Face_Happy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094131b4b7118c7408f050cbbd1c73ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotion: 1
+  emotion: 3
 --- !u!95 &8418182756637377186
 Animator:
   serializedVersion: 3
