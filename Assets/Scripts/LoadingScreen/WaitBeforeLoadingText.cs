@@ -41,11 +41,11 @@ public class WaitBeforeLoadingText : MonoBehaviour
         if(textObject.color.a >= 1 || textObject.color.a <= 0)
         {
             flipAlpha = !flipAlpha;
+        }
 
-            if (timeBeforeFadeIn < 0 && textObject.color.a <= 0)
-            {
-                textObject.text = continueText;
-            }
+        if (timeBeforeFadeIn <= 0 && textObject.color.a <= 0)
+        {
+            textObject.text = continueText;
         }
     }
 
