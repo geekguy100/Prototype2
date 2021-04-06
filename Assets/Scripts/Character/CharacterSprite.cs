@@ -8,16 +8,15 @@
 using UnityEngine;
 
 
-    public class CharacterSprite : MonoBehaviour
+public class CharacterSprite : MonoBehaviour
+{
+    public enum Emotion { ANY, DEFAULT, CONCERNED, HAPPY, SHOCKED, THINKING };
+
+    // The emotion associated with this sprite.
+    [SerializeField] private Emotion emotion = Emotion.DEFAULT;
+
+    public Emotion GetEmotion()
     {
-        public enum Emotion { ANY, DEFAULT, CONCERNED, HAPPY, SHOCKED, THINKING };
-
-        // The emotion associated with this sprite.
-        [SerializeField] private Emotion emotion = Emotion.DEFAULT;
-
-        public Emotion GetEmotion()
-        {
-            return emotion;
-        }
+        return emotion;
     }
-
+}

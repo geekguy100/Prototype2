@@ -98,12 +98,12 @@ TextureImporter:
       name: marketer default right SpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 17
-        width: 203
+        x: 0
+        y: 18
+        width: 217
         height: 226
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -124,7 +124,7 @@ TextureImporter:
         width: 217
         height: 226
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
