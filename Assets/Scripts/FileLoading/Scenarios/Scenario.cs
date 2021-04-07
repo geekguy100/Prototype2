@@ -29,5 +29,7 @@ namespace FileLoading
         // The name of the character to display for this question.
         public string CharacterName;
 
+        public bool LargeButtons;
+
     }
 }

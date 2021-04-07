@@ -16,6 +16,14 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public static bool completedTutorial = false;
 
+    [Tooltip("Y Scale used for large choice buttons")]
+    public float largeButtonHeight = 68;
+
+    /// <summary>
+    /// Y scale used for normal choice buttons
+    /// </summary>
+    private float normalButtonHeight = 60;
+
     [Tooltip("All the text files for each setup, one per setup. The ID is the files index in the array")]
     private string[] scenarioFiles;
 
@@ -589,6 +597,22 @@ public class GameManager : MonoBehaviour
         // Update the question ID
         setupText.text = "ID: " + currentSetup.Name + "\n" + currentSetup.Setup;
 
+        // Scales up choice buttons if current setup uses large choice buttons
+        if (currentSetup.LargeButtons)
+        {
+            foreach (Button obj in choiceButtons)
+            {
+                obj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, largeButtonHeight);
+            }
+        }
+        else
+        {
+            foreach (Button obj in choiceButtons)
+            {
+                obj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, normalButtonHeight);
+            }
+        }
+
         // Load the background image (the red ones)
         scenarioIcon.sprite = Resources.Load<Sprite>("Icons/" + currentSetup.Icon);
 
@@ -645,13 +669,20 @@ public class GameManager : MonoBehaviour
                 choiceButtonRows[index + 2].SetActive(false);
             }           
         }
+        print(currentText);
+
+        // Turns off last button row if it is unnecessary
+        if (currentText < 5)
+        {
+            choiceButtonRows[choiceButtonRows.Length - 1].SetActive(false);
+        }
 
         // Sets all unused choice buttons to inactive
         //Kyle Grenier - changed from a hardcoded to value to something more modular.
         while (currentText < choiceTexts.Length)
         {
             choiceTexts[currentText].transform.parent.gameObject.SetActive(false);
-            currentText++;
+            currentText++;            
         }
 
         // Update the stat sliders to show the proper value

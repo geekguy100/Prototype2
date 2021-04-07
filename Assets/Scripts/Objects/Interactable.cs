@@ -36,12 +36,7 @@ public class Interactable : MonoBehaviour
     /// Whether or not cursor offsets have been set
     /// </summary>
     private bool offsetsSet = false;
-    private void Start()
-    {
-        questionMarkOffset = new Vector2(questionMarkCursor.width / 2, questionMarkCursor.height / 2);
-        revealedOffset = new Vector2(revealedCursor.width / 2, revealedCursor.height / 2);
-        offsetsSet = true;
-    }
+
     /// <summary>
     /// Changes the cursor sprite
     /// </summary>

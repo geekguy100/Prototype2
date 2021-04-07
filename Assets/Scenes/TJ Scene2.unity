@@ -5789,7 +5789,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 9
+  m_fontSizeMin: 8
   m_fontSizeMax: 12
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -15106,7 +15106,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 280, y: -30}
-  m_SizeDelta: {x: 280, y: 60}
+  m_SizeDelta: {x: 280, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &517412888
 MonoBehaviour:
@@ -18079,7 +18079,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 9
+  m_fontSizeMin: 8
   m_fontSizeMax: 12
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -22787,7 +22787,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 9
+  m_fontSizeMin: 8
   m_fontSizeMax: 12
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -26647,7 +26647,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 9
+  m_fontSizeMin: 8
   m_fontSizeMax: 12
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -27540,7 +27540,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 9
+  m_fontSizeMin: 8
   m_fontSizeMax: 12
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -27794,7 +27794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2452901176725187575, guid: 53513aa38e55af4429b4e03be9cc6f7d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2452901176725187575, guid: 53513aa38e55af4429b4e03be9cc6f7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -28628,7 +28628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1039718153
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31357,7 +31357,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 9
+  m_fontSizeMin: 8
   m_fontSizeMax: 12
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -37495,7 +37495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1347828860
 Transform:
   m_ObjectHideFlags: 0
@@ -38880,7 +38880,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 9
+  m_fontSizeMin: 8
   m_fontSizeMax: 12
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -40282,7 +40282,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 9
+  m_fontSizeMin: 8
   m_fontSizeMax: 12
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -47484,7 +47484,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 302, y: -241.29749}
+  m_AnchoredPosition: {x: 302, y: -217.82}
   m_SizeDelta: {x: 570, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1737559791
@@ -48647,11 +48647,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
@@ -51895,7 +51895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 67, y: -100.432495}
+  m_AnchoredPosition: {x: 67, y: -123.91}
   m_SizeDelta: {x: 100, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1896336855
@@ -55454,6 +55454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff5ac5eb60b451438df336ce26dbbdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  largeButtonHeight: 68
   noSelectionPanel: {fileID: 1043135928}
   statsPanel: {fileID: 646520248}
   chosenColor: {r: 0.5686275, g: 0.85098046, b: 0.9294118, a: 1}

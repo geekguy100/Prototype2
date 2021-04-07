@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 647913907976216916}
   - component: {fileID: 1393635720626134333}
   m_Layer: 0
-  m_Name: Face_Shocked (1)
+  m_Name: Face_Shocked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

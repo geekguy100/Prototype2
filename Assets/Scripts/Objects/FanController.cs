@@ -56,6 +56,13 @@ public class FanController : Interactable
     /// </summary>
     [SerializeField]private int numInteractions = 0;
 
+
+
+    private void Start()
+    {
+        bladesAnim.keepAnimatorControllerStateOnDisable = true;
+    }
+
     /// <summary>
     /// Turns the fan animation off if it is on, turns it on if it is off
     /// </summary>
@@ -97,6 +104,7 @@ public class FanController : Interactable
             }
         }      
     }
+    
 
     private IEnumerator CountInteractions()
     {

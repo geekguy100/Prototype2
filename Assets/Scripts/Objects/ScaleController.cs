@@ -18,6 +18,7 @@ public class ScaleController : Interactable
     private void Start()
     {
         scaleAnim = GetComponent<Animator>();
+        scaleAnim.keepAnimatorControllerStateOnDisable = true;
     }
 
     public void Interact()

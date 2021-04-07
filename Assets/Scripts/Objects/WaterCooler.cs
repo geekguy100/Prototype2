@@ -23,8 +23,9 @@ public class WaterCooler : Interactable
     private void Start()
     {
         bubbleAnim = GetComponent<Animator>();
+        bubbleAnim.keepAnimatorControllerStateOnDisable = true;
     }
-
+   
     public void Interact()
     {
         // Change cursor to revealed one if it wasn't already
@@ -34,8 +35,11 @@ public class WaterCooler : Interactable
             ChangeCursor(revealed);
         }
         // Play animation if stopped, stop animation if playing
+        print("isPlaying = " + isPlaying);
+        print("animRunning = " + bubbleAnim.GetBool("playBubbles"));
         isPlaying = !isPlaying;
         bubbleAnim.SetBool("playBubbles", isPlaying);
+
         if (isPlaying)
         {
             PlaySFX(bubbleSound);
