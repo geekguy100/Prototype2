@@ -199,7 +199,7 @@
           "Result": "Developing automated data management systems slows down your expansion initially, but those new systems become crucial to your later expansion efforts. This development takes significant resources, and your delay in implementation prevents you from making a profit."
         },
         {
-          "Choice": "Commit to urban development and add space for new homes and power sources, which will both be implemented into the Smart Grid. Expand the company’s scope into urban city expansion for profits later down the road.",
+          "Choice": "Commit to urban development and add space for new homes and power sources, which will both be implemented into the Smart Grid. Expand the company's scope into urban city expansion for profits later down the road.",
           "Approval": 0,
           "Efficiency": 4,
           "Environment": -7,

@@ -11641,8 +11641,8 @@ MonoBehaviour:
 
 
 
-    At the end of each question, the stats will change based on the
-    choice you made and you will see the result of your decision.
+    At the end of each question, your team''s stats will change based
+    on the choice you made and you will see the result of your decision.
 
 '
   m_isRightToLeft: 0
@@ -31993,10 +31993,10 @@ MonoBehaviour:
   - {fileID: 1961460015}
   - {fileID: 41379988}
   - {fileID: 586315728}
-  timerText: 'Notice the timer to the right of to this question. It will display
-    how long you have to respond to each question. To respond to this scenario, you
-    need to do two things. First, you will need to select the box with the response
-    you want. Select one of the options below to continue. '
+  timerText: 'Notice the timer to the right of this question. It will display how
+    long you have to respond to each question. To respond to this scenario, you need
+    to do two things. First, you will need to select the box with the response you
+    want. Select one of the options below to continue. '
   choiceSelectText: To lock in your answer, press the confirm button below the options.
     You can change the selected response as many times you want before locking in
     your selection. Confirm your response to continue.
@@ -46709,7 +46709,7 @@ MonoBehaviour:
     Your goal
     as a team is to get all of these stats as high as possible, but sacrifices will
     often have to be made. Each Advisor will want to prioritize their own stat, but
-    be willing to make compromises.
+    will want to make compromises.
 
 
 '
