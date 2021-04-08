@@ -37,7 +37,10 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private GameObject tutorialStatsPanel;
 
     [Tooltip("Gameplay tutorial setup text")]
-    [SerializeField] private TextMeshProUGUI setUpText;
+    [SerializeField] private TextMeshProUGUI[] setUpTexts;
+
+    [Tooltip("Text Scroll scripts attached to the gameplay setup texts")]
+    public TextScroll[] gameplayScrolls;
 
     [Tooltip("Gameobject holding the Efficiency booklet link")]
     [SerializeField] private GameObject efficiencyBooklet;
@@ -171,14 +174,13 @@ public class Tutorial : MonoBehaviour
     /// </summary>
     private Role playerRole = Role.Unset;
 
-    
+    private int gameplayStep = 0;
     void Start()
     {
         // Activates the correct buttons for the beginning of the tutorial
         menuButton.gameObject.SetActive(true);
         nextButton.gameObject.SetActive(true);
         prevButton.gameObject.SetActive(false);
-
         panels[step].SetActive(true);
 
         statsCloseStep = statsStep + 1;
@@ -252,11 +254,13 @@ public class Tutorial : MonoBehaviour
     /// <summary>
     /// Switches to timer step of the tutorial
     /// </summary>
-    private void OpenTimerStep()
+    private void OpenGameplayStep()
     {
+        setUpTexts[gameplayStep].gameObject.SetActive(false);
+        gameplayScrolls[gameplayStep].FinishScroll();
         step++;
-        setUpText.text = timerText;
-        //Invoke("PlayTimerWarning", 5f);
+        gameplayStep++;
+        setUpTexts[gameplayStep].gameObject.SetActive(true);
     }
 
     /// <summary>
@@ -280,21 +284,21 @@ public class Tutorial : MonoBehaviour
     /// <summary>
     /// Switches to close stats step of the tutorial
     /// </summary>
-    private void OpenStatsCloseStep()
-    {
-        step++;
-        setUpText.text = closeStatsText;
-    }
+    //private void OpenStatsCloseStep()
+    //{        
+    //    step++;
+    //    setUpText.text = closeStatsText;
+    //    gameplayScroll.NewScroll();
+    //}
 
     /// <summary>
     /// Switches to choice select step of the tutorial
     /// </summary>
-    private void OpenChoiceSelectStep()
-    {
-        CancelInvoke("PlayTimerWarning");
-        step++;
-        setUpText.text = choiceSelectText;
-    }
+    //private void OpenChoiceSelectStep()
+    //{
+    //    step++;
+    //    setUpText.text = choiceSelectText;
+    //}
 
     /// <summary>
     /// Switches to results step of the tutorial
@@ -303,6 +307,7 @@ public class Tutorial : MonoBehaviour
     {
         step++;
         tutorialGameplayPanel.SetActive(false);
+        gameplayScrolls[gameplayStep].FinishScroll();
         tutorialResults.SetActive(true);
 
         resultsHandler.Display(stats, resultsString);
@@ -490,11 +495,12 @@ public class Tutorial : MonoBehaviour
         print(step + "  " + statsStep);
         if (step == statsStep)
         {
-            OpenStatsCloseStep();
+            //OpenStatsCloseStep();
+            OpenGameplayStep();
         }
         else if (step == statsCloseStep)
         {
-            OpenTimerStep();
+            OpenGameplayStep();
         }
         if (!tutorialStatsPanel.activeInHierarchy)
         {
@@ -518,7 +524,9 @@ public class Tutorial : MonoBehaviour
         tutorialChoiceButtons[buttonNum].GetComponent<Image>().color = chosenColor;
         if (step == timerStep)
         {
-            OpenChoiceSelectStep();
+            //gameplayScroll.FinishScroll();
+            //OpenChoiceSelectStep();
+            OpenGameplayStep();
         }
     }
 

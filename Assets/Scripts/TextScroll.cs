@@ -48,12 +48,15 @@ public class TextScroll : MonoBehaviour
     /// </summary>
     private bool started = false;
 
+    /// <summary>
+    /// Whether or not values have been initialized
+    /// </summary>
+    private bool initialized = false;
+
     void Start()
     {
         // Sets initial values
-        thisText = GetComponent<TextMeshProUGUI>();
-        targetString = thisText.text;
-        thisText.text = "";
+        InitializeValues();
     }
 
     void Update()
@@ -75,6 +78,7 @@ public class TextScroll : MonoBehaviour
             }
         }
     }
+ 
     /// <summary>
     /// Stops the typewriter sounds from playing
     /// </summary>
@@ -87,6 +91,10 @@ public class TextScroll : MonoBehaviour
     /// </summary>
     public void StartScroll()
     {
+        if (!initialized)
+        {
+            InitializeValues();
+        }
         StartCoroutine(Scroll());
     }
 
@@ -103,7 +111,15 @@ public class TextScroll : MonoBehaviour
         {
             typewriterSource.Stop();
             started = false;
-            thisText.text = "";
+            if (!initialized)
+            {
+                InitializeValues();
+            }
+            else
+            {
+                thisText.text = "";
+            }
+
             if (text2 != null)
             {
                 text2.SetActive(false);
@@ -161,5 +177,16 @@ public class TextScroll : MonoBehaviour
             text2.SetActive(true);
         }
         typewriterSource.Stop();
+    }
+
+    /// <summary>
+    /// Initialized necessary values 
+    /// </summary>
+    private void InitializeValues()
+    {
+        thisText = GetComponent<TextMeshProUGUI>();
+        targetString = thisText.text;
+        thisText.text = "";
+        initialized = true;
     }
 }
