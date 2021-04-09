@@ -8,7 +8,7 @@
           "Efficiency": -4,
           "Environment": -3,
           "Finance": 5,
-          "Result": "Once the public learns of the benefits of the Smart Grid, they become much more supportive of it. Many people are excited about the idea of a more adaptable system compared to the almost century old grid. "
+          "Result": "For the most part, people remain skeptical of the Smart Grid. However, your public statement catches the eye of investors, who give you a financial boost."
         },
         {
           "Choice": "Use your platform to push a marketing campaign that provides the public with more reliable sources of information on Smart Meters. You trust that the public will be welcoming to Smart Meters after giving them the opportunity to research it.",
@@ -57,7 +57,7 @@
         {
           "Choice": "Your company accepts the deal on the condition that Beautiful Clean Fossil Fuels diversifies some of their production into clean energy sources. This will help bring BCFF into the renewable energy industry.",
           "Approval": 0,
-          "Efficiency": -4,
+          "Efficiency": 4,
           "Environment": -4,
           "Finance": 5,
           "Result": "Accepting the money lowers your company's approval, but using it to put more renewable energy into the Smart Grid softens the hit. The grant will allow you to build a more efficient grid compared to the current centuries old system."
