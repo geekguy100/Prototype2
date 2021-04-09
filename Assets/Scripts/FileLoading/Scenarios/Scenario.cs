@@ -29,7 +29,11 @@ namespace FileLoading
         // The name of the character to display for this question.
         public string CharacterName;
 
-        public bool LargeButtons;
+        // Whether or not this question uses tall choice buttons
+        public bool TallButtons;
+
+        // Whether or not this question uses wide choice buttons
+        public bool WideButtons;
 
     }
 }

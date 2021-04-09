@@ -33,7 +33,8 @@
       "Icon": "Scenario 1",
       "Music": "members_only_edited",
       "CharacterName": "Committee",
-      "LargeButtons": true
+      "TallButtons": false,
+      "WideButtons": true
     },
     {
       "Decisions": [
@@ -76,7 +77,8 @@
       "Icon": "Scenario 2",
       "Music": "twilight_train_edited",
       "CharacterName": "Tycoon",
-      "LargeButtons": true
+      "TallButtons": true,
+      "WideButtons": false
     },
     {
       "Decisions": [
@@ -119,7 +121,8 @@
       "Icon": "Scenario 2",
       "Music": "minor_blues_edited",
       "CharacterName": "Worker",
-      "LargeButtons": true
+      "TallButtons": true,
+      "WideButtons": false
     },
     {
       "Decisions": [
@@ -170,7 +173,8 @@
       "Icon": "Scenario 1",
       "Music": "sunny_days_edited",
       "CharacterName": "Marketer",
-      "LargeButtons": false
+      "TallButtons": false,
+      "WideButtons": false
     },
     {
       "Decisions": [
@@ -229,7 +233,8 @@
       "Icon": "Scenario 1",
       "Music": "caring_friend_edited",
       "CharacterName": "Robot",
-      "LargeButtons": false
+      "TallButtons": false,
+      "WideButtons": false
     }
   ]
 }

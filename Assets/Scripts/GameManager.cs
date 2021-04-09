@@ -16,13 +16,21 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public static bool completedTutorial = false;
 
-    [Tooltip("Y Scale used for large choice buttons")]
+    [Tooltip("Height used for large choice buttons")]
     public float largeButtonHeight = 68;
 
     /// <summary>
     /// Y scale used for normal choice buttons
     /// </summary>
     private float normalButtonHeight = 60;
+
+    [Tooltip("Width used for large choice buttons")]
+    public float largeButtonWidth = 68;
+
+    /// <summary>
+    /// Y scale used for normal choice buttons
+    /// </summary>
+    private float normalButtonWidth = 280;
 
     [Tooltip("All the text files for each setup, one per setup. The ID is the files index in the array")]
     private string[] scenarioFiles;
@@ -85,6 +93,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private string[] financeEndingBackgrounds =
         {"Endings/Backgrounds/FinanceBad", "Endings/Backgrounds/FinanceNeutral", "Endings/Backgrounds/FinanceGood"};
+
+    private bool threeChoices = false;
 
     /// <summary>
     /// Used to hold the information returned about the specific ending
@@ -163,6 +173,9 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Buttons to track player choice - only show if number of options is odd")]
     public Button[] middleChoiceButtons;
+
+    [Tooltip("Buttons to track player choice - only show if there are 3 answer")]
+    public Button[] threeChoiceButtons;
 
     [Tooltip("Objects holding each row of choice buttons")]
     public GameObject[] choiceButtonRows;
@@ -597,22 +610,22 @@ public class GameManager : MonoBehaviour
         // Update the question ID
         setupText.text = "ID: " + currentSetup.Name + "\n" + currentSetup.Setup;
 
-        // Scales up choice buttons if current setup uses large choice buttons
-        if (currentSetup.LargeButtons)
+
+        ScaleButtons(currentSetup.TallButtons, currentSetup.WideButtons);
+
+        if (currentSetup.WideButtons)
         {
-            foreach (Button obj in choiceButtons)
-            {
-                obj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, largeButtonHeight);
-            }
+            threeChoices = true;
         }
         else
         {
-            foreach (Button obj in choiceButtons)
+            threeChoices = false;
+            foreach (Button b in threeChoiceButtons)
             {
-                obj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, normalButtonHeight);
+                b.gameObject.transform.parent.gameObject.SetActive(false);
             }
         }
-
+        
         // Load the background image (the red ones)
         scenarioIcon.sprite = Resources.Load<Sprite>("Icons/" + currentSetup.Icon);
 
@@ -626,28 +639,53 @@ public class GameManager : MonoBehaviour
 
         middleChoiceButtons[0].gameObject.transform.parent.gameObject.SetActive(false);
         middleChoiceButtons[1].gameObject.transform.parent.gameObject.SetActive(false);
+
         oddNumChoices = false;
 
         foreach (var choice in currentSetup.Decisions)
         {
-            // Set the text with the proper letter prefix
-            //choicesText.text += currentLetter + ": " + choice.Choice + "\n";
-            choiceTexts[currentText].text = currentLetter + ": " + choice.Choice;
-
-            // Activates any choice buttons that are inactive and will be used
-            if (!choiceTexts[currentText].transform.parent.gameObject.activeInHierarchy)
+            if (!threeChoices)
             {
-                choiceTexts[currentText].transform.parent.gameObject.SetActive(true);
+                // Set the text with the proper letter prefix
+                //choicesText.text += currentLetter + ": " + choice.Choice + "\n";
+                choiceTexts[currentText].text = currentLetter + ": " + choice.Choice;
+
+                // Activates any choice buttons that are inactive and will be used
+                if (!choiceTexts[currentText].transform.parent.gameObject.activeInHierarchy)
+                {
+                    choiceTexts[currentText].transform.parent.gameObject.SetActive(true);
+                }
+
+
+                // Increment the prefix
+                ++currentText;
+                ++currentLetter;
+            }
+            else
+            {
+                foreach (Button b in middleChoiceButtons)
+                {
+                    b.gameObject.transform.parent.gameObject.SetActive(false);
+                }
+                foreach (GameObject obj in choiceButtonRows)
+                {
+                    obj.SetActive(false);
+                }
+                foreach (Button b in threeChoiceButtons)
+                {
+                    b.gameObject.transform.parent.gameObject.SetActive(true);
+                }
+                threeChoiceButtons[currentText].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = currentLetter + ": " + choice.Choice;
+
+                // Increment the prefix
+                ++currentText;
+                ++currentLetter;
             }
 
-
-            // Increment the prefix
-            ++currentText;
-            ++currentLetter;
         }
 
         // Checks if there are an odd number of choices
-        if (currentText % 2 == 1)
+        if (currentText % 2 == 1 && !threeChoices)
         {
             oddNumChoices = true;
 
@@ -657,7 +695,7 @@ public class GameManager : MonoBehaviour
             
             // Finds which middle choice button is needed
             int index = (currentText / 2) - 1;
-            middleChoiceButtons[index].gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = currentLetter + ": " + currentSetup.Decisions[currentText].Choice;
+            middleChoiceButtons[index].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = currentLetter + ": " + currentSetup.Decisions[currentText].Choice;
             middleChoiceButtons[index].gameObject.transform.parent.gameObject.SetActive(true);
             
             // Deactivates the row the middle choice button is replacing
@@ -691,6 +729,46 @@ public class GameManager : MonoBehaviour
         sliders[1].value = stats[1] / 100f;
         sliders[2].value = stats[2] / 100f;
         sliders[3].value = stats[3] / 100f;
+    }
+
+    /// <summary>
+    /// Scales choice buttons to match needs for this question
+    /// </summary>
+    /// <param name="isTall">If the buttons need to be tall</param>
+    /// <param name="isWide">If the buttons need to be wide</param>
+    private void ScaleButtons(bool isTall, bool isWide)
+    {
+        // Scales up choice buttons if current setup uses tall choice buttons
+        if (isTall)
+        {
+            foreach (Button obj in choiceButtons)
+            {
+                obj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, largeButtonHeight);
+            }
+        }
+        else
+        {
+            foreach (Button obj in choiceButtons)
+            {
+                obj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, normalButtonHeight);
+            }
+        }
+
+        // Scales up choice buttons if current setup uses tall choice buttons
+        if (isWide)
+        {
+            foreach (Button obj in middleChoiceButtons)
+            {
+                obj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, largeButtonWidth);
+            }
+        }
+        else
+        {
+            foreach (Button obj in middleChoiceButtons)
+            {
+                obj.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, normalButtonWidth);
+            }
+        }
     }
 
     /// <summary>
@@ -964,28 +1042,40 @@ public class GameManager : MonoBehaviour
             b.GetComponent<Image>().color = Color.white;
         }
 
-        if (!oddNumChoices)
+        if (threeChoices)
         {
-            choiceButtons[index].GetComponent<Image>().color = chosenColor;
+            foreach (Button b in threeChoiceButtons)
+            {
+                b.GetComponent<Image>().color = Color.white;
+            }
+            threeChoiceButtons[index].GetComponent<Image>().color = chosenColor;
         }
         else
         {
-            // First middle button was pressed
-            if (index == 2 && middleChoiceButtons[0].gameObject.activeInHierarchy)
-            {                
-                middleChoiceButtons[0].GetComponent<Image>().color = chosenColor;
-            }
-            // Second middle button was pressed
-            else if (index == 4 && middleChoiceButtons[1].gameObject.activeInHierarchy)
-            {
-                middleChoiceButtons[1].GetComponent<Image>().color = chosenColor;
-            }
-            // Neither middle button was pressed
-            else
+            if (!oddNumChoices)
             {
                 choiceButtons[index].GetComponent<Image>().color = chosenColor;
             }
+            else
+            {
+                // First middle button was pressed
+                if (index == 2 && middleChoiceButtons[0].gameObject.activeInHierarchy)
+                {
+                    middleChoiceButtons[0].GetComponent<Image>().color = chosenColor;
+                }
+                // Second middle button was pressed
+                else if (index == 4 && middleChoiceButtons[1].gameObject.activeInHierarchy)
+                {
+                    middleChoiceButtons[1].GetComponent<Image>().color = chosenColor;
+                }
+                // Neither middle button was pressed
+                else
+                {
+                    choiceButtons[index].GetComponent<Image>().color = chosenColor;
+                }
+            }
         }
+
         
     }
 
