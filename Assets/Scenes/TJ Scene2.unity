@@ -35043,8 +35043,8 @@ MonoBehaviour:
   approvalSliderLoading: {fileID: 1740520776}
   financeSliderLoading: {fileID: 1405340270}
   efficiencyText: {fileID: 476236793}
-  approvalText: {fileID: 2052621708}
-  financeText: {fileID: 1745741905}
+  approvalText: {fileID: 830775222}
+  financeText: {fileID: 2052621708}
   animationTime: 1
   animationDelayTime: 0
   resultsText: {fileID: 1235360999}
