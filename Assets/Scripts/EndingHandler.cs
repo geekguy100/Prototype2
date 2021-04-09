@@ -21,6 +21,9 @@ public class EndingHandler : MonoBehaviour
     [Tooltip("Ending Text")]
     public TextMeshProUGUI endText;
 
+    [Tooltip("Ending Button Text")]
+    public TextMeshProUGUI endButtonText;
+
     [Tooltip("Ending Next button")]
     public GameObject nextButton;
 
@@ -77,6 +80,12 @@ public class EndingHandler : MonoBehaviour
     /// </summary>
     private TextMeshProUGUI quitButtonText;
 
+
+    /// <summary>
+    /// Labels used for the ending button
+    /// </summary>
+    private string[] endingButtonLabels = { "View Approval Report", "View Finance Report" };
+
     // Start is called before the first frame update
     void Start()
     {
@@ -96,6 +105,11 @@ public class EndingHandler : MonoBehaviour
     /// <param name="background">Background for this ending</param>
     public void StartNewEnding(string text, Sprite background)
     {
+        if (numEndings < endingButtonLabels.Length)
+        {
+            endButtonText.text = endingButtonLabels[numEndings];
+        }
+
         // Increments number of endings seen
         numEndings++;
 
