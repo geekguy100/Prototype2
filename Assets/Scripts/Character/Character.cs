@@ -136,7 +136,6 @@ public class Character : MonoBehaviour
     private void UpdateSprite(CharacterSprite.Emotion emotion, ref GameObject expressionContainer, CharacterSprite[] possibilities)
     {
         GameObject chosen = null;
-        print("POSSIBILITIES FOR CONTAINER " + expressionContainer.gameObject.name + " AND EMOTION " + emotion.ToString() + " : " + possibilities.Length);
 
 
         if (emotion == CharacterSprite.Emotion.ANY)

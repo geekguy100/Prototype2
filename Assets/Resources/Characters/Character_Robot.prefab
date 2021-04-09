@@ -102,10 +102,15 @@ MonoBehaviour:
   - {fileID: 6422141620887763312, guid: c4deec07aa77a554bbea52e445d79f97, type: 3}
   leftArms:
   - {fileID: 4887857947495713885, guid: a12242a601742114d89fb0226680c197, type: 3}
+  - {fileID: 4900746926996018661, guid: 65b10085f0c3ba04d918d31b9327b641, type: 3}
   - {fileID: 1198553336828401987, guid: c345a3050992071408fa45d337612b8e, type: 3}
+  - {fileID: 7167192993299863745, guid: 57fb60c91e6a5dd40b5b282ac8d8a4a1, type: 3}
   rightArms:
   - {fileID: 4029258480875798162, guid: 0d9f74517ff4a8f4fa89bca78d37e0a0, type: 3}
+  - {fileID: 5835281835516170488, guid: 3a06e2de14b45374c81d9b6e38244f16, type: 3}
+  - {fileID: 430021120601536247, guid: 9b8fdeb9f540632499cebc4707641ccc, type: 3}
   - {fileID: 4278642854307399039, guid: 67d4497c7fb300d4a97a8fa3dbab96d7, type: 3}
+  - {fileID: 5601285782947756532, guid: b747154a575d2c14ba543a2cae040ae2, type: 3}
   antennas:
   - {fileID: 3231790398405193855, guid: def6a5e48a151e54e8569f23c68c7cb1, type: 3}
   - {fileID: 1999790495623033267, guid: ee9b8563cbd2cbc4fa15d49a6440e6f1, type: 3}
@@ -255,6 +260,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2452901176725187575}
     m_Modifications:
+    - target: {fileID: 2089815213089597062, guid: 5f0640762f2e59444a499faf47699edc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1066326452358756712, guid: 4af8b9f5d420f024296f5e403e880a33, type: 3}
     - target: {fileID: 2089815213089597112, guid: 5f0640762f2e59444a499faf47699edc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
