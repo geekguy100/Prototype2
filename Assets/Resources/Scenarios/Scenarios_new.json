@@ -50,9 +50,9 @@
           "Choice": "Your company publicly denounces the deal, citing Beautiful Clean Fossil Fuels as unethical. Instead, you double down on your commitment to making sure Smart Grid is implemented in areas using clean and diverse power generation to maximize clean energy usage.",
           "Approval": 0,
           "Efficiency": -5,
-          "Environment": 10,
+          "Environment": 9,
           "Finance": -2,
-          "Result": "Your company's statement brings in large public support, allowing you to further educate them about Smart Grid's adaptability and efficient utilization of different renewable energy sources. The public's support of Smart Grid greatly increases due to this, but your approval to other large corporations has fallen."
+          "Result": "Your company's statement brings in large public support, allowing you to further educate them about Smart Grid's adaptability and efficient utilization of different renewable energy sources. The public's support of Smart Grid greatly increases due to this, but other large corporations are less likely to offer you deals in the future."
         },
         {
           "Choice": "Your company accepts the deal on the condition that Beautiful Clean Fossil Fuels diversifies some of their production into clean energy sources. This will help bring BCFF into the renewable energy industry.",
