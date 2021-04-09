@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8006194406170253151}
   - component: {fileID: 8006194406170253150}
   m_Layer: 0
-  m_Name: LeftArm_Bent_Thinking
+  m_Name: LeftArm_Bent_Concerned
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 094131b4b7118c7408f050cbbd1c73ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotion: 5
+  emotion: 2
 --- !u!222 &8006194406170253151
 CanvasRenderer:
   m_ObjectHideFlags: 0
