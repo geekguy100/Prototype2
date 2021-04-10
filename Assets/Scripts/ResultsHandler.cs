@@ -344,6 +344,7 @@ public class ResultsHandler : MonoBehaviour
     /// </summary>
     public void Reset()
     {
+        StopAllCoroutines();
         slider = 1;
         efficiencyText.text = string.Empty;
         approvalText.text = string.Empty;
