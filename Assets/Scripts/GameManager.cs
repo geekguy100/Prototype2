@@ -822,14 +822,14 @@ public class GameManager : MonoBehaviour
         else
         {
             animationHolder.GetComponent<AnimationController>().TitleSequence();
-           Invoke("TitleAnimation", 1.5f);
+            Invoke("TitleAnimation", 1.5f);
         }
         
     }
 
     public void TitleAnimation()
     {
-        Transition.instance.StartTransition(AfterConfirmScenarioSelection);
+        Transition.instance.StartTransition(AfterConfirmScenarioSelection, false);
     }
 
     /// <summary>
@@ -1107,7 +1107,6 @@ public class GameManager : MonoBehaviour
 
     public void CompleteTutorial()
     {
-        Transition.instance.SetVariableTransitions(true);
         completedTutorial = true;
     }
 
@@ -1116,6 +1115,6 @@ public class GameManager : MonoBehaviour
         Transition.instance.StartTransition(() => {
             loadingMenu.SetActive(true);
             musicHandler.PlayLoadingScreen();
-        });
+        }, false);
     }
 }

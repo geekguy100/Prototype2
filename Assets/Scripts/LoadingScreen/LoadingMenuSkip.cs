@@ -28,7 +28,7 @@ public class LoadingMenuSkip : MonoBehaviour
                 {
                     GM.ContinueFromResults();
                     gameObject.SetActive(false);
-                });
+                }, false);
             }
             else
             {
@@ -36,7 +36,7 @@ public class LoadingMenuSkip : MonoBehaviour
                 {
                     GM.ConfirmScenarioSelection(true);
                     gameObject.SetActive(false);
-                });
+                }, false);
             }
 
         }

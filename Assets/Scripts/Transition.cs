@@ -80,9 +80,10 @@ public class Transition : MonoBehaviour
         fadeWaitTime = fadeWaitTimes[index];
     }
 
-    public void StartTransition(TransitionCallback callback)
+    public void StartTransition(TransitionCallback callback, bool variableTransition = true)
     {       
         pauseManager.canPause = false;
+        SetVariableTransitions(variableTransition);
         StartCoroutine(PerformTransition(callback));
     }
 }

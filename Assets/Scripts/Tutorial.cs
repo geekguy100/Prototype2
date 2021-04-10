@@ -202,7 +202,7 @@ public class Tutorial : MonoBehaviour
         // gameplay 
         if (step > panels.Length - 1)
         {
-            Transition.instance.StartTransition(StartInteractiveTutorial);
+            Transition.instance.StartTransition(StartInteractiveTutorial, false);
             return;
         }
         // If we're not on the last step of the tutorial (before going to the interactive section), 
