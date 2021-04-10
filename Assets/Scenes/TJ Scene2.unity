@@ -55654,10 +55654,19 @@ MonoBehaviour:
   - Your Decisions Matter!
   - The experts know best!
   - Tired of fluorescent lighting?
+  - Be a team player!
+  - Just tuning in?
+  - We all have the power to shape the future!
+  - Remember who's boss!
   loadOutHints:
-  - Every choice affects one or more stats.
+  - Every choice can affect one or more stats.
   - Talk with your team to determine the best outcome.
   - Take a walk, get some air, eat an apple.
+  - Sometimes what's better for your team may go against your roles goals.
+  - When each scenario comes up, find it in your role booklet and read your perspective
+    on it.
+  - Your company's future will be affected by the choices you make.
+  - The manager has final say on what actions your company will make.
   titleTextObject: {fileID: 1886140256}
   hintTextObject: {fileID: 1498694063}
 --- !u!114 &2025868374
