@@ -346,9 +346,9 @@ public class ResultsHandler : MonoBehaviour
     {
         StopAllCoroutines();
         slider = 1;
-        efficiencyText.text = string.Empty;
-        approvalText.text = string.Empty;
-        financeText.text = string.Empty;
+
+        // Added this because it looked awkward with the text suddenly disappearing after continue button is pressed.
+        Invoke("ResetChangeText", 2f);
 
         // Make sure all of the sliders reach their final values.
         efficiencySlider.value = stats[1] / 100f;
@@ -359,6 +359,13 @@ public class ResultsHandler : MonoBehaviour
         efficiencySliderLoading.value = stats[1] / 100f;
         approvalSliderLoading.value = stats[2] / 100f;
         financeSliderLoading.value = stats[3] / 100f;
+    }
+
+    private void ResetChangeText()
+    {
+        efficiencyText.text = string.Empty;
+        approvalText.text = string.Empty;
+        financeText.text = string.Empty;
     }
 
     /// <summary>
