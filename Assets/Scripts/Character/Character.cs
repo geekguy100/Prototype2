@@ -106,7 +106,7 @@ public class Character : MonoBehaviour
         }
 
         float delta = statsDelta[associatedEmotionIndex];
-        print("STAT DELTA INDEX: " + associatedEmotionIndex + ": CHANGE = " + delta);
+        //print("STAT DELTA INDEX: " + associatedEmotionIndex + ": CHANGE = " + delta);
 
         if (delta < 0)
         {

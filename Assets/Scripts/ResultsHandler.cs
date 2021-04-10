@@ -133,7 +133,7 @@ public class ResultsHandler : MonoBehaviour
     private void SetBackgroundSliders(float[] updatedStats)
     {
         float change = updatedStats[1] - stats[1];
-        print("EFF  " + change);
+        //print("EFF  " + change);
 
         if (change > 0)
             efficiencyBackground.value = updatedStats[1] / 100f;
@@ -142,7 +142,7 @@ public class ResultsHandler : MonoBehaviour
 
 
         change = updatedStats[2] - stats[2];
-        print("APP  " + change);
+        //print("APP  " + change);
         if (change > 0)
             approvalBackground.value = updatedStats[2] / 100f;
         else
@@ -150,7 +150,7 @@ public class ResultsHandler : MonoBehaviour
 
 
         change = updatedStats[3] - stats[3];
-        print("FIN  " + change);
+        //print("FIN  " + change);
         if (change > 0)
             financeBackground.value = updatedStats[3] / 100f;
         else

@@ -1113,7 +1113,9 @@ public class GameManager : MonoBehaviour
 
     public void ActivateLoadingMenu()
     {
-        loadingMenu.SetActive(true);
-        musicHandler.PlayLoadingScreen();
+        Transition.instance.StartTransition(() => {
+            loadingMenu.SetActive(true);
+            musicHandler.PlayLoadingScreen();
+        });
     }
 }

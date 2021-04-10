@@ -47,7 +47,10 @@ public class Transition : MonoBehaviour
         if (variableTransitions)
             SetRandomController();
         else
+        {
+            fadeAnimator.runtimeAnimatorController = animatorControllers[1];
             fadeWaitTime = fadeWaitTimes[1];
+        }
 
         fadeAnimator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(fadeWaitTime);
