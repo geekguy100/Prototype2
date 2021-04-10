@@ -45,13 +45,37 @@ public class Character : MonoBehaviour
     [Tooltip("The character's bow")]
     [SerializeField] private GameObject bow = null;
 
-    [Tooltip("If a player's stat decreases or increases by at least this amount, select the appropriate emotion.")]
-    [SerializeField] private int emotionThreshold = 6;
 
-    [Tooltip("The number of stats that need to decrease in order for the character to be concerned.")]
+    [Header("Emotion Selection Algorithm")]
+    [SerializeField] private EMOTION_ALGORITHM selectedAlgorithm = EMOTION_ALGORITHM.STAT_BIAS;
+    private enum EMOTION_ALGORITHM { STAT_BIAS, CONSIDER_ALL, MIX };
+
+    [Header("CONSIDER_ALL Emotion Settings")]
+    [Tooltip("Used with the CONSIDER_ALL or MIX algorithm option. This value determine by how much" +
+        " a stat must increase or decrease for the character to be happy or shocked respectively.")]
+    [SerializeField] private int majorEmotionThreshold = 6;
+
+    [Tooltip("Used with the random emotion-selection algorithm option. If the majorEmotionThreshold is not reached, this " +
+        "value determines how many stats must decrease in order for the character to be CONCERNED.")]
     [SerializeField] private int statDecreaseThreshold = 2;
 
+    [Header("STAT_BIAS Emotion Settings")]
+    [Tooltip("The index of stat that this character looks for changes in.")]
+    [Range(1, 3)]
+    [SerializeField] private int associatedEmotionIndex;
 
+    [SerializeField] private int happyThreshold = 8;
+    [SerializeField] private int shockedThreshold = -8;
+
+    [Tooltip("The max amount a stat needs to increase or decrease by for the character to be thinking.")]
+    [SerializeField] private int thinkingThreshold = 4;
+
+
+    // DEFAULT, HAPPY, CONCERNED, SHOCKED, THINKING
+    // When I say 'change' I mean the absolute value of the change in the stat.
+    // If the change is between 0 and thinkingThreshold, make the character THINKING.
+    // If the change is between (thinkingThreshold + 1) and (happyShockedThreshold - 1), make the character CONCERNED.
+    // If the change is greater than happyShockedThreshold, make the character HAPPY or SHOCKED (depending on a negative or positive change).
     private void Start()
     {
         SetEmotion(CharacterSprite.Emotion.DEFAULT);
@@ -63,19 +87,68 @@ public class Character : MonoBehaviour
     /// <param name="statsDelta">The change is stats since the last scenario was completed.</param>
     public void SetEmotion(float[] statsDelta)
     {
+        if (selectedAlgorithm == EMOTION_ALGORITHM.CONSIDER_ALL)
+        {
+            SetEmotion_OLD(statsDelta);
+            return;
+        }
+
+        // Decide at runtime which algorithm to use to set the emotion of the character.
+        // If we're using a random algorithm, that is.
+        if (selectedAlgorithm == EMOTION_ALGORITHM.MIX)
+        {
+            int randomNum = Random.Range(1, 3);
+            if (randomNum == 1)
+            {
+                SetEmotion_OLD(statsDelta);
+                return;
+            }
+        }
+
+        float delta = statsDelta[associatedEmotionIndex];
+        print("STAT DELTA INDEX: " + associatedEmotionIndex + ": CHANGE = " + delta);
+
+        if (delta < 0)
+        {
+            if (delta <= shockedThreshold)
+                SetEmotion(CharacterSprite.Emotion.SHOCKED);
+            else if (delta < -thinkingThreshold)
+                SetEmotion(CharacterSprite.Emotion.CONCERNED);
+            else
+                SetEmotion(CharacterSprite.Emotion.THINKING);
+        }
+        else
+        {
+            if (delta >= happyThreshold)
+                SetEmotion(CharacterSprite.Emotion.HAPPY);
+            else if (delta > thinkingThreshold)
+                SetEmotion(CharacterSprite.Emotion.CONCERNED);
+            else
+                SetEmotion(CharacterSprite.Emotion.THINKING);
+        }
+    }
+
+    /// <summary>
+    /// Sets the character's emotion based on the player's change in stats.
+    /// This algorithm looks at all of the stats to determine an emotion.
+    /// </summary>
+    /// <param name="statsDelta">The change is stats since the last scenario was completed.</param>
+    public void SetEmotion_OLD(float[] statsDelta)
+    {
         int statsDecreased = 0;
+
         for (int i = 1; i < statsDelta.Length; ++i)
         {
             // If any of the stats hit the threshold, set the appropriate emotion and return.
-            if (statsDelta[i] <= -emotionThreshold)
+            if (statsDelta[i] <= -majorEmotionThreshold)
             {
-                print("CHARACTER: " + "Hit SHOCKED threshold, meaning a stat decreased by " + emotionThreshold + " or more.");
+                print("CHARACTER: " + "Hit SHOCKED threshold, meaning a stat decreased by " + majorEmotionThreshold + " or more.");
                 SetEmotion(CharacterSprite.Emotion.SHOCKED);
                 return;
             }
-            else if (statsDelta[i] >= emotionThreshold)
+            else if (statsDelta[i] >= majorEmotionThreshold)
             {
-                print("CHARACTER: " + "Hit HAPPY threshold, meaning a stat increased by " + emotionThreshold + " or more.");
+                print("CHARACTER: " + "Hit HAPPY threshold, meaning a stat increased by " + majorEmotionThreshold + " or more.");
                 SetEmotion(CharacterSprite.Emotion.HAPPY);
                 return;
             }
@@ -95,7 +168,7 @@ public class Character : MonoBehaviour
 
         // If there are more than or an equal amount of stats decreased
         // compared to our statDecreased threshold, pick the CONCERNED emotion.
-        else if (statsDecreased >= statDecreaseThreshold)
+        else if (statsDecreased >= 2)
         {
             print("CHARACTER: " + "2 or more stats decreased, so character is CONCERNED.");
             SetEmotion(CharacterSprite.Emotion.CONCERNED);

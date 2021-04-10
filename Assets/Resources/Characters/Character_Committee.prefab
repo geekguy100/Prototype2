@@ -117,8 +117,13 @@ MonoBehaviour:
   rightArm: {fileID: 5302995407688787523}
   antenna: {fileID: 0}
   bow: {fileID: 0}
-  emotionThreshold: 6
+  selectedAlgorithm: 2
+  majorEmotionThreshold: 4
   statDecreaseThreshold: 2
+  associatedEmotionIndex: 1
+  happyThreshold: 2
+  shockedThreshold: 4
+  thinkingThreshold: 2
 --- !u!1001 &131392011720617236
 PrefabInstance:
   m_ObjectHideFlags: 0

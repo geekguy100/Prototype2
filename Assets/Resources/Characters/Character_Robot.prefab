@@ -114,6 +114,7 @@ MonoBehaviour:
   - {fileID: 4278642854307399039, guid: 67d4497c7fb300d4a97a8fa3dbab96d7, type: 3}
   - {fileID: 5601285782947756532, guid: b747154a575d2c14ba543a2cae040ae2, type: 3}
   - {fileID: 4029258480875798162, guid: 2aab8eb0135dad44cbea661acd26fece, type: 3}
+  - {fileID: 4029258480875798162, guid: f538b7c0c08b6034fa29609dd0f1301b, type: 3}
   antennas:
   - {fileID: 3231790398405193855, guid: def6a5e48a151e54e8569f23c68c7cb1, type: 3}
   - {fileID: 1999790495623033267, guid: ee9b8563cbd2cbc4fa15d49a6440e6f1, type: 3}
@@ -128,8 +129,13 @@ MonoBehaviour:
   rightArm: {fileID: 1831486885874313759}
   antenna: {fileID: 4343756315254443234}
   bow: {fileID: 8293799064774068645}
-  emotionThreshold: 6
+  selectedAlgorithm: 1
+  majorEmotionThreshold: 7
   statDecreaseThreshold: 2
+  associatedEmotionIndex: 3
+  happyThreshold: 8
+  shockedThreshold: -8
+  thinkingThreshold: 4
 --- !u!95 &250276289
 Animator:
   serializedVersion: 3
