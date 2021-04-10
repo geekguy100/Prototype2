@@ -8,6 +8,9 @@ using System.Linq;
 
 public class SettingsMenu : MonoBehaviour
 {
+    public AudioSource sfxSource;
+    public AudioClip ding;
+
     public AudioMixer music;
     public AudioMixer ui;
     public TMP_Dropdown resolutionDropdown;
@@ -66,5 +69,11 @@ public class SettingsMenu : MonoBehaviour
     {
  
         Screen.SetResolution((int)options[resolutionIndex].x,(int)options[resolutionIndex].y,Screen.fullScreen,defaultRefreshRate);
+    }
+
+    public void CheckEffectsVolume()
+    {
+        sfxSource.clip = ding;
+        sfxSource.PlayScheduled(0);
     }
 }
