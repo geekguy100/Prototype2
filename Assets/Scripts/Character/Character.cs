@@ -192,10 +192,10 @@ public class Character : MonoBehaviour
             UpdateSprite(emotion, ref bow, bows);
         if (face != null)
             UpdateSprite(emotion, ref face, faces);
-        if (leftArm != null)
-            UpdateSprite(emotion, ref leftArm, leftArms);
         if (rightArm != null)
             UpdateSprite(emotion, ref rightArm, rightArms);
+        if (leftArm != null)
+            UpdateSprite(emotion, ref leftArm, leftArms);
         if (antenna != null)
             UpdateSprite(emotion, ref antenna, antennas);
     }
