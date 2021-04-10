@@ -118,12 +118,12 @@ MonoBehaviour:
   antenna: {fileID: 0}
   bow: {fileID: 0}
   selectedAlgorithm: 2
-  majorEmotionThreshold: 4
+  majorEmotionThreshold: 5
   statDecreaseThreshold: 2
-  associatedEmotionIndex: 1
-  happyThreshold: 2
-  shockedThreshold: 4
-  thinkingThreshold: 2
+  associatedEmotionIndex: 2
+  happyThreshold: 5
+  shockedThreshold: -3
+  thinkingThreshold: 3
 --- !u!1001 &131392011720617236
 PrefabInstance:
   m_ObjectHideFlags: 0
