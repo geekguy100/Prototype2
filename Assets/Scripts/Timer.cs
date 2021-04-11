@@ -161,7 +161,7 @@ public class Timer : MonoBehaviour
                     Invoke("HideWarnings", warningTime);
                 }
                 // Decays stat multiplier
-                statMultiplier -= decayPerSecond * Time.deltaTime;
+                //statMultiplier -= decayPerSecond * Time.deltaTime;
             }
 
             time -= Time.deltaTime;

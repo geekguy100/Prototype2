@@ -32266,7 +32266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1164707613
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32365,6 +32365,7 @@ MonoBehaviour:
   - {fileID: 1961460015}
   - {fileID: 41379988}
   - {fileID: 586315728}
+  resultsScroll: {fileID: 1951089573}
   timerText: 'Notice the timer to the right of this question. It will display how
     long you have to respond to each question. To respond to this scenario, you need
     to do two things. First, you will need to select the box with the response you
@@ -47255,7 +47256,7 @@ MonoBehaviour:
   m_text: 'Each Advisor has a corresponding stat that they are aiming to maximize.
     The Accountant oversees finance, which relates to the profits of the company.
     The Engineer manages efficiency, or how well the Smart Grid is running. The Publicist
-    handles approval, which is  how the public views your company.
+    handles approval, which is how the public views your company.
 
 
 
@@ -54274,6 +54275,7 @@ GameObject:
   - component: {fileID: 1951089572}
   - component: {fileID: 1951089571}
   - component: {fileID: 1951089570}
+  - component: {fileID: 1951089573}
   m_Layer: 5
   m_Name: results text
   m_TagString: Untagged
@@ -54340,7 +54342,7 @@ MonoBehaviour:
   m_fontSizeMin: 10
   m_fontSizeMax: 14
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -54402,6 +54404,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.5}
   m_SizeDelta: {x: -20, y: -21.039352}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1951089573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951089569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a8c0fee77ca6e419ca324c89fb827e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typewriterSource: {fileID: 1940758732}
+  dingSource: {fileID: 605736306}
+  dingClip: {fileID: 8300000, guid: 0507d5b05ab73084d823afa96afa566e, type: 3}
+  text2: {fileID: 0}
 --- !u!1 &1961460013
 GameObject:
   m_ObjectHideFlags: 0
@@ -55994,6 +56012,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1164707614}
+        m_TargetAssemblyTypeName: Tutorial, Assembly-CSharp
+        m_MethodName: EndTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

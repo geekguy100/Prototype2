@@ -78,6 +78,7 @@ public class Tutorial : MonoBehaviour
     [Tooltip("Buttons to track player choice")]
     public Button[] tutorialChoiceButtons;
 
+    public TextScroll resultsScroll;
 
     [Tooltip("Text for tutorial step explaining timer")]
     [SerializeField]
@@ -127,9 +128,9 @@ public class Tutorial : MonoBehaviour
 
 
 
-    private string resultsString = "This screen will show you the results of your choice, including how your stats changed." +
-                                   "\n\nMake sure all of your advisors have their booklets open and are ready to play." +
-                                   "\n\nWhen you are ready to start playing the game, press the Start Game button below your stats.";
+    private string resultsString = "This screen will show the results of your choice. It will describe the effects of your decision and display how your stats have changed because of it." +
+                                   "\n\nAlso, you can see how your answer compares to other groups that have played this game in the starburst on the left." +
+                                   "\n\nYou are now ready to begin the game. Make sure all of your advisors are ready, then press the \"Start Game\" button below to begin.";
 
     [Tooltip("The tutorial stats (used for animating results screen)")]
     [SerializeField] private float[] stats;
@@ -564,4 +565,8 @@ public class Tutorial : MonoBehaviour
         roleDescriptionPanel.SetActive(false);
     }
 
+    public void EndTutorial()
+    {
+        resultsScroll.FinishScroll();
+    }
 }
