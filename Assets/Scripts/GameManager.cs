@@ -922,6 +922,7 @@ public class GameManager : MonoBehaviour
             {
                 ending.backgroundPath = backgroundPaths[i];
                 ending.text = endings[i];
+                break;
             }
         }
         //if (stat < resultsHandler.statThresholds[0])
