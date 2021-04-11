@@ -2418,7 +2418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   revealed: 0
-  revealedCursor: {fileID: 2800000, guid: 965edee7d6480634ab584639aadc42a6, type: 3}
+  revealedCursor: {fileID: 2800000, guid: 1b6c8d667127ae346b1e9d95e82f0e18, type: 3}
   questionMarkCursor: {fileID: 2800000, guid: 45fa99f00d7e78a45869659b7639e7b0, type: 3}
   sfxSource: {fileID: 768988162}
   scaleSound: {fileID: 8300000, guid: 0dfc1652234eb0c40940176c2e2cdfe4, type: 3}
@@ -8238,7 +8238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   revealed: 0
-  revealedCursor: {fileID: 2800000, guid: 965edee7d6480634ab584639aadc42a6, type: 3}
+  revealedCursor: {fileID: 2800000, guid: 1b6c8d667127ae346b1e9d95e82f0e18, type: 3}
   questionMarkCursor: {fileID: 2800000, guid: 45fa99f00d7e78a45869659b7639e7b0, type: 3}
   sfxSource: {fileID: 768988162}
   bubbleSound: {fileID: 8300000, guid: be8cbf8c53d378f439cbbf76dc0eb4a7, type: 3}
