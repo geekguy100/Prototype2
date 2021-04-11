@@ -359,6 +359,48 @@ public class ResultsHandler : MonoBehaviour
         efficiencySliderLoading.value = stats[1] / 100f;
         approvalSliderLoading.value = stats[2] / 100f;
         financeSliderLoading.value = stats[3] / 100f;
+
+        // Change loading efficiency slider color
+        if (stats[1] < statThresholds[0])
+        {
+            efficiencySliderLoading.fillRect.gameObject.GetComponent<Image>().color = Color.red;
+        }
+        else if (stats[1] < statThresholds[1])
+        {
+            efficiencySliderLoading.fillRect.gameObject.GetComponent<Image>().color = Color.yellow;
+        }
+        else
+        {
+            efficiencySliderLoading.fillRect.gameObject.GetComponent<Image>().color = Color.green;
+        }
+
+        // Change loading approval slider color
+        if (stats[2] < statThresholds[0])
+        {
+            approvalSliderLoading.fillRect.gameObject.GetComponent<Image>().color = Color.red;
+        }
+        else if (stats[2] < statThresholds[1])
+        {
+            approvalSliderLoading.fillRect.gameObject.GetComponent<Image>().color = Color.yellow;
+        }
+        else
+        {
+            approvalSliderLoading.fillRect.gameObject.GetComponent<Image>().color = Color.green;
+        }
+
+        // Change loading finance slider color
+        if (stats[3] < statThresholds[0])
+        {
+            financeSliderLoading.fillRect.gameObject.GetComponent<Image>().color = Color.red;
+        }
+        else if (stats[3] < statThresholds[1])
+        {
+            financeSliderLoading.fillRect.gameObject.GetComponent<Image>().color = Color.yellow;
+        }
+        else
+        {
+            financeSliderLoading.fillRect.gameObject.GetComponent<Image>().color = Color.green;
+        }
     }
 
     private void ResetChangeText()
