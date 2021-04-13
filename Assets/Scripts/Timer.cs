@@ -93,7 +93,10 @@ public class Timer : MonoBehaviour
     [Tooltip("Warning SFX volume (0-1)")]
     public float warningVolume;
 
-
+    /// <summary>
+    /// Whether or not timer is paused
+    /// </summary>
+    private bool isPaused = false;
     //public Image background;
 
     //The Coroutine previously called to Countdown - used to make sure the timer stops and resets properly.
@@ -124,7 +127,7 @@ public class Timer : MonoBehaviour
 
         halfWarningSent = false;
         quarterWarningSent = false;
-
+        isPaused = false;
         lastCall = StartCoroutine(Countdown());
     }
 
@@ -137,42 +140,51 @@ public class Timer : MonoBehaviour
 
         while (time > 0)
         {
-            // Checks if timer is 3/4 over (send warning here)
-            if (time < timePerQuestion / 4)
+            if (!isPaused)
             {
-                // Sends quarter warning
-                if (!quarterWarningSent)
+                // Checks if timer is 3/4 over (send warning here)
+                if (time < timePerQuestion / 4)
                 {
-                    quarterWarningSent = true;
-                    sfxSource.PlayOneShot(quarterWarningSound, warningVolume);
-                    quarterWarning.SetActive(true);
-                    Invoke("HideWarnings", warningTime);
+                    // Sends quarter warning
+                    if (!quarterWarningSent)
+                    {
+                        quarterWarningSent = true;
+                        sfxSource.PlayOneShot(quarterWarningSound, warningVolume);
+                        quarterWarning.SetActive(true);
+                        Invoke("HideWarnings", warningTime);
+                    }
                 }
-            }
-            // Checks if grace time is over and start decay should start
-            else if (time < timePerQuestion / 2)
-            {
-                // Sends half warning 
-                if (!halfWarningSent)
+                // Checks if grace time is over and start decay should start
+                else if (time < timePerQuestion / 2)
                 {
-                    halfWarningSent = true;
-                    sfxSource.PlayOneShot(halfWarningSound, warningVolume);
-                    halfWarning.SetActive(true);
-                    Invoke("HideWarnings", warningTime);
+                    // Sends half warning 
+                    if (!halfWarningSent)
+                    {
+                        halfWarningSent = true;
+                        sfxSource.PlayOneShot(halfWarningSound, warningVolume);
+                        halfWarning.SetActive(true);
+                        Invoke("HideWarnings", warningTime);
+                    }
+                    // Decays stat multiplier
+                    //statMultiplier -= decayPerSecond * Time.deltaTime;
                 }
-                // Decays stat multiplier
-                //statMultiplier -= decayPerSecond * Time.deltaTime;
+
+                // Pause timer if player presses Q
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    TimerPause();
+                }
+
+                time -= Time.deltaTime;
+
+                // Gets rotation change
+                rotChange = Time.deltaTime * fullRot / timePerQuestion;
+
+                // Adds rotation change to old rotation and applied new rotation to spinner
+                Vector3 oldRot = spinnerObj.transform.rotation.eulerAngles;
+                Vector3 newRot = oldRot + new Vector3(0, 0, -rotChange);
+                spinnerObj.transform.rotation = Quaternion.Euler(newRot);
             }
-
-            time -= Time.deltaTime;
-
-            // Gets rotation change
-            rotChange = Time.deltaTime * fullRot / timePerQuestion;
-
-            // Adds rotation change to old rotation and applied new rotation to spinner
-            Vector3 oldRot = spinnerObj.transform.rotation.eulerAngles;
-            Vector3 newRot = oldRot + new Vector3(0, 0, -rotChange);
-            spinnerObj.transform.rotation = Quaternion.Euler(newRot);
 
             yield return null;
         }
@@ -214,6 +226,11 @@ public class Timer : MonoBehaviour
     {
         quarterWarning.SetActive(false);
         halfWarning.SetActive(false);
+    }
+
+    private void TimerPause()
+    {
+        isPaused = !isPaused;
     }
 
     /// <summary>
