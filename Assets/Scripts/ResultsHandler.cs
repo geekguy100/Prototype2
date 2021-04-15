@@ -268,49 +268,45 @@ public class ResultsHandler : MonoBehaviour
         // statStates[0] = efficiency
         // statStates[1] = approval
         // statStates[2] = finance
-        for (int i = 0; i < statStates.Length; i++)
+        float[] statDiffs = new float[3];
+        for (int i = 0; i < 3; i++)
         {
-            switch (i)
+            statDiffs[i] = Math.Abs(50 - stats[i + 1]);
+        }
+        if (statDiffs[0] > statDiffs[1] && statDiffs[0] > statDiffs[2])
+        {
+            if (statStates[0] == 0)
             {
-                case 0:
-                    efficiencyObjs[statStates[i]].SetActive(true);
-                    if (statStates[i] == 0)
-                    {
-                        lowEfficiencyWindow.SetActive(true);
-                    }
-                    else if (statStates[i] == 2)
-                    {
-                        highEfficiencyWindow.SetActive(true);
-                    }
-                    break;
-                case 1:
-                    approvalObjs[statStates[i]].SetActive(true);
-                    // Shows window objects
-                    if (statStates[i] == 0)
-                    {
-                        lowApprovalWindow.SetActive(true);
-                    }
-                    else if (statStates[i] == 2)
-                    {
-                        highApprovalWindow.SetActive(true);
-                    }
-                    break;
-                case 2:
-                    financeObjs[statStates[i]].SetActive(true);
-                    // Shows window objects
-                    if (statStates[i] == 0)
-                    {
-                        lowFinanceWindow.SetActive(true);
-                    }
-                    else if (statStates[i] == 2)
-                    {
-                        highFinanceWindow.SetActive(true);
-                    }
-                    break;
+                lowEfficiencyWindow.SetActive(true);
+            }
+            else if (statStates[0] == 2)
+            {
+                highEfficiencyWindow.SetActive(true);
+            }
+        }
+        else if (statDiffs[1] > statDiffs[2] && statDiffs[1] > statDiffs[0])
+        {
+            if (statStates[1] == 0)
+            {
+                lowApprovalWindow.SetActive(true);
+            }
+            else if (statStates[1] == 2)
+            {
+                highApprovalWindow.SetActive(true);
+            }
+        }
+        else
+        {
+            if (statStates[2] == 0)
+            {
+                lowFinanceWindow.SetActive(true);
+            }
+            else if(statStates[2] == 2)
+            {
+                highFinanceWindow.SetActive(true);
             }
         }
 
-        // Shows window objects
     }
 
     /// <summary>
