@@ -28274,6 +28274,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4343756315254443234, guid: 53513aa38e55af4429b4e03be9cc6f7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4542715039507070854, guid: 53513aa38e55af4429b4e03be9cc6f7d, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -55772,6 +55776,9 @@ MonoBehaviour:
   - The manager has final say on what actions your company will make.
   titleTextObject: {fileID: 1886140256}
   hintTextObject: {fileID: 1498694063}
+  choice: 0
+  swapTimeDefaultValue: 12
+  swapTimer: 0
 --- !u!114 &2025868374
 MonoBehaviour:
   m_ObjectHideFlags: 0
