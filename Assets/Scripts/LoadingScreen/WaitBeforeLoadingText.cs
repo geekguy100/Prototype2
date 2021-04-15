@@ -3,7 +3,7 @@ using TMPro;
 
 public class WaitBeforeLoadingText : MonoBehaviour
 {
-    public float timeBeforeFadeIn = 7f;
+    public float timeBeforeFadeIn = 5f;
     private float originalTime;
     public TextMeshProUGUI textObject;
     bool flipAlpha = false;
