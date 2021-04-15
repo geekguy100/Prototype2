@@ -40,6 +40,8 @@ public class FanController : Interactable
     [Tooltip("Particles to play when fan breaks")]
     public GameObject brokenParticles;
 
+    [Tooltip("Animators of plants that blow in the fan's breeze")]
+    public Animator[] plantAnims;
 
     /// <summary>
     /// Whether or not the fan is currently counting number of interactions
@@ -61,6 +63,10 @@ public class FanController : Interactable
     private void Start()
     {
         bladesAnim.keepAnimatorControllerStateOnDisable = true;
+        foreach (Animator anim in plantAnims)
+        {
+            anim.keepAnimatorControllerStateOnDisable = true;
+        }
     }
 
     /// <summary>
@@ -101,6 +107,10 @@ public class FanController : Interactable
                 isOn = true;
                 bladesAnim.SetBool("shouldRun", isOn);
                 PlaySFX(onSound);
+            }
+            foreach (Animator anim in plantAnims)
+            {
+                anim.SetBool("isPlaying", isOn);
             }
         }      
     }
@@ -158,5 +168,10 @@ public class FanController : Interactable
         }
         // Destroys particles when fan is no longer broken
         Destroy(particles);
+    }
+
+    public bool GetIsOn()
+    {
+        return isOn;
     }
 }

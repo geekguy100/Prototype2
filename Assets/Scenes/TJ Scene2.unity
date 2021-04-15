@@ -6953,6 +6953,7 @@ GameObject:
   - component: {fileID: 274307862}
   - component: {fileID: 274307861}
   - component: {fileID: 274307860}
+  - component: {fileID: 274307864}
   m_Layer: 0
   m_Name: Plant Leaves
   m_TagString: Untagged
@@ -7087,6 +7088,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &274307864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274307858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a9baad1f065534c9dbc1e862407cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fc: {fileID: 424646282}
 --- !u!1 &282615550
 GameObject:
   m_ObjectHideFlags: 0
@@ -11928,6 +11942,10 @@ MonoBehaviour:
   breakTime: 4
   breakCount: 10
   brokenParticles: {fileID: 8562086034200742265, guid: e59c15dcee93e3d4e9f1841019667a9d, type: 3}
+  plantAnims:
+  - {fileID: 274307862}
+  - {fileID: 1517319615}
+  - {fileID: 1568061071}
   numInteractions: 0
 --- !u!58 &424646283
 CircleCollider2D:
@@ -38153,7 +38171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1347828860
 Transform:
   m_ObjectHideFlags: 0
@@ -43568,6 +43586,7 @@ GameObject:
   - component: {fileID: 1517319617}
   - component: {fileID: 1517319616}
   - component: {fileID: 1517319615}
+  - component: {fileID: 1517319619}
   m_Layer: 0
   m_Name: Hanging Plant Left
   m_TagString: Untagged
@@ -43702,6 +43721,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1517319619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517319613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a9baad1f065534c9dbc1e862407cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fc: {fileID: 424646282}
 --- !u!1 &1518266313
 GameObject:
   m_ObjectHideFlags: 0
@@ -45036,6 +45068,7 @@ GameObject:
   - component: {fileID: 1568061073}
   - component: {fileID: 1568061072}
   - component: {fileID: 1568061071}
+  - component: {fileID: 1568061075}
   m_Layer: 0
   m_Name: Hanging Plant Right
   m_TagString: Untagged
@@ -45170,6 +45203,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1568061075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568061069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a9baad1f065534c9dbc1e862407cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fc: {fileID: 424646282}
 --- !u!1 &1569066669
 GameObject:
   m_ObjectHideFlags: 0
