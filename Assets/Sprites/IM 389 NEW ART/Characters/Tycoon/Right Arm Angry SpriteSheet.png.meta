@@ -103,10 +103,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1
         y: 41
-        width: 177
+        width: 176
         height: 471
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -122,12 +122,12 @@ TextureImporter:
       name: Right Arm Angry SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 178
+        x: 179
         y: 41
-        width: 178
+        width: 176
         height: 471
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,10 +145,10 @@ TextureImporter:
         serializedVersion: 2
         x: 357
         y: 41
-        width: 177
+        width: 176
         height: 471
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

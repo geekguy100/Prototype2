@@ -122,9 +122,9 @@ public class Character : MonoBehaviour
             if (delta >= happyThreshold)
                 SetEmotion(CharacterSprite.Emotion.HAPPY);
             else if (delta > thinkingThreshold)
-                SetEmotion(CharacterSprite.Emotion.CONCERNED);
-            else
                 SetEmotion(CharacterSprite.Emotion.THINKING);
+            else
+                SetEmotion(CharacterSprite.Emotion.CONCERNED);
         }
     }
 
