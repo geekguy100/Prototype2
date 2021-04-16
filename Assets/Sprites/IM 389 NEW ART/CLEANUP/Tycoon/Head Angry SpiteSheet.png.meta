@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: fd0e9843bf5b9674faa35438f59fccd9
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1593322244430976061
+    second: Head Angry SpiteSheet_0
+  - first:
+      213: 5883408016110290549
+    second: Head Angry SpiteSheet_1
+  - first:
+      213: 9222527156821701738
+    second: Head Angry SpiteSheet_2
+  - first:
+      213: -1414948905020314610
+    second: Head Angry SpiteSheet_3
+  - first:
+      213: -4414722258846260577
+    second: Head Angry SpiteSheet_4
+  - first:
+      213: 3652363204848073698
+    second: Head Angry SpiteSheet_5
+  - first:
+      213: -4944939761965291309
+    second: Head Angry SpiteSheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +62,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +94,168 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Head Angry SpiteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 713
+        width: 350
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cba6f74cd163e9e0800000000000000
+      internalID: -1593322244430976061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Angry SpiteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 713
+        width: 350
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57680f44b6016a150800000000000000
+      internalID: 5883408016110290549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Angry SpiteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 487
+        width: 350
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6430c9069ffcff70800000000000000
+      internalID: 9222527156821701738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Angry SpiteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 487
+        width: 350
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0cafe4b7771d5ce0800000000000000
+      internalID: -1414948905020314610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Angry SpiteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 261
+        width: 350
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92657bee71cbb2c0800000000000000
+      internalID: -4414722258846260577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Angry SpiteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 261
+        width: 350
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb3da7dbfccfa230800000000000000
+      internalID: 3652363204848073698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Angry SpiteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 35
+        width: 350
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8aa546c7b006bb0800000000000000
+      internalID: -4944939761965291309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

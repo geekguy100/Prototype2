@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: fc711538bd23ce947b0cbaf1b7bdeac6
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3708997010676912305
+    second: Head Default SpriteSheet_0
+  - first:
+      213: 4433792553691564917
+    second: Head Default SpriteSheet_1
+  - first:
+      213: -861460934197418722
+    second: Head Default SpriteSheet_2
+  - first:
+      213: 246937584133922177
+    second: Head Default SpriteSheet_3
+  - first:
+      213: 7294363638685838845
+    second: Head Default SpriteSheet_4
+  - first:
+      213: 1262697481695760600
+    second: Head Default SpriteSheet_5
+  - first:
+      213: -1747298653120328978
+    second: Head Default SpriteSheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +62,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +94,168 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Head Default SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 756
+        width: 353
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fed91bedef68cc0800000000000000
+      internalID: -3708997010676912305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Default SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 756
+        width: 353
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bce8a16def78d30800000000000000
+      internalID: 4433792553691564917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Default SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 523
+        width: 353
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15694538d97b04f0800000000000000
+      internalID: -861460934197418722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Default SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 523
+        width: 353
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ddef7ac6c4d6300800000000000000
+      internalID: 246937584133922177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Default SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 290
+        width: 353
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd256a0519ca3560800000000000000
+      internalID: 7294363638685838845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Default SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 290
+        width: 353
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d091476ba0068110800000000000000
+      internalID: 1262697481695760600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head Default SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 57
+        width: 353
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea8e30f12950c7e0800000000000000
+      internalID: -1747298653120328978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

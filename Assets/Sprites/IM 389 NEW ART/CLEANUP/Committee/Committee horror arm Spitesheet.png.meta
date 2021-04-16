@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: cde9b634c81dc42449b800a2d02f4825
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7307009171330002857
+    second: Committee horror arm Spitesheet_0
+  - first:
+      213: -4476814423306556167
+    second: Committee horror arm Spitesheet_1
+  - first:
+      213: -4585515906213355814
+    second: Committee horror arm Spitesheet_2
+  - first:
+      213: -8781676983775682724
+    second: Committee horror arm Spitesheet_3
+  - first:
+      213: 589605237420426212
+    second: Committee horror arm Spitesheet_4
+  - first:
+      213: -8726498029061101204
+    second: Committee horror arm Spitesheet_5
+  - first:
+      213: 4424874013633057312
+    second: Committee horror arm Spitesheet_6
+  - first:
+      213: -7959984731913000575
+    second: Committee horror arm Spitesheet_7
+  - first:
+      213: -5486677914251465322
+    second: Committee horror arm Spitesheet_8
+  - first:
+      213: 7803669273287011107
+    second: Committee horror arm Spitesheet_9
+  - first:
+      213: -4270213299256957243
+    second: Committee horror arm Spitesheet_10
+  - first:
+      213: 408829420103254136
+    second: Committee horror arm Spitesheet_11
+  - first:
+      213: 4832779629167667302
+    second: Committee horror arm Spitesheet_12
+  - first:
+      213: -7881272690074548990
+    second: Committee horror arm Spitesheet_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +83,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +115,168 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Committee horror arm Spitesheet_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1232
+        width: 436
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af65ab8026b76560800000000000000
+      internalID: 7307009171330002857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Committee horror arm Spitesheet_1
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 1232
+        width: 436
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fca77d40092fd1c0800000000000000
+      internalID: -4476814423306556167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Committee horror arm Spitesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 1232
+        width: 436
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adedf321499fc50c0800000000000000
+      internalID: -4585515906213355814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Committee horror arm Spitesheet_3
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 653
+        width: 436
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f93d18f47312680800000000000000
+      internalID: -8781676983775682724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Committee horror arm Spitesheet_4
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 653
+        width: 436
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3872ee6d2be2800800000000000000
+      internalID: 589605237420426212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Committee horror arm Spitesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 653
+        width: 436
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69aaac074045e680800000000000000
+      internalID: -8726498029061101204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Committee horror arm Spitesheet_6
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 74
+        width: 436
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022947ea87f486d30800000000000000
+      internalID: 4424874013633057312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

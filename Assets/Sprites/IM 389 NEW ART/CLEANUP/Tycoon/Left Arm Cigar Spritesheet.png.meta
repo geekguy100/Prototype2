@@ -1,7 +1,34 @@
 fileFormatVersion: 2
 guid: 3e5bbabe99060d44192570cc7a8fd22d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3195009617939712437
+    second: Left Arm Cigar Spritesheet_0
+  - first:
+      213: 5229034824156981552
+    second: Left Arm Cigar Spritesheet_1
+  - first:
+      213: -4295726891577430855
+    second: Left Arm Cigar Spritesheet_2
+  - first:
+      213: -5995776291881391163
+    second: Left Arm Cigar Spritesheet_3
+  - first:
+      213: -5620817216407021375
+    second: Left Arm Cigar Spritesheet_4
+  - first:
+      213: -6551914420723241300
+    second: Left Arm Cigar Spritesheet_5
+  - first:
+      213: -3747513577576033377
+    second: Left Arm Cigar Spritesheet_6
+  - first:
+      213: 7109509567730355833
+    second: Left Arm Cigar Spritesheet_7
+  - first:
+      213: -6127543081412285323
+    second: Left Arm Cigar Spritesheet_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +68,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +100,210 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Left Arm Cigar Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 610
+        width: 321
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b463fbc2eab09a3d0800000000000000
+      internalID: -3195009617939712437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Cigar Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 610
+        width: 321
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039260cc773419840800000000000000
+      internalID: 5229034824156981552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Cigar Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 610
+        width: 321
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc2f6fd6238264c0800000000000000
+      internalID: -4295726891577430855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Cigar Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 321
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb63b1ca39bacca0800000000000000
+      internalID: -5995776291881391163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Cigar Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 316
+        width: 321
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8d8a4a588def1b0800000000000000
+      internalID: -5620817216407021375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Cigar Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 316
+        width: 321
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae28024c8ce215a0800000000000000
+      internalID: -6551914420723241300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Cigar Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 22
+        width: 321
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9390a1a1482efbc0800000000000000
+      internalID: -3747513577576033377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Cigar Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 22
+        width: 321
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e0fc7b84d0aa260800000000000000
+      internalID: 7109509567730355833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Left Arm Cigar Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 22
+        width: 321
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ca486580896faa0800000000000000
+      internalID: -6127543081412285323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
