@@ -123,8 +123,8 @@ public class Tutorial : MonoBehaviour
     [Tooltip("Volume timer warning should play at")]
     public float warningVolume = .3f;
 
-    [Tooltip("Timer half warning object")]
-    public GameObject halfWarningObj;
+    [Tooltip("Projector Button object")]
+    public GameObject projectorButton;
 
 
 
@@ -209,13 +209,16 @@ public class Tutorial : MonoBehaviour
         // If we're not on the last step of the tutorial (before going to the interactive section), 
         // make sure to hide the previous slide and show the current one.
         else
-        {           
+        {
+            
             if (step == roleSelectStep)
             {
+                projectorButton.SetActive(false);
                 StartCoroutine(ZoomIn());
             }
             else if (step == (roleSelectStep + 1))
             {
+                projectorButton.SetActive(true);
                 panels[step - 1].SetActive(false);
                 StartCoroutine(ZoomOut());
             }
@@ -229,7 +232,7 @@ public class Tutorial : MonoBehaviour
 
 
         // Shows previous button if it isn't showing
-        if (!prevButton.gameObject.activeInHierarchy && step < panels.Length && step != roleSelectStep)
+        if (!prevButton.gameObject.activeInHierarchy && step < panels.Length && step != roleSelectStep && step != roleSelectStep + 1)
         {
             prevButton.gameObject.SetActive(true);
         }
@@ -262,24 +265,6 @@ public class Tutorial : MonoBehaviour
         step++;
         gameplayStep++;
         setUpTexts[gameplayStep].gameObject.SetActive(true);
-    }
-
-    /// <summary>
-    /// Plays the timer warning and shows the warning object
-    /// </summary>
-    private void PlayTimerWarning()
-    {
-        sfxSource.PlayOneShot(timerWarning, warningVolume);
-        halfWarningObj.SetActive(true);
-        Invoke("HideWarningObj", 3f);
-    }
-
-    /// <summary>
-    /// Hides warning object
-    /// </summary>
-    private void HideWarningObj()
-    {
-        halfWarningObj.SetActive(false);
     }
 
     /// <summary>
@@ -332,6 +317,7 @@ public class Tutorial : MonoBehaviour
         }
         else if (step == roleSelectStep + 1)
         {
+            projectorButton.SetActive(false);
             panels[step].SetActive(false);
             step--;
             texts[step].FinishScroll();
@@ -349,6 +335,10 @@ public class Tutorial : MonoBehaviour
 
         // Hides previous button if its the first step
         if (step == 0)
+        {
+            prevButton.gameObject.SetActive(false);
+        }
+        else if (step == roleSelectStep + 1)
         {
             prevButton.gameObject.SetActive(false);
         }
@@ -436,6 +426,7 @@ public class Tutorial : MonoBehaviour
         {
             prevButton.gameObject.SetActive(true);
         }
+        projectorButton.SetActive(true);
         nextButton.gameObject.SetActive(true);
         chibiCharacter.StopPointing();
     }
@@ -450,6 +441,7 @@ public class Tutorial : MonoBehaviour
     ///                       3 = Efficiency </param>
     public void SelectRole(int chosenRole)
     {
+        prevButton.gameObject.SetActive(false);
         switch (chosenRole)
         {
             // Player chose manager, keeps tutorial going
@@ -463,21 +455,21 @@ public class Tutorial : MonoBehaviour
                 playerRole = Role.Finance;
                 panels[step].SetActive(false);
                 financeBooklet.SetActive(true);
-                prevButton.gameObject.SetActive(false);
+                step++;
                 break;
             // Player chose PR advisor, takes them to their booklet link
             case 2:
                 playerRole = Role.PR;
                 panels[step].SetActive(false);
                 prBooklet.SetActive(true);
-                prevButton.gameObject.SetActive(false);
+                step++;
                 break;
             // Player chose efficiency advisor, takes them to their booklet link
             case 3:
                 playerRole = Role.Efficiency;
                 panels[step].SetActive(false);
                 efficiencyBooklet.SetActive(true);
-                prevButton.gameObject.SetActive(false);
+                step++;
                 break;
             // Shouldnt get here but moves forward with tutorial as normal
             default:
@@ -568,5 +560,29 @@ public class Tutorial : MonoBehaviour
     public void EndTutorial()
     {
         resultsScroll.FinishScroll();
+    }
+
+    public GameObject GetCurrentPanel()
+    {
+        if (step < panels.Length)
+        {
+            return panels[step];
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    public TextScroll GetCurrentTextScroll()
+    {
+        if (step < texts.Length)
+        {
+            return texts[step];
+        }
+        else
+        {
+            return null;
+        }
     }
 }

@@ -107,7 +107,7 @@ public class TextScroll : MonoBehaviour
         {
             text2.GetComponent<TextScroll>().ResetScroll();
         }
-        if (!completed)
+        if (!completed && started)
         {
             typewriterSource.Stop();
             started = false;

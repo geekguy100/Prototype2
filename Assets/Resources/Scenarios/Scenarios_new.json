@@ -5,25 +5,25 @@
         {
           "Choice": "Ignore the concerns about the radio frequency emissions. In a public statement, you explain that because of Smart Grid's two-way information exchange between utilities and customers, the grid is extremely adaptable and more transparent to consumers. Customers will be able to see exactly how much energy they are using.",
           "Approval": 0,
-          "Efficiency": -4,
-          "Environment": -3,
-          "Finance": 5,
+          "Efficiency": -7,
+          "Environment": -5,
+          "Finance": 7,
           "Result": "For the most part, people remain skeptical of the Smart Grid. However, your public statement catches the eye of investors, who give you a financial boost."
         },
         {
           "Choice": "Use your platform to push a marketing campaign that provides the public with more reliable sources of information on Smart Meters. You trust that the public will be welcoming to Smart Meters after giving them the opportunity to research it.",
           "Approval": 0,
-          "Efficiency": -4,
-          "Environment": 4,
-          "Finance": -3,
+          "Efficiency": -7,
+          "Environment": 6,
+          "Finance": -5,
           "Result": "Your campaign releases and public approval rises among those that put in the effort to research. They are especially drawn in by how Phasor Measurement Units, devices that can read voltages many times a second, will allow for them to have a better understanding of their power usage and will stop those pesky visits by meter readers. Those that don't look further into Smart Grid maintain their old view of the system."
         },
         {
           "Choice": "Spend funds on a large statement to the public explaining that radio frequency emissions from a typical Smart Meter are significantly weaker than radio frequency emissions from common household appliances.",
           "Approval": 0,
-          "Efficiency": 2,
-          "Environment": 5,
-          "Finance": -4,
+          "Efficiency": 5,
+          "Environment": 7,
+          "Finance": -6,
           "Result": "Your public statement wins the public over. They were reassured after hearing that the World Health Organization concluded the radio frequencies produced by Smart Meters cause no negative health effects. They were also relieved to hear that these radio frequencies are only transmitted for about three minutes a day. The public was so won over by your statement that they pushed for faster implementation of Smart Meters."
         }
       ],
@@ -41,33 +41,33 @@
         {
           "Choice": "You accept the contract, which will have you implement Smart Meters into new coal-powered areas; however, you will be required to abandon your research into islanding, the practice of sharing green energy between multiple homes in a neighborhood.",
           "Approval": 0,
-          "Efficiency": -6,
-          "Environment": -3,
-          "Finance": 9,
+          "Efficiency": -9,
+          "Environment": -5,
+          "Finance": 11,
           "Result": "Your company takes the money from BCFF. The public is displeased because they know the Smart Grid has the capability to utilize a variety of renewable energy sources; however, the grant allows your company to roll out Smart Meters more quickly and efficiently."
         },
         {
           "Choice": "Your company publicly denounces the deal, citing Beautiful Clean Fossil Fuels as unethical. Instead, you double down on your commitment to making sure Smart Grid is implemented in areas using clean and diverse power generation to maximize clean energy usage.",
           "Approval": 0,
-          "Efficiency": 3,
-          "Environment": 9,
-          "Finance": -7,
+          "Efficiency": 5,
+          "Environment": 11,
+          "Finance": -9,
           "Result": "Your company's statement brings in large public support, allowing you to further educate them about Smart Grid's adaptability and efficient utilization of different renewable energy sources. The public's support of Smart Grid greatly increases due to this, but other large corporations are less likely to offer you deals in the future."
         },
         {
           "Choice": "Your company accepts the deal on the condition that Beautiful Clean Fossil Fuels diversifies some of their production into clean energy sources. This will help bring BCFF into the renewable energy industry.",
           "Approval": 0,
-          "Efficiency": 4,
-          "Environment": -4,
-          "Finance": 5,
+          "Efficiency": 7,
+          "Environment": -6,
+          "Finance": 7,
           "Result": "Accepting the money lowers your company's approval, but using it to put more renewable energy into the Smart Grid softens the hit. The grant will allow you to build a more efficient grid compared to the current centuries old system."
         },
         {
           "Choice": "Your company refuses the offer because Beautiful Clean Fossil Fuels lacks the integrated computer infrastructure and digital communications technology that Smart Grid requires. However, you remain open to the deal if the company upgrades their own system.",
           "Approval": 0,
-          "Efficiency": 4,
-          "Environment": -2,
-          "Finance": -2,
+          "Efficiency": 8,
+          "Environment": -4,
+          "Finance": -4,
           "Result": "The public is a bit disappointed you didn't denounce BCFF more enthusiastically, since one of your main arguments for the Smart Grid is its ability to take in many different renewable resources. However, leaving opportunities for future partnerships with companies helps your company's future finances."
         }
       ],
@@ -85,33 +85,33 @@
         {
           "Choice": "Your company will offer the former employees jobs, but the offers will come with substantial pay cuts and no retraining. The former employees will have to learn how to operate the Smart Grid on their own.",
           "Approval": 0,
-          "Efficiency": -6,
-          "Environment": 1,
-          "Finance": 5,
+          "Efficiency": -8,
+          "Environment": 3,
+          "Finance": 7,
           "Result": "Keeping the old workers at a discount saves you some money in the short term, and the community appreciates the fact that you were able to keep the workers at all. In the long term, your efficiency suffers as the old workers struggle to adapt to the new system."
         },
         {
           "Choice": "Leave behind the concerns of the past power grid workers. Lay them off since they are no longer qualified to work on the new system, and hire less expensive employees straight out of college.",
           "Approval": 0,
-          "Efficiency": -8,
-          "Environment": -8,
-          "Finance": 9,
+          "Efficiency": -11,
+          "Environment": -10,
+          "Finance": 11,
           "Result": "New employees won't have as much experience or expertise as the previous workers, but their salaries are much cheaper. You can use these savings to improve the Smart Grid in the long term. The community is enraged by mass layoffs required to hire new employees."
         },
         {
           "Choice": "Keep the previous employees in their current positions and hire more qualified workers to help train them to work with the Smart Grid.",
           "Approval": 0,
-          "Efficiency": 4,
-          "Environment": 9,
-          "Finance": -7,
+          "Efficiency": 7,
+          "Environment": 11,
+          "Finance": -9,
           "Result": "The community greatly appreciates the opportunity to continue working, but the costs of retraining the employees to work on Smart Grid is expensive. The older workers latch onto the concepts of Smart Grid much quicker than a new employee would, and, as a result, the Smart Grid excels at a faster rate."
         },
         {
           "Choice": "Spend resources to go on the offensive and create a marketing campaign demonizing the outdated grid. Focus on educating other corporations about the benefits of Smart Grid in order to gain funding. Ignore all complaints from workers and the public.",
           "Approval": 0,
-          "Efficiency": -6,
-          "Environment": -8,
-          "Finance": 6,
+          "Efficiency": -8,
+          "Environment": -10,
+          "Finance": 8,
           "Result": "The community and the press are enraged by your decision to ignore the old workers. The extra funding has allowed you to start implementing DataGuard, which helps protect the data that Smart Meters collect from your customers' household appliances."
         }
       ],
@@ -129,41 +129,41 @@
         {
           "Choice": "Install Smart Meters for cheap so you can improve your system with little cost to your customers.",
           "Approval": 0,
-          "Efficiency": 8,
-          "Environment": 9,
-          "Finance": -9,
+          "Efficiency": 11,
+          "Environment": 11,
+          "Finance": -11,
           "Result": "The installation reaches a large number of customers, and they are pleased that they received the upgrade without additional costs. Your company covers some of the installation fees."
         },
         {
           "Choice": "Partner with a local cable company to have a packaged deal where you install Smart Meters alongside a cable upgrade, showing the customers that you care about supporting their local businesses.",
           "Approval": 0,
-          "Efficiency": 5,
-          "Environment": 5,
-          "Finance": -3,
+          "Efficiency": 7,
+          "Environment": 7,
+          "Finance": -5,
           "Result": "Your company gains widespread support in the community you targeted. However, the deal is costly and takes a while to finalize, slowing your expansion."
         },
         {
           "Choice": "Spend resources lobbying the local government to cover more of the installation fee for Smart Meters than they already do.",
           "Approval": 0,
-          "Efficiency": -2,
-          "Environment": 8,
-          "Finance": -3,
+          "Efficiency": -5,
+          "Environment": 10,
+          "Finance": -5,
           "Result": "Your company makes a large profit from the government contract. The negotiations take time, resulting in a slower rollout of Smart Meters."
         },
         {
           "Choice": "Start a door-to-door marketing campaign in order to cheaply spread information about Smart Meters to the area's population.",
           "Approval": 0,
-          "Efficiency": 2,
-          "Environment": -5,
-          "Finance": 5,
+          "Efficiency": 4,
+          "Environment": -7,
+          "Finance": 7,
           "Result": "Information on Smart Meter reaches the entire area's population. The door-to-door campaign is a cheap initiative that can lead to more installations of Smart Meters, but it will annoy some members of the community."
         },
         {
           "Choice": "Pay for an advertisement spot explaining the savings and protection that Smart Meters provide on a local TV news channel in order to quickly reach the community.",
           "Approval": 0,
-          "Efficiency": 3,
-          "Environment": 6,
-          "Finance": -9,
+          "Efficiency": 5,
+          "Environment": 8,
+          "Finance": -11,
           "Result": "This is an expensive way to be sure that a large amount of the area sees your company's marketing. The advertisement emphasizes the ability to save money by avoiding times of peak power usage, which consumers appreciate."
         }
       ],
@@ -181,49 +181,49 @@
         {
           "Choice": "Keep rolling out Smart Meters into currently targeted homes without any changes, ensuring that all customers in your trial area have a Smart Meter before improvements occur.",
           "Approval": 0,
-          "Efficiency": 5,
-          "Environment": -5,
-          "Finance": 3,
+          "Efficiency": 7,
+          "Environment": -7,
+          "Finance": 5,
           "Result": "The increased number of Smart Meters gives you the resources to develop Energy Management Systems, which allow consumers to easily manage their power usage on their smart devices. Overall, this helps the grid become much more efficient. However, the public is unhappy with the bugs caused by the quick rollout of the Smart Meters."
         },
         {
           "Choice": "Slow down installation in order to perform trial studies on current homes using Smart Meters' fast and accurate data collection, then fix any major problems before expanding.",
           "Approval": 0,
-          "Efficiency": 6,
-          "Environment": 4,
-          "Finance": -6,
+          "Efficiency": 8,
+          "Environment": 6,
+          "Finance": -8,
           "Result": "Due to further research, bug-free Energy Management Systems can be released, which enables consumers to manage their energy usage on their smart devices. Debugging the system is expensive and takes time, but the public appreciates how smooth the Smart Grid rollout is."
         },
         {
           "Choice": "Focus on creating automated data management systems for Smart Grid so workers aren't needed for this process and can be utilized elsewhere. You wait for the completion of this project before expanding Smart Grid's implementation.",
           "Approval": 0,
-          "Efficiency": 5,
-          "Environment": -4,
-          "Finance": -3,
+          "Efficiency": 7,
+          "Environment": -6,
+          "Finance": -5,
           "Result": "Developing automated data management systems slows down your expansion initially, but those new systems become crucial to your later expansion efforts. This development takes significant resources, and your delay in implementation prevents you from making a profit."
         },
         {
           "Choice": "Commit to urban development and add space for new homes and power sources, which will both be implemented into the Smart Grid. Expand the company's scope into urban city expansion for profits later down the road.",
           "Approval": 0,
-          "Efficiency": 2,
-          "Environment": -6,
-          "Finance": 7,
+          "Efficiency": 5,
+          "Environment": -8,
+          "Finance": 9,
           "Result": "Adding new homes to the Smart Grid results in increased profits; however, you lose your focus on the existing grid. Your customers are upset at the lack of improvements to the functionality of the Smart Grid in their area."
         },
         {
           "Choice": "Prioritize gaining new customers over improving the experience of your current customer base. Quickly roll out Smart Meters into as many homes as possible, regardless of any issues old customers have.",
           "Approval": 0,
-          "Efficiency": -3,
-          "Environment": -8,
-          "Finance": 9,
+          "Efficiency": -7,
+          "Environment": -10,
+          "Finance": 11,
           "Result": "The massive influx of new customers results in a major increase in profits. However, many issues pop up in homes currently connected to the Smart Grid, and your rapid expansion leaves little time to investigate them."
         },
         {
           "Choice": "Slow the implementation of Smart Meters and instead focus on integrating a greater variety of power sources into the Smart Grid.",
           "Approval": 0,
-          "Efficiency": 9,
-          "Environment": 6,
-          "Finance": -3,
+          "Efficiency": 11,
+          "Environment": 8,
+          "Finance": -5,
           "Result": "Your slower Smart Meter implementation leads to decreased revenue, but your focus on new power sources allows you to take advantage of Smart Grid's ability to efficiently utilize green energy sources."
         }
       ],
