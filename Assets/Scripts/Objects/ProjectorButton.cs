@@ -46,6 +46,12 @@ public class ProjectorButton : Interactable
 
     public void Interact()
     {
+        if (!revealed)
+        {
+            revealed = true;
+            ChangeCursor(revealed);
+        }
+
         currentTutorialPanel = tutorial.GetCurrentPanel();
         currentTutorialTextScroll = tutorial.GetCurrentTextScroll();
         if (currentTutorialPanel != null)
