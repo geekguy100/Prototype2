@@ -271,7 +271,22 @@ public class ResultsHandler : MonoBehaviour
         float[] statDiffs = new float[3];
         for (int i = 0; i < 3; i++)
         {
-            statDiffs[i] = Math.Abs(50 - stats[i + 1]);
+            statDiffs[i] = Math.Abs(50 - stats[i + 1]);          
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            if (statStates[0] == i)
+            {
+                efficiencyObjs[i].SetActive(true);
+            }
+            if (statStates[1] == i)
+            {
+                approvalObjs[i].SetActive(true);
+            }
+            if (statStates[2] == i)
+            {
+                financeObjs[i].SetActive(true);
+            }
         }
         if (statDiffs[0] > statDiffs[1] && statDiffs[0] > statDiffs[2])
         {
