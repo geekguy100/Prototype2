@@ -1,22 +1,7 @@
 fileFormatVersion: 2
-guid: 16525129be4a4d749a40775048c00ba4
+guid: e3d0caf3dfa72bf489b961a17be8edde
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -3297791293996003787
-    second: committee right arm unimpressed SpriteSheet_0
-  - first:
-      213: 6663732530691567463
-    second: committee right arm unimpressed SpriteSheet_1
-  - first:
-      213: 5300143580378276890
-    second: committee right arm unimpressed SpriteSheet_2
-  - first:
-      213: 6891678053114729968
-    second: committee right arm unimpressed SpriteSheet_3
-  - first:
-      213: 3685480829076121195
-    second: committee right arm unimpressed SpriteSheet_4
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -56,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -88,126 +73,9 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: committee right arm unimpressed SpriteSheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 448
-        width: 283
-        height: 427
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53e0ef16a44eb32d0800000000000000
-      internalID: -3297791293996003787
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: committee right arm unimpressed SpriteSheet_1
-      rect:
-        serializedVersion: 2
-        x: 284
-        y: 448
-        width: 283
-        height: 427
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76fe5124e655a7c50800000000000000
-      internalID: 6663732530691567463
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: committee right arm unimpressed SpriteSheet_2
-      rect:
-        serializedVersion: 2
-        x: 568
-        y: 448
-        width: 283
-        height: 427
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a14a3074184ed8940800000000000000
-      internalID: 5300143580378276890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: committee right arm unimpressed SpriteSheet_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 19
-        width: 283
-        height: 427
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f55246fca824af50800000000000000
-      internalID: 6891678053114729968
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: committee right arm unimpressed SpriteSheet_4
-      rect:
-        serializedVersion: 2
-        x: 284
-        y: 19
-        width: 283
-        height: 427
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b66289b9945752330800000000000000
-      internalID: 3685480829076121195
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
