@@ -18,6 +18,12 @@ public class ChibiCharacter : MonoBehaviour
     [Tooltip("The Animator responsible for controlling the character's arm animation.")]
     [SerializeField] private Animator armAnim;
 
+    [Tooltip("The AudioSource that plays object SFX")]
+    [SerializeField] private AudioSource sfxSource;
+
+    [Tooltip("Pop audio clip")]
+    [SerializeField] private AudioClip popSound;
+
     private void Awake()
     {
         bodyAnim = GetComponent<Animator>();
@@ -71,5 +77,11 @@ public class ChibiCharacter : MonoBehaviour
     public void StopPointing()
     {
         armAnim.SetTrigger("Idle");
+    }
+
+    public void PlayPop()
+    {
+        sfxSource.clip = popSound;
+        sfxSource.PlayScheduled(0);
     }
 }

@@ -12,6 +12,9 @@ using System.Collections;
 
 public class Tutorial : MonoBehaviour
 {
+    [Tooltip("Tutorial roomba AnimationController")]
+    public AnimationController roombaAC;
+
     [Tooltip("Current step of the tutorial")]
     [SerializeField] private int step = 0;
 
@@ -262,6 +265,7 @@ public class Tutorial : MonoBehaviour
     {
         setUpTexts[gameplayStep].gameObject.SetActive(false);
         gameplayScrolls[gameplayStep].FinishScroll();
+        roombaAC.StopRoombaSound();
         step++;
         gameplayStep++;
         setUpTexts[gameplayStep].gameObject.SetActive(true);

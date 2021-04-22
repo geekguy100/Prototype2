@@ -14,6 +14,15 @@ public class AnimationController : MonoBehaviour
     Animator animator;
     public int roombaPath;
 
+    [Tooltip("AudioSource playing roomba sound")]
+    public AudioSource roombaSource;
+    
+    [Tooltip("Audio Clip of roomba bumping into something")]
+    public AudioClip roombaBump;
+
+    [Tooltip("AudioSource used for SFX")]
+    public AudioSource sfxSource;
+
     [Header("Animators")]
     [Tooltip("Animator for title transparency")]
     public Animator titleTransparency;
@@ -83,5 +92,20 @@ public class AnimationController : MonoBehaviour
         titleSettingsText.SetBool("ButtonText", true);
         titleCreditsText.SetBool("ButtonText", true);
         titleExitText.SetBool("ButtonText", true);
+    }
+
+    public void PlayRoombaSound()
+    {
+        roombaSource.Play();
+    }
+
+    public void PlayRoombaBump()
+    {
+        sfxSource.clip = roombaBump;
+        sfxSource.PlayScheduled(0);
+    }
+    public void StopRoombaSound()
+    {
+        roombaSource.Stop();
     }
 }
