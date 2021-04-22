@@ -24,7 +24,7 @@ public class LoadingTextChange : MonoBehaviour
     {
         if (loadOutTitles.Count > 2)
         {
-            choice = Random.Range(0, loadOutTitles.Count);
+            //choice = Random.Range(0, loadOutTitles.Count);
             
 
             titleTextObject.text = loadOutTitles[choice];
