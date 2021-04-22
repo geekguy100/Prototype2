@@ -6211,6 +6211,8 @@ GameObject:
   - component: {fileID: 218068727}
   - component: {fileID: 218068730}
   - component: {fileID: 218068731}
+  - component: {fileID: 218068733}
+  - component: {fileID: 218068732}
   m_Layer: 0
   m_Name: Approval Bad Line
   m_TagString: Untagged
@@ -6257,7 +6259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2540144005398631321, guid: 9277523116d0bc146b7db8a4e8f59b4b, type: 3}
+  m_Sprite: {fileID: -399390010332432159, guid: 4301a636c8e52a24993b9f1eadafe2c8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6361,7 +6363,94 @@ MonoBehaviour:
   revealedCursor: {fileID: 2800000, guid: 1b6c8d667127ae346b1e9d95e82f0e18, type: 3}
   questionMarkCursor: {fileID: 2800000, guid: 45fa99f00d7e78a45869659b7639e7b0, type: 3}
   sfxSource: {fileID: 768988162}
-  playClip: {fileID: 0}
+  playClip: {fileID: 8300000, guid: 3244e3a05c89cc4408b106564def8114, type: 3}
+--- !u!114 &218068732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218068725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 218068731}
+          m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+          m_MethodName: ChangeCursor
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 218068731}
+          m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+          m_MethodName: ChangeCursor
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 218068731}
+          m_TargetAssemblyTypeName: BadApprovalPoster, Assembly-CSharp
+          m_MethodName: Interact
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!61 &218068733
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218068725}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.3303424, y: -0.21021867}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.81, y: 1.79}
+    newSize: {x: 1.81, y: 1.79}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.0702693, y: 2.7309775}
+  m_EdgeRadius: 0
 --- !u!1 &221026612
 GameObject:
   m_ObjectHideFlags: 0
@@ -19748,7 +19837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &659569133
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39114,7 +39203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1347828860
 Transform:
   m_ObjectHideFlags: 0
@@ -40830,7 +40919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1394533548
 RectTransform:
   m_ObjectHideFlags: 0
@@ -46094,6 +46183,9 @@ GameObject:
   - component: {fileID: 1565138384}
   - component: {fileID: 1565138383}
   - component: {fileID: 1565138386}
+  - component: {fileID: 1565138388}
+  - component: {fileID: 1565138387}
+  - component: {fileID: 1565138389}
   m_Layer: 0
   m_Name: Approval Line
   m_TagString: Untagged
@@ -46140,7 +46232,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f3bac512ab31f744eaf6dfd8f6f376d5, type: 3}
+  m_Sprite: {fileID: -9085999070512244096, guid: 9277523116d0bc146b7db8a4e8f59b4b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -46228,6 +46320,110 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1565138387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565138381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53f4b61257f0ed4a86c1d73d3228cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  revealed: 0
+  revealedCursor: {fileID: 2800000, guid: 1b6c8d667127ae346b1e9d95e82f0e18, type: 3}
+  questionMarkCursor: {fileID: 2800000, guid: 45fa99f00d7e78a45869659b7639e7b0, type: 3}
+  sfxSource: {fileID: 768988162}
+  playClip: {fileID: 8300000, guid: c08dd959bcd139e459290d1298b9c985, type: 3}
+--- !u!114 &1565138388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565138381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1565138387}
+          m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+          m_MethodName: ChangeCursor
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1565138387}
+          m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+          m_MethodName: ChangeCursor
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1565138387}
+          m_TargetAssemblyTypeName: ApprovalPoster, Assembly-CSharp
+          m_MethodName: Interact
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!61 &1565138389
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565138381}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.018632531, y: 0.088505924}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5, y: 1.45}
+    newSize: {x: 1.5, y: 1.45}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7981231, y: 2.372322}
+  m_EdgeRadius: 0
 --- !u!1 &1568061069
 GameObject:
   m_ObjectHideFlags: 0

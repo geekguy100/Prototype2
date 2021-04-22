@@ -2,29 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BadApprovalPoster : Interactable
+public class ApprovalPoster : Interactable
 {
-
+    [Tooltip("Audio clip to play when bad approval poster animates")]
     public AudioClip playClip;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    Animator anim;
     public void Interact()
     {
+        if (anim == null)
+        {
+            anim = GetComponent<Animator>();
+        }
         // Change cursor to revealed one if it wasn't already
         if (!revealed)
         {
             revealed = true;
             ChangeCursor(revealed);
         }
+        PlaySFX(playClip);
+        anim.SetTrigger("Animate");
     }
 }
