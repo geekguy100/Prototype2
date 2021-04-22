@@ -33149,16 +33149,6 @@ MonoBehaviour:
   - {fileID: 41379988}
   - {fileID: 586315728}
   resultsScroll: {fileID: 1951089573}
-  timerText: 'Notice the timer to the right of this question. It will display how
-    long you have to respond to each question. To respond to this scenario, you need
-    to do two things. First, you will need to select the box with the response you
-    want. Select one of the options below to continue. '
-  choiceSelectText: To lock in your answer, press the confirm button below the options.
-    You can change the selected response as many times you want before locking in
-    your selection. Confirm your response to continue.
-  closeStatsText: The Stats panel has now popped up and will show your current stats.
-    You can close the Stats panel by pressing the x in the upper right corner of
-    the panel. Close the Stats panel to continue.
   tutorialGameplayPanel: {fileID: 641858637}
   zoomedScale: {x: 1.2, y: 1.2, z: 0}
   originalScale: {x: 1, y: 1, z: 0}
@@ -58169,6 +58159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff5ac5eb60b451438df336ce26dbbdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxStats: 300
   largeButtonHeight: 75
   largeButtonWidth: 425
   noSelectionPanel: {fileID: 1043135928}
@@ -58250,7 +58241,7 @@ MonoBehaviour:
   nextButton: {fileID: 1009423202}
   menuButton: {fileID: 1095243393}
   quitButton: {fileID: 1254064790}
-  maxEndings: 3
+  maxEndings: 4
   waitTime: 2
   fadeTime: 1
   panelTarget: {r: 1, g: 1, b: 1, a: 0.92156863}

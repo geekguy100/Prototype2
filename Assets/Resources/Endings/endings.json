@@ -13,5 +13,10 @@
     "Finance Report:\nYour company's lack of focus on finances has resulted in the bankruptcy of the company. Your company cannot afford to keep the Smart Grid system running, and will be powered down until further notice. You couldn't even afford an ending screen.",
     "Finance Report:\nThe company has earned a fair amount of profits thanks to the efforts put forth by your team. The company is greatly appreciative of the hard work that you have put in, and will continue to grow more and more in the near future.",
     "Finance Report:\nYou have steered the company into many money-making opportunities that have helped it make billions of dollars. Part of this money has been put back into the company and has allowed for improvements to be made to the Smart Grid system and its infrastructure, as well as giving you lofty bonuses."
+  ],
+  "Manager": [
+    "Manager Report:\nEver since your team took the lead on the Smart Grid project, the company has gone downhill. Clearly your focus has not been in the right place during your work on this project. As of tomorrow, your entire team will be demoted and another group will be found to replace you.",
+    "Manager Report:\nYour cooperation and decision-making skills have proven successful in implementing Smart Grid across many nearby cities. Your company will have a bright future as you expand the system further."
   ]
+
 }

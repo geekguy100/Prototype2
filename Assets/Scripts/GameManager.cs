@@ -11,6 +11,8 @@ using LeaderboardInfo;
 
 public class GameManager : MonoBehaviour
 {
+    [Tooltip("Highest the stats could add up to")]
+    public float maxStats = 300;
     /// <summary>
     /// Holds whether or not the player has completed the tutorial in this play session
     /// </summary>
@@ -93,6 +95,12 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private string[] financeEndingBackgrounds =
         {"Endings/Backgrounds/FinanceBad", "Endings/Backgrounds/FinanceNeutral", "Endings/Backgrounds/FinanceGood"};
+
+    /// <summary>
+    /// Paths to the different backgrounds for the finance endings
+    /// </summary>
+    private string[] managerEndingBackgrounds =
+        {"Endings/Backgrounds/ManagerBad", "Endings/Backgrounds/ManagerGood"};
 
     private bool threeChoices = false;
 
@@ -229,11 +237,6 @@ public class GameManager : MonoBehaviour
     private Endings endings;
 
     /// <summary>
-    /// Did the players get the godzilla setup
-    /// </summary>
-    private bool hadGodzilla = false;
-
-    /// <summary>
     /// The ResultsHandler to manage displaying the results and updating values after each question.
     /// </summary>
     [SerializeField] private ResultsHandler resultsHandler = null;
@@ -249,7 +252,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Stats are in the order approval, efficiency, envrionment, finance
     /// </summary>
-    private float[] stats = { 50, 50, 50, 50 };
+    private float[] stats = { 0, 50, 50, 50 };
     private float[] statsDelta;
     [Header("Thresholds for various changes and backgrounds")]
 
@@ -290,21 +293,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        // The below code is for allowing the user to select a scenario file instead of defaulting to Scenarios.json
-        //string[] scenarioArray = Directory.GetFiles("Assets/Resources/Scenarios", "*.json");
-        //List<string> scenarioListTrimmed = new List<string>();
-        //for (int i = 0; i < scenarioArray.Length; ++i)
-        //{
-        //    scenarioListTrimmed.Add(Path.GetFileNameWithoutExtension(scenarioArray[i]));
-        //}
-
         // Default the game to loading "Scenarios.json"
         scenarioFiles = new string[] { "Scenarios_new" };
 
-        // The below code is for allowing the user to select a scenario file instead of defaulting to Scenarios.json
-        //scenarioFiles = scenarioListTrimmed.ToArray();
-        //scenarioListTrimmed.Insert(0, "Random");
-        //scenarioSelect.AddOptions(scenarioListTrimmed);
         // Load the endings from endings.json
         TextAsset endingsData = Resources.Load("Endings/endings") as TextAsset;
         endings = JsonUtility.FromJson<Endings>(endingsData.text);
@@ -368,12 +359,6 @@ public class GameManager : MonoBehaviour
         currentSetup = currentScenario.Setups[validChoices[choiceIndex]];
         string characterName = currentSetup.CharacterName;
         InstantiateCharacter(characterName);
-
-        // If the godzilla setup occured, set the flag so the godzilla ending can occur
-        if (currentSetup.ID == 7)
-        {
-            hadGodzilla = true;
-        }
 
         // Remove the selected choice from the valid list
         validChoices.RemoveAt(choiceIndex);
@@ -462,10 +447,6 @@ public class GameManager : MonoBehaviour
             {
                 b.GetComponent<Image>().color = Color.white;
             }
-
-            // Approval is the average of the 3 other stats.
-            // Right now, we are ignoring the original approval stat in favor of using Environment as Public Approval.
-            stats[0] = (stats[1] + stats[2] + stats[3]) / 3;
 
             // Keep track of the change in stats.
             // This will be sent to the character to judge their emotion.
@@ -881,7 +862,6 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         // This scene has not has godzilla
-        hadGodzilla = false;
         SceneManager.LoadScene(sceneName);
     }
 
@@ -915,7 +895,7 @@ public class GameManager : MonoBehaviour
         ending.text = endings[2];
         ending.backgroundPath = backgroundPaths[2];
 
-        // Temporary alpha code - good ending shows at 50 or above, bad ending at 49 or below - TJ
+        
         for (int i = 0; i < 2; i++)
         {
             if (stat < resultsHandler.statThresholds[i])
@@ -971,10 +951,14 @@ public class GameManager : MonoBehaviour
             switcher = TestEnding(stats[2], endings.Approval, approvalEndingBackgrounds);
 
         }
-        else // Finance
+        else if (endingsSeen == 2)// Finance
         {
             switcher = TestEnding(stats[3], endings.Finance, financeEndingBackgrounds);
             // Last ending - restart/main menu buttons here
+        }
+        else
+        {
+            switcher = FinalEnding(stats, endings.Manager, managerEndingBackgrounds);
         }
 
         // Display ending
@@ -984,32 +968,37 @@ public class GameManager : MonoBehaviour
 
         // Increment the number of endings seen
         ++endingsSeen;
-        // Add the path to a list. Used for the rare Godzilla ending
-        //allEndings.Add(switcher.backgroundPath);
-        // If the godzilla setup occured
-        //if (hadGodzilla)
-        //{
-        //    // Add the godzilla ending path to the list. Inserts at index 1 every time
-        //    allEndings.Add("Endings/Backgrounds/GodzillaEnd");
-        //    // Add the regular path 9 more times, making Godzilla a 1/11 chance
-        //    for (int i = 0; i < 9; i++)
-        //    {
-        //        allEndings.Add(switcher.backgroundPath);
-        //    }
-        //}
+    }
 
-        // Pick what ending to be shown randomly. If godzilla did not appear, this line is redundant
-        //int randZilla = Random.Range(0, allEndings.Count);
-        // Load the sprite picked above
-        //backgroundRenderer.sprite = Resources.Load<Sprite>(allEndings[randZilla]);
+    private Ending FinalEnding(float[] stats, string[] endings, string[] backgroundPaths)
+    {
+        Ending ending;
+        // Default to the best text and background
+        ending.text = endings[1];
+        ending.backgroundPath = backgroundPaths[1];
 
-        // If godzilla was picked, set the flag to false so he cannot appear again.
-        //if (randZilla == 1)
-        //{
-        //    hadGodzilla = false;
-        //}
+        // adds up all the stats
+        float statsTotal = 0;
+        foreach(float stat in stats)
+        {
+            print("stat = " + stat);
+            statsTotal += stat;
+        }
 
-
+        // Good ending if player has greater than or equal to half of max possible stats, bad if player has less than half
+        if (statsTotal >= (maxStats / 2))
+        {
+            print("good manager - " + statsTotal);
+            ending.text = endings[1];
+            ending.backgroundPath = backgroundPaths[1];
+        }
+        else
+        {
+            print("bad manager - " + statsTotal);
+            ending.text = endings[0];
+            ending.backgroundPath = backgroundPaths[0];
+        }
+        return ending;
     }
 
     /// <summary>
@@ -1019,17 +1008,6 @@ public class GameManager : MonoBehaviour
     /// <param name="index">Index of the player's choice</param>
     public void HoldSelection(int index)
     {
-        //TODO: Do not let the player select another option if the timer has run out. Added by Kyle Grenier
-        //if (timer.Completed)
-        //    return;
-        //    return;
-
-        //// Hides no selection panel
-        //if (noSelectionPanel.activeInHierarchy)
-        //{
-        //    noSelectionPanel.SetActive(false);
-        //}
-
         // Stores index of player's current selection
         currentSelection = index;
 

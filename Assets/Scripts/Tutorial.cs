@@ -83,24 +83,24 @@ public class Tutorial : MonoBehaviour
 
     public TextScroll resultsScroll;
 
-    [Tooltip("Text for tutorial step explaining timer")]
-    [SerializeField]
-    private string timerText = "Each scenario will have a time limit in which you need to decide how to respond. " +
-                               "The timer in the upper right corner of the screen shows you how much time you have left for this scenario. " +
-                               "The faster you respond to each scenario, the more effective your choice will be. " +
-                               "Click one of the choice buttons below to continue.";
+    //[Tooltip("Text for tutorial step explaining timer")]
+    //[SerializeField]
+    //private string timerText = "Each scenario will have a time limit in which you need to decide how to respond. " +
+    //                           "The timer in the upper right corner of the screen shows you how much time you have left for this scenario. " +
+    //                           "The faster you respond to each scenario, the more effective your choice will be. " +
+    //                           "Click one of the choice buttons below to continue.";
 
-    [Tooltip("Text for tutorial step explaining choice selection")]
-    [SerializeField]
-    private string choiceSelectText = "To decide how you are going to respond to each scenario, you need to click two buttons. " +
-                                  "First, you need to click on the choice button that you want to go with. " +
-                                  "Then you click the confirm button in the bottom right of the screen to lock in that choice. " +
-                                  "Select one of the choices below then confirm it to continue.";
+    //[Tooltip("Text for tutorial step explaining choice selection")]
+    //[SerializeField]
+    //private string choiceSelectText = "To decide how you are going to respond to each scenario, you need to click two buttons. " +
+    //                              "First, you need to click on the choice button that you want to go with. " +
+    //                              "Then you click the confirm button in the bottom right of the screen to lock in that choice. " +
+    //                              "Select one of the choices below then confirm it to continue.";
 
-    [Tooltip("Text for tutorial step explaining closing the stats panel")]
-    [SerializeField]
-    private string closeStatsText = "Press the Stats button or the X in the upper right corner of the Stats panel to close it. " +
-                                    "Close the Stats panel to continue. ";
+    //[Tooltip("Text for tutorial step explaining closing the stats panel")]
+    //[SerializeField]
+    //private string closeStatsText = "Press the Stats button or the X in the upper right corner of the Stats panel to close it. " +
+    //                                "Close the Stats panel to continue. ";
 
     [Tooltip("The GameObject holding all assets relating to the interactive tutorial.")]
     [SerializeField] private GameObject tutorialGameplayPanel;

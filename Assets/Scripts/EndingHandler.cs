@@ -84,7 +84,7 @@ public class EndingHandler : MonoBehaviour
     /// <summary>
     /// Labels used for the ending button
     /// </summary>
-    private string[] endingButtonLabels = { "View Approval Report", "View Finance Report" };
+    private string[] endingButtonLabels = { "View Approval Report", "View Finance Report", "View Manager Report" };
 
     // Start is called before the first frame update
     void Start()

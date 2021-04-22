@@ -13,6 +13,7 @@ namespace FileLoading
         public string[] Efficiency;
         public string[] Envrionment;
         public string[] Finance;
-        
+        public string[] Manager;
+
     }
 }
