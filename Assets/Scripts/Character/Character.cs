@@ -13,38 +13,9 @@ using System.Collections.Generic;
 public class Character : MonoBehaviour
 {
     [Header("Expression Prefabs")]
-    [Tooltip("The faces to display on the character.")]
-    [SerializeField] private CharacterSprite[] faces = null;
-
-    [Tooltip("The left arms to display on the character.")]
-    [SerializeField] private CharacterSprite[] leftArms = null;
-
-    [Tooltip("The right arms to display on the character.")]
-    [SerializeField] private CharacterSprite[] rightArms = null;
-
-    [Tooltip("The antennas to display on the character.")]
-    [SerializeField] private CharacterSprite[] antennas = null;
-
-    [Tooltip("The bows to display on the character.")]
-    [SerializeField] private CharacterSprite[] bows = null;
-
-
-    [Header("Expression GameObjects attached to the Character.")]
-    [Tooltip("The character's face.")]
-    [SerializeField] private GameObject face = null;
-
-    [Tooltip("The character's left arm.")]
-    [SerializeField] private GameObject leftArm = null;
-
-    [Tooltip("The character's right arm.")]
-    [SerializeField] private GameObject rightArm = null;
-
-    [Tooltip("The character's antenna.")]
-    [SerializeField] private GameObject antenna = null;
-
-    [Tooltip("The character's bow")]
-    [SerializeField] private GameObject bow = null;
-
+    [Tooltip("The preset builds of the character.")]
+    [SerializeField] private CharacterSprite[] presetBuilds;
+    [SerializeField] private GameObject characterHolder;
 
     [Header("Emotion Selection Algorithm")]
     [SerializeField] private EMOTION_ALGORITHM selectedAlgorithm = EMOTION_ALGORITHM.STAT_BIAS;
@@ -188,16 +159,7 @@ public class Character : MonoBehaviour
     /// <param name="emotion">The emotion of the character.</param>
     public void SetEmotion(CharacterSprite.Emotion emotion)
     {
-        if (bow != null)
-            UpdateSprite(emotion, ref bow, bows);
-        if (face != null)
-            UpdateSprite(emotion, ref face, faces);
-        if (rightArm != null)
-            UpdateSprite(emotion, ref rightArm, rightArms);
-        if (leftArm != null)
-            UpdateSprite(emotion, ref leftArm, leftArms);
-        if (antenna != null)
-            UpdateSprite(emotion, ref antenna, antennas);
+        UpdateSprite(emotion, ref characterHolder, presetBuilds);
     }
 
     /// <summary>
