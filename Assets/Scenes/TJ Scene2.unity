@@ -29897,6 +29897,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character_Robot
       objectReference: {fileID: 0}
+    - target: {fileID: 2452901176725187574, guid: 53513aa38e55af4429b4e03be9cc6f7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2452901176725187575, guid: 53513aa38e55af4429b4e03be9cc6f7d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -29927,7 +29931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2452901176725187575, guid: 53513aa38e55af4429b4e03be9cc6f7d, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2452901176725187575, guid: 53513aa38e55af4429b4e03be9cc6f7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -29980,6 +29984,10 @@ PrefabInstance:
     - target: {fileID: 2452901176725187575, guid: 53513aa38e55af4429b4e03be9cc6f7d, type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7911026889688048935, guid: 53513aa38e55af4429b4e03be9cc6f7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53513aa38e55af4429b4e03be9cc6f7d, type: 3}
@@ -34155,7 +34163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac5db2b1bfeb8d84dad33dfe738975be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roombaAC: {fileID: 0}
+  roombaAC: {fileID: 1505426941}
   step: 0
   roleSelectStep: 4
   statsStep: 9
@@ -41561,17 +41569,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &1381322099 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2452901176725187562, guid: 53513aa38e55af4429b4e03be9cc6f7d, type: 3}
-  m_PrefabInstance: {fileID: 1006246618}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00f0b66f93f7e34408a9740414da0c14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1383348196
 GameObject:
   m_ObjectHideFlags: 0
@@ -52707,7 +52704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emotion: 2
-  character: {fileID: 1381322099}
+  character: {fileID: 0}
 --- !u!1 &1816128138
 GameObject:
   m_ObjectHideFlags: 0
