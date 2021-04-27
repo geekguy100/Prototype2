@@ -91,7 +91,7 @@
           "Result": "Keeping the old workers at a discount saves you some money in the short term, and the community appreciates the fact that you were able to keep the workers at all. In the long term, your efficiency suffers as the old workers struggle to adapt to the new system."
         },
         {
-          "Choice": "Leave behind the concerns of the past power grid workers. Lay them off since they are no longer qualified to work on the new system, and hire less expensive employees straight out of college.",
+          "Choice": "Leave behind the concerns of the past power grid workers. Lay them off since they are no longer qualified to work on the new system, and hire fewer workers.",
           "Approval": 0,
           "Efficiency": -11,
           "Environment": -10,
@@ -107,7 +107,7 @@
           "Result": "The community greatly appreciates the opportunity to continue working, but the costs of retraining the employees to work on Smart Grid is expensive. The older workers latch onto the concepts of Smart Grid much quicker than a new employee would, and, as a result, the Smart Grid excels at a faster rate."
         },
         {
-          "Choice": "Spend resources to go on the offensive and create a marketing campaign demonizing the outdated grid. Focus on educating other corporations about the benefits of Smart Grid in order to gain funding. Ignore all complaints from workers and the public.",
+          "Choice": "Spend resources to go on the offensive and create a marketing campaign criticising the outdated grid. Focus on educating other corporations about the benefits of Smart Grid in order to gain funding. Ignore all complaints from workers and the public.",
           "Approval": 0,
           "Efficiency": -8,
           "Environment": -10,
@@ -115,7 +115,7 @@
           "Result": "The community and the press are enraged by your decision to ignore the old workers. The extra funding has allowed you to start implementing DataGuard, which helps protect the data that Smart Meters collect from your customers' household appliances."
         }
       ],
-      "Setup": "As Smart Grid's integration is nearing completion in the local area, some of the workers from the old power grid are concerned about how this modernization will affect their jobs. What is the best way to handle this situation?",
+      "Setup": "As Smart Grid installation is nearing completion in the local area, some of the workers from the old power grid are concerned about how this modernization will affect their jobs. What is the best way to handle this situation?",
       "ID": 3,
       "Name": "The Workers",
       "Icon": "Scenario 2",
@@ -127,7 +127,7 @@
     {
       "Decisions": [
         {
-          "Choice": "Install Smart Meters for cheap so you can improve your system with little cost to your customers.",
+          "Choice": "Install Smart Meters as inexpensively as possible so you can improve your system with little cost to your customers.",
           "Approval": 0,
           "Efficiency": 11,
           "Environment": 11,
@@ -151,7 +151,7 @@
           "Result": "Your company makes a large profit from the government contract. The negotiations take time, resulting in a slower rollout of Smart Meters."
         },
         {
-          "Choice": "Start a door-to-door marketing campaign in order to cheaply spread information about Smart Meters to the area's population.",
+          "Choice": "Start a door-to-door marketing campaign in order to inexpensively spread information about Smart Meters to the area's population.",
           "Approval": 0,
           "Efficiency": 4,
           "Environment": -7,
