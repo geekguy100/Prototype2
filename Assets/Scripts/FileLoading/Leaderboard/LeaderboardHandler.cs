@@ -56,7 +56,7 @@ namespace LeaderboardInfo
 
             // If an error occured, log it.
             if (www.isNetworkError || www.isHttpError)
-                Debug.LogError(www.error);
+                Debug.LogWarning(www.error + "\nNo stamp will be shown this playthrough.");
 
             // No error occured, so assign our Dreamlo object.
             else
