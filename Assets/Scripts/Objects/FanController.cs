@@ -139,6 +139,10 @@ public class FanController : Interactable
                     isOn = false;
                     bladesAnim.SetBool("shouldRun", isOn);
                 }
+                foreach (Animator anim in plantAnims)
+                {
+                    anim.SetBool("isPlaying", isOn);
+                }
                 counting = false;
                 broken = true;
                 numInteractions = 0;
