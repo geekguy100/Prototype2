@@ -204,7 +204,17 @@ public class Timer : MonoBehaviour
             OnTimerEnd?.Invoke();
         }
     }
+    public void PauseTimer()
+    {
+        isPaused = true;
+        print("pausing timer");
+    }
 
+    public void UnpauseTimer()
+    {
+        isPaused = false;
+        print("unpausing timer");
+    }
     /// <summary>
     /// Returns stat multiplier from timer
     /// </summary>

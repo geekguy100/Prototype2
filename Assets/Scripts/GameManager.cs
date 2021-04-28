@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     [Tooltip("Transition time for gameplay buttons")]
     public float transitionTime = 3f;
 
+    [Tooltip("How long gameplay transition should wait before beginning")]
+    public float transitionWaitTime = 3f;
+
     [Tooltip("Gameplay stats button")]
     public GameObject statsButton;
 
@@ -545,6 +548,7 @@ public class GameManager : MonoBehaviour
 
         gameplayObject.SetActive(true);
         timer.Reset();
+        
 
         // Sets currentSelection to -1 to make sure player makes a selection before submitting
         currentSelection = -1;
@@ -730,20 +734,60 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator GameplayTransition()
     {
+        print("Starting gameplay transition");
+        timer.PauseTimer();
         List<Image> imagesToTransition = new List<Image>();
+        List<TextMeshProUGUI> textToTransition = new List<TextMeshProUGUI>();
+
+        // Adding necessary objects to lists
         foreach (GameObject go in buttonsToHide)
         {
             imagesToTransition.Add(go.GetComponent<Image>());
+            textToTransition.Add(go.transform.GetChild(0).GetComponent<TextMeshProUGUI>());
         }
+        imagesToTransition.Add(statsButton.GetComponent<Image>());
+        textToTransition.Add(statsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>());
+        imagesToTransition.Add(setupText.transform.parent.GetComponent<Image>());
+        textToTransition.Add(setupText);
+        imagesToTransition.Add(submitButton.GetComponent<Image>());
+        textToTransition.Add(submitButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>());
+
+        // Making objects transparent
+        foreach (Image img in imagesToTransition)
+        {
+            img.color = Color.clear;
+        }
+        foreach (TextMeshProUGUI tmp in textToTransition)
+        {
+            tmp.color = Color.clear;
+        }
+
+        yield return new WaitForSeconds(transitionWaitTime);
 
         for (float i = 0; i < transitionTime; i += Time.deltaTime)
         {
             float normalized = i / transitionTime;
-
+            foreach (Image img in imagesToTransition)
+            {
+                img.color = Color.Lerp(Color.clear, Color.white, normalized);
+            }
+            foreach(TextMeshProUGUI tmp in textToTransition)
+            {
+                tmp.color = Color.Lerp(Color.clear, Color.black, normalized);
+            }
             yield return null;
         }
-    
-        
+        foreach (Image img in imagesToTransition)
+        {
+            img.color = Color.white;
+        }
+        foreach (TextMeshProUGUI tmp in textToTransition)
+        {
+            tmp.color = Color.black;
+        }
+        timer.UnpauseTimer();
+        print("Ending gameplay transition");
+
         //foreach()
     }
     /// <summary>
