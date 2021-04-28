@@ -734,7 +734,6 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator GameplayTransition()
     {
-        print("Starting gameplay transition");
         timer.PauseTimer();
         List<Image> imagesToTransition = new List<Image>();
         List<TextMeshProUGUI> textToTransition = new List<TextMeshProUGUI>();
@@ -786,7 +785,6 @@ public class GameManager : MonoBehaviour
             tmp.color = Color.black;
         }
         timer.UnpauseTimer();
-        print("Ending gameplay transition");
 
         //foreach()
     }
