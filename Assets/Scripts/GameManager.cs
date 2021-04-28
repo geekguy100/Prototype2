@@ -11,6 +11,17 @@ using LeaderboardInfo;
 
 public class GameManager : MonoBehaviour
 {
+    /// <summary>
+    /// Buttons to transition when opening the gameplay screen 
+    /// </summary>
+    private List<GameObject> buttonsToHide = new List<GameObject>();
+
+    [Tooltip("Transition time for gameplay buttons")]
+    public float transitionTime = 3f;
+
+    [Tooltip("Gameplay stats button")]
+    public GameObject statsButton;
+
     [Tooltip("Highest the stats could add up to")]
     public float maxStats = 300;
     /// <summary>
@@ -637,7 +648,7 @@ public class GameManager : MonoBehaviour
                     choiceTexts[currentText].transform.parent.gameObject.SetActive(true);
                 }
 
-
+                buttonsToHide.Add(choiceTexts[currentText].transform.parent.gameObject);
                 // Increment the prefix
                 ++currentText;
                 ++currentLetter;
@@ -655,6 +666,7 @@ public class GameManager : MonoBehaviour
                 foreach (Button b in threeChoiceButtons)
                 {
                     b.gameObject.transform.parent.gameObject.SetActive(true);
+                    buttonsToHide.Add(b.gameObject);
                 }
                 threeChoiceButtons[currentText].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = currentLetter + ": " + choice.Choice;
 
@@ -678,7 +690,8 @@ public class GameManager : MonoBehaviour
             int index = (currentText / 2) - 1;
             middleChoiceButtons[index].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = currentLetter + ": " + currentSetup.Decisions[currentText].Choice;
             middleChoiceButtons[index].gameObject.transform.parent.gameObject.SetActive(true);
-            
+            buttonsToHide.Add(middleChoiceButtons[index].gameObject);
+
             // Deactivates the row the middle choice button is replacing
             choiceButtonRows[index + 1].SetActive(false);
 
@@ -704,6 +717,8 @@ public class GameManager : MonoBehaviour
             currentText++;            
         }
 
+        StartCoroutine(GameplayTransition());
+
         // Update the stat sliders to show the proper value
         // 0 to 4 is approval, efficiency, envrionment, finance
         //sliders[0].value = stats[0] / 100f;   // At the moment, approval is not being used, and we are replacing environment with public approval.
@@ -712,6 +727,25 @@ public class GameManager : MonoBehaviour
         sliders[3].value = stats[3] / 100f;
     }
 
+
+    private IEnumerator GameplayTransition()
+    {
+        List<Image> imagesToTransition = new List<Image>();
+        foreach (GameObject go in buttonsToHide)
+        {
+            imagesToTransition.Add(go.GetComponent<Image>());
+        }
+
+        for (float i = 0; i < transitionTime; i += Time.deltaTime)
+        {
+            float normalized = i / transitionTime;
+
+            yield return null;
+        }
+    
+        
+        //foreach()
+    }
     /// <summary>
     /// Scales choice buttons to match needs for this question
     /// </summary>

@@ -60615,6 +60615,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff5ac5eb60b451438df336ce26dbbdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionTime: 3
+  statsButton: {fileID: 0}
   maxStats: 300
   largeButtonHeight: 75
   largeButtonWidth: 425
