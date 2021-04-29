@@ -204,6 +204,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tycoon_Default
       objectReference: {fileID: 0}
+    - target: {fileID: 6453208292579898300, guid: 022dec6d3e9df2d48baefb89d14f27f7, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.4954778
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453208292579898300, guid: 022dec6d3e9df2d48baefb89d14f27f7, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0.9075613
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453208292579898301, guid: 022dec6d3e9df2d48baefb89d14f27f7, type: 3}
+      propertyPath: m_Scale3D.x
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453208292579898301, guid: 022dec6d3e9df2d48baefb89d14f27f7, type: 3}
+      propertyPath: m_Scale3D.y
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453208292579898301, guid: 022dec6d3e9df2d48baefb89d14f27f7, type: 3}
+      propertyPath: m_Scale3D.z
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453208292579898302, guid: 022dec6d3e9df2d48baefb89d14f27f7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 70.50984
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 022dec6d3e9df2d48baefb89d14f27f7, type: 3}
 --- !u!1 &5029023592624869150 stripped

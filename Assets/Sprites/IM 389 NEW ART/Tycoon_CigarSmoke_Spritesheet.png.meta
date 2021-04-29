@@ -1,7 +1,97 @@
 fileFormatVersion: 2
 guid: 01a4bcbf282e9194bbeb9a418483673c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6443656195522695949
+    second: Tycoon_CigarSmoke_Spritesheet_0
+  - first:
+      213: 6889545331582167714
+    second: Tycoon_CigarSmoke_Spritesheet_1
+  - first:
+      213: 5755051613942728701
+    second: Tycoon_CigarSmoke_Spritesheet_2
+  - first:
+      213: 3897782442006014296
+    second: Tycoon_CigarSmoke_Spritesheet_3
+  - first:
+      213: 2430544863413781848
+    second: Tycoon_CigarSmoke_Spritesheet_4
+  - first:
+      213: -4667918162227939025
+    second: Tycoon_CigarSmoke_Spritesheet_5
+  - first:
+      213: 4666388647574318058
+    second: Tycoon_CigarSmoke_Spritesheet_6
+  - first:
+      213: 2875493791654008319
+    second: Tycoon_CigarSmoke_Spritesheet_7
+  - first:
+      213: 8142847348118573504
+    second: Tycoon_CigarSmoke_Spritesheet_8
+  - first:
+      213: -140244990035597553
+    second: Tycoon_CigarSmoke_Spritesheet_9
+  - first:
+      213: -7453810656436183736
+    second: Tycoon_CigarSmoke_Spritesheet_10
+  - first:
+      213: -4522596458449525332
+    second: Tycoon_CigarSmoke_Spritesheet_11
+  - first:
+      213: 7887535621505801383
+    second: Tycoon_CigarSmoke_Spritesheet_12
+  - first:
+      213: -775487505216034555
+    second: Tycoon_CigarSmoke_Spritesheet_13
+  - first:
+      213: 2127602263697141856
+    second: Tycoon_CigarSmoke_Spritesheet_14
+  - first:
+      213: -7889325896402286459
+    second: Tycoon_CigarSmoke_Spritesheet_15
+  - first:
+      213: 3763211470663858670
+    second: Tycoon_CigarSmoke_Spritesheet_16
+  - first:
+      213: -5924898872220293636
+    second: Tycoon_CigarSmoke_Spritesheet_17
+  - first:
+      213: -7823487308532820230
+    second: Tycoon_CigarSmoke_Spritesheet_18
+  - first:
+      213: 7927587328561494413
+    second: Tycoon_CigarSmoke_Spritesheet_19
+  - first:
+      213: -6343159235442007833
+    second: Tycoon_CigarSmoke_Spritesheet_20
+  - first:
+      213: -9147619769129532628
+    second: Tycoon_CigarSmoke_Spritesheet_21
+  - first:
+      213: -8783677466734550609
+    second: Tycoon_CigarSmoke_Spritesheet_22
+  - first:
+      213: -2756554073077628659
+    second: Tycoon_CigarSmoke_Spritesheet_23
+  - first:
+      213: 504037697441977973
+    second: Tycoon_CigarSmoke_Spritesheet_24
+  - first:
+      213: -3260997274115239605
+    second: Tycoon_CigarSmoke_Spritesheet_25
+  - first:
+      213: -3357429059699970220
+    second: Tycoon_CigarSmoke_Spritesheet_26
+  - first:
+      213: 7369359672070561442
+    second: Tycoon_CigarSmoke_Spritesheet_27
+  - first:
+      213: 1164537878761725077
+    second: Tycoon_CigarSmoke_Spritesheet_28
+  - first:
+      213: 1938908287237489714
+    second: Tycoon_CigarSmoke_Spritesheet_29
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +131,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +163,368 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 234
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1.5, y: 21}
+        - {x: -10.5, y: 8}
+        - {x: -12.5, y: -3}
+        - {x: -12.5, y: -21}
+        - {x: 0.5, y: -21}
+        - {x: 6.5, y: -12}
+        - {x: 12.5, y: 6}
+        - {x: 12.5, y: 21}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcef1384d88396a0800000000000000
+      internalID: -6443656195522695949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 234
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aae7e80af49c9f50800000000000000
+      internalID: 6889545331582167714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 234
+        width: 55
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7481983fc0edf40800000000000000
+      internalID: 5755051613942728701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 234
+        width: 61
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859e58bca74b71630800000000000000
+      internalID: 3897782442006014296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 234
+        width: 78
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855cd6afca70bb120800000000000000
+      internalID: 2430544863413781848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 94
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f293fc3c929383fb0800000000000000
+      internalID: -4667918162227939025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 140
+        width: 89
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb259a50c752c040800000000000000
+      internalID: 4666388647574318058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 156
+        width: 84
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5d0655e5ec7e720800000000000000
+      internalID: 2875493791654008319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 157
+        width: 84
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1d6dc3584310170800000000000000
+      internalID: 8142847348118573504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 159
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d991033bebe8890800000000000000
+      internalID: -7453810656436183736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 71
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca52da79b728c31c0800000000000000
+      internalID: -4522596458449525332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 85
+        width: 56
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7acd7199bd7267d60800000000000000
+      internalID: 7887535621505801383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 95
+        width: 54
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50928d3093aec35f0800000000000000
+      internalID: -775487505216034555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 98
+        width: 45
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0603cfe7cf2c68d10800000000000000
+      internalID: 2127602263697141856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tycoon_CigarSmoke_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 114
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588c6ab85eb738290800000000000000
+      internalID: -7889325896402286459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
