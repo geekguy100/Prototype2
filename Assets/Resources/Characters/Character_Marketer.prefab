@@ -98,7 +98,7 @@ MonoBehaviour:
   - {fileID: 1857563877870469058, guid: 37a194b9a464edf4285524f200b6ef3a, type: 3}
   characterHolder: {fileID: 8735289012770086202}
   selectedAlgorithm: 1
-  majorEmotionThreshold: 6
+  majorEmotionThreshold: 7
   statDecreaseThreshold: 2
   associatedEmotionIndex: 2
   happyThreshold: 8
