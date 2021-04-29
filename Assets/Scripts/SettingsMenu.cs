@@ -32,8 +32,9 @@ public class SettingsMenu : MonoBehaviour
         16:9 aspect ratio resolutions: 1024×576, 1152×648, 1280×720 (HD), 1366×768, 1600×900, and 1920×1080 (FHD)
          
          */
+        optionsText[0] = "";
 
-        for(int i = 0;i<options.Count; i++)
+        for (int i = 1;i<options.Count; i++)
         {
             optionsText[i] = ((int)options[i].x +"  x  "+ (int)options[i].y).ToString();
         }

@@ -38482,6 +38482,7 @@ MonoBehaviour:
   ui: {fileID: 24100000, guid: 272bbe6e6432f314fb4e8bfb657ab927, type: 2}
   resolutionDropdown: {fileID: 2136406109}
   options:
+  - {x: 0, y: 0}
   - {x: 1024, y: 768}
   - {x: 1280, y: 960}
   - {x: 1400, y: 1050}
@@ -38519,7 +38520,7 @@ MonoBehaviour:
   - 
   - 
   - 
-  - Fit To Screen
+  - 
   defaultRefreshRate: 30
 --- !u!114 &1273463461
 MonoBehaviour:
