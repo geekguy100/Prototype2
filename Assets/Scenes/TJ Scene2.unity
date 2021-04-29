@@ -13364,8 +13364,7 @@ MonoBehaviour:
   m_text: 'Your group will only have a limited amount of time to make a decision
     for each scenario. You will have five minutes to respond to each question and
     will be notified when half and a quarter of your time is remaining with an alarm
-    sound. The quicker you respond to each question, the better your resulting stats
-    will be.
+    sound.
 
 
 
@@ -24979,7 +24978,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'One one person should be playing the Manager and the remaining roles should
+  m_text: 'One person should be playing the Manager and the remaining roles should
     be split up.
 
     Hover over each icon to learn about that role.
@@ -26946,7 +26945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &853587339
 RectTransform:
   m_ObjectHideFlags: 0
