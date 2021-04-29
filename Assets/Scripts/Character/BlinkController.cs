@@ -12,8 +12,8 @@ public class BlinkController : MonoBehaviour
 {
     private Animator anim;
 
-    private const float MIN_BLINK_TIME = 5f;
-    private const float MAX_BLINK_TIME = 10f;
+    private const float MIN_BLINK_TIME = 2f;
+    private const float MAX_BLINK_TIME = 8f;
 
     private void Awake()
     {

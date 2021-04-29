@@ -53545,7 +53545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69fae96a232d1d149adae71509a04ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotion: 2
+  emotion: 1
   character: {fileID: 0}
 --- !u!1 &1816128138
 GameObject:
