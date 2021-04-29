@@ -10379,6 +10379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roombaPath: 0
+  uiMixer: {fileID: 24100000, guid: 272bbe6e6432f314fb4e8bfb657ab927, type: 2}
   roombaSource: {fileID: 0}
   roombaBump: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -15728,6 +15729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roombaPath: 2
+  uiMixer: {fileID: 0}
   roombaSource: {fileID: 0}
   roombaBump: {fileID: 0}
   sfxSource: {fileID: 0}
@@ -47010,6 +47012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roombaPath: 1
+  uiMixer: {fileID: 24100000, guid: 272bbe6e6432f314fb4e8bfb657ab927, type: 2}
   roombaSource: {fileID: 272728098}
   roombaBump: {fileID: 8300000, guid: 167d5ffdcac582243a0a6bb5c84287c8, type: 3}
   sfxSource: {fileID: 768988162}

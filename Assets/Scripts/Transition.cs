@@ -7,6 +7,7 @@
 *****************************************************************************/
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class Transition : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class Transition : MonoBehaviour
     private Animator fadeAnimator;
 
     private float fadeWaitTime;
+
+    public Action OnTransitionStart;
+    public Action OnTransitionEnd;
 
     [Tooltip("The time to wait after fading in.")]
     [SerializeField] private float pauseWaitTime;
@@ -52,12 +56,20 @@ public class Transition : MonoBehaviour
             fadeWaitTime = fadeWaitTimes[1];
         }
 
+        print("Transitioning Start");
+
+        OnTransitionStart?.Invoke();
+
         fadeAnimator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(fadeWaitTime);
         //print("should be false it is: " + pauseManager.canPause);
         fadeAnimator.SetTrigger("FadeOut");
         //yield return new WaitForSeconds(fadeWaitTime);
         //print("should be false it is: " + pauseManager.canPause);
+
+        print("Transitioning End");
+        OnTransitionEnd?.Invoke();
+
         callback?.Invoke();
         yield return new WaitForSeconds(pauseWaitTime);
         pauseManager.canPause = true;
@@ -75,7 +87,7 @@ public class Transition : MonoBehaviour
     private void SetRandomController()
     {
         int range = animatorControllers.Length;
-        int index = Random.Range(0, range);
+        int index = UnityEngine.Random.Range(0, range);
         fadeAnimator.runtimeAnimatorController = animatorControllers[index];
         fadeWaitTime = fadeWaitTimes[index];
     }

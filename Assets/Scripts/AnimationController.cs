@@ -8,11 +8,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AnimationController : MonoBehaviour
 {
     Animator animator;
     public int roombaPath;
+
+    [SerializeField] private AudioMixer uiMixer;
 
     [Tooltip("AudioSource playing roomba sound")]
     public AudioSource roombaSource;
@@ -63,6 +66,8 @@ public class AnimationController : MonoBehaviour
     [Tooltip("Animator for title exit button")]
     public Animator titleExitText;
 
+    private float originalVolume;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +80,24 @@ public class AnimationController : MonoBehaviour
         {
             animator.SetBool("Conference", true);
         }
+
+        uiMixer.GetFloat("UIVolume", out originalVolume);
+    }
+
+    private void OnEnable()
+    {
+        if (roombaSource != null)
+        {
+            Transition.instance.OnTransitionStart += FadeOutAudio;
+            Transition.instance.OnTransitionEnd += FadeInAudio;
+        }
+    }
+
+    private void OnDisable()
+    {
+        StopRoombaSound();
+        Transition.instance.OnTransitionStart -= FadeOutAudio;
+        Transition.instance.OnTransitionEnd -= FadeInAudio;
     }
 
     public void TitleSequence()
@@ -96,7 +119,8 @@ public class AnimationController : MonoBehaviour
 
     public void PlayRoombaSound()
     {
-        roombaSource.Play();
+        if (roombaSource != null)
+            roombaSource.Play();
     }
 
     public void PlayRoombaBump()
@@ -106,6 +130,33 @@ public class AnimationController : MonoBehaviour
     }
     public void StopRoombaSound()
     {
-        roombaSource.Stop();
+        if (roombaSource != null)
+            roombaSource.Stop();
+    }
+
+    private void FadeOutAudio()
+    {
+        print("FADING OUT AUDIO>>>");
+        StartCoroutine(FadeAudio(-80));
+    }
+
+    private void FadeInAudio()
+    {
+        print("FADING IN AUDIO>>>");
+        StartCoroutine(FadeAudio(originalVolume));
+    }
+
+    private IEnumerator FadeAudio(float finalVolume)
+    {
+        const float FADE_TIME = 1f;
+        float currentTime = 0f;
+
+        while (currentTime < FADE_TIME)
+        {
+            currentTime += Time.deltaTime;
+            float newVol = Mathf.Lerp(originalVolume, finalVolume, currentTime / FADE_TIME);
+            uiMixer.SetFloat("UIVolume", newVol);
+            yield return null;
+        }
     }
 }
