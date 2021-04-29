@@ -14,9 +14,15 @@ public class SettingsMenu : MonoBehaviour
     public AudioMixer music;
     public AudioMixer ui;
     public TMP_Dropdown resolutionDropdown;
+
+    public Vector2 previousResolution;
+
+
     public List<Vector2> options = new List<Vector2>();
     public List<string> optionsText = new List<string>();
     public int defaultRefreshRate = 30;
+
+    public GameObject areYouSureButton;
 
     // Start is called before the first frame update
     void Start()
@@ -68,8 +74,24 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetResolution(int resolutionIndex)
     {
- 
-        Screen.SetResolution((int)options[resolutionIndex].x,(int)options[resolutionIndex].y,Screen.fullScreen,defaultRefreshRate);
+        if(resolutionIndex != 0)
+        {
+            previousResolution = new Vector2(Screen.width, Screen.height);
+            Screen.SetResolution((int)options[resolutionIndex].x, (int)options[resolutionIndex].y, Screen.fullScreen, defaultRefreshRate);
+            areYouSureButton.SetActive(true);
+        }
+
+    }
+
+    public void ResetResolutionButton()
+    {
+        Screen.SetResolution((int)previousResolution.x, (int)previousResolution.y, Screen.fullScreen, defaultRefreshRate);
+        areYouSureButton.SetActive(false);
+    }
+
+    public void SettingsAreFine()
+    {
+        areYouSureButton.SetActive(false);
     }
 
     public void CheckEffectsVolume()
