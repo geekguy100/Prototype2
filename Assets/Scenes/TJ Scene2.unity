@@ -43054,17 +43054,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: e35dca103cc0d664e8c70e657e157c09, type: 3}
-  - {fileID: 21300000, guid: 01b1c3779e7042e4394d9aa90e6169ef, type: 3}
-  - {fileID: 21300000, guid: 3fca3e33ce3a89849a39facd523a4aef, type: 3}
-  - {fileID: 21300000, guid: 76a0be9369a224449bb18f2b3d106bd1, type: 3}
-  - {fileID: 21300000, guid: 2cdcda18b47ad2e4f83fdf4676a16f98, type: 3}
-  - {fileID: 21300000, guid: dc2f26e6543dd7c47a7529242a0b41ef, type: 3}
-  - {fileID: 21300000, guid: 47230095602bc024bb7da2a9888c3551, type: 3}
-  - {fileID: 21300000, guid: a18375c4a74c1044689502cac51dd519, type: 3}
-  - {fileID: 21300000, guid: 2111abbde2d3f56479ba5b4348a9d113, type: 3}
-  - {fileID: 21300000, guid: a5738d6c47a97b74bb4fd1ff8e1e5f29, type: 3}
-  spritePerFrame: 3
+  - {fileID: 21300000, guid: 833e972a766aa83428448093d4bb8de5, type: 3}
+  - {fileID: 21300000, guid: 4cbf2dc89a3cff1499d152fce6d1a346, type: 3}
+  - {fileID: 21300000, guid: b679380a63a690446affe25068482539, type: 3}
+  - {fileID: 21300000, guid: b108da1f41d3de94597ce996c820654f, type: 3}
+  - {fileID: 21300000, guid: 92dcffb95f9828849b29a2620515817b, type: 3}
+  - {fileID: 21300000, guid: 0d0b3cd19ba604549afacf2c080acb54, type: 3}
+  - {fileID: 21300000, guid: 75cea411c4c095946a712e216bd45497, type: 3}
+  - {fileID: 21300000, guid: d61bf8a61bf2fd44f9c295c2cf14ac3c, type: 3}
+  - {fileID: 21300000, guid: ca827ed05c3972e4a905910832246f40, type: 3}
+  - {fileID: 21300000, guid: eb78ca64e46012747b122127381f4b0b, type: 3}
+  spritePerFrame: 7
   loop: 1
   destroyOnEnd: 0
 --- !u!114 &1409114252
@@ -43080,7 +43080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
