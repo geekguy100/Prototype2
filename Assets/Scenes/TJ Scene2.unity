@@ -6813,10 +6813,9 @@ MonoBehaviour:
 
 
 
-    
 
-    Your company will be presented with problems.
-    Try to choose the best answer for each.
+    Your company will be presented with problems. Try
+    to choose the best answer for each.
 
 '
   m_isRightToLeft: 0
@@ -38795,7 +38794,6 @@ MonoBehaviour:
   - {fileID: 1467091706}
   - {fileID: 112254094}
   efficiencyBooklet: {fileID: 1460227056}
-  projector: {fileID: 0}
   tutorialBackground: {fileID: 647980185}
   tutorialResults: {fileID: 1183313292}
   prevButton: {fileID: 1749606321}
@@ -42802,6 +42800,7 @@ MonoBehaviour:
   ui: {fileID: 24100000, guid: 272bbe6e6432f314fb4e8bfb657ab927, type: 2}
   resolutionDropdown: {fileID: 2136406109}
   previousResolution: {x: 0, y: 0}
+  previousValue: 0
   options:
   - {x: 0, y: 0}
   - {x: 1024, y: 768}
@@ -46068,7 +46067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1347828860
 Transform:
   m_ObjectHideFlags: 0

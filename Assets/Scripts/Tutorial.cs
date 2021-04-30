@@ -48,9 +48,6 @@ public class Tutorial : MonoBehaviour
     [Tooltip("Gameobject holding the Efficiency booklet link")]
     [SerializeField] private GameObject efficiencyBooklet;
 
-    [Tooltip("The projector object")]
-    [SerializeField] private GameObject projector;
-
     [Tooltip("The tutorial background")]
     [SerializeField] private GameObject tutorialBackground;
 
@@ -235,7 +232,6 @@ public class Tutorial : MonoBehaviour
         panels[step - 1].SetActive(false);
         texts[step - 1].StopTypeWriter();
         tutorialBackground.SetActive(false);
-        projector.SetActive(false);
         tutorialGameplayPanel.SetActive(true);
     }
 
