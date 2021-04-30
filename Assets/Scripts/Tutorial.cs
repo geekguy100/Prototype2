@@ -294,6 +294,7 @@ public class Tutorial : MonoBehaviour
             panels[step].SetActive(false);
             step--;
             texts[step].FinishScroll();
+            texts[step].GoBack();
             StartCoroutine(ZoomOut());
         }
         else if (step == roleSelectStep + 1)
@@ -311,6 +312,7 @@ public class Tutorial : MonoBehaviour
             panels[step].SetActive(false);
             step--;
             panels[step].SetActive(true);
+            texts[step].GoBack();
         }
 
 

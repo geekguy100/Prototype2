@@ -228,7 +228,10 @@ public class TextScroll : MonoBehaviour
             text2Scroll = text2.GetComponent<TextScroll>();
         }
     }
-
+    public void GoBack()
+    {
+        sent = false;
+    }
     private void AdvanceTutorial()
     {
         if (!isGameplayTutorial && !sent)
