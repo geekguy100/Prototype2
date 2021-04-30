@@ -50976,6 +50976,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1658177700}
   - component: {fileID: 1658177701}
+  - component: {fileID: 1658177702}
   m_Layer: 5
   m_Name: 'Timer '
   m_TagString: Timer
@@ -51031,6 +51032,18 @@ MonoBehaviour:
   quarterWarningSound: {fileID: 8300000, guid: ad5f97319871d9541af219ec139f88b7, type: 3}
   sfxSource: {fileID: 768988162}
   warningVolume: 0.3
+--- !u!225 &1658177702
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658177699}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1666414562
 GameObject:
   m_ObjectHideFlags: 0

@@ -735,6 +735,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator GameplayTransition()
     {
         timer.PauseTimer();
+        CanvasGroup timerCG =  timer.gameObject.GetComponent<CanvasGroup>();
         List<Image> imagesToTransition = new List<Image>();
         List<TextMeshProUGUI> textToTransition = new List<TextMeshProUGUI>();
 
@@ -743,7 +744,9 @@ public class GameManager : MonoBehaviour
         {
             imagesToTransition.Add(go.GetComponent<Image>());
             textToTransition.Add(go.transform.GetChild(0).GetComponent<TextMeshProUGUI>());
+            
         }
+        
         imagesToTransition.Add(statsButton.GetComponent<Image>());
         textToTransition.Add(statsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>());
         imagesToTransition.Add(setupText.transform.parent.GetComponent<Image>());
@@ -760,6 +763,7 @@ public class GameManager : MonoBehaviour
         {
             tmp.color = Color.clear;
         }
+        timerCG.alpha = 0;
 
         yield return new WaitForSeconds(transitionWaitTime);
 
@@ -774,6 +778,7 @@ public class GameManager : MonoBehaviour
             {
                 tmp.color = Color.Lerp(Color.clear, Color.black, normalized);
             }
+            timerCG.alpha = Mathf.Lerp(0, 1, normalized);
             yield return null;
         }
         foreach (Image img in imagesToTransition)
@@ -784,6 +789,7 @@ public class GameManager : MonoBehaviour
         {
             tmp.color = Color.black;
         }
+        timerCG.alpha = 1;
         timer.UnpauseTimer();
 
         //foreach()
