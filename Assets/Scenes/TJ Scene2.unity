@@ -66652,6 +66652,11 @@ MonoBehaviour:
   - Just tuning in?
   - We all have the power to shape the future!
   - Remember who's boss!
+  - Smart Grid Fact!
+  - Smart Meter Fact!
+  - Smart Grid Fact!
+  - Smart Meter Fact!
+  - Smart Meter Future!
   loadOutHints:
   - Every choice can affect one or more stats.
   - Talk with your team to determine the best outcome.
@@ -66661,6 +66666,14 @@ MonoBehaviour:
     on it.
   - Your company's future will be affected by the choices you make.
   - The manager has final say on what actions your company will make.
+  - Smart Grid can cut air pollution from electric utilities by 30% by 2030! This
+    can help reduce some of the 3,000 deaths a year caused by power plant pollution!
+  - Samuel Gardiner was responsible for the first patent of electric meters in 1872!
+  - The first instance of technology similar to what is used in Smart Grid comes
+    from a caller-ID technology patented by Theodore Paraskevakos in the 1970s!
+  - Thomas Edison added a counting mechanism to electrical meters to aid meter reading.
+  - 'It is estimated that by 2024 30.4 million shipments of Smart meters will have
+    been completed! '
   titleTextObject: {fileID: 1886140256}
   hintTextObject: {fileID: 1498694063}
   choice: 0
