@@ -1,7 +1,91 @@
 fileFormatVersion: 2
 guid: 884a59b3d32a17e41b4791caa2b39d12
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1474222828062610335
+    second: RacecarTrack_Spritesheet_0
+  - first:
+      213: 199369295630756535
+    second: RacecarTrack_Spritesheet_1
+  - first:
+      213: -6078149594299966852
+    second: RacecarTrack_Spritesheet_2
+  - first:
+      213: 2683577117445901497
+    second: RacecarTrack_Spritesheet_3
+  - first:
+      213: 8637285385474343140
+    second: RacecarTrack_Spritesheet_4
+  - first:
+      213: 4398721035416099445
+    second: RacecarTrack_Spritesheet_5
+  - first:
+      213: -3586925041674848756
+    second: RacecarTrack_Spritesheet_6
+  - first:
+      213: -5562402468078078108
+    second: RacecarTrack_Spritesheet_7
+  - first:
+      213: 3328775625435168615
+    second: RacecarTrack_Spritesheet_8
+  - first:
+      213: 7335460245210476716
+    second: RacecarTrack_Spritesheet_9
+  - first:
+      213: -4404254485793186772
+    second: RacecarTrack_Spritesheet_10
+  - first:
+      213: 6771964717231517927
+    second: RacecarTrack_Spritesheet_11
+  - first:
+      213: -2509315843049846115
+    second: RacecarTrack_Spritesheet_12
+  - first:
+      213: -6187603353312628171
+    second: RacecarTrack_Spritesheet_13
+  - first:
+      213: -1101641664558204881
+    second: RacecarTrack_Spritesheet_14
+  - first:
+      213: 7638655402310821093
+    second: RacecarTrack_Spritesheet_15
+  - first:
+      213: -6484573467873123993
+    second: RacecarTrack_Spritesheet_16
+  - first:
+      213: -1598662292250412790
+    second: RacecarTrack_Spritesheet_17
+  - first:
+      213: -3570295525436119452
+    second: RacecarTrack_Spritesheet_18
+  - first:
+      213: 3371407604993561597
+    second: RacecarTrack_Spritesheet_19
+  - first:
+      213: 7826040399782621677
+    second: RacecarTrack_Spritesheet_20
+  - first:
+      213: 7549312750569616702
+    second: RacecarTrack_Spritesheet_21
+  - first:
+      213: 8686596548877811000
+    second: RacecarTrack_Spritesheet_22
+  - first:
+      213: -3371310632115995889
+    second: RacecarTrack_Spritesheet_23
+  - first:
+      213: 9203631806288762131
+    second: RacecarTrack_Spritesheet_24
+  - first:
+      213: 8709717098312438046
+    second: RacecarTrack_Spritesheet_25
+  - first:
+      213: -6546022250936467095
+    second: RacecarTrack_Spritesheet_26
+  - first:
+      213: -3095051784872176566
+    second: RacecarTrack_Spritesheet_27
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +125,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +157,621 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1062
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c6e8d06228a8be0800000000000000
+      internalID: -1474222828062610335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1062
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bae03d615d44c200800000000000000
+      internalID: 199369295630756535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 1062
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ad01cb52316aba0800000000000000
+      internalID: -6078149594299966852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 1062
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bccabc8b2bfd3520800000000000000
+      internalID: 2683577117445901497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 885
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e00fd8bb4dcdd770800000000000000
+      internalID: 8637285385474343140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 885
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ad30ee9756b0d30800000000000000
+      internalID: 4398721035416099445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 885
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06740fcdaea83ec0800000000000000
+      internalID: -3586925041674848756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 885
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46733781d606ec2b0800000000000000
+      internalID: -5562402468078078108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 708
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76fba037bcf223e20800000000000000
+      internalID: 3328775625435168615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 708
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca035c36a3accc560800000000000000
+      internalID: 7335460245210476716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 708
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c50e141e1f0e2c0800000000000000
+      internalID: -4404254485793186772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 708
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0301ae70adafd50800000000000000
+      internalID: 6771964717231517927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 531
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a01c1298e1d2dd0800000000000000
+      internalID: -2509315843049846115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 531
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532f8c29887312aa0800000000000000
+      internalID: -6187603353312628171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 531
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28fc3a2ebe26b0f0800000000000000
+      internalID: -1101641664558204881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 531
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4ea58fd94f10a60800000000000000
+      internalID: 7638655402310821093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 354
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761ef77a9ca2206a0800000000000000
+      internalID: -6484573467873123993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 354
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a093a928d1960d9e0800000000000000
+      internalID: -1598662292250412790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 354
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466a637c223c37ec0800000000000000
+      internalID: -3570295525436119452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 354
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df311b0ba55a9ce20800000000000000
+      internalID: 3371407604993561597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 177
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de136ea874eab9c60800000000000000
+      internalID: 7826040399782621677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 177
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35770cd2fb84c860800000000000000
+      internalID: 7549312750569616702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 177
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83dfef2a98dfc8870800000000000000
+      internalID: 8686596548877811000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 177
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b7a3197d2b631d0800000000000000
+      internalID: -3371310632115995889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31514596d5ed9bf70800000000000000
+      internalID: 9203631806288762131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 0
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e111f0b0e812fd870800000000000000
+      internalID: 8709717098312438046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 0
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9610121f17bd725a0800000000000000
+      internalID: -6546022250936467095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 0
+        width: 449
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a445149ccca2c05d0800000000000000
+      internalID: -3095051784872176566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

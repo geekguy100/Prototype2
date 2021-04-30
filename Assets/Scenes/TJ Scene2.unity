@@ -13602,6 +13602,10 @@ GameObject:
   - component: {fileID: 409645013}
   - component: {fileID: 409645015}
   - component: {fileID: 409645014}
+  - component: {fileID: 409645016}
+  - component: {fileID: 409645017}
+  - component: {fileID: 409645019}
+  - component: {fileID: 409645018}
   m_Layer: 5
   m_Name: Racetrack
   m_TagString: Untagged
@@ -13625,7 +13629,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: -191.1}
+  m_AnchoredPosition: {x: -42.8, y: -191.1}
   m_SizeDelta: {x: 449, y: 177}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409645014
@@ -13648,7 +13652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e1153b6c8637b504896b3ee0c0e02e7c, type: 3}
+  m_Sprite: {fileID: -3095051784872176566, guid: 884a59b3d32a17e41b4791caa2b39d12, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13666,6 +13670,129 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409645012}
   m_CullTransparentMesh: 0
+--- !u!95 &409645016
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409645012}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 118cedc16e53eef469c01005a917f9c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &409645017
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409645012}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.5937805, y: 3.1343994}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 447.59113, y: 181.19577}
+  m_EdgeRadius: 0
+--- !u!114 &409645018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409645012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a52ab0f46e1ce41a27993d3ec7f0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  revealed: 0
+  revealedCursor: {fileID: 2800000, guid: 1b6c8d667127ae346b1e9d95e82f0e18, type: 3}
+  questionMarkCursor: {fileID: 2800000, guid: 45fa99f00d7e78a45869659b7639e7b0, type: 3}
+  sfxSource: {fileID: 768988162}
+  playClip: {fileID: 8300000, guid: 490af669320c8d34fa9911d4d687df87, type: 3}
+--- !u!114 &409645019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409645012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 409645018}
+          m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+          m_MethodName: ChangeCursor
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 409645018}
+          m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+          m_MethodName: ChangeCursor
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 409645018}
+          m_TargetAssemblyTypeName: RacetrackController, Assembly-CSharp
+          m_MethodName: Interact
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &410119477
 GameObject:
   m_ObjectHideFlags: 0
