@@ -40,10 +40,6 @@ public class ProjectorButton : Interactable
     [Tooltip("Sound to play when player leaves tutorial")]
     public AudioClip leaveTutorialSound;
 
-    [Tooltip("Sound to play when player enters tutorial")]
-    public AudioClip enterTutorialSound;
-
-
     public void Interact()
     {
         if (!revealed)
@@ -51,7 +47,8 @@ public class ProjectorButton : Interactable
             revealed = true;
             ChangeCursor(revealed);
         }
-
+        sfxSource.clip = leaveTutorialSound;
+        sfxSource.PlayScheduled(0);
         currentTutorialPanel = tutorial.GetCurrentPanel();
         currentTutorialTextScroll = tutorial.GetCurrentTextScroll();
         if (currentTutorialPanel != null)

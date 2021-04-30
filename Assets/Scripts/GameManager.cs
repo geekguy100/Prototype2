@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Buttons to transition when opening the gameplay screen 
     /// </summary>
-    private List<GameObject> buttonsToHide = new List<GameObject>();
+    private List<Button> buttonsToHide = new List<Button>();
 
     [Tooltip("Transition time for gameplay buttons")]
     public float transitionTime = 3f;
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public float transitionWaitTime = 3f;
 
     [Tooltip("Gameplay stats button")]
-    public GameObject statsButton;
+    public Button statsButton;
 
     [Tooltip("Highest the stats could add up to")]
     public float maxStats = 300;
@@ -165,7 +165,7 @@ public class GameManager : MonoBehaviour
     public SpriteRenderer scenarioIcon;
 
     [Tooltip("Button for selecting the current choice")]
-    public GameObject submitButton;
+    public Button submitButton;
 
 
 
@@ -652,7 +652,7 @@ public class GameManager : MonoBehaviour
                     choiceTexts[currentText].transform.parent.gameObject.SetActive(true);
                 }
 
-                buttonsToHide.Add(choiceTexts[currentText].transform.parent.gameObject);
+                buttonsToHide.Add(choiceTexts[currentText].transform.parent.gameObject.GetComponent<Button>());
                 // Increment the prefix
                 ++currentText;
                 ++currentLetter;
@@ -670,7 +670,7 @@ public class GameManager : MonoBehaviour
                 foreach (Button b in threeChoiceButtons)
                 {
                     b.gameObject.transform.parent.gameObject.SetActive(true);
-                    buttonsToHide.Add(b.gameObject);
+                    buttonsToHide.Add(b.gameObject.GetComponent<Button>());
                 }
                 threeChoiceButtons[currentText].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = currentLetter + ": " + choice.Choice;
 
@@ -694,7 +694,7 @@ public class GameManager : MonoBehaviour
             int index = (currentText / 2) - 1;
             middleChoiceButtons[index].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = currentLetter + ": " + currentSetup.Decisions[currentText].Choice;
             middleChoiceButtons[index].gameObject.transform.parent.gameObject.SetActive(true);
-            buttonsToHide.Add(middleChoiceButtons[index].gameObject);
+            buttonsToHide.Add(middleChoiceButtons[index].gameObject.GetComponent<Button>());
 
             // Deactivates the row the middle choice button is replacing
             choiceButtonRows[index + 1].SetActive(false);
@@ -740,19 +740,20 @@ public class GameManager : MonoBehaviour
         List<TextMeshProUGUI> textToTransition = new List<TextMeshProUGUI>();
 
         // Adding necessary objects to lists
-        foreach (GameObject go in buttonsToHide)
+        foreach (Button b in buttonsToHide)
         {
-            imagesToTransition.Add(go.GetComponent<Image>());
-            textToTransition.Add(go.transform.GetChild(0).GetComponent<TextMeshProUGUI>());
-            
+            imagesToTransition.Add(b.GetComponent<Image>());
+            textToTransition.Add(b.transform.GetChild(0).GetComponent<TextMeshProUGUI>());
+            b.interactable = false;
         }
-        
-        imagesToTransition.Add(statsButton.GetComponent<Image>());
+        submitButton.interactable = false;
+        statsButton.interactable = false;
+        imagesToTransition.Add(statsButton.gameObject.GetComponent<Image>());
         textToTransition.Add(statsButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>());
         imagesToTransition.Add(setupText.transform.parent.GetComponent<Image>());
         textToTransition.Add(setupText);
-        imagesToTransition.Add(submitButton.GetComponent<Image>());
-        textToTransition.Add(submitButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>());
+        imagesToTransition.Add(submitButton.gameObject.GetComponent<Image>());
+        textToTransition.Add(submitButton.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>());
 
         // Making objects transparent
         foreach (Image img in imagesToTransition)
@@ -789,6 +790,12 @@ public class GameManager : MonoBehaviour
         {
             tmp.color = Color.black;
         }
+        foreach (Button b in buttonsToHide)
+        {
+            b.interactable = true;
+        }
+        statsButton.interactable = true;
+        submitButton.interactable = true;
         timerCG.alpha = 1;
         timer.UnpauseTimer();
 

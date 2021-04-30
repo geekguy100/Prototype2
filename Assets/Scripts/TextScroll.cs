@@ -11,6 +11,11 @@ using TMPro;
 
 public class TextScroll : MonoBehaviour
 {
+    public Tutorial tutorial;
+
+    public bool isGameplayTutorial = false;
+
+    public bool toGameplay = false;
     /// <summary>
     /// Number of characters per second that show up on screen
     /// </summary>
@@ -22,11 +27,24 @@ public class TextScroll : MonoBehaviour
     [Tooltip("The audio source to play when the player skips the typing effect")]
     public AudioSource dingSource;
 
+    [Tooltip("Button click audio source")]
+    public AudioSource buttonSource;
+
     [Tooltip("The audio clip to play when the player skips the typing effect")]
     public AudioClip dingClip;
 
     [Tooltip("The next text to scroll on this panel if there is one")]
     public GameObject text2;
+
+    /// <summary>
+    /// If this textscroll already advanced the tutorial once
+    /// </summary>
+    private bool sent = false;
+
+    /// <summary>
+    /// TextScroll script on text2 object
+    /// </summary>
+    private TextScroll text2Scroll;
 
     /// <summary>
     /// The TextMeshProUGUI on this game object
@@ -75,6 +93,23 @@ public class TextScroll : MonoBehaviour
             {
                 started = true;
                 StartScroll();
+            }
+        }
+        else
+        {
+            if (text2 == null)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    AdvanceTutorial();
+                }
+            }
+            else if (text2Scroll.completed)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    AdvanceTutorial();
+                }
             }
         }
     }
@@ -188,5 +223,25 @@ public class TextScroll : MonoBehaviour
         targetString = thisText.text;
         thisText.text = "";
         initialized = true;
+        if (text2 != null)
+        {
+            text2Scroll = text2.GetComponent<TextScroll>();
+        }
+    }
+
+    private void AdvanceTutorial()
+    {
+        if (!isGameplayTutorial && !sent)
+        {
+            tutorial.NextStep();
+            sent = true;
+            buttonSource.Play();
+        }
+        else if (toGameplay && !sent)
+        {
+            tutorial.StartInteractiveTutorial();
+            buttonSource.Play();
+            sent = true;
+        }
     }
 }

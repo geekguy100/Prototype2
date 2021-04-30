@@ -228,7 +228,7 @@ public class Tutorial : MonoBehaviour
     }
 
 
-    private void StartInteractiveTutorial()
+    public void StartInteractiveTutorial()
     {
         prevButton.gameObject.SetActive(false);
         nextButton.gameObject.SetActive(false);
