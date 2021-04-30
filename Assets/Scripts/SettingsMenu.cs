@@ -16,6 +16,7 @@ public class SettingsMenu : MonoBehaviour
     public TMP_Dropdown resolutionDropdown;
 
     public Vector2 previousResolution;
+    public int previousValue = 0;
 
 
     public List<Vector2> options = new List<Vector2>();
@@ -28,7 +29,6 @@ public class SettingsMenu : MonoBehaviour
     void Start()
     {
         resolutionDropdown.ClearOptions();
-
 
 
 
@@ -86,12 +86,14 @@ public class SettingsMenu : MonoBehaviour
     public void ResetResolutionButton()
     {
         Screen.SetResolution((int)previousResolution.x, (int)previousResolution.y, Screen.fullScreen, defaultRefreshRate);
+        resolutionDropdown.value = previousValue;
         areYouSureButton.SetActive(false);
     }
 
     public void SettingsAreFine()
     {
         areYouSureButton.SetActive(false);
+        previousValue = resolutionDropdown.value;
     }
 
     public void CheckEffectsVolume()
