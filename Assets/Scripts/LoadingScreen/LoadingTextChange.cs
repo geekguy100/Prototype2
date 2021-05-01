@@ -22,6 +22,14 @@ public class LoadingTextChange : MonoBehaviour
     // Start is called before the first frame update
     private void OnEnable()
     {
+
+        choice++;
+
+        if (choice >= loadOutTitles.Count)
+        {
+            choice = 0;
+        }
+        
         if (loadOutTitles.Count > 2)
         {
             //choice = Random.Range(0, loadOutTitles.Count);
@@ -32,7 +40,7 @@ public class LoadingTextChange : MonoBehaviour
 
             swapTimer = swapTimeDefaultValue;
         }
-        choice++;
+
     }
 
     private void FixedUpdate()
