@@ -241,7 +241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0871f95993fabe54ba0d753adbd8a529, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea1bacafe3704ab46ad5dbf834742500, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -284,6 +284,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faceAnim: {fileID: 4943489364300771335}
   armAnim: {fileID: 4943489364816920830}
+  sfxSource: {fileID: 0}
+  popSound: {fileID: 0}
 --- !u!1 &4943489364816920824
 GameObject:
   m_ObjectHideFlags: 0
