@@ -101,12 +101,12 @@ TextureImporter:
       name: Left arm angry spritesheet_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 23
-        width: 287
-        height: 404
+        width: 255
+        height: 405
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -122,12 +122,12 @@ TextureImporter:
       name: Left arm angry spritesheet_1
       rect:
         serializedVersion: 2
-        x: 300
+        x: 302
         y: 23
-        width: 273
-        height: 398
+        width: 255
+        height: 405
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -143,12 +143,12 @@ TextureImporter:
       name: Left arm angry spritesheet_2
       rect:
         serializedVersion: 2
-        x: 587
+        x: 588
         y: 23
-        width: 271
-        height: 393
+        width: 255
+        height: 405
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
