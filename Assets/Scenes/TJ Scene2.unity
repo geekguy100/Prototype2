@@ -67208,8 +67208,8 @@ MonoBehaviour:
     been completed! '
   titleTextObject: {fileID: 1886140256}
   hintTextObject: {fileID: 1498694063}
-  choice: 0
-  swapTimeDefaultValue: 12
+  choice: 11
+  swapTimeDefaultValue: 10
   swapTimer: 0
 --- !u!114 &2025868374
 MonoBehaviour:

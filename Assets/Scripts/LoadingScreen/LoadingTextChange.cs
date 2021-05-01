@@ -11,9 +11,9 @@ public class LoadingTextChange : MonoBehaviour
     public TextMeshProUGUI hintTextObject;
     private int lastLoadout = 0;
 
-    public int choice;
+    public int choice = 11;
 
-    public float swapTimeDefaultValue = 12;
+    public float swapTimeDefaultValue = 10;
 
     //timer length
     public float swapTimer = 0;
@@ -23,11 +23,11 @@ public class LoadingTextChange : MonoBehaviour
     private void OnEnable()
     {
 
-        choice++;
+        choice--;
 
-        if (choice >= loadOutTitles.Count)
+        if (choice < 0)
         {
-            choice = 0;
+            choice = loadOutTitles.Count-1;
         }
         
         if (loadOutTitles.Count > 2)
@@ -49,11 +49,11 @@ public class LoadingTextChange : MonoBehaviour
 
         if (swapTimer <= 0)
         {
-            choice++;
+            choice--;
 
-            if(choice >= loadOutTitles.Count)
+            if(choice < 0)
             {
-                choice = 0;
+                choice = loadOutTitles.Count-1;
             }
 
 
