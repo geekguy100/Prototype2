@@ -32,6 +32,7 @@ public class LoadingTextChange : MonoBehaviour
 
             swapTimer = swapTimeDefaultValue;
         }
+        choice++;
     }
 
     private void FixedUpdate()
