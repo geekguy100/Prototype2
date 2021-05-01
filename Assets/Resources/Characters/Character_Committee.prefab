@@ -91,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   presetBuilds:
   - {fileID: 3374694948918087431, guid: 36bb7ee1fa869c94a8e26af6251f71f8, type: 3}
-  - {fileID: 2630114894959859906, guid: 421621651b2ccbc44bfb56cc0ca4a650, type: 3}
+  - {fileID: 2151043323437705135, guid: f4ac2437890e8a742961d8c8ef2b67f4, type: 3}
   - {fileID: 1520388373370204286, guid: 1df1b15dec2166843a9c86dbec094f9e, type: 3}
   - {fileID: 5193252670479712850, guid: e7fc30ba0539f8740a022071ccde2a61, type: 3}
   - {fileID: 2196070517748488151, guid: 76099c835e837ae469067642bf48f0bf, type: 3}
@@ -99,10 +99,10 @@ MonoBehaviour:
   - {fileID: 6632369281926098407, guid: b697694ed5544ef4082ee84d495d65cb, type: 3}
   - {fileID: 2375055048311312230, guid: aabd88613bce2dd45bea452454c65deb, type: 3}
   - {fileID: 4671791993919459304, guid: f6682e8adde3f8f45be017ab96e733c6, type: 3}
-  - {fileID: 2151043323437705135, guid: f4ac2437890e8a742961d8c8ef2b67f4, type: 3}
+  - {fileID: 2526307572049496438, guid: ec939e5db23ce474295ed9ee04be8af7, type: 3}
   characterHolder: {fileID: 5810441958559366869}
   selectedAlgorithm: 1
-  majorEmotionThreshold: 7
+  majorEmotionThreshold: 8
   statDecreaseThreshold: 2
   associatedEmotionIndex: 2
   happyThreshold: 5
@@ -118,6 +118,10 @@ PrefabInstance:
     - target: {fileID: 972113244696527108, guid: 421621651b2ccbc44bfb56cc0ca4a650, type: 3}
       propertyPath: m_Name
       value: Committee_Default
+      objectReference: {fileID: 0}
+    - target: {fileID: 972113244696527108, guid: 421621651b2ccbc44bfb56cc0ca4a650, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6551952657174811188, guid: 421621651b2ccbc44bfb56cc0ca4a650, type: 3}
       propertyPath: m_LocalPosition.x

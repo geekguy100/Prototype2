@@ -14,7 +14,7 @@ public class CharacterEmotionTester : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) && character != null)
             character.SetEmotion(emotion);
     }
 }
