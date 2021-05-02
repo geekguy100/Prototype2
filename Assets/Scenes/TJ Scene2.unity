@@ -7082,8 +7082,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -69, y: -23}
-  m_SizeDelta: {x: 431.2343, y: 216.7916}
+  m_AnchoredPosition: {x: -78.309, y: -23}
+  m_SizeDelta: {x: 412.6172, y: 216.7916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206659831
 MonoBehaviour:
@@ -14430,8 +14430,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -69, y: -23}
-  m_SizeDelta: {x: 431.2343, y: 216.7916}
+  m_AnchoredPosition: {x: -73.15, y: -23}
+  m_SizeDelta: {x: 422.92645, y: 216.7916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420239977
 MonoBehaviour:
@@ -58428,8 +58428,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -69, y: -23}
-  m_SizeDelta: {x: 431.2343, y: 216.7916}
+  m_AnchoredPosition: {x: -79.1, y: -23}
+  m_SizeDelta: {x: 412.8648, y: 216.7916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1685253229
 MonoBehaviour:
@@ -58472,9 +58472,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Each Advisor has a corresponding stat that they are aiming to maximize.
-    \r\n\n\n\n\n\n\nYour goal as a team is to maximize all of these stats. Each Advisor
-    should focus on their own stat, but the Manager should try to choose the best
-    decision for the company as a whole.\n\n"
+    \r\n\n\n\n\n\n\nYour goal as a team is to maximize these stats. Each Advisor
+    should focus on their own stat. The Manager should try to choose the best decision
+    for the company as a whole.\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
