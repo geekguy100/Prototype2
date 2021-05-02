@@ -381,7 +381,6 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Fired when a choice is made. Adjusts the stats and picks the next setup
     /// </summary>
-
     int decisionIndex;
     public void ChoiceSelect()
     {
@@ -409,6 +408,14 @@ public class GameManager : MonoBehaviour
             // If player ran out of time deducts stats and moves to next question - TJ
             else
             {
+                // Adding necessary objects to lists
+                foreach (Button b in buttonsToHide)
+                {
+                    b.interactable = false;
+                }
+
+                submitButton.interactable = false;
+                statsButton.interactable = false;
 
                 for (int i = 1; i < stats.Length; i++)
                 {
@@ -435,6 +442,15 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            // Adding necessary objects to lists
+            foreach (Button b in buttonsToHide)
+            {
+                b.interactable = false;
+            }
+
+            submitButton.interactable = false;
+            statsButton.interactable = false;
+
             // Below line ties approval into the decision system directly
             //int approvalAdjust = currentSetup.Decisions[decisionIndex].Approval;
             // Set the adjustments for the stats
@@ -794,6 +810,8 @@ public class GameManager : MonoBehaviour
         {
             b.interactable = true;
         }
+
+        print("TRUE");
         statsButton.interactable = true;
         submitButton.interactable = true;
         timerCG.alpha = 1;
