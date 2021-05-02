@@ -100,7 +100,6 @@ MonoBehaviour:
   - {fileID: 5247096316719432031, guid: e897b07cfb3816046bb61927f1943c1f, type: 3}
   - {fileID: 644871626868035106, guid: 27a5f29db79afe042b25fa756170f6a0, type: 3}
   - {fileID: 1819670191217577853, guid: 00bb85b58041e1b44ad180f395ec28d1, type: 3}
-  - {fileID: 4000797847284910973, guid: 0315dde3960921d41b96f1c0d89f70ed, type: 3}
   characterHolder: {fileID: 5029023592624869150}
   selectedAlgorithm: 0
   majorEmotionThreshold: 6
