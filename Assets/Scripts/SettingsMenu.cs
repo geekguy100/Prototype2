@@ -36,6 +36,8 @@ public class SettingsMenu : MonoBehaviour
     public static float sfxVolume = 0;
     public static bool isFullSCREEN;
 
+
+    bool getFucked = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,16 +60,7 @@ public class SettingsMenu : MonoBehaviour
 
         isFullSCREEN = Screen.fullScreen;
         fullscreenToggle.isOn = isFullSCREEN;
-        currentRes = Screen.currentResolution;
 
-        for(int i = 0; i < options.Count; i++)
-        {
-            if (currentRes.width == options[i].x && currentRes.height == options[i].y)
-            {
-                resolutionDropdown.value = i;
-                break;
-            }
-        }
 
         optionsText[0] = "";
 
@@ -77,6 +70,19 @@ public class SettingsMenu : MonoBehaviour
         }
 
         resolutionDropdown.AddOptions(optionsText);
+        resolutionDropdown.RefreshShownValue();
+
+
+        for (int i = 0; i < options.Count; i++)
+        {
+            if (Screen.width == options[i].x && Screen.height == options[i].y)
+            {
+                getFucked = true;
+                resolutionDropdown.value = i;
+                break;
+            }
+        }
+       
         resolutionDropdown.RefreshShownValue();
     }
 
@@ -108,12 +114,14 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetResolution(int resolutionIndex)
     {
-        if(resolutionIndex != 0)
+        
+        if(resolutionIndex != 0 && !getFucked)
         {
             previousResolution = new Vector2(Screen.width, Screen.height);
             Screen.SetResolution((int)options[resolutionIndex].x, (int)options[resolutionIndex].y, Screen.fullScreen, defaultRefreshRate);
             areYouSureButton.SetActive(true);
         }
+        getFucked = false;
 
     }
 
