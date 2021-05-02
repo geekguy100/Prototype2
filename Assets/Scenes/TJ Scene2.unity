@@ -5351,7 +5351,6 @@ MonoBehaviour:
   tutorialButtons:
   - {fileID: 1749606319}
   - {fileID: 1440909229}
-  - {fileID: 330089423}
   chromeScreen: {fileID: 1387286848}
   leaveTutorialSound: {fileID: 8300000, guid: be5723bb8cebea54583989310bf1cda8, type: 3}
 --- !u!114 &134137729
@@ -10195,6 +10194,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 646520248}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &305985801
 MonoBehaviour:
@@ -26596,7 +26607,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 47.8, y: -170.7}
-  m_SizeDelta: {x: 461.135, y: 130.88995}
+  m_SizeDelta: {x: 268.1, y: 130.88995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &704522464
 MonoBehaviour:
@@ -31857,7 +31868,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 47.8, y: -40.1}
-  m_SizeDelta: {x: 461.135, y: 130.88995}
+  m_SizeDelta: {x: 268.1, y: 130.88995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &887468389
 MonoBehaviour:
@@ -52064,7 +52075,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 47.8, y: -106.3}
-  m_SizeDelta: {x: 461.135, y: 130.88995}
+  m_SizeDelta: {x: 268.1, y: 130.88995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479633895
 MonoBehaviour:
@@ -70208,6 +70219,7 @@ MonoBehaviour:
   pausePanel: {fileID: 1472428459}
   tutorialPanel: {fileID: 1164707612}
   settingsPanel: {fileID: 1273463459}
+  loadingPanel: {fileID: 0}
   transitionImage: {fileID: 672618264}
   typeSource: {fileID: 1940758732}
   paused: 0

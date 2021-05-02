@@ -29,6 +29,9 @@ public class PauseManager : MonoBehaviour
     [Tooltip("Canvas object containing settings panel")]
     public GameObject settingsPanel;
 
+    [Tooltip("Canvas object containing loading menu")]
+    public GameObject loadingPanel;
+
     [Tooltip("Transition panel object")]
     public Image transitionImage;
 
@@ -55,50 +58,54 @@ public class PauseManager : MonoBehaviour
             {
                 print("canPause = " + canPause);
                 // Makes sure player is at results/gameplay screen
-                if (resultsObj.activeInHierarchy || gameplayObj.activeInHierarchy || tutorialPanel.activeInHierarchy)
+                if (!loadingPanel.activeInHierarchy)
                 {
-                    // Checks if it is unpaused currently
-                    if (!paused)
+                    if (resultsObj.activeInHierarchy || gameplayObj.activeInHierarchy || tutorialPanel.activeInHierarchy)
                     {
-                        // Pauses game
-                        Time.timeScale = 0;
-                        paused = true;
-                        pausePanel.SetActive(true);
-                        if (transitionImage.raycastTarget)
+                        // Checks if it is unpaused currently
+                        if (!paused)
                         {
-                            transitionImage.raycastTarget = false;
-                        }
-                        if (tutorialPanel.activeInHierarchy)
-                        {
-                            if (typeSource.isPlaying)
+                            // Pauses game
+                            Time.timeScale = 0;
+                            paused = true;
+                            pausePanel.SetActive(true);
+                            if (transitionImage.raycastTarget)
                             {
-                                typeSource.Stop();
-                                wasPlaying = true;
+                                transitionImage.raycastTarget = false;
                             }
-                        }
-                        //characterObj.SetActive(false);
-                    }
-                    else
-                    {
-                        // Unpauses game
-                        Time.timeScale = 1;
-                        paused = false;
-                        pausePanel.SetActive(false);
-                        if (settingsPanel.activeInHierarchy)
-                        {
-                            settingsPanel.SetActive(false);
-                        }
-                        if (tutorialPanel.activeInHierarchy)
-                        {
-                            if (wasPlaying)
+                            if (tutorialPanel.activeInHierarchy)
                             {
-                                typeSource.Play();
-                                wasPlaying = false;
+                                if (typeSource.isPlaying)
+                                {
+                                    typeSource.Stop();
+                                    wasPlaying = true;
+                                }
                             }
+                            //characterObj.SetActive(false);
                         }
-                        //characterObj.SetActive(true);
+                        else
+                        {
+                            // Unpauses game
+                            Time.timeScale = 1;
+                            paused = false;
+                            pausePanel.SetActive(false);
+                            if (settingsPanel.activeInHierarchy)
+                            {
+                                settingsPanel.SetActive(false);
+                            }
+                            if (tutorialPanel.activeInHierarchy)
+                            {
+                                if (wasPlaying)
+                                {
+                                    typeSource.Play();
+                                    wasPlaying = false;
+                                }
+                            }
+                            //characterObj.SetActive(true);
+                        }
                     }
                 }
+
             }
         }  
     }
