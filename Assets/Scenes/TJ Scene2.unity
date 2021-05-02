@@ -70219,7 +70219,7 @@ MonoBehaviour:
   pausePanel: {fileID: 1472428459}
   tutorialPanel: {fileID: 1164707612}
   settingsPanel: {fileID: 1273463459}
-  loadingPanel: {fileID: 0}
+  loadingPanel: {fileID: 792394239}
   transitionImage: {fileID: 672618264}
   typeSource: {fileID: 1940758732}
   paused: 0
