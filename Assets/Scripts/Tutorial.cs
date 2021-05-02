@@ -514,10 +514,9 @@ public class Tutorial : MonoBehaviour
     { 
         if (step == choiceSelectStep)
         {
+            buttonGroup.interactable = false;
             OpenResultsStep();
         }
-
-        buttonGroup.interactable = false;
     }
 
 
