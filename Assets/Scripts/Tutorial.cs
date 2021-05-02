@@ -506,6 +506,7 @@ public class Tutorial : MonoBehaviour
         }
     }
 
+    [SerializeField] private CanvasGroup buttonGroup;
     /// <summary>
     /// Moves from the tutorial to starting the game. Happens when player presses confirm with a choice selected.
     /// </summary>
@@ -515,6 +516,8 @@ public class Tutorial : MonoBehaviour
         {
             OpenResultsStep();
         }
+
+        buttonGroup.interactable = false;
     }
 
 
