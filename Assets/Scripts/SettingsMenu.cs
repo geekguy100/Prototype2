@@ -11,6 +11,11 @@ public class SettingsMenu : MonoBehaviour
     public AudioSource sfxSource;
     public AudioClip ding;
 
+    public Slider musicSlider;
+    public Slider masterSlider;
+    public Slider sfxSlider;
+    public Toggle fullscreenToggle;
+
     public AudioMixer music;
     public AudioMixer ui;
     public TMP_Dropdown resolutionDropdown;
@@ -21,9 +26,15 @@ public class SettingsMenu : MonoBehaviour
 
     public List<Vector2> options = new List<Vector2>();
     public List<string> optionsText = new List<string>();
+    Resolution currentRes = new Resolution();
     public int defaultRefreshRate = 30;
 
     public GameObject areYouSureButton;
+
+    public static float musicVolume = 0;
+    public static float masterVolume = 1;
+    public static float sfxVolume = 0;
+    public static bool isFullSCREEN;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +49,26 @@ public class SettingsMenu : MonoBehaviour
         16:9 aspect ratio resolutions: 1024×576, 1152×648, 1280×720 (HD), 1366×768, 1600×900, and 1920×1080 (FHD)
          
          */
+        masterSlider.value = AudioListener.volume;
+        music.GetFloat("MusicVolume", out musicVolume);
+        ui.GetFloat("UIVolume", out sfxVolume);
+
+        musicSlider.value = musicVolume;
+        sfxSlider.value = sfxVolume;
+
+        isFullSCREEN = Screen.fullScreen;
+        fullscreenToggle.isOn = isFullSCREEN;
+        currentRes = Screen.currentResolution;
+
+        for(int i = 0; i < options.Count; i++)
+        {
+            if (currentRes.width == options[i].x && currentRes.height == options[i].y)
+            {
+                resolutionDropdown.value = i;
+                break;
+            }
+        }
+
         optionsText[0] = "";
 
         for (int i = 1;i<options.Count; i++)
@@ -50,21 +81,24 @@ public class SettingsMenu : MonoBehaviour
     }
 
         // Update is called once per frame
-        public void AdjustMasterVolume(float newVolume)
+    public void AdjustMasterVolume(float newVolume)
     {
         AudioListener.volume = newVolume;
+        masterVolume = newVolume;
     }
 
     //adjust ui volume
     public void AdjustUIVolume(float newVolume)
     {
         ui.SetFloat("UIVolume", newVolume);
+        sfxVolume = newVolume;
     }
 
     //adjust music volume
     public void AdjustMusicVolume(float newVolume)
     {
         music.SetFloat("MusicVolume",newVolume);
+        musicVolume = newVolume;
     }
 
     public void SetFullscreen(bool isFullscreen)

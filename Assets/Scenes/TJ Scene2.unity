@@ -44285,6 +44285,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxSource: {fileID: 768988162}
   ding: {fileID: 8300000, guid: 0507d5b05ab73084d823afa96afa566e, type: 3}
+  musicSlider: {fileID: 2128127961}
+  masterSlider: {fileID: 951801217}
+  sfxSlider: {fileID: 1275726047}
+  fullscreenToggle: {fileID: 1398892702}
   music: {fileID: 24100000, guid: a4409123192addd4ba060cdea234e2c2, type: 2}
   ui: {fileID: 24100000, guid: 272bbe6e6432f314fb4e8bfb657ab927, type: 2}
   resolutionDropdown: {fileID: 2136406109}
